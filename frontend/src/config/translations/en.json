@@ -208,6 +208,7 @@
   "editComparisonItems": "Edit comparison items",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "comparisonResult": "Comparison result"
 >>>>>>> 3c4a20d (OTAT-259 Change compare result page title)
 =======
@@ -305,4 +306,9 @@
   "created": "Created",
   "description": "Description"
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+  "comparisonResult": "Comparison result",
+  "oneFileOnly": "You can only upload one file at a time.",
+  "dropYourFileHere": "Drop your file here"
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
 }

@@ -550,6 +550,7 @@ export const createService = (
         }
       );
     },
+<<<<<<< HEAD
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
 =======
         config
@@ -563,6 +564,26 @@ export const createService = (
       return axios.get(`/baseinfo/profiles/${profileId}/`, config);
     },
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+    uploadProfilePhoto(file: any, config: AxiosRequestConfig<any> | undefined) {
+      return axios.post(
+        `/baseinfo/profiles/1/images/`,
+        { image: file },
+        {
+          ...config,
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+    },
+    deleteProfilePhoto(
+      args: { id: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      return axios.delete(`/baseinfo/profiles/1/images/${args?.id}/`, config);
+    },
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
   };
 
   return service;

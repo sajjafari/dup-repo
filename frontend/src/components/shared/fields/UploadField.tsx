@@ -5,7 +5,11 @@ import ListItemText from "@mui/material/ListItemText";
 import React, { useCallback, useState } from "react";
 import { Accept, DropEvent, FileRejection, useDropzone } from "react-dropzone";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
 import CircularProgress from "@mui/material/CircularProgress";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";
@@ -15,7 +19,11 @@ import FilePresentRoundedIcon from "@mui/icons-material/FilePresentRounded";
 import { styles } from "../../../config/styles";
 import FileUploadRoundedIcon from "@mui/icons-material/FileUploadRounded";
 import { useServiceContext } from "../../../providers/ServiceProvider";
+<<<<<<< HEAD
 import { TQueryServiceFunction, useQuery } from "../../../utils/useQuery";
+=======
+import { useQuery } from "../../../utils/useQuery";
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
 import toastError from "../../../utils/toastError";
 import { t } from "i18next";
 import { ICustomError } from "../../../utils/CustomError";
@@ -38,8 +46,11 @@ interface IUploadFieldProps {
   defaultValue?: any[];
   accept?: Accept;
   maxSize?: number;
+<<<<<<< HEAD
   uploadService: TQueryServiceFunction<any, any>;
   deleteService: TQueryServiceFunction<any, any>;
+=======
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
 }
 
 const UploadField = (props: IUploadFieldProps) => {
@@ -79,6 +90,7 @@ interface IUploadProps {
   maxSize?: number;
   required?: boolean;
   defaultValue?: any[];
+<<<<<<< HEAD
   uploadService: TQueryServiceFunction<any, any>;
   deleteService: TQueryServiceFunction<any, any>;
 }
@@ -104,6 +116,21 @@ const Uploader = (props: IUploadProps) => {
 
   const deleteQueryProps = useQuery({
     service: deleteService,
+=======
+}
+
+const Uploader = (props: IUploadProps) => {
+  const { fieldProps, errors, label, accept, maxSize, required } = props;
+  console.log(fieldProps.value);
+  const [myFiles, setMyFiles] = useState<File[]>([]);
+  const { service } = useServiceContext();
+  const uploadQueryProps = useQuery({
+    service: (args, config) => service.uploadProfilePhoto(args, config),
+    runOnMount: false,
+  });
+  const deleteQueryProps = useQuery({
+    service: (args, config) => service.deleteProfilePhoto(args, config),
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
     runOnMount: false,
   });
 
@@ -139,6 +166,10 @@ const Uploader = (props: IUploadProps) => {
     onDrop,
     multiple: false,
     onDropRejected(rejectedFiles, event) {
+<<<<<<< HEAD
+=======
+      console.dir(rejectedFiles, event);
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
       if (rejectedFiles.length > 1) {
         toastError(t("oneFileOnly") as string);
       }
@@ -151,6 +182,7 @@ const Uploader = (props: IUploadProps) => {
   const file = myFiles?.[0] || fieldProps.value?.[0];
 
   const loading = uploadQueryProps.loading || deleteQueryProps.loading;
+<<<<<<< HEAD
   const isDownloadable =
     (!uploadQueryProps.loading &&
       !uploadQueryProps.error &&
@@ -158,6 +190,11 @@ const Uploader = (props: IUploadProps) => {
     (file as any)?.[fieldProps.name];
 
   const { errorMessage, hasError } = getFieldError(errors, fieldProps.name);
+=======
+
+  const { errorMessage, hasError } = getFieldError(errors, fieldProps.name);
+  console.log(file);
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
   return (
     <FormControl sx={{ width: "100%" }} error={hasError}>
       <Box
@@ -191,7 +228,14 @@ const Uploader = (props: IUploadProps) => {
                     p={1}
                     sx={{ backgroundColor: "#ffffffc9", borderRadius: 1 }}
                   >
+<<<<<<< HEAD
                     {isDownloadable && (
+=======
+                    {((!uploadQueryProps.loading &&
+                      !uploadQueryProps.error &&
+                      uploadQueryProps.data?.[fieldProps.name]) ||
+                      (file as any)?.[fieldProps.name]) && (
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
                       <IconButton
                         onClick={(e: any) => e.stopPropagation()}
                         sx={{ mr: 0.2 }}

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { t } from "i18next";
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { t } from "i18next";
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
 import { toast } from "react-toastify";
 import { ECustomErrorType } from "../types";
 import { ICustomError } from "./CustomError";
@@ -13,6 +17,9 @@ export interface IToastErrorOptions {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
 const toastError = (
   err: ICustomError | string | true,
   options?: IToastErrorOptions
@@ -26,9 +33,12 @@ const toastError = (
     return;
   }
 
+<<<<<<< HEAD
 =======
 const toastError = (err: ICustomError, options?: IToastErrorOptions) => {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 834bd68 (OTAT-252 Add uploader field)
   const {
     filterByStatus = [],
     filterByType = [],
