@@ -1,12 +1,16 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Alert from "@mui/material/Alert";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import AlertTitle from "@mui/material/AlertTitle";
 import { Trans } from "react-i18next";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import QANumberIndicator from "../shared/QANumberIndicator";
 import AlertBox from "../shared/AlertBox";
@@ -14,6 +18,10 @@ import AlertBox from "../shared/AlertBox";
 import { TId } from "../../types";
 import QANumberIndicator from "../shared/QANumberIndicator";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import QANumberIndicator from "../shared/QANumberIndicator";
+import AlertBox from "../shared/AlertBox";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
 type TQuestionnairesNotCompleteAlertProps = {
   subjectName?: string;
@@ -30,10 +38,14 @@ const QuestionnairesNotCompleteAlert = (
   const location = useLocation();
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <AlertBox
 =======
     <Alert
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    <AlertBox
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
       severity="warning"
       variant="filled"
       sx={{
@@ -95,10 +107,14 @@ const QuestionnairesNotCompleteAlert = (
         <Trans i18nKey="pleaseCompleteAllQuestionnaires" />
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </AlertBox>
 =======
     </Alert>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    </AlertBox>
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   );
 };
 

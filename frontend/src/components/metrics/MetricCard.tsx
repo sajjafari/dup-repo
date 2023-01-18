@@ -215,12 +215,17 @@ const AnswerTemplate = (props: {
           flexWrap={"wrap"}
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
           {answer_templates?.map((template) => {
             const { value: templateValue, caption } = template || {};
 =======
           {answer_templates.map((template) => {
             const { value: templateValue, caption } = template;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          {answer_templates?.map((template) => {
+            const { value: templateValue, caption } = template || {};
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
             return (
               <Box
                 key={template.value}

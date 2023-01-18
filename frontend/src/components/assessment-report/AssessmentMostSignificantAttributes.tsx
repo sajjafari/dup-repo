@@ -11,10 +11,14 @@ import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
 import { styles } from "../../config/styles";
 import Title from "../shared/Title";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ErrorEmptyData from "../shared/errors/ErrorEmptyData";
 =======
 import EmptyError from "../shared/errors/EmptyError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorEmptyData from "../shared/errors/ErrorEmptyData";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
 interface IAssessmentMostSignificantAttributesProps {
   most_significant_items: string[];
@@ -73,10 +77,14 @@ export const AssessmentMostSignificantAttributes = (
         <Box display="flex" flexDirection={"column"} mt={4}>
           {isEmpty ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
             <ErrorEmptyData p={2} hideMessage={true} />
 =======
             <EmptyError p={2} hideMessage={true} />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            <ErrorEmptyData p={2} hideMessage={true} />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
           ) : (
             most_significant_items.map((item, index) => {
               return (

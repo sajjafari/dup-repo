@@ -1,5 +1,9 @@
 import React, { PropsWithChildren } from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import LockPersonRoundedIcon from "@mui/icons-material/LockPersonRounded";
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";

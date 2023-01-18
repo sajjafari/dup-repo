@@ -245,7 +245,16 @@
   "selectAssessment": "Select assessment",
   "changeAssessment": "Change assessment",
   "addToCompareList": "Add to compare list",
+<<<<<<< HEAD
   "statusIsEvaluatedAs": "Status is evaluated as"
 >>>>>>> 83892e7 (OTAT-212 Add compare)
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  "statusIsEvaluatedAs": "Status is evaluated as",
+  "changeSelectedAssessment": "Change selected assessment",
+  "assessmentsAreFilteredBy": "Assessments are filtered by",
+  "inOrderToSelectAssessmentsFromOtherProfiles": "In order to select assessments from other profiles make a new comparison.",
+  "newComparison": "New comparison",
+  "addToCompare": "Add to compare"
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 }

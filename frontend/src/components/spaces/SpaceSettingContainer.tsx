@@ -18,10 +18,14 @@ import { useParams } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 import { useAuthContext } from "../../providers/AuthProvider";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ErrorAccessDenied from "../shared/errors/ErrorAccessDenied";
 =======
 import AccessDeniedError from "../shared/errors/AccessDeniedError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorAccessDenied from "../shared/errors/ErrorAccessDenied";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import { styles } from "../../config/styles";
 import { ISpaceModel } from "../../types";
 import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
@@ -96,6 +100,7 @@ function SpaceSettings(props: { isOwner: boolean }) {
         </Box>
         <TabPanel value="1" sx={{ p: { xs: 1, sm: 3 } }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <ErrorAccessDenied hasAccess={isOwner}>
             <SpaceMembers />
           </ErrorAccessDenied>
@@ -104,6 +109,11 @@ function SpaceSettings(props: { isOwner: boolean }) {
             <SpaceMembers />
           </AccessDeniedError>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <ErrorAccessDenied hasAccess={isOwner}>
+            <SpaceMembers />
+          </ErrorAccessDenied>
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
         </TabPanel>
       </TabContext>
     </Box>

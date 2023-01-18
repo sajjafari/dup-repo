@@ -409,6 +409,9 @@ export const createService = (
       );
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     fetchAssessmentsInfo(
       args: { assessmentIds: TId[] },
       config: AxiosRequestConfig<any> | undefined
@@ -417,6 +420,7 @@ export const createService = (
       return axios.post(
         `/assessment/compareselect/`,
         { assessment_list_ids: assessmentIds || [] },
+<<<<<<< HEAD
         config
       );
     },
@@ -516,6 +520,14 @@ export const createService = (
     },
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        {
+          ...config,
+          withCredentials: true,
+        }
+      );
+    },
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   };
 
   return service;

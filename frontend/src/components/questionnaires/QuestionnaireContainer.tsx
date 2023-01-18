@@ -48,6 +48,7 @@ import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 =======
 import PermissionControl from "../shared/PermissionControl";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 3b81eb7 (OTAT-221 Add permission control component)
 =======
 import AlertBox from "../shared/AlertBox";
@@ -61,6 +62,9 @@ import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 import PermissionControl from "../shared/PermissionControl";
 >>>>>>> 12af81b (OTAT-221 Add permission control component)
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import AlertBox from "../shared/AlertBox";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
 const QuestionnaireContainer = () => {
   const {
@@ -250,10 +254,14 @@ const NotCompletedAlert = (props: {
         <LoadingSkeleton height="76px" />
       ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <AlertBox
 =======
         <Alert
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        <AlertBox
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
           severity={isCompleted ? "success" : "info"}
           action={
             <Button
@@ -283,10 +291,14 @@ const NotCompletedAlert = (props: {
             <Trans i18nKey="pickupQuestionnaire" />
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </AlertBox>
 =======
         </Alert>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        </AlertBox>
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
       )}
     </Box>
   );

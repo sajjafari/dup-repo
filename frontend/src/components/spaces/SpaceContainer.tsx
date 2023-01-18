@@ -11,8 +11,12 @@ import Box from "@mui/material/Box";
 import { Trans } from "react-i18next";
 import Title from "../../components/shared/Title";
 import QueryData from "../../components/shared/QueryData";
+<<<<<<< HEAD
 import EmptyError from "../../components/shared/errors/EmptyError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorEmptyData from "../../components/shared/errors/ErrorEmptyData";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import useDialog from "../../utils/useDialog";
 import CreateSpaceDialog from "./CreateSpaceDialog";
 import { SpacesList } from "./SpaceList";
@@ -70,10 +74,14 @@ const SpaceContainer = () => {
         )}
         emptyDataComponent={
 <<<<<<< HEAD
+<<<<<<< HEAD
           <ErrorEmptyData
 =======
           <EmptyError
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <ErrorEmptyData
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
             emptyMessage={<Trans i18nKey="nothingToSeeHere" />}
             suggests={
               <Typography variant="subtitle1" textAlign="center">

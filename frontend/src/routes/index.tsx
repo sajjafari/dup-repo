@@ -9,8 +9,12 @@ import ErrorNotFoundPage from "../components/shared/errors/ErrorNotFoundPage";
 import Layout from "../layouts/Layout";
 import Redirect from "./Redirect";
 import GettingThingsReadyLoading from "../components/shared/loadings/GettingThingsReadyLoading";
+<<<<<<< HEAD
 import PageNotFoundError from "../components/shared/errors/PageNotFoundError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorNotFoundPage from "../components/shared/errors/ErrorNotFoundPage";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import AuthRoutes from "./AuthRoutes";
 import AuthLayout from "../layouts/AuthLayout";
 import AppLayout from "../layouts/AppLayout";
@@ -130,8 +134,12 @@ const Routes = () => {
             element={<CompareResultScreen />}
           />
         </Route>
+<<<<<<< HEAD
         <Route path="*" element={<PageNotFoundError />} />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        <Route path="*" element={<ErrorNotFoundPage />} />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
       </RrdRoutes>
     </React.Suspense>
   );

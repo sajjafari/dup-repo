@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useServiceContext } from "../providers/ServiceProvider";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const useConnectSelectField = (props: {
   url: string;
   searchParams?: Record<string, any>;
@@ -17,6 +18,14 @@ const useConnectSelectField = (props: {
 const useConnectSelectField = (url: any) => {
   const [options, setOptions] = useState([]);
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+const useConnectSelectField = (props: {
+  url: string;
+  filterOptions?: (options: any[]) => any[];
+}) => {
+  const { url, filterOptions = (options) => options } = props;
+  const [options, setOptions] = useState<any[]>([]);
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -44,9 +53,14 @@ const useConnectSelectField = (url: any) => {
 =======
       } = await service.fetchOptions({ url }, { signal });
 
+<<<<<<< HEAD
       if (results) {
         setOptions(results);
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      if (results && Array.isArray(results)) {
+        setOptions(filterOptions(results));
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
         setError(false);
       } else {
         setOptions([]);

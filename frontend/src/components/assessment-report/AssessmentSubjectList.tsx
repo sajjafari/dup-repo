@@ -6,8 +6,12 @@ import ErrorEmptyData from "../shared/errors/ErrorEmptyData";
 =======
 import Box from "@mui/material/Box";
 import { Trans } from "react-i18next";
+<<<<<<< HEAD
 import EmptyError from "../shared/errors/EmptyError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorEmptyData from "../shared/errors/ErrorEmptyData";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import Title from "../shared/Title";
 import { AssessmentSubjectCard } from "./AssessmentSubjectCard";
 import Grid from "@mui/material/Grid";
@@ -40,10 +44,14 @@ export const AssessmentSubjectList = (props: IAssessmentSubjectListProps) => {
       <Box mt={3}>
         {isEmpty ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <ErrorEmptyData />
 =======
           <EmptyError />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <ErrorEmptyData />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
         ) : (
           <Grid
             container

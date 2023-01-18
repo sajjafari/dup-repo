@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
+=======
+import Box, { BoxProps } from "@mui/material/Box";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import HourglassEmptyRoundedIcon from "@mui/icons-material/HourglassEmptyRounded";
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";

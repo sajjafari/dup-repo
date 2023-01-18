@@ -4,15 +4,21 @@ import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import useMenu from "../../utils/useMenu";
 import { useServiceContext } from "../../providers/ServiceProvider";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import {
   createSearchParams,
   Link,
   useLocation,
   useNavigate,
 } from "react-router-dom";
+<<<<<<< HEAD
 =======
 import { Link, useLocation } from "react-router-dom";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import { Trans } from "react-i18next";
 import { styles } from "../../config/styles";
@@ -37,9 +43,13 @@ import hasStatus from "../../utils/hasStatus";
 import { toast } from "react-toastify";
 import { t } from "i18next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import CompareRoundedIcon from "@mui/icons-material/CompareRounded";
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import CompareRoundedIcon from "@mui/icons-material/CompareRounded";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
 interface IAssessmentCardProps {
   item: IAssessment;
@@ -167,9 +177,13 @@ const Actions = (props: {
   const [editLoading, setEditLoading] = React.useState(false);
   const { service } = useServiceContext();
 <<<<<<< HEAD
+<<<<<<< HEAD
   const navigate = useNavigate();
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const navigate = useNavigate();
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
   const deleteItem = async (e: any) => {
     try {
@@ -199,6 +213,9 @@ const Actions = (props: {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const addToCompare = (e: any) => {
     navigate({
       pathname: "/compare",
@@ -208,8 +225,11 @@ const Actions = (props: {
     });
   };
 
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   return (
     <MoreActions
       {...useMenu()}
@@ -254,6 +274,11 @@ const Actions = (props: {
           icon: <EditRoundedIcon fontSize="small" />,
           text: <Trans i18nKey="edit" />,
           onClick: openEditDialog,
+        },
+        {
+          icon: <CompareRoundedIcon fontSize="small" />,
+          text: <Trans i18nKey="addToCompare" />,
+          onClick: addToCompare,
         },
         {
           icon: <DeleteRoundedIcon fontSize="small" />,

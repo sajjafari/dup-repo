@@ -17,10 +17,14 @@ import {
 import { MetricCard } from "./MetricCard";
 import { Trans } from "react-i18next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ErrorEmptyData from "../../components/shared/errors/ErrorEmptyData";
 =======
 import EmptyError from "../../components/shared/errors/EmptyError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorEmptyData from "../../components/shared/errors/ErrorEmptyData";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import { Review } from "./MetricsReview";
 import { TransitionGroup } from "react-transition-group";
 import useScreenResize from "../../utils/useScreenResize";
@@ -28,10 +32,14 @@ import { styles } from "../../config/styles";
 import MetricNextPrev from "./MetricNextPrev";
 import { MetricsProgress } from "./MetricsProgress";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ErrorNotFoundOrAccessDenied } from "../../components/shared/errors/ErrorNotFoundOrAccessDenied";
 =======
 import { NotFoundOrAccessDenied } from "../../components/shared/errors/NotFoundOrAccessDenied";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { ErrorNotFoundOrAccessDenied } from "../../components/shared/errors/ErrorNotFoundOrAccessDenied";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
 export const MetricContainer = () => {
   const {
@@ -102,10 +110,14 @@ export const MetricContainer = () => {
             ) : (
               <Box mt={6}>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <ErrorNotFoundOrAccessDenied />
 =======
                 <NotFoundOrAccessDenied />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                <ErrorNotFoundOrAccessDenied />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
               </Box>
             )}
           </Box>
@@ -113,10 +125,14 @@ export const MetricContainer = () => {
       </Box>
     ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <ErrorEmptyData />
 =======
       <EmptyError />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      <ErrorEmptyData />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     )
   ) : null;
 };

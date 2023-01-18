@@ -85,6 +85,9 @@ const auth = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 const buttons = {
   compareButton: style({
     position: { xs: "fixed", md: "absolute" },
@@ -115,6 +118,7 @@ const buttons = {
   }),
 };
 
+<<<<<<< HEAD
 const compare = {
   compareResultBorder: style({
     "&:not(:last-of-type) > div": {
@@ -123,16 +127,21 @@ const compare = {
   }),
 };
 
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 export const styles = {
   ...commonStyles,
   ...auth,
   ...buttons,
+<<<<<<< HEAD
   ...compare,
 =======
 export const styles = {
   ...commonStyles,
   ...auth,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   cards,
 };
 

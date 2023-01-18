@@ -12,10 +12,16 @@ import Box from "@mui/material/Box";
 import { styles } from "../../config/styles";
 import { ECustomErrorType } from "../../types";
 import { ICustomError } from "../../utils/CustomError";
+<<<<<<< HEAD
 import EmptyError from "./errors/EmptyError";
 import DataLoadingError from "./errors/DataLoadingError";
 import { NotFoundOrAccessDenied } from "./errors/NotFoundOrAccessDenied";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorEmptyData from "./errors/ErrorEmptyData";
+import ErrorDataLoading from "./errors/ErrorDataLoading";
+import { ErrorNotFoundOrAccessDenied } from "./errors/ErrorNotFoundOrAccessDenied";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import GettingThingsReadyLoading from "./loadings/GettingThingsReadyLoading";
 import { AxiosRequestConfig } from "axios";
 
@@ -57,10 +63,14 @@ const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
     queryBatchData = [],
     isDataEmpty,
 <<<<<<< HEAD
+<<<<<<< HEAD
     errorComponent = <ErrorDataLoading />,
 =======
     errorComponent = <DataLoadingError />,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    errorComponent = <ErrorDataLoading />,
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     renderLoading = () => loadingComponent,
     loadingComponent = (
       <Box sx={{ ...styles.centerVH }} pt={3}>
@@ -69,10 +79,14 @@ const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
     ),
     renderError = defaultRenderError,
 <<<<<<< HEAD
+<<<<<<< HEAD
     emptyDataComponent = <ErrorEmptyData />,
 =======
     emptyDataComponent = <EmptyError />,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    emptyDataComponent = <ErrorEmptyData />,
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     data = reduceData<T>(queryBatchData),
     loading = reduceLoadings<T>(queryBatchData),
     loaded = reduceLoaded<T>(queryBatchData),
@@ -100,10 +114,14 @@ const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
 export const defaultRenderError = (
   err: ICustomError | (ICustomError | ICustomError[] | undefined)[] | undefined,
 <<<<<<< HEAD
+<<<<<<< HEAD
   errorComponent: JSX.Element = <ErrorDataLoading />
 =======
   errorComponent: JSX.Element = <DataLoadingError />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  errorComponent: JSX.Element = <ErrorDataLoading />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 ): any => {
   if (!err) {
     return errorComponent;
@@ -128,10 +146,14 @@ export const defaultRenderError = (
     err.type === ECustomErrorType.ACCESS_DENIED
   ) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return <ErrorNotFoundOrAccessDenied />;
 =======
     return <NotFoundOrAccessDenied />;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    return <ErrorNotFoundOrAccessDenied />;
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   }
   return errorComponent;
 };

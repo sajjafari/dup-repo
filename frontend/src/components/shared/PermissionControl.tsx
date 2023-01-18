@@ -2,10 +2,14 @@ import React, { PropsWithChildren } from "react";
 import { ECustomErrorType } from "../../types";
 import { ICustomError } from "../../utils/CustomError";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ErrorNotFoundOrAccessDenied } from "./errors/ErrorNotFoundOrAccessDenied";
 =======
 import { NotFoundOrAccessDenied } from "./errors/NotFoundOrAccessDenied";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { ErrorNotFoundOrAccessDenied } from "./errors/ErrorNotFoundOrAccessDenied";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
 interface IPermissionControl {
   error: (ICustomError | undefined) | (ICustomError | undefined)[];
@@ -23,10 +27,14 @@ const PermissionControl = (props: PropsWithChildren<IPermissionControl>) => {
 
   if (!hasViewPermission) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     return <ErrorNotFoundOrAccessDenied />;
 =======
     return <NotFoundOrAccessDenied />;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    return <ErrorNotFoundOrAccessDenied />;
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   }
 
   return <>{children}</>;

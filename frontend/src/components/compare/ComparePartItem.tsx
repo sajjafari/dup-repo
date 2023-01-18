@@ -6,8 +6,12 @@ import { Box } from "@mui/material";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 =======
 import Box from "@mui/material/Box";
+<<<<<<< HEAD
 import Paper from "@mui/material/Paper";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import { Trans } from "react-i18next";
 import { styles } from "../../config/styles";
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
@@ -17,6 +21,9 @@ import Title from "../shared/Title";
 import { Gauge } from "../shared/charts/Gauge";
 import ProgressChip from "../shared/ProgressChip";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import { TId, TQueryFunction } from "../../types";
 import IconButton from "@mui/material/IconButton";
 import {
@@ -24,6 +31,7 @@ import {
   useCompareContext,
   useCompareDispatch,
 } from "../../providers/CompareProvider";
+<<<<<<< HEAD
 
 interface IComparePartsItemProps {
   data: any;
@@ -36,21 +44,30 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
   const { data, index, disabled, fetchAssessmentsInfo } = props;
 =======
 import { ICompareModel, TQueryFunction } from "../../types";
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
 interface IComparePartsItemProps {
   data: any;
-  fetchCompare: TQueryFunction<ICompareModel>;
+  index: number;
+  disabled: boolean;
+  fetchAssessmentsInfo: TQueryFunction;
 }
 
 const ComparePartItem = (props: IComparePartsItemProps) => {
+<<<<<<< HEAD
   const { data, fetchCompare } = props;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const { data, index, disabled, fetchAssessmentsInfo } = props;
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const dialogProps = useDialog({
     context: {
       data,
       type: data?.id ? "update" : "create",
     },
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -82,17 +99,42 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
             disabled ? "#101c324f" : data?.color?.color_code || "#101c32"
           }`,
 =======
+=======
+
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   return (
-    <Paper>
+    <Box
+      display="flex"
+      flexDirection={"column"}
+      minHeight="264px"
+      height="100%"
+      position="relative"
+    >
+      {data?.id && (
+        <DeleteAssessmentIconBtn
+          fetchAssessmentsInfo={fetchAssessmentsInfo}
+          index={index}
+          id={data?.id}
+        />
+      )}
       <Button
         fullWidth
         color="inherit"
+        disabled={disabled}
         sx={{
           p: 3,
+          height: "100%",
           px: 3.5,
           borderRadius: 2,
+<<<<<<< HEAD
           minHeight: "264px",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+
+          border: `2px dashed ${
+            disabled ? "#101c324f" : data?.color?.color_code || "#101c32"
+          }`,
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
           ...(data
             ? {
                 display: "flex",
@@ -141,13 +183,19 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
         )}
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
       <CompareItemCEFormDialog {...dialogProps} index={index} />
     </Box>
   );
 };
 
+<<<<<<< HEAD
 const numberMap = ["first", "second", "third", "fourth"];
 
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 const DeleteAssessmentIconBtn = (props: {
   id: TId;
   index: number;
@@ -176,18 +224,27 @@ const DeleteAssessmentIconBtn = (props: {
       sx={{
         opacity: 0.9,
         position: "absolute",
+<<<<<<< HEAD
         zIndex: 2,
         bottom: "10px",
         left: index % 2 !== 0 ? undefined : "10px",
+=======
+        zIndex: -1,
+        bottom: "10px",
+        left: "10px",
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
         right: index % 2 !== 0 ? { xs: "none", md: "10px" } : undefined,
       }}
     >
       <DeleteRoundedIcon />
     </IconButton>
+<<<<<<< HEAD
 =======
       <CompareItemCEFormDialog {...dialogProps} onSubmitForm={fetchCompare} />
     </Paper>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   );
 };
 

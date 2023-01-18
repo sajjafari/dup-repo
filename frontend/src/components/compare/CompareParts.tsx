@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from "react";
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Grid";
@@ -91,27 +92,46 @@ const CompareParts = () => {
       </PermissionControl>
 =======
 import React from "react";
+=======
+import React, { useEffect } from "react";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import ComparePartItem from "./ComparePartItem";
+import Button from "@mui/material/Button";
+import { Trans } from "react-i18next";
+import {
+  createSearchParams,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 import { useServiceContext } from "../../providers/ServiceProvider";
 import { useQuery } from "../../utils/useQuery";
 import QueryData from "../shared/QueryData";
-import Button from "@mui/material/Button";
-import { Trans } from "react-i18next";
 import { LoadingSkeleton } from "../shared/loadings/LoadingSkeleton";
-import { ICompareModel } from "../../types";
-import getAssessmentResult from "../../utils/getAssessmentResult";
-import { createSearchParams, useNavigate } from "react-router-dom";
+import {
+  compareActions,
+  useCompareContext,
+  useCompareDispatch,
+} from "../../providers/CompareProvider";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
+import Chip from "@mui/material/Chip";
+import { styles } from "../../config/styles";
+import AlertBox from "../shared/AlertBox";
 
 const CompareParts = () => {
-  const { compareQueryData } = useCompareParts();
+  const { assessmentIds, assessmentsInfoQueryData } = useCompareParts();
 
   return (
-    <Box>
+    <Box sx={{ pb: { xs: 6, sm: 0 } }}>
+      <Box my={3}>
+        <ProfileField />
+      </Box>
       <Box position={"relative"}>
         <QueryData
-          {...compareQueryData}
+          {...assessmentsInfoQueryData}
+          isDataEmpty={() => false}
           renderLoading={() => {
             return (
               <>
@@ -119,8 +139,12 @@ const CompareParts = () => {
                 <Grid container spacing={3}>
                   {[0, 1, 2, 3].map((index) => {
                     return (
-                      <Grid item xs={12} sm={6} key={index}>
-                        <LoadingSkeleton height="264px" />
+                      <Grid item xs={12} md={6} key={index}>
+                        <LoadingSkeleton
+                          height={
+                            assessmentIds?.length === 0 ? "264px" : "290px"
+                          }
+                        />
                       </Grid>
                     );
                   })}
@@ -128,25 +152,25 @@ const CompareParts = () => {
               </>
             );
           }}
-          render={(data) => {
-            const { assessment_project_compare_list = [] } = data;
-            const canCompare = assessment_project_compare_list.length > 1;
+          render={(res = []) => {
             return (
               <>
                 <CompareButton
-                  disabled={!canCompare}
-                  assessmentIds={extractAssessmentIdsFromCompareList(
-                    assessment_project_compare_list
-                  )}
+                  assessmentIds={assessmentIds as string[]}
+                  disabled={assessmentIds?.length <= 1}
                 />
                 <Grid container spacing={3}>
                   {[0, 1, 2, 3].map((index) => {
-                    const data = assessment_project_compare_list[index];
+                    const data = res[index];
                     return (
-                      <Grid item xs={12} sm={6} key={index}>
+                      <Grid item xs={12} md={6} key={index}>
                         <ComparePartItem
                           data={data}
-                          fetchCompare={compareQueryData.query}
+                          index={index}
+                          disabled={
+                            assessmentIds.length >= index ? false : true
+                          }
+                          fetchAssessmentsInfo={assessmentsInfoQueryData.query}
                         />
                       </Grid>
                     );
@@ -165,12 +189,16 @@ const CompareParts = () => {
 const useCompareParts = () => {
   const { service } = useServiceContext();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const [searchParams, setSearchParams] = useSearchParams();
   const assessmentsInfoQueryData = useQuery({
     service: (args, config) => service.fetchAssessmentsInfo(args, config),
     runOnMount: false,
     initialLoading: true,
     initialData: [],
+<<<<<<< HEAD
   });
   const { assessmentIds, profile: contextProfile } = useCompareContext();
   const dispatch = useCompareDispatch();
@@ -206,10 +234,45 @@ const useCompareParts = () => {
 =======
   const compareQueryData = useQuery<ICompareModel>({
     service: (args, config) => service.fetchCompare(args, config),
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   });
+  const { assessmentIds, profile: contextProfile } = useCompareContext();
+  const dispatch = useCompareDispatch();
 
+<<<<<<< HEAD
   return { compareQueryData };
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  useEffect(() => {
+    assessmentsInfoQueryData.query({ assessmentIds });
+    setSearchParams(createSearchParams({ assessmentIds } as any), {
+      replace: true,
+    });
+  }, [assessmentIds.join()]);
+
+  useEffect(() => {
+    if (assessmentsInfoQueryData.loaded && !contextProfile) {
+      const profile = assessmentsInfoQueryData.data?.find(
+        (item: any) => item?.assessment_profile
+      );
+      if (profile) {
+        dispatch(compareActions.setProfile(profile.assessment_profile));
+      }
+    }
+  }, [assessmentsInfoQueryData.loaded]);
+
+  useEffect(() => {
+    const assessmentIdsParams = searchParams.getAll("assessmentIds");
+    if (assessmentIdsParams.length == 0 && assessmentIds.length > 0) {
+      assessmentsInfoQueryData.query({ assessmentIds: [] });
+      dispatch(compareActions.setProfile(null));
+      dispatch(compareActions.setAssessmentIds(assessmentIdsParams));
+    }
+  }, [searchParams]);
+
+  return { assessmentIds, assessmentsInfoQueryData };
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 };
 
 const CompareButton = (props: {
@@ -217,10 +280,14 @@ const CompareButton = (props: {
   assessmentIds?: string[];
 }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { assessmentIds, disabled = false } = props;
 =======
   const { disabled = false, assessmentIds } = props;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const { assessmentIds, disabled = false } = props;
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -245,6 +312,7 @@ const CompareButton = (props: {
         size="large"
         disabled={disabled}
 <<<<<<< HEAD
+<<<<<<< HEAD
         sx={{ ...styles.compareButton }}
 =======
         sx={{
@@ -258,10 +326,14 @@ const CompareButton = (props: {
           zIndex: 2,
         }}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        sx={{ ...styles.compareButton }}
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
         onClick={handleClick}
       >
         <Trans i18nKey="compare" />
       </Button>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Box sx={{ ...styles.compareButtonBg }} />
 =======
@@ -279,12 +351,19 @@ const CompareButton = (props: {
         }}
       />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      <Box sx={{ ...styles.compareButtonBg }} />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     </>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CompareSelectedProfileInfo = () => {
+=======
+const ProfileField = () => {
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const { profile } = useCompareContext();
   const dispatch = useCompareDispatch();
   const makeNewComparison = () => {
@@ -309,11 +388,16 @@ const CompareSelectedProfileInfo = () => {
         <Trans i18nKey="assessmentsAreFilteredBy" />{" "}
         <Chip label={profile.title} />
       </AlertTitle>
+<<<<<<< HEAD
       <Trans i18nKey="toCompareAssessmentsOfOtherProfiles" />
+=======
+      <Trans i18nKey="inOrderToSelectAssessmentsFromOtherProfiles" />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     </AlertBox>
   ) : (
     <></>
   );
+<<<<<<< HEAD
 =======
 const extractAssessmentIdsFromCompareList = (
   compareList: any[] | undefined
@@ -323,6 +407,8 @@ const extractAssessmentIdsFromCompareList = (
   }
   return compareList.map((compareItem) => compareItem.id);
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 };
 
 export default CompareParts;

@@ -5,12 +5,16 @@ import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectProps } from "@mui/material/Select";
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useFormContext, UseFormRegister } from "react-hook-form";
 import getFieldError from "../../../utils/getFieldError";
 import ColorLensRoundedIcon from "@mui/icons-material/ColorLensRounded";
 import { Box } from "@mui/material";
 =======
 import { useFormContext } from "react-hook-form";
+=======
+import { useFormContext, UseFormRegister } from "react-hook-form";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import getFieldError from "../../../utils/getFieldError";
 import ColorLensRoundedIcon from "@mui/icons-material/ColorLensRounded";
 import Box from "@mui/material/Box";
@@ -23,6 +27,9 @@ const selectField = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 interface ISelectFieldUC extends ISelectField {}
 
 const SelectFieldUC = (props: ISelectFieldUC) => {
@@ -46,6 +53,7 @@ const SelectFieldUC = (props: ISelectFieldUC) => {
 };
 
 interface ISelectField extends SelectProps {
+<<<<<<< HEAD
   renderOption?: (option: any) => JSX.Element;
   InputLabelProps?: InputLabelProps;
   helperText?: string | JSX.Element | Element;
@@ -55,12 +63,18 @@ interface ISelectFieldUC extends SelectProps {
   InputLabelProps?: InputLabelProps;
   helperText?: string | JSX.Element;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  renderOption?: (option: any) => JSX.Element;
+  InputLabelProps?: InputLabelProps;
+  helperText?: string | JSX.Element | Element;
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   options: any[];
   nullable?: boolean;
   name: string;
   size?: "small" | "medium" | undefined;
   loading?: boolean;
   renderLoading?: () => JSX.Element;
+<<<<<<< HEAD
 <<<<<<< HEAD
   error?: boolean;
   fetchOptions?: any;
@@ -73,6 +87,14 @@ export const SelectField = (props: ISelectField) => {
 
 const SelectFieldUC = (props: ISelectFieldUC) => {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  error?: boolean;
+  fetchOptions?: any;
+  register?: UseFormRegister<any>;
+}
+
+export const SelectField = (props: ISelectField) => {
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const {
     name,
     required,
@@ -87,17 +109,24 @@ const SelectFieldUC = (props: ISelectFieldUC) => {
     renderOption = defaultRenderOption,
     renderLoading = defaultRenderLoading,
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetchOptions,
     error,
     register,
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    fetchOptions,
+    error,
+    register,
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     ...rest
   } = props;
 
   const selectOptions = nullable
     ? [{ id: "", title: "---" }, ...options]
     : options;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -108,10 +137,17 @@ const SelectFieldUC = (props: ISelectFieldUC) => {
     formState: { errors },
   } = useFormContext();
   const { hasError, errorMessage } = getFieldError(errors, name);
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
+  console.log(defaultValue);
   return (
+<<<<<<< HEAD
     <FormControl fullWidth error={hasError} size={size} variant="outlined">
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    <FormControl fullWidth error={error} size={size} variant="outlined">
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
       <InputLabel
         required={required}
         id={`select_label_id_${name}`}
@@ -122,6 +158,7 @@ const SelectFieldUC = (props: ISelectFieldUC) => {
       <Select
         {...rest}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {...(register ? register(name, { required }) : {})}
         defaultValue={defaultValue}
         labelId={`select_label_id_${name}`}
@@ -130,6 +167,11 @@ const SelectFieldUC = (props: ISelectFieldUC) => {
         labelId={`select_label_id_${name}`}
         {...register(name, { required })}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        {...(register ? register(name, { required }) : {})}
+        defaultValue={defaultValue}
+        labelId={`select_label_id_${name}`}
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
         sx={{
           ...(rest?.sx || {}),
           "& .MuiSelect-select": { display: "flex", alignItems: "center" },
@@ -142,12 +184,16 @@ const SelectFieldUC = (props: ISelectFieldUC) => {
             })}
       </Select>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {helperText && <FormHelperText>{helperText as any}</FormHelperText>}
 =======
       {(errorMessage || helperText) && (
         <FormHelperText>{(errorMessage || helperText) as any}</FormHelperText>
       )}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      {helperText && <FormHelperText>{helperText as any}</FormHelperText>}
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     </FormControl>
   );
 };
@@ -177,6 +223,7 @@ const defaultRenderLoading = () => {
   return [1, 2, 3, 4].map((index) => {
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Box m={0.5} key={index}>
         <LoadingSkeleton sx={{ borderRadius: 1 }} height="36px" width="100%" />
 =======
@@ -188,6 +235,10 @@ const defaultRenderLoading = () => {
           width="100%"
         />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      <Box m={0.5} key={index}>
+        <LoadingSkeleton sx={{ borderRadius: 1 }} height="36px" width="100%" />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
       </Box>
     );
   });

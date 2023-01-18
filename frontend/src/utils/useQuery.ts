@@ -25,7 +25,11 @@ import defToastError, { IToastErrorOptions } from "./toastError";
 interface IUseQueryProps<T, A> {
   initialData?: any;
   runOnMount?: boolean;
+<<<<<<< HEAD
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  initialLoading?: boolean;
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   toastError?:
     | boolean
     | ((err: ICustomError, options?: IToastErrorOptions) => void);
@@ -49,6 +53,7 @@ export const useQuery = <T extends any = any, A extends any = any>(
     service,
     runOnMount = true,
 <<<<<<< HEAD
+<<<<<<< HEAD
     initialLoading = runOnMount,
     toastError = false,
     toastErrorOptions,
@@ -57,12 +62,19 @@ export const useQuery = <T extends any = any, A extends any = any>(
   const [data, setData] = useState<T>(initialData);
   const [loading, setLoading] = useState(initialLoading);
 =======
+=======
+    initialLoading = runOnMount,
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
     toastError = false,
     toastErrorOptions,
   } = props;
   const [data, setData] = useState<T>(initialData);
+<<<<<<< HEAD
   const [loading, setLoading] = useState(() => (runOnMount ? true : false));
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const [loading, setLoading] = useState(initialLoading);
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const [error, setError] = useState(false);
   const [errorObject, setErrorObject] = useState<undefined | ICustomError>(
     undefined

@@ -3,10 +3,14 @@ import { Trans } from "react-i18next";
 import Title from "../../components/shared/Title";
 import QueryData from "../../components/shared/QueryData";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ErrorEmptyData from "../../components/shared/errors/ErrorEmptyData";
 =======
 import EmptyError from "../../components/shared/errors/EmptyError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import ErrorEmptyData from "../../components/shared/errors/ErrorEmptyData";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import { useServiceContext } from "../../providers/ServiceProvider";
 import useDialog from "../../utils/useDialog";
 import { AssessmentsList } from "./AssessmentList";
@@ -19,10 +23,14 @@ import toastError from "../../utils/toastError";
 import { ToolbarCreateItemBtn } from "../../components/shared/buttons/ToolbarCreateItemBtn";
 import { ECustomErrorType } from "../../types";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ErrorNotFoundOrAccessDenied } from "../../components/shared/errors/ErrorNotFoundOrAccessDenied";
 =======
 import { NotFoundOrAccessDenied } from "../../components/shared/errors/NotFoundOrAccessDenied";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { ErrorNotFoundOrAccessDenied } from "../../components/shared/errors/ErrorNotFoundOrAccessDenied";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
@@ -42,10 +50,14 @@ const AssessmentContainer = () => {
     (errorObject?.type === ECustomErrorType.ACCESS_DENIED ||
       errorObject?.type === ECustomErrorType.NOT_FOUND) ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ErrorNotFoundOrAccessDenied />
 =======
     <NotFoundOrAccessDenied />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    <ErrorNotFoundOrAccessDenied />
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   ) : (
     <Box display="flex" flexDirection="column" m="auto">
       <Title
@@ -83,10 +95,14 @@ const AssessmentContainer = () => {
         renderLoading={() => <LoadingSkeletonOfAssessments />}
         emptyDataComponent={
 <<<<<<< HEAD
+<<<<<<< HEAD
           <ErrorEmptyData
 =======
           <EmptyError
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <ErrorEmptyData
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
             emptyMessage={<Trans i18nKey="nothingToSeeHere" />}
             suggests={
               <Typography variant="subtitle1" textAlign="center">

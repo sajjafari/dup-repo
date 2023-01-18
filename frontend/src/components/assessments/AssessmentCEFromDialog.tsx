@@ -137,10 +137,14 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
           <Grid item xs={12} md={4}>
             <SelectFieldUC
 <<<<<<< HEAD
+<<<<<<< HEAD
               {...useConnectSelectField({ url: "/assessment/colors/" })}
 =======
               {...useConnectSelectField("/assessment/colors/")}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              {...useConnectSelectField({ url: "/assessment/colors/" })}
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
               name="color"
               defaultValue={defaultValues?.color?.id || ""}
               label={<Trans i18nKey="color" />}

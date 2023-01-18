@@ -130,6 +130,9 @@ export interface IAssessmentProfileModel {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 export interface IProfile {
   code: string;
   description: string;
@@ -137,8 +140,11 @@ export interface IProfile {
   title: string;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 export interface IAssessmentResult {
   assessment_project: string;
   id: TId;
@@ -298,6 +304,7 @@ export interface IQuestionnairesInfo {
   metric_number: number;
   progress: number;
   last_updated?: string;
+<<<<<<< HEAD
 <<<<<<< HEAD:frontend/src/types.ts
 <<<<<<< HEAD
   current_metric_index: number;
@@ -306,6 +313,8 @@ export interface IQuestionnairesInfo {
 =======
   current_metric_index: number;
 >>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/types.ts
+=======
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   title: string;
   subject: { id: TId; title: string }[];
 }
@@ -364,10 +373,14 @@ export interface IQuestionnairesPageDataModel {
 export interface IDialogProps extends DialogProps {
   onClose: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
   onSubmitForm?: (args: any) => void;
 =======
   onSubmitForm?: () => void;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  onSubmitForm?: (args: any) => void;
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
   openDialog?: any;
   context?: IDialogContext;
 }

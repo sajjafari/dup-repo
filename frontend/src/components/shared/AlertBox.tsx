@@ -1,6 +1,10 @@
 import React from "react";
 import Alert, { AlertProps } from "@mui/material/Alert";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import useScreenResize from "../../utils/useScreenResize";
 
 interface IAlertBox extends AlertProps {}
@@ -14,14 +18,22 @@ const AlertBox = (props: IAlertBox) => {
       {...rest}
       action={!isSmall ? action : undefined}
       sx={
+<<<<<<< HEAD
         isSmall && action
+=======
+        isSmall
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
           ? { ...(rest.sx || {}), "& .MuiAlert-message": { width: "100%" } }
           : rest.sx
       }
     >
       <Box sx={isSmall ? { flexDirection: "column", width: "100%" } : {}}>
         {children}
+<<<<<<< HEAD
         {isSmall && action ? (
+=======
+        {isSmall ? (
+>>>>>>> 671bfb7 (OTAT-212 Add compare page)
           <Box
             sx={{
               pt: { xs: 1.5, md: 0.5 },
