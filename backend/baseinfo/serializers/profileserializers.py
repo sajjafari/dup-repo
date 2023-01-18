@@ -86,6 +86,7 @@ class AssessmentProfileSerilizer(serializers.ModelSerializer):
         model = AssessmentProfile
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         fields = ['id', 'code', 'title', 'metric_categories', 'assessment_subjects', 'description', 'images', 'tags']
 >>>>>>> 055f1b9 (Add tag to profile display)
 =======
@@ -94,6 +95,9 @@ class AssessmentProfileSerilizer(serializers.ModelSerializer):
 =======
         fields = ['id', 'code', 'title', 'description', 'images', 'tags', 'expert_group', 'number_of_assessment', 'current_user_delete_permission']
 >>>>>>> 0c3a6ff (OTAT-283: profile delete service is ready)
+=======
+        fields = ['id', 'code', 'title', 'summary', 'about', 'images', 'tags', 'expert_group', 'number_of_assessment', 'current_user_delete_permission']
+>>>>>>> 9636b53 (OTAT-310: Add about to profile and related services)
 
 class AssessmentProfileCreateSerilizer(serializers.ModelSerializer):
     class Meta:

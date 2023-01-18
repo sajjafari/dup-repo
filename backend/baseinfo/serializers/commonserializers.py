@@ -99,7 +99,7 @@ class FileUploadSerializer(Serializer):
 class AssessmentProfileSimpleSerilizer(serializers.ModelSerializer):
     class Meta:
         model = AssessmentProfile
-        fields = ['id', 'code', 'title', 'description']
+        fields = ['id', 'code', 'title', 'summary']
 
 class ExpertGroupSimpleSerilizers(serializers.ModelSerializer):
     class Meta:
