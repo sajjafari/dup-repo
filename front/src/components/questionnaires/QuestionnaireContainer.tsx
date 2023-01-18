@@ -25,6 +25,7 @@ import { LoadingSkeleton } from "../shared/loadings/LoadingSkeleton";
 import hasStatus from "../../utils/hasStatus";
 import Button from "@mui/material/Button";
 import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
+<<<<<<< HEAD
 =======
 import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
 =======
@@ -35,6 +36,9 @@ import SupTitleBreadcrumb, {
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 >>>>>>> ce7326d (OTAT-218 Add breadcrumb)
+=======
+import PermissionControl from "../shared/PermissionControl";
+>>>>>>> 3b81eb7 (OTAT-221 Add permission control component)
 
 const QuestionnaireContainer = () => {
   const {
@@ -46,6 +50,7 @@ const QuestionnaireContainer = () => {
   const progress = questionnaireQueryData.data?.progress || 0;
 
   return (
+<<<<<<< HEAD
     <Box>
 <<<<<<< HEAD
       <Title
@@ -115,9 +120,52 @@ const QuestionnaireContainer = () => {
         <QuestionnaireList
           questionnaireQueryData={questionnaireQueryData}
           pageQueryData={pageQueryData}
+=======
+    <PermissionControl
+      error={[
+        pageQueryData.errorObject,
+        questionnaireQueryData.errorObject,
+        totalProgressQueryData.errorObject,
+        assessmentQueryData.errorObject,
+      ]}
+    >
+      <Box>
+        <QuestionnaireTitle />
+        <NotCompletedAlert
+          isCompleted={
+            totalProgressQueryData.data?.total_progress?.progress == 100
+          }
+          hasStatus={hasStatus(assessmentQueryData.data?.status)}
+          loading={
+            totalProgressQueryData.loading || assessmentQueryData.loading
+          }
+>>>>>>> 3b81eb7 (OTAT-221 Add permission control component)
         />
+        <Box
+          flexWrap={"wrap"}
+          sx={{
+            ...styles.centerCV,
+            transition: "height 1s ease",
+            backgroundColor: "#01221e",
+            background: questionnaireQueryData.loading
+              ? undefined
+              : `linear-gradient(135deg, #2e7d72 ${progress}%, #01221e ${progress}%)`,
+            px: { xs: 1, sm: 2, md: 3, lg: 4 },
+            pt: { xs: 5, sm: 3 },
+            pb: 5,
+          }}
+          borderRadius={2}
+          my={2}
+          color="white"
+          position={"relative"}
+        >
+          <QuestionnaireList
+            questionnaireQueryData={questionnaireQueryData}
+            pageQueryData={pageQueryData}
+          />
+        </Box>
       </Box>
-    </Box>
+    </PermissionControl>
   );
 };
 
