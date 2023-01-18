@@ -11,6 +11,7 @@ import setServerFieldErrors from "../../utils/setServerFieldError";
 import useConnectSelectField from "../../utils/useConnectSelectField";
 import NoteAddRoundedIcon from "@mui/icons-material/NoteAddRounded";
 import { ICustomError } from "../../utils/CustomError";
+<<<<<<< HEAD
 import { Link, useParams } from "react-router-dom";
 import toastError from "../../utils/toastError";
 import { CEDialog, CEDialogActions } from "../../components/shared/dialogs/CEDialog";
@@ -19,6 +20,15 @@ import AutocompleteAsyncField, { useConnectAutocompleteField } from "../shared/f
 import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
+=======
+import { useParams } from "react-router-dom";
+import toastError from "../../utils/toastError";
+import {
+  CEDialog,
+  CEDialogActions,
+} from "../../components/shared/dialogs/CEDialog";
+import FormProviderWithForm from "../../components/shared/FormProviderWithForm";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 interface IAssessmentCEFromDialogProps extends DialogProps {
   onClose: () => void;
@@ -30,7 +40,17 @@ interface IAssessmentCEFromDialogProps extends DialogProps {
 const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
   const [loading, setLoading] = React.useState(false);
   const { service } = useServiceContext();
+<<<<<<< HEAD
   const { onClose: closeDialog, onSubmitForm, context = {}, openDialog, ...rest } = props;
+=======
+  const {
+    onClose: closeDialog,
+    onSubmitForm,
+    context = {},
+    openDialog,
+    ...rest
+  } = props;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   const { type, data = {} } = context;
   const { id: rowId } = data;
   const defaultValues = type === "update" ? data : {};
@@ -53,8 +73,19 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
     try {
       const { data: res } =
         type === "update"
+<<<<<<< HEAD
           ? await service.updateAssessment({ rowId, data: { space: spaceId, ...data } }, { signal: abortController.signal })
           : await service.createAssessment({ data: { space: spaceId, ...data } }, { signal: abortController.signal });
+=======
+          ? await service.updateAssessment(
+              { rowId, data: { space: spaceId, ...data } },
+              { signal: abortController.signal }
+            )
+          : await service.createAssessment(
+              { data: { space: spaceId, ...data } },
+              { signal: abortController.signal }
+            );
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       setLoading(false);
       onSubmitForm();
       close();
@@ -73,11 +104,26 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
       title={
         <>
           <NoteAddRoundedIcon sx={{ mr: 1 }} />
+<<<<<<< HEAD
           {type === "update" ? <Trans i18nKey="updateAssessment" /> : <Trans i18nKey="createAssessment" />}
         </>
       }
     >
       <FormProviderWithForm formMethods={formMethods} onSubmit={formMethods.handleSubmit(onSubmit)}>
+=======
+          {type === "update" ? (
+            <Trans i18nKey="updateAssessment" />
+          ) : (
+            <Trans i18nKey="createAssessment" />
+          )}
+        </>
+      }
+    >
+      <FormProviderWithForm
+        formMethods={formMethods}
+        onSubmit={formMethods.handleSubmit(onSubmit)}
+      >
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         <Grid container spacing={2} sx={styles.formGrid}>
           <Grid item xs={12} md={8}>
             <InputFieldUC
@@ -90,15 +136,22 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
           </Grid>
           <Grid item xs={12} md={4}>
             <SelectFieldUC
+<<<<<<< HEAD
               {...useConnectSelectField({ url: "/assessment/colors/" })}
+=======
+              {...useConnectSelectField("/assessment/colors/")}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               name="color"
               defaultValue={defaultValues?.color?.id || ""}
               label={<Trans i18nKey="color" />}
             />
           </Grid>
+<<<<<<< HEAD
           <Grid item xs={12}>
             <ProfileField defaultValue={defaultValues?.assessment_profile} />
           </Grid>
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         </Grid>
         <CEDialogActions closeDialog={close} loading={loading} type={type} />
       </FormProviderWithForm>
@@ -106,6 +159,7 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
   );
 };
 
+<<<<<<< HEAD
 const ProfileField = ({ defaultValue }: { defaultValue: any }) => {
   const { service } = useServiceContext();
   const queryData = useConnectAutocompleteField({
@@ -123,4 +177,6 @@ const ProfileField = ({ defaultValue }: { defaultValue: any }) => {
   );
 };
 
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 export default AssessmentCEFromDialog;

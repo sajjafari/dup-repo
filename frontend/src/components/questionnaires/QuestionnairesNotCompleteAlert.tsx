@@ -1,10 +1,19 @@
 import React from "react";
+<<<<<<< HEAD
+=======
+import Alert from "@mui/material/Alert";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import AlertTitle from "@mui/material/AlertTitle";
 import { Trans } from "react-i18next";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
+<<<<<<< HEAD
 import QANumberIndicator from "../shared/QANumberIndicator";
 import AlertBox from "../shared/AlertBox";
+=======
+import { TId } from "../../types";
+import QANumberIndicator from "../shared/QANumberIndicator";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 type TQuestionnairesNotCompleteAlertProps = {
   subjectName?: string;
@@ -20,7 +29,11 @@ const QuestionnairesNotCompleteAlert = (
   const { subjectName, to, progress, q, a } = props;
   const location = useLocation();
   return (
+<<<<<<< HEAD
     <AlertBox
+=======
+    <Alert
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       severity="warning"
       variant="filled"
       sx={{
@@ -46,7 +59,11 @@ const QuestionnairesNotCompleteAlert = (
               state={location}
               to={to}
             >
+<<<<<<< HEAD
               {subjectName} <Trans i18nKey="questionnaires" />{" "}
+=======
+              {subjectName} questionnaires{" "}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               {q && a && (
                 <QANumberIndicator
                   q={q}
@@ -77,7 +94,11 @@ const QuestionnairesNotCompleteAlert = (
       ) : (
         <Trans i18nKey="pleaseCompleteAllQuestionnaires" />
       )}
+<<<<<<< HEAD
     </AlertBox>
+=======
+    </Alert>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   );
 };
 

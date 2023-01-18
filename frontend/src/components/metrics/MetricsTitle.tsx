@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
@@ -18,7 +22,10 @@ import SupTitleBreadcrumb, {
 } from "../shared/SupTitleBreadcrumb";
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
+<<<<<<< HEAD
 import { t } from "i18next";
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 const MetricsTitle = (props: {
   data: IQuestionnaireModel;
@@ -81,12 +88,21 @@ const MetricsTitle = (props: {
             routes={[
               {
                 title: breadcrumbInfo?.space,
+<<<<<<< HEAD
                 to: `/${spaceId}/assessments`,
                 icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
               },
               {
                 title: `${breadcrumbInfo?.assessment} ${t("questionnaires")}`,
                 to: `/${spaceId}/assessments/${assessmentId}/questionnaires`,
+=======
+                to: "/spaces/",
+                icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
+              },
+              {
+                title: breadcrumbInfo?.assessment,
+                to: `/${spaceId}/assessments`,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                 icon: (
                   <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
                 ),
@@ -106,7 +122,11 @@ const MetricsTitle = (props: {
             <Typography
               display="inline-block"
               variant="h5"
+<<<<<<< HEAD
               sx={{ opacity: 0.6, marginLeft: 1, fontWeight: "bold" }}
+=======
+              sx={{ opacity: 0.6, marginLeft: 1 }}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             >
               <Trans i18nKey="review" />
             </Typography>
@@ -126,7 +146,10 @@ const MetricsTitle = (props: {
                   display="inline-flex"
                   variant="h5"
                   sx={{
+<<<<<<< HEAD
                     fontWeight: "bold",
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                     opacity: 0.6,
                     ml: { xs: 0, sm: 1 },
                     alignItems: "center",
@@ -138,7 +161,10 @@ const MetricsTitle = (props: {
                 <Typography
                   display="inline-block"
                   variant="h5"
+<<<<<<< HEAD
                   fontWeight={"bold"}
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                   sx={{ opacity: 0.6, ml: { xs: 0, sm: 1 } }}
                 >
                   {" "}

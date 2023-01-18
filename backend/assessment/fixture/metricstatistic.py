@@ -1,4 +1,4 @@
-from assessmentbaseinfo.models import MetricCategory, AssessmentSubject
+from baseinfo.models import MetricCategory, AssessmentSubject
 from .dictionary import Dictionary
 from ..models import AssessmentResult
 

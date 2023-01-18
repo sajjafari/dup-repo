@@ -1,7 +1,13 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import ErrorEmptyData from "../shared/errors/ErrorEmptyData";
+=======
+import Box from "@mui/material/Box";
+import { Trans } from "react-i18next";
+import EmptyError from "../shared/errors/EmptyError";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import Title from "../shared/Title";
 import { AssessmentSubjectCard } from "./AssessmentSubjectCard";
 import Grid from "@mui/material/Grid";
@@ -22,14 +28,22 @@ export const AssessmentSubjectList = (props: IAssessmentSubjectListProps) => {
         <Title
           borderBottom={true}
           sx={{ borderBottomColor: colorCode }}
+<<<<<<< HEAD
           inPageLink="subjects"
+=======
+          inPageLink="#subjects"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         >
           <Trans i18nKey="subjects" />
         </Title>
       </Box>
       <Box mt={3}>
         {isEmpty ? (
+<<<<<<< HEAD
           <ErrorEmptyData />
+=======
+          <EmptyError />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         ) : (
           <Grid
             container

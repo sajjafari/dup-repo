@@ -1,7 +1,12 @@
 from rest_framework import serializers
 
 from baseinfo.models import Metric
+<<<<<<< HEAD
 from baseinfo.serializers.commonserializers import AnswerTemplateSerializer, SimpleMetricSerializers
+=======
+from baseinfo.serializers import AnswerTemplateSerializer
+from baseinfo.serializers import SimpleMetricSerializers
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 from assessment.models import MetricValue, QualityAttributeValue
 
 from ..fixture.common import update_assessment_status

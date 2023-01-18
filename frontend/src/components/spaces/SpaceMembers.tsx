@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import React, { useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import Title from "../../components/shared/Title";
@@ -82,7 +86,11 @@ export const SpaceMembers = () => {
         <Title
           size="small"
           fontSize={"1rem"}
+<<<<<<< HEAD
           fontFamily="Roboto"
+=======
+          fontFamily="RobotoMedium"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           textTransform={"unset"}
           letterSpacing=".05rem"
           mb={2}
@@ -104,7 +112,11 @@ export const SpaceMembers = () => {
             size="small"
             variant="outlined"
             inputRef={user_id_ref}
+<<<<<<< HEAD
             placeholder={t("enterEmailOfTheUserYouWantToAdd") as string}
+=======
+            placeholder={t("enterEmailOfTheUserYouWantToAdd")}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             label={<Trans i18nKey="userEmail" />}
             InputProps={{
               endAdornment: <AddMemberButton loading={loading} />,
@@ -117,13 +129,21 @@ export const SpaceMembers = () => {
           size="small"
           mb={2}
           fontSize={"1rem"}
+<<<<<<< HEAD
           fontFamily="Roboto"
+=======
+          fontFamily="RobotoMedium"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           textTransform={"capitalize"}
           letterSpacing=".05rem"
           toolbar={
             <Box sx={{ ...styles.centerV, opacity: 0.8, mb: "auto" }}>
               <PeopleOutlineRoundedIcon sx={{ mr: 0.5 }} fontSize="small" />
+<<<<<<< HEAD
               <Typography fontFamily="Roboto" fontWeight={"bold"}>
+=======
+              <Typography fontFamily={"RobotoBold"}>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                 {spaceData?.data?.results?.length}
               </Typography>
             </Box>

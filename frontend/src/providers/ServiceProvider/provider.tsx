@@ -1,6 +1,13 @@
 import React, { useReducer, FC, useContext, useMemo } from "react";
+<<<<<<< HEAD
 import { createService } from "../../service";
 import { TService } from "../../service";
+=======
+import { useNavigate } from "react-router-dom";
+import { createService } from "../../service";
+import { TService } from "../../service";
+import { appActions, useAppDispatch } from "../AppProvider";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { authActions, useAuthContext } from "../AuthProvider";
 import serviceReducer from "./reducer";
 
@@ -10,10 +17,18 @@ interface IServiceProviderProps {
 
 export interface IServiceContext {
   service: TService;
+<<<<<<< HEAD
+=======
+  dispatch: React.Dispatch<any>;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 }
 
 export const ServiceContext = React.createContext<IServiceContext>({
   service: {} as any,
+<<<<<<< HEAD
+=======
+  dispatch: () => {},
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 });
 
 export const ServiceProvider: FC<IServiceProviderProps> = ({ children }) => {
@@ -27,10 +42,22 @@ export const ServiceProvider: FC<IServiceProviderProps> = ({ children }) => {
     []
   );
 
+<<<<<<< HEAD
   const [state] = useReducer(serviceReducer, { service });
 
   return (
     <ServiceContext.Provider value={state}>{children}</ServiceContext.Provider>
+=======
+  const [state, dispatch] = useReducer(serviceReducer, {
+    service,
+    dispatch: () => {},
+  });
+
+  return (
+    <ServiceContext.Provider value={{ ...state, dispatch }}>
+      {children}
+    </ServiceContext.Provider>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   );
 };
 

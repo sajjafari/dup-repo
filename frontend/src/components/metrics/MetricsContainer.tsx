@@ -1,5 +1,9 @@
 import React, { PropsWithChildren, useEffect, useState } from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { useNavigate, useParams } from "react-router-dom";
 import {
   EAssessmentStatus,

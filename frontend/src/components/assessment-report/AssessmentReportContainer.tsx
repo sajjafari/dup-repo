@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import Grid from "@mui/material/Grid";
 import QueryData from "../shared/QueryData";
 import { useParams } from "react-router-dom";

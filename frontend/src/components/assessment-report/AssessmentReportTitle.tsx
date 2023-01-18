@@ -1,6 +1,10 @@
 import React from "react";
 import Title from "../shared/Title";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Trans } from "react-i18next";
 import formatDate from "../../utils/formatDate";
 import Typography from "@mui/material/Typography";
@@ -42,11 +46,19 @@ const AssessmentReportTitle = (props: IAssessmentReportTitle) => {
           routes={[
             {
               title: spaceTitle,
+<<<<<<< HEAD
               to: `/${spaceId}/assessments/`,
+=======
+              to: "/spaces/",
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
             },
             {
               title,
+<<<<<<< HEAD
+=======
+              to: `/${spaceId}/assessments`,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               icon: (
                 <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
               ),

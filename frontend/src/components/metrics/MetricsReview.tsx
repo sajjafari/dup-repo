@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -34,21 +38,33 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
             sx={{
               opacity: 0.8,
               mb: 4,
+<<<<<<< HEAD
               fontFamily: "Roboto",
+=======
+              fontFamily: "RobotoBold",
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               fontWeight: "bolder",
             }}
             textTransform={"uppercase"}
           >
             <Trans i18nKey="youFinishedQuestionnaire" />
           </Typography>
+<<<<<<< HEAD
           <Typography variant="h5" fontFamily="Roboto" fontWeight="bold">
+=======
+          <Typography variant="h5" fontFamily="RobotoBold">
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             <Trans i18nKey="youCan" />{" "}
             <Button
               startIcon={<QueryStatsRoundedIcon />}
               variant="contained"
               size="large"
               component={Link}
+<<<<<<< HEAD
               to={"./../../../insights"}
+=======
+              to={"./../../.."}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             >
               <Trans i18nKey="viewInsights" />
             </Button>{" "}
@@ -99,11 +115,15 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
                     >
                       <Trans i18nKey={"question"} />
                     </Typography>
+<<<<<<< HEAD
                     <Typography
                       variant="h6"
                       fontFamily="Roboto"
                       fontWeight="bold"
                     >
+=======
+                    <Typography variant="h6" fontFamily={"RobotoBold"}>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                       {metric.title}
                     </Typography>
                   </Box>
@@ -116,11 +136,15 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
                       >
                         <Trans i18nKey={"yourAnswer"} />
                       </Typography>
+<<<<<<< HEAD
                       <Typography
                         variant="h6"
                         fontFamily="Roboto"
                         fontWeight="bold"
                       >
+=======
+                      <Typography variant="h6" fontFamily={"RobotoBold"}>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                         {metric.answer.caption}
                       </Typography>
                     </Box>

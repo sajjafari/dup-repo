@@ -1,6 +1,10 @@
 from statistics import mean
 from ..models import AssessmentProject, AssessmentResult
+<<<<<<< HEAD
 from ..services.metricstatistic import calculate_answered_metric_by_result
+=======
+from .metricstatistic import calculate_answered_metric_by_result
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 
 ANSWERED_QUESTION_NUMBER_BOUNDARY = 5

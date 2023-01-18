@@ -10,7 +10,11 @@ from account.permission.spaceperm import IsSpaceMember
 from baseinfo.models import MetricCategory
 from ..serializers.metricvalueserializers import AddMetricValueSerializer, UpdateMetricValueSerializer, MetricValueSerializer
 from ..fixture.dictionary import Dictionary
+<<<<<<< HEAD
 from ..services.metricstatistic import extract_total_progress
+=======
+from ..fixture.metricstatistic import extract_total_progress
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 
 class MetricValueViewSet(ModelViewSet):

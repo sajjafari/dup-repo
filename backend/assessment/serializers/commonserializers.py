@@ -1,6 +1,10 @@
 from rest_framework import serializers
 
+<<<<<<< HEAD
 from baseinfo.serializers.commonserializers import QualityAttributeSerilizer
+=======
+from baseinfo.serializers import QualityAttributeSerilizer
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 from ..models import AssessmentResult, Color, QualityAttributeValue
 
 

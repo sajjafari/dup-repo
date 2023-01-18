@@ -22,6 +22,7 @@ def calculate_maturity_level(result, quality_attribute):
         for metric_value, impacts in metric_impact_attribute.items():
             for impact in impacts:
                 if impact.level == 1 and metric_value.answer is not None:
+<<<<<<< HEAD
                     impact_metric_value_level_1.add(impact, normalize_Value(metric_value.answer.value))
                 elif impact.level == 2 and metric_value.answer is not None:
                     impact_metric_value_level_2.add(impact, normalize_Value(metric_value.answer.value))
@@ -29,6 +30,15 @@ def calculate_maturity_level(result, quality_attribute):
                     impact_metric_value_level_3.add(impact, normalize_Value(metric_value.answer.value))
                 elif impact.level == 4 and metric_value.answer is not None:
                     impact_metric_value_level_4.add(impact, normalize_Value(metric_value.answer.value))
+=======
+                    impact_metric_value_level_1.add(impact, normlize_Value(metric_value.answer.value))
+                elif impact.level == 2 and metric_value.answer is not None:
+                    impact_metric_value_level_2.add(impact, normlize_Value(metric_value.answer.value))
+                elif impact.level == 3 and metric_value.answer is not None:
+                    impact_metric_value_level_3.add(impact, normlize_Value(metric_value.answer.value))
+                elif impact.level == 4 and metric_value.answer is not None:
+                    impact_metric_value_level_4.add(impact, normlize_Value(metric_value.answer.value))
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
         impact_metric_value_level_list = []
         impact_metric_value_level_list.append(impact_metric_value_level_1)
@@ -70,7 +80,11 @@ def calculate_maturity_level(result, quality_attribute):
             i += 1
         return maturity_level_value + 1
 
+<<<<<<< HEAD
 def normalize_Value(value):
+=======
+def normlize_Value(value):
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     match value:
         case 1:
             return 0

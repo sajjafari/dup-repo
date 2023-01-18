@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
@@ -10,11 +11,17 @@ import CompareResult from "./CompareResult";
 import { ICompareResultModel } from "../../types";
 import Button from "@mui/material/Button";
 import BorderColorRoundedIcon from "@mui/icons-material/BorderColorRounded";
+=======
+import { useSearchParams } from "react-router-dom";
+import { useServiceContext } from "../../providers/ServiceProvider";
+import { useQuery } from "../../utils/useQuery";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 const CompareResultContainer = () => {
   const [searchParams] = useSearchParams();
   const assessmentIds = searchParams.getAll("assessmentIds");
   const { service } = useServiceContext();
+<<<<<<< HEAD
   const compareResultQueryData = useQuery<ICompareResultModel>({
     service: (args = { assessmentIds }, config) =>
       service.fetchCompareResult(args, config),
@@ -51,6 +58,14 @@ const CompareResultContainer = () => {
       }}
     />
   );
+=======
+  const compareResultQueryData = useQuery({
+    service: (args = { assessment_list: assessmentIds }, config) =>
+      service.compare(args, config),
+  });
+
+  return <div>CompareResultContainer</div>;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 };
 
 export default CompareResultContainer;

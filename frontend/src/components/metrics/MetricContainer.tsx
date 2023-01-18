@@ -3,7 +3,11 @@ import Checkbox from "@mui/material/Checkbox";
 import Collapse from "@mui/material/Collapse";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Hidden from "@mui/material/Hidden";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import {
   EAssessmentStatus,
   metricActions,
@@ -12,14 +16,22 @@ import {
 } from "../../providers/MetricProvider";
 import { MetricCard } from "./MetricCard";
 import { Trans } from "react-i18next";
+<<<<<<< HEAD
 import ErrorEmptyData from "../../components/shared/errors/ErrorEmptyData";
+=======
+import EmptyError from "../../components/shared/errors/EmptyError";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Review } from "./MetricsReview";
 import { TransitionGroup } from "react-transition-group";
 import useScreenResize from "../../utils/useScreenResize";
 import { styles } from "../../config/styles";
 import MetricNextPrev from "./MetricNextPrev";
 import { MetricsProgress } from "./MetricsProgress";
+<<<<<<< HEAD
 import { ErrorNotFoundOrAccessDenied } from "../../components/shared/errors/ErrorNotFoundOrAccessDenied";
+=======
+import { NotFoundOrAccessDenied } from "../../components/shared/errors/NotFoundOrAccessDenied";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 export const MetricContainer = () => {
   const {
@@ -89,14 +101,22 @@ export const MetricContainer = () => {
               </>
             ) : (
               <Box mt={6}>
+<<<<<<< HEAD
                 <ErrorNotFoundOrAccessDenied />
+=======
+                <NotFoundOrAccessDenied />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               </Box>
             )}
           </Box>
         )}
       </Box>
     ) : (
+<<<<<<< HEAD
       <ErrorEmptyData />
+=======
+      <EmptyError />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     )
   ) : null;
 };

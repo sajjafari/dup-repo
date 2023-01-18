@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ICustomError } from "./CustomError";
@@ -13,12 +14,31 @@ interface IUseQueryProps<T, A> {
   initialData?: any;
   runOnMount?: boolean;
   initialLoading?: boolean;
+=======
+import { AxiosRequestConfig, AxiosResponse } from "axios";
+import React, { useEffect, useRef, useState } from "react";
+import { toast } from "react-toastify";
+import { ICustomError } from "./CustomError";
+import dataExist from "./dataExist";
+import defToastError, { IToastErrorOptions } from "./toastError";
+
+interface IUseQueryProps<T, A> {
+  initialData?: any;
+  runOnMount?: boolean;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   toastError?:
     | boolean
     | ((err: ICustomError, options?: IToastErrorOptions) => void);
   toastErrorOptions?: IToastErrorOptions;
+<<<<<<< HEAD
   service: TQueryServiceFunction<T, A>;
   accessor?: string;
+=======
+  service: (
+    args?: A,
+    config?: AxiosRequestConfig<any> | undefined
+  ) => Promise<AxiosResponse<T, any>>;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 }
 
 export const useQuery = <T extends any = any, A extends any = any>(
@@ -28,6 +48,7 @@ export const useQuery = <T extends any = any, A extends any = any>(
     initialData,
     service,
     runOnMount = true,
+<<<<<<< HEAD
     initialLoading = runOnMount,
     toastError = false,
     toastErrorOptions,
@@ -35,6 +56,13 @@ export const useQuery = <T extends any = any, A extends any = any>(
   } = props;
   const [data, setData] = useState<T>(initialData);
   const [loading, setLoading] = useState(initialLoading);
+=======
+    toastError = false,
+    toastErrorOptions,
+  } = props;
+  const [data, setData] = useState<T>(initialData);
+  const [loading, setLoading] = useState(() => (runOnMount ? true : false));
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   const [error, setError] = useState(false);
   const [errorObject, setErrorObject] = useState<undefined | ICustomError>(
     undefined
@@ -58,11 +86,18 @@ export const useQuery = <T extends any = any, A extends any = any>(
     setErrorObject(undefined);
 
     try {
+<<<<<<< HEAD
       const { data: res } = await service(args, {
         signal: controller.current.signal,
         ...config,
       });
       const data = accessor ? get(res, accessor, initialData) : res;
+=======
+      const { data } = await service(args, {
+        signal: controller.current.signal,
+        ...config,
+      });
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       if (data) {
         setData(data);
         setError(false);

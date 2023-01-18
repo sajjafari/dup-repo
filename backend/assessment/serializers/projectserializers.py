@@ -1,10 +1,17 @@
 from rest_framework import serializers
 
 
+<<<<<<< HEAD
 from ..services.metricstatistic import extract_total_progress
 from ..models import AssessmentProject
 from .commonserializers import ColorSerilizer
 from baseinfo.serializers.profileserializers import AssessmentProfileSerilizer, AssessmentProfileSimpleSerilizer
+=======
+from ..fixture.metricstatistic import extract_total_progress
+from ..models import AssessmentProject
+from .commonserializers import ColorSerilizer
+from baseinfo.serializers import AssessmentProfileSerilizer, AssessmentProfileSimpleSerilizer
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 from account.serializers import SpaceSimpleSerializer
 
 

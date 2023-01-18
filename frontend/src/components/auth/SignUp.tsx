@@ -6,7 +6,11 @@ import { styles } from "../../config/styles";
 import { InputFieldUC } from "../shared/fields/InputField";
 import Title from "../shared/Title";
 import { Trans } from "react-i18next";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import {
   FieldValues,
   FormProvider,
@@ -250,7 +254,11 @@ const SuccessfullyCreatedAccountMessage = () => {
 
         <Typography
           variant="h6"
+<<<<<<< HEAD
           fontFamily="Roboto"
+=======
+          fontFamily="RobotoMedium"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           sx={{ my: 3, textAlign: "center", letterSpacing: ".03em" }}
         >
           <Trans i18nKey="pleaseCheckYouEmail" />

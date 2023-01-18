@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Trans } from "react-i18next";
 import Paper from "@mui/material/Paper";
 import { ESystemStatus, ISubjectInfo, TStatus } from "../../types";
@@ -37,8 +41,12 @@ export const AssessmentOverallStatus = (
                     key={subject?.id}
                     sx={{ mb: 0.6 }}
                     fontSize="1.1rem"
+<<<<<<< HEAD
                     fontFamily={"Roboto"}
                     fontWeight={500}
+=======
+                    fontFamily={"RobotoMedium"}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                     letterSpacing=".03em"
                   >
                     <span style={{ textTransform: "uppercase" }}>

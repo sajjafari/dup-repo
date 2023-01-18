@@ -1,12 +1,20 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Trans } from "react-i18next";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import CircleRoundedIcon from "@mui/icons-material/CircleRounded";
 import { styles } from "../../config/styles";
 import Title from "../shared/Title";
+<<<<<<< HEAD
 import ErrorEmptyData from "../shared/errors/ErrorEmptyData";
+=======
+import EmptyError from "../shared/errors/EmptyError";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 interface IAssessmentMostSignificantAttributesProps {
   most_significant_items: string[];
@@ -17,8 +25,12 @@ export const AssessmentMostSignificantAttributes = (
   props: IAssessmentMostSignificantAttributesProps
 ) => {
   const { most_significant_items = [], isWeakness } = props;
+<<<<<<< HEAD
   const isEmpty =
     most_significant_items?.length === 0 || !most_significant_items;
+=======
+  const isEmpty = most_significant_items.length === 0;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
   return (
     <Paper sx={{ height: "100%", borderRadius: 3 }} elevation={3}>
@@ -60,7 +72,11 @@ export const AssessmentMostSignificantAttributes = (
         </Box>
         <Box display="flex" flexDirection={"column"} mt={4}>
           {isEmpty ? (
+<<<<<<< HEAD
             <ErrorEmptyData p={2} hideMessage={true} />
+=======
+            <EmptyError p={2} hideMessage={true} />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           ) : (
             most_significant_items.map((item, index) => {
               return (

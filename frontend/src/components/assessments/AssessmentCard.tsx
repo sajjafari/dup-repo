@@ -3,12 +3,16 @@ import { Gauge } from "../../components/shared/charts/Gauge";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 import useMenu from "../../utils/useMenu";
 import { useServiceContext } from "../../providers/ServiceProvider";
+<<<<<<< HEAD
 import {
   createSearchParams,
   Link,
   useLocation,
   useNavigate,
 } from "react-router-dom";
+=======
+import { Link, useLocation } from "react-router-dom";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import { Trans } from "react-i18next";
 import { styles } from "../../config/styles";
@@ -19,7 +23,11 @@ import MoreActions from "../../components/shared/MoreActions";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { IAssessment, TId, TQueryFunction } from "../../types";
 import { TDialogProps } from "../../utils/useDialog";
 import Button from "@mui/material/Button";
@@ -28,7 +36,10 @@ import QueryStatsRounded from "@mui/icons-material/QueryStatsRounded";
 import hasStatus from "../../utils/hasStatus";
 import { toast } from "react-toastify";
 import { t } from "i18next";
+<<<<<<< HEAD
 import CompareRoundedIcon from "@mui/icons-material/CompareRounded";
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 interface IAssessmentCardProps {
   item: IAssessment;
@@ -79,7 +90,10 @@ const AssessmentCard = (props: IAssessmentCardProps) => {
                 textTransform={"uppercase"}
                 sx={{
                   padding: "8px 28px",
+<<<<<<< HEAD
                   fontWeight: "bold",
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
                   pb: 0,
                   textAlign: "center",
                   color: item.color?.color_code || "#101c32",
@@ -152,7 +166,10 @@ const Actions = (props: {
   const { deleteAssessment, item, dialogProps, abortController } = props;
   const [editLoading, setEditLoading] = React.useState(false);
   const { service } = useServiceContext();
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
   const deleteItem = async (e: any) => {
     try {
@@ -181,6 +198,7 @@ const Actions = (props: {
       });
   };
 
+<<<<<<< HEAD
   const addToCompare = (e: any) => {
     navigate({
       pathname: "/compare",
@@ -190,11 +208,14 @@ const Actions = (props: {
     });
   };
 
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   return (
     <MoreActions
       {...useMenu()}
       loading={editLoading}
       boxProps={{ position: "absolute", top: "10px", right: "10px", zIndex: 2 }}
+<<<<<<< HEAD
       items={
         hasStatus(item.status)
           ? [
@@ -227,6 +248,20 @@ const Actions = (props: {
               },
             ]
       }
+=======
+      items={[
+        {
+          icon: <EditRoundedIcon fontSize="small" />,
+          text: <Trans i18nKey="edit" />,
+          onClick: openEditDialog,
+        },
+        {
+          icon: <DeleteRoundedIcon fontSize="small" />,
+          text: <Trans i18nKey="delete" />,
+          onClick: deleteItem,
+        },
+      ]}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     />
   );
 };

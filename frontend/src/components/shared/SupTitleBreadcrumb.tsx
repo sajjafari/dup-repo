@@ -4,7 +4,11 @@ import MuiLink from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import { styles } from "../../config/styles";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { LoadingSkeleton } from "./loadings/LoadingSkeleton";
 import { TId } from "../../types";
 import { useServiceContext } from "../../providers/ServiceProvider";
@@ -27,6 +31,7 @@ const SupTitleBreadcrumb = (
     <Breadcrumbs>
       {routes.map((route, index) => {
         const { to, title, sup, icon } = route;
+<<<<<<< HEAD
         const disabled = routes.length - 1 === index || !to;
         return (
           <Box display="flex" flexDirection={"column"} key={index}>
@@ -58,6 +63,36 @@ const SupTitleBreadcrumb = (
                 opacity: 0.8,
                 letterSpacing: "0.085em",
                 color: disabled ? "GrayText" : "primary.dark",
+=======
+        return to ? (
+          <Box display="flex" flexDirection={"column"} key={index}>
+            {/* {sup && (
+              <Typography
+                sx={{
+                  fontSize: "0.6rem",
+                  fontFamily: "RobotoMedium",
+                  opacity: 0.6,
+                  letterSpacing: "0.07em",
+                  color: "text.primary",
+                }}
+              >
+                {sup}
+              </Typography>
+            )} */}
+
+            <MuiLink
+              component={Link}
+              underline="hover"
+              color="inherit"
+              to={to}
+              sx={{
+                ...styles.centerV,
+                fontSize: "0.8rem",
+                fontFamily: "RobotoBold",
+                opacity: 0.8,
+                letterSpacing: "0.085em",
+                color: "primary.dark",
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               }}
             >
               {icon}
@@ -66,6 +101,11 @@ const SupTitleBreadcrumb = (
               )}
             </MuiLink>
           </Box>
+<<<<<<< HEAD
+=======
+        ) : (
+          <Typography color="text.primary">{title}</Typography>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         );
       })}
       {/* <Typography color="text.primary">Breadcrumbs</Typography> */}

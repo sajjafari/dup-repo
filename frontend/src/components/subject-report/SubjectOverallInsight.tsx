@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Trans } from "react-i18next";
 import Grid from "@mui/material/Grid";
 import Skeleton from "@mui/material/Skeleton";
@@ -12,6 +16,12 @@ const SubjectOverallInsight = (props: any) => {
   const { title = "" } = data;
   return (
     <Box>
+<<<<<<< HEAD
+=======
+      {/* <Title sx={{ opacity: 0.9 }} inPageLink="#insight">
+        <Trans i18nKey="overallStatusOf" values={{ title }} />
+      </Title> */}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       <Box display="flex" sx={{ flexDirection: { xs: "column", sm: "row" } }}>
         <OverallInsightText {...props} />
         <Box sx={{ pl: { xs: 0, sm: 3, md: 6 }, mt: { xs: 4, sm: 0 } }}>
@@ -37,8 +47,12 @@ const OverallInsightText = (props: any) => {
   return (
     <Box display="flex" flexDirection={"column"} flex={1}>
       <Typography
+<<<<<<< HEAD
         fontFamily={"Roboto"}
         fontWeight="500"
+=======
+        fontFamily={"RobotoMedium"}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         fontSize="1.3rem"
         sx={{ opacity: 0.96 }}
       >
@@ -49,7 +63,11 @@ const OverallInsightText = (props: any) => {
             <Trans i18nKey="withConfidence" />{" "}
             <Typography
               component="span"
+<<<<<<< HEAD
               fontFamily={"Roboto"}
+=======
+              fontFamily={"RobotoBold"}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               fontWeight="bold"
               sx={{ color: "#3596A1" }}
               fontSize="1.15rem"
@@ -60,18 +78,26 @@ const OverallInsightText = (props: any) => {
             <Typography
               component="span"
               fontWeight="bold"
+<<<<<<< HEAD
               fontFamily={"Roboto"}
+=======
+              fontFamily={"RobotoBold"}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               sx={{ color: "#6035A1" }}
               fontSize="1.15rem"
             >
               {ml}.
             </Typography>{" "}
             <Trans i18nKey="meaning" values={{ title }} />{" "}
+<<<<<<< HEAD
             <Typography
               component="span"
               fontFamily="Roboto"
               fontWeight={"bold"}
             >
+=======
+            <Typography component="span" fontFamily={"RobotoBold"}>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               {status}.
             </Typography>
             <Box>
@@ -107,16 +133,26 @@ const OverallInsightText = (props: any) => {
   );
 };
 
+<<<<<<< HEAD
 export const MostSigItems = ({
   loading,
   att,
   items,
+=======
+const MostSigItems = ({
+  loading,
+  att,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   color,
   text,
 }: {
   loading: boolean;
+<<<<<<< HEAD
   att?: any[];
   items?: string[];
+=======
+  att: any[];
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   color: string;
   text: string;
 }) => {
@@ -130,6 +166,7 @@ export const MostSigItems = ({
       >
         <Trans i18nKey={text} />
       </Title>
+<<<<<<< HEAD
       <ul style={{ marginBlockStart: "8px", paddingInlineStart: "26px" }}>
         {loading ? (
           <MostSigItemLoadingSkeleton />
@@ -139,6 +176,17 @@ export const MostSigItems = ({
           })
         )}
       </ul>
+=======
+      <Box p={1}>
+        {loading ? (
+          <MostSigItemLoadingSkeleton />
+        ) : (
+          att?.map((attribute: any, index: any) => {
+            return <Typography key={index}>{attribute?.title}</Typography>;
+          })
+        )}
+      </Box>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     </>
   );
 };

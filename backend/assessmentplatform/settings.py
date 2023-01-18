@@ -129,7 +129,10 @@ INSTALLED_APPS = [
     'account',
     'baseinfo',
     'assessment',
+<<<<<<< HEAD
     'assessmentplatform'
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     # 'djversion',
 ]
 
@@ -157,12 +160,20 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "http://localhost:3333",
     "http://127.0.0.1:3333",
+<<<<<<< HEAD
     "https://checkuptest.asta.ir",
+=======
+    "https://checkup.asta.ir",
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
+<<<<<<< HEAD
 CSRF_TRUSTED_ORIGINS = ['https://checkuptest.asta.ir']
+=======
+CSRF_TRUSTED_ORIGINS = ['https://checkup.asta.ir']
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 
 
@@ -177,6 +188,15 @@ OPTIONAL_APPS = (
     PACKAGE_NAME_GRAPPELLI,
 )
 
+<<<<<<< HEAD
+=======
+
+
+#############
+# Customization#
+#############
+
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
     import imp
@@ -243,8 +263,13 @@ IMPORT_EXPORT_USE_TRANSACTIONS = True
 ACCOUNTS_VERIFICATION_REQUIRED = True
 
 
+<<<<<<< HEAD
 STATIC_URL = '/admin/vol/web/static/'
 MEDIA_URL = '/admin/vol/web/media/'
+=======
+STATIC_URL = '/admin/static/'
+MEDIA_URL = '/admin/media/'
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 MEDIA_ROOT = '/admin/vol/web/media'
 STATIC_ROOT = '/admin/vol/web/static'

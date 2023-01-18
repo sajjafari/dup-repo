@@ -19,6 +19,10 @@ interface ISignInPayload {
 
 export const signIn = (payload: ISignInPayload = {}) => {
   if (payload.refresh && payload.access) {
+<<<<<<< HEAD
+=======
+    //@ts-expect-error
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     axios.defaults.headers["Authorization"] = `JWT ${payload.access}`;
     localStorage.setItem("refreshToken", JSON.stringify(payload.refresh));
     localStorage.setItem("accessToken", JSON.stringify(payload.access));
@@ -53,6 +57,10 @@ export const setUserInfoLoading = (payload: boolean) => {
 
 export const signOut = () => {
   localStorage.clear();
+<<<<<<< HEAD
+=======
+  //@ts-expect-error
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   axios.defaults.headers["Authorization"] = ``;
   return { type: AUTH_ACTIONS_TYPE.SIGN_OUT };
 };

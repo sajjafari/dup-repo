@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Trans } from "react-i18next";
 import Title from "../../components/shared/Title";
 import TabContext from "@mui/lab/TabContext";
@@ -13,7 +17,11 @@ import { useServiceContext } from "../../providers/ServiceProvider";
 import { useParams } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 import { useAuthContext } from "../../providers/AuthProvider";
+<<<<<<< HEAD
 import ErrorAccessDenied from "../shared/errors/ErrorAccessDenied";
+=======
+import AccessDeniedError from "../shared/errors/AccessDeniedError";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { styles } from "../../config/styles";
 import { ISpaceModel } from "../../types";
 import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
@@ -87,9 +95,15 @@ function SpaceSettings(props: { isOwner: boolean }) {
           </TabList>
         </Box>
         <TabPanel value="1" sx={{ p: { xs: 1, sm: 3 } }}>
+<<<<<<< HEAD
           <ErrorAccessDenied hasAccess={isOwner}>
             <SpaceMembers />
           </ErrorAccessDenied>
+=======
+          <AccessDeniedError hasAccess={isOwner}>
+            <SpaceMembers />
+          </AccessDeniedError>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         </TabPanel>
       </TabContext>
     </Box>

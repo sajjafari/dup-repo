@@ -7,11 +7,19 @@ import {
   IQuestionnairesModel,
   IQuestionnairesPageDataModel,
   TId,
+<<<<<<< HEAD
   TQueryProps,
   TQueryFunction,
 } from "../../types";
 import LoadingSkeletonOfQuestionnaires from "../shared/loadings/LoadingSkeletonOfQuestionnaires";
 import { Box } from "@mui/material";
+=======
+  TQueryData,
+  TQueryFunction,
+} from "../../types";
+import LoadingSkeletonOfQuestionnaires from "../shared/loadings/LoadingSkeletonOfQuestionnaires";
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import QANumberIndicator from "../shared/QANumberIndicator";
 import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";
@@ -20,8 +28,13 @@ import { useSearchParams } from "react-router-dom";
 import { LoadingSkeleton } from "../shared/loadings/LoadingSkeleton";
 
 interface IQuestionnaireListProps {
+<<<<<<< HEAD
   questionnaireQueryData: TQueryProps<IQuestionnairesModel>;
   pageQueryData: TQueryProps<IQuestionnairesPageDataModel>;
+=======
+  questionnaireQueryData: TQueryData<IQuestionnairesModel>;
+  pageQueryData: TQueryData<IQuestionnairesPageDataModel>;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 }
 
 export const QuestionnaireList = (props: IQuestionnaireListProps) => {

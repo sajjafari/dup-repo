@@ -1,5 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+<<<<<<< HEAD
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from statistics import mean
@@ -11,11 +12,17 @@ from ..fixture.dictionary import Dictionary
 from ..fixture.common import calculate_staus
 from ..services.metricstatistic import extract_total_progress, extract_subject_total_progress
 from ..services.attributesstatistics import extract_most_significant_weaknessness_atts, extract_most_significant_strength_atts
+=======
+from rest_framework import status
+
+
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 
 
 class CompareAssessmentView(APIView):
     # TODO check authorization
+<<<<<<< HEAD
     permission_classes = [IsAuthenticated, IsSpaceMember]
     def post(self, request):
         assessment_list_ids = request.data.get(ASSESSMENT_LIST_IDS_PARAM_NAME)
@@ -250,5 +257,11 @@ class CompareAssessmentView(APIView):
             
 
         
+=======
+    def post(self, request):
+        assessment_list_ids = request.data.get('assessment_list_ids')
+        print(len(assessment_list_ids))
+        return Response({'error: The '},status=status.HTTP_404_NOT_FOUND)
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
             

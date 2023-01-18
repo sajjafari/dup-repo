@@ -25,9 +25,14 @@ class AssessmentProfile(models.Model):
         verbose_name = "Assessment Profile"
         verbose_name_plural = "Assessment Profiles"
         ordering = ['title']
+<<<<<<< HEAD
 
 class ProfileDsl(models.Model):
     dsl_file = models.FileField(upload_to='profile/dsl')
+=======
+        
+
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 class MetricCategory(models.Model):
     code = models.CharField(max_length=50)
@@ -93,7 +98,11 @@ class AnswerTemplate(models.Model):
 
 class Metric(models.Model):
     title = models.TextField()
+<<<<<<< HEAD
     description = models.TextField(null=True)
+=======
+    description = models.TextField()
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     creation_time = models.DateTimeField(auto_now_add=True)
     last_modification_date = models.DateTimeField(auto_now=True)
     metric_category = models.ForeignKey(MetricCategory, on_delete=models.CASCADE)

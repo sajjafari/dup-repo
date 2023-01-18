@@ -1,7 +1,11 @@
 import React from "react";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import BgLines1 from "../../assets/svg/bgLines1.svg";
 import SubjectProgress from "../shared/progress/SubjectProgress";
 import { Trans } from "react-i18next";
@@ -20,7 +24,19 @@ interface IAssessmentSubjectCardProps extends ISubjectInfo {
 }
 
 export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
+<<<<<<< HEAD
   const { title, progress = 0, status, id, image, colorCode, description = "" } = props;
+=======
+  const {
+    title,
+    progress = 0,
+    status,
+    id,
+    image,
+    colorCode,
+    description = "",
+  } = props;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   return (
     <Paper
       sx={{
@@ -51,20 +67,50 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
           height: "100%",
         }}
       >
+<<<<<<< HEAD
         <Typography variant="h4" textTransform={"uppercase"} letterSpacing={".13em"} fontFamily="Oswald" fontWeight={500}>
           {title}
         </Typography>
         <ReadMoreAboutSubject colorCode={colorCode} title={title} description={description} />
+=======
+        <Typography
+          variant="h4"
+          textTransform={"uppercase"}
+          letterSpacing={".13em"}
+          fontFamily="OswaldMedium"
+        >
+          {title}
+        </Typography>
+        <ReadMoreAboutSubject
+          colorCode={colorCode}
+          title={title}
+          description={description}
+        />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         <Box
           mt={2}
           sx={{
             filter: (t) => {
+<<<<<<< HEAD
               const shouldInvert = t.palette.getContrastText(colorCode) === "rgba(0, 0, 0, 0.87)";
+=======
+              const shouldInvert =
+                t.palette.getContrastText(colorCode) === "rgba(0, 0, 0, 0.87)";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               return shouldInvert ? "invert(.93)" : undefined;
             },
           }}
         >
+<<<<<<< HEAD
           <img src={`${BASE_URL}${image}`} alt={title} width={"90px"} style={{ filter: "drop-shadow(1px 4px 4px #00000050)" }} />
+=======
+          <img
+            src={`${BASE_URL}${image}`}
+            alt={title}
+            width={"90px"}
+            style={{ filter: "drop-shadow(1px 4px 4px #00000050)" }}
+          />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         </Box>
         <SubjectProgress progress={progress} colorCode={colorCode} />
 
@@ -77,9 +123,19 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
             component={Link}
             to={progress === 100 ? `./${id}#insight` : `./${id}`}
             state={{ status }}
+<<<<<<< HEAD
             startIcon={progress === 0 ? <StartRoundedIcon /> : <QueryStatsRoundedIcon />}
           >
             <Trans i18nKey={"viewInsights"} />
+=======
+            startIcon={
+              progress === 0 ? <StartRoundedIcon /> : <QueryStatsRoundedIcon />
+            }
+          >
+            <Trans
+              i18nKey={progress === 0 ? "startAssessment" : "viewInsights"}
+            />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           </Button>
         </Box>
       </Box>
@@ -87,7 +143,13 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
   );
 };
 
+<<<<<<< HEAD
 const SubjectStatus = (props: Pick<IAssessmentSubjectCardProps, "title" | "status">) => {
+=======
+const SubjectStatus = (
+  props: Pick<IAssessmentSubjectCardProps, "title" | "status">
+) => {
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   const { title, status } = props;
   const hasStats = hasStatus(status);
   return (
@@ -95,14 +157,25 @@ const SubjectStatus = (props: Pick<IAssessmentSubjectCardProps, "title" | "statu
       {
         <>
           <Typography textAlign={"center"}>
+<<<<<<< HEAD
             <Trans i18nKey="subjectStatusIs" values={{ title }} /> {hasStats && <Trans i18nKey="evaluatedAs" />}
+=======
+            <Trans i18nKey="subjectStatusIs" values={{ title }} />{" "}
+            {hasStats && <Trans i18nKey="evaluatedAs" />}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           </Typography>
           <Typography
             variant={hasStats ? "h3" : "h4"}
             letterSpacing=".17em"
             sx={{
+<<<<<<< HEAD
               fontWeight: "500",
               borderBottom: hasStats ? `3px solid ${getColorOfStatus(status)}` : undefined,
+=======
+              borderBottom: hasStats
+                ? `3px solid ${getColorOfStatus(status)}`
+                : undefined,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               pl: 1,
               pr: 1,
             }}
@@ -115,7 +188,16 @@ const SubjectStatus = (props: Pick<IAssessmentSubjectCardProps, "title" | "statu
   );
 };
 
+<<<<<<< HEAD
 const ReadMoreAboutSubject = (props: Pick<IAssessmentSubjectCardProps, "title" | "colorCode" | "description">) => {
+=======
+const ReadMoreAboutSubject = (
+  props: Pick<
+    IAssessmentSubjectCardProps,
+    "title" | "colorCode" | "description"
+  >
+) => {
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   const { title, colorCode, description } = props;
   return (
     <Box
@@ -138,7 +220,11 @@ const ReadMoreAboutSubject = (props: Pick<IAssessmentSubjectCardProps, "title" |
           textDecoration: "underline",
           cursor: "pointer",
         }}
+<<<<<<< HEAD
         fontFamily="Roboto"
+=======
+        fontFamily="RobotoRegular"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       >
         <Trans i18nKey="readAbout" /> {title}
       </Typography>

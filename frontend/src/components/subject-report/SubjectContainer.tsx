@@ -3,7 +3,11 @@ import Hidden from "@mui/material/Hidden";
 import Paper from "@mui/material/Paper";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Trans } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import GettingThingsReadyLoading from "../../components/shared/loadings/GettingThingsReadyLoading";
@@ -25,7 +29,10 @@ import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
 import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
+<<<<<<< HEAD
 import { t } from "i18next";
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 const SubjectContainer = () => {
   const { noStatus, loading, loaded, hasError, subjectQueryData, subjectId } =
@@ -165,18 +172,31 @@ const SubjectTitle = (props: {
       sx={{ opacity: 0.9 }}
       backLink={-1}
       id="insight"
+<<<<<<< HEAD
       inPageLink="insight"
+=======
+      inPageLink="#insight"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       sup={
         <SupTitleBreadcrumb
           routes={[
             {
               title: assessment_project_space_title,
+<<<<<<< HEAD
               to: `/${spaceId}/assessments`,
               icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
             },
             {
               title: `${assessment_project_title} ${t("insights")}`,
               to: `/${spaceId}/assessments/${assessmentId}/insights`,
+=======
+              to: "/spaces/",
+              icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
+            },
+            {
+              title: assessment_project_title,
+              to: `/${spaceId}/assessments`,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               icon: (
                 <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
               ),
@@ -190,6 +210,10 @@ const SubjectTitle = (props: {
                   {assessment_project_title}
                 </>
               ),
+<<<<<<< HEAD
+=======
+              to: `/${spaceId}/assessments/${assessmentId}/insights`,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               icon: (
                 <AnalyticsRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
               ),
@@ -235,11 +259,16 @@ const NoInsightYetMessage = (props: { data: ISubjectReportModel }) => {
         }}
       >
         {no_insight_yet_message ? (
+<<<<<<< HEAD
           <Typography variant="h4" fontFamily={"Roboto"}>
+=======
+          <Typography variant="h4" fontFamily={"RobotoRegular"}>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             {no_insight_yet_message}
           </Typography>
         ) : (
           <>
+<<<<<<< HEAD
             <Typography variant="h4" fontFamily={"Roboto"}>
               <Trans i18nKey="moreQuestionsNeedToBeAnswered" />
             </Typography>
@@ -249,6 +278,12 @@ const NoInsightYetMessage = (props: { data: ISubjectReportModel }) => {
               fontWeight="300"
               sx={{ mt: 2 }}
             >
+=======
+            <Typography variant="h4" fontFamily={"RobotoRegular"}>
+              <Trans i18nKey="moreQuestionsNeedToBeAnswered" />
+            </Typography>
+            <Typography variant="h5" fontFamily={"RobotoLight"} sx={{ mt: 2 }}>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               <Trans i18nKey="completeSomeOfQuestionnaires" />
             </Typography>
           </>
@@ -257,7 +292,11 @@ const NoInsightYetMessage = (props: { data: ISubjectReportModel }) => {
           sx={{ mt: 3 }}
           variant="contained"
           component={Link}
+<<<<<<< HEAD
           to={`./../../questionnaires?subject_pk=${subjectId}`}
+=======
+          to={`./../questionnaires?subject_pk=${subjectId}`}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         >
           {title} <Trans i18nKey="questionnaires" />
         </Button>

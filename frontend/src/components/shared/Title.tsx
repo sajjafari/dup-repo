@@ -1,6 +1,10 @@
 import React from "react";
 import Typography, { TypographyProps } from "@mui/material/Typography";
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
+=======
+import Box, { BoxProps } from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Link as RLink, To } from "react-router-dom";
 import Link from "@mui/material/Link";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
@@ -16,7 +20,11 @@ interface ITitle extends Omit<TypographyProps, "borderBottom"> {
   backIconProps?: SvgIconProps;
   size?: "small" | "medium" | "large";
   wrapperProps?: BoxProps;
+<<<<<<< HEAD
   inPageLink?: string;
+=======
+  inPageLink?: `#${string}`;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 }
 
 const Title = (props: ITitle) => {
@@ -113,12 +121,20 @@ const Title = (props: ITitle) => {
         ) : (
           <></>
         )}
+<<<<<<< HEAD
         <Box sx={{ ...styles.centerV, display: { xs: "block", sm: "flex" } }}>
           {children}
           {inPageLink && (
             <Link
               href={`#${inPageLink}`}
               id={inPageLink}
+=======
+        <Box sx={{ ...styles.centerV }}>
+          {children}
+          {inPageLink && (
+            <Link
+              href={inPageLink}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               className="title-hash-link"
               sx={{
                 display: "flex",

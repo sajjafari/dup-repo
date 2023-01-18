@@ -5,7 +5,11 @@ import Paper from "@mui/material/Paper";
 import { styles } from "../../config/styles";
 import { InputFieldUC } from "../shared/fields/InputField";
 import { Trans } from "react-i18next";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { FormProvider, useForm } from "react-hook-form";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
@@ -93,7 +97,10 @@ const SignIn = () => {
                 variant="contained"
                 size="large"
                 loading={loading}
+<<<<<<< HEAD
                 data-cy="btn-sign-in"
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               >
                 <Trans i18nKey="signIn" />
               </LoadingButton>
@@ -105,7 +112,10 @@ const SignIn = () => {
           <Box pt={1}>
             <Trans i18nKey="dontHaveAccount" />{" "}
             <Button
+<<<<<<< HEAD
               data-cy="btn-sign-up"
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               onClick={() => {
                 navigate("/sign-up");
               }}

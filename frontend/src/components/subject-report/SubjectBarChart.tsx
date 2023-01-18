@@ -53,9 +53,15 @@ const SubjectBar = (props: any) => {
         <Legend />
         <Bar
           dataKey="ml"
+<<<<<<< HEAD
           name={t("maturityLevel") as string}
           fill="#6035A1"
           maxBarSize={40}
+=======
+          name={t("maturityLevel")}
+          fill="#6035A1"
+          maxBarSize={80}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         />
       </BarChart>
     </ResponsiveContainer>

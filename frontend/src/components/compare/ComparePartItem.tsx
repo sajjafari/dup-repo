@@ -1,8 +1,13 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
+=======
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Trans } from "react-i18next";
 import { styles } from "../../config/styles";
 import AddBoxRoundedIcon from "@mui/icons-material/AddBoxRounded";
@@ -11,6 +16,7 @@ import CompareItemCEFormDialog from "./CompareItemCEFormDialog";
 import Title from "../shared/Title";
 import { Gauge } from "../shared/charts/Gauge";
 import ProgressChip from "../shared/ProgressChip";
+<<<<<<< HEAD
 import { TId, TQueryFunction } from "../../types";
 import IconButton from "@mui/material/IconButton";
 import {
@@ -28,12 +34,24 @@ interface IComparePartsItemProps {
 
 const ComparePartItem = (props: IComparePartsItemProps) => {
   const { data, index, disabled, fetchAssessmentsInfo } = props;
+=======
+import { ICompareModel, TQueryFunction } from "../../types";
+
+interface IComparePartsItemProps {
+  data: any;
+  fetchCompare: TQueryFunction<ICompareModel>;
+}
+
+const ComparePartItem = (props: IComparePartsItemProps) => {
+  const { data, fetchCompare } = props;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   const dialogProps = useDialog({
     context: {
       data,
       type: data?.id ? "update" : "create",
     },
   });
+<<<<<<< HEAD
 
   return (
     <Box
@@ -63,6 +81,18 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
           border: `1.5px dashed ${
             disabled ? "#101c324f" : data?.color?.color_code || "#101c32"
           }`,
+=======
+  return (
+    <Paper>
+      <Button
+        fullWidth
+        color="inherit"
+        sx={{
+          p: 3,
+          px: 3.5,
+          borderRadius: 2,
+          minHeight: "264px",
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           ...(data
             ? {
                 display: "flex",
@@ -98,14 +128,19 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
           <>
             <AddBoxRoundedIcon sx={{ mb: 0.5 }} fontSize="large" />
             <Typography textTransform={"none"} textAlign="center">
+<<<<<<< HEAD
               <Trans
                 i18nKey="selectAssessmentForComparison"
                 values={{ value: numberMap[index] }}
               />
+=======
+              <Trans i18nKey="selectAssessmentForComparison" />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             </Typography>
           </>
         )}
       </Button>
+<<<<<<< HEAD
       <CompareItemCEFormDialog {...dialogProps} index={index} />
     </Box>
   );
@@ -149,6 +184,10 @@ const DeleteAssessmentIconBtn = (props: {
     >
       <DeleteRoundedIcon />
     </IconButton>
+=======
+      <CompareItemCEFormDialog {...dialogProps} onSubmitForm={fetchCompare} />
+    </Paper>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   );
 };
 

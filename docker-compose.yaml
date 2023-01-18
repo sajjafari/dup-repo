@@ -2,10 +2,14 @@ version: '3.9'
 
 services:
 <<<<<<< HEAD
+<<<<<<< HEAD
   backend:
 =======
   checkupassessmenttoolkit:
 >>>>>>> cb52529 (Add existing project files to github)
+=======
+  backend:
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     build:
       context: .
     command: >
@@ -15,6 +19,7 @@ services:
     ports:
       - 8000:8000
     volumes:
+<<<<<<< HEAD
 <<<<<<< HEAD
       - ./backend:/backend
       - static-data:/admin/vol/web
@@ -27,15 +32,24 @@ services:
       - DB_PASS=${DB_PASS}
 =======
       - ./checkupassessmenttoolkit:/checkupassessmenttoolkit
+=======
+      - ./backend:/backend
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       - static-data:/admin/vol/web
     environment:
-      - SECRET_KEY=devsecretkey
-      - DEBUG=1
+      - SECRET_KEY=${SECRET_KEY}
+      - DEBUG=${DEBUG}
       - DB_HOST=db
+<<<<<<< HEAD
       - DB_NAME=checkupassessment
       - DB_USER=postgres
       - DB_PASS=123456
 >>>>>>> cb52529 (Add existing project files to github)
+=======
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - EMAIL_HOST=${EMAIL_HOST}
       - DEFAULT_FROM_EMAIL=${DEFAULT_FROM_EMAIL}
@@ -63,11 +77,18 @@ services:
 =======
   db:
     image: postgres:11
+    restart: always
     environment:
+<<<<<<< HEAD
       - POSTGRES_DB=checkupassessment
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=123456
 >>>>>>> cb52529 (Add existing project files to github)
+=======
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     volumes:
       - postgres-data:/var/lib/postgresql/data
     ports:
@@ -79,6 +100,7 @@ services:
     restart: always
     build:
       context: .
+<<<<<<< HEAD
 <<<<<<< HEAD
     command: celery -A assessmentplatform worker -l info
     volumes:
@@ -92,22 +114,32 @@ services:
       - DB_PASS=${DB_PASS}
 =======
     command: celery -A checkupassessmenttoolkit worker -l info
+=======
+    command: celery -A backend worker -l info
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     volumes:
-      - ./checkupassessmenttoolkit:/checkupassessmenttoolkit
+      - ./backend:/backend
     environment:
-      - SECRET_KEY=devsecretkey
-      - DEBUG=1
+      - SECRET_KEY=${SECRET_KEY}
+      - DEBUG=${DEBUG}
       - DB_HOST=db
+<<<<<<< HEAD
       - DB_NAME=checkupassessment
       - DB_USER=postgres
       - DB_PASS=123456
 >>>>>>> cb52529 (Add existing project files to github)
+=======
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - CELERY_BROKER_URL=redis://redis:6379/1
       - DOMAIN=${DOMAIN}
     depends_on:
       - db
       - redis
+<<<<<<< HEAD
 <<<<<<< HEAD
       - backend
 
@@ -131,26 +163,35 @@ services:
       - DB_PASS=${DB_PASS}
 =======
       - checkupassessmenttoolkit
+=======
+      - backend
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
   flower:
     build: .
-    command: celery -A checkupassessmenttoolkit flower
+    command: celery -A backend flower
     volumes:
-      - ./checkupassessmenttoolkit:/checkupassessmenttoolkit
+      - ./backend:/backend
     depends_on:
-      - checkupassessmenttoolkit
+      - backend
       - redis
       - celery
     environment:
       - DEBUG=1
       - CELERY_BROKER=redis://redis:6379/1
       - CELERY_BACKEND=redis://redis:6379/1
-      - SECRET_KEY=devsecretkey
+      - SECRET_KEY=${SECRET_KEY}
       - DB_HOST=db
+<<<<<<< HEAD
       - DB_NAME=checkupassessment
       - DB_USER=postgres
       - DB_PASS=123456
 >>>>>>> cb52529 (Add existing project files to github)
+=======
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - DOMAIN=${DOMAIN}
     ports:
@@ -160,6 +201,7 @@ services:
     restart: always
     command : npm start
 <<<<<<< HEAD
+<<<<<<< HEAD
     container_name: frontend
     build:
       context: ./frontend
@@ -168,10 +210,16 @@ services:
     build:
       context: ./front
 >>>>>>> cb52529 (Add existing project files to github)
+=======
+    container_name: frontend
+    build:
+      context: ./frontend
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
+<<<<<<< HEAD
 <<<<<<< HEAD
       - BASE_URL=http://backend:8000
     stdin_open: true
@@ -183,9 +231,12 @@ volumes:
   static-data:
 =======
       - BASE_URL=http://checkupassessmenttoolkit:8000
+=======
+      - BASE_URL=http://backend:8000
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     stdin_open: true
     depends_on:
-      - checkupassessmenttoolkit  
+      - backend  
 
 volumes:
   postgres-data:

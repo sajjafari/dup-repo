@@ -1,12 +1,20 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
 import { getColorOfStatus, styles } from "../../../config/styles";
 import Skeleton from "@mui/material/Skeleton";
 import { TStatus } from "../../../types";
 
+<<<<<<< HEAD
 interface IVerticalLevelChartProps extends BoxProps {
+=======
+interface IVerticalLevelChartProps {
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   loading?: boolean;
   title: string;
   status: TStatus;
@@ -15,6 +23,7 @@ interface IVerticalLevelChartProps extends BoxProps {
 }
 
 const VerticalLevelChart = (props: IVerticalLevelChartProps) => {
+<<<<<<< HEAD
   const { loading, title, status, cl, ml, ...rest } = props;
   const statusColor = getColorOfStatus(status);
 
@@ -23,6 +32,13 @@ const VerticalLevelChart = (props: IVerticalLevelChartProps) => {
       {...rest}
       sx={{ ...(styles.centerCH as any), ...((rest.sx || {}) as any) }}
     >
+=======
+  const { loading, title, status, cl, ml } = props;
+  const statusColor = getColorOfStatus(status);
+
+  return (
+    <Box sx={{ ...styles.centerCH }}>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       <Box textAlign={"center"}>
         <Typography textAlign={"center"}>
           {loading ? (
@@ -45,8 +61,11 @@ const VerticalLevelChart = (props: IVerticalLevelChartProps) => {
             borderBottom: loading ? undefined : `2px solid ${statusColor}`,
           }}
           variant="h3"
+<<<<<<< HEAD
           fontFamily={"Oswald"}
           fontWeight="bold"
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           letterSpacing={".1em"}
         >
           {loading ? <Skeleton width={"164px"} /> : status}

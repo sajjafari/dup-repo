@@ -44,6 +44,7 @@ const commonStyles = {
       color: (theme) => theme.palette.primary.dark,
     },
   }),
+<<<<<<< HEAD
   circularProgressBackgroundStroke: style({
     display: "flex",
     justifyContent: "center",
@@ -59,6 +60,8 @@ const commonStyles = {
     overflow: "hidden",
     textOverflow: "ellipsis",
   }),
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 };
 
 const cards = {
@@ -81,6 +84,7 @@ const auth = {
   }),
 };
 
+<<<<<<< HEAD
 const buttons = {
   compareButton: style({
     position: { xs: "fixed", md: "absolute" },
@@ -124,6 +128,11 @@ export const styles = {
   ...auth,
   ...buttons,
   ...compare,
+=======
+export const styles = {
+  ...commonStyles,
+  ...auth,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   cards,
 };
 

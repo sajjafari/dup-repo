@@ -28,7 +28,11 @@ class SubjectImageFormInline(admin.TabularInline):
 class AssessmentSubjectAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     autocomplete_fields = ['metric_categories']
     search_fields = ['code', 'title', 'assessment_profile']
+<<<<<<< HEAD
     fields = ['code', 'title', 'description', 'assessment_profile', 'metric_categories', 'index']
+=======
+    fields = ['code', 'title', 'description', 'assessment_profile', 'index']
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     list_display = ['code', 'title', 'subject_categories', 'assessment_profile']
     list_editable = ['title']
     list_per_page = 10

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import { t } from "i18next";
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { toast } from "react-toastify";
 import { ECustomErrorType } from "../types";
 import { ICustomError } from "./CustomError";
@@ -9,6 +12,7 @@ export interface IToastErrorOptions {
   filterIfHasData?: boolean;
 }
 
+<<<<<<< HEAD
 const toastError = (
   err: ICustomError | string | true,
   options?: IToastErrorOptions
@@ -22,6 +26,9 @@ const toastError = (
     return;
   }
 
+=======
+const toastError = (err: ICustomError, options?: IToastErrorOptions) => {
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   const {
     filterByStatus = [],
     filterByType = [],

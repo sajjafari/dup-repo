@@ -1,5 +1,9 @@
 import React, { PropsWithChildren } from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { Outlet } from "react-router-dom";
 import pl1 from "../assets/svg/pl1.svg";
 import Logo from "../assets/svg/logo.svg";
@@ -34,7 +38,11 @@ const AuthLayout = (props: PropsWithChildren<{}>) => {
         <React.Suspense
           fallback={
             <Box mt={6}>
+<<<<<<< HEAD
               <GettingThingsReadyLoading color="white" />
+=======
+              <GettingThingsReadyLoading />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             </Box>
           }
         >

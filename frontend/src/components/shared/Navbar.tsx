@@ -1,10 +1,18 @@
 import React from "react";
 import { Trans } from "react-i18next";
+<<<<<<< HEAD
 import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { styles } from "../../config/styles";
 import { useAuthContext } from "../../providers/AuthProvider";
 import AppBar from "@mui/material/AppBar";
 import { Box } from "@mui/material";
+=======
+import { NavLink } from "react-router-dom";
+import { styles } from "../../config/styles";
+import { useAuthContext } from "../../providers/AuthProvider";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
@@ -20,10 +28,13 @@ import Avatar from "@mui/material/Avatar";
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 import CompareRoundedIcon from "@mui/icons-material/CompareRounded";
+<<<<<<< HEAD
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 import ArrowDropUpRoundedIcon from "@mui/icons-material/ArrowDropUpRounded";
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 const drawerWidth = 240;
 
@@ -58,7 +69,31 @@ const Navbar = () => {
             component={NavLink}
             to="spaces"
           >
+<<<<<<< HEAD
             <ListItemText primary={<Trans i18nKey="spaces" />} />
+=======
+            <ListItemText
+              primary={
+                <>
+                  <Trans i18nKey="spaces" />
+                  {current_space?.title && (
+                    <Typography
+                      variant="caption"
+                      textTransform={"none"}
+                      sx={{
+                        pl: 0.5,
+                        ml: 0.5,
+                        lineHeight: "1",
+                        borderLeft: (t) => `1px solid ${t.palette.grey[300]}`,
+                      }}
+                    >
+                      {current_space?.title}
+                    </Typography>
+                  )}
+                </>
+              }
+            />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           </ListItemButton>
         </ListItem>
         {current_space?.id && (
@@ -68,6 +103,7 @@ const Navbar = () => {
               component={NavLink}
               to={`/${current_space?.id}/assessments`}
             >
+<<<<<<< HEAD
               <ListItemText
                 primary={
                   <>
@@ -89,6 +125,9 @@ const Navbar = () => {
                   </>
                 }
               />
+=======
+              <ListItemText primary={<Trans i18nKey="assessments" />} />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             </ListItemButton>
           </ListItem>
         )}
@@ -101,6 +140,7 @@ const Navbar = () => {
             <ListItemText primary={<Trans i18nKey="compare" />} />
           </ListItemButton>
         </ListItem>
+<<<<<<< HEAD
         <ListItem disablePadding>
           <ListItemButton
             sx={{ textAlign: "left", borderRadius: 1.5 }}
@@ -110,6 +150,8 @@ const Navbar = () => {
             <ListItemText primary={<Trans i18nKey="profiles" />} />
           </ListItemButton>
         </ListItem>
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       </List>
     </Box>
   );
@@ -124,7 +166,10 @@ const Navbar = () => {
           borderRadius: "16px",
           background: "white",
         }}
+<<<<<<< HEAD
         data-cy="nav-bar"
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       >
         <Toolbar variant="dense" sx={{ backgroundColor: "white" }}>
           <IconButton
@@ -157,8 +202,40 @@ const Navbar = () => {
             <Logo />
           </Typography>
           <Box sx={{ display: { xs: "none", md: "block" }, ml: 3 }}>
+<<<<<<< HEAD
             <SpacesButton currentSpace={current_space} />
             {/* {current_space?.id && (
+=======
+            <Button
+              component={NavLink}
+              to="spaces"
+              sx={{ ...styles.activeNavbarLink, ml: 0.1 }}
+              startIcon={
+                <FolderRoundedIcon
+                  sx={{ opacity: 0.8, fontSize: "18px !important" }}
+                />
+              }
+            >
+              <Box sx={{ ...styles.centerV }}>
+                <Trans i18nKey="spaces" />
+                {current_space?.title && (
+                  <Typography
+                    variant="caption"
+                    textTransform={"none"}
+                    sx={{
+                      pl: 0.5,
+                      ml: 0.5,
+                      lineHeight: "1",
+                      borderLeft: (t) => `1px solid ${t.palette.grey[300]}`,
+                    }}
+                  >
+                    {current_space?.title}
+                  </Typography>
+                )}
+              </Box>
+            </Button>
+            {current_space?.id && (
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               <Button
                 component={NavLink}
                 to={`/${current_space?.id}/assessments`}
@@ -171,7 +248,11 @@ const Navbar = () => {
               >
                 <Trans i18nKey="assessments" />
               </Button>
+<<<<<<< HEAD
             )} */}
+=======
+            )}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             <Button
               component={NavLink}
               to={`/compare`}
@@ -180,6 +261,7 @@ const Navbar = () => {
                   sx={{ opacity: 0.8, fontSize: "18px !important" }}
                 />
               }
+<<<<<<< HEAD
               sx={{ ...styles.activeNavbarLink, ml: 0.1, mr: 0.8 }}
             >
               <Trans i18nKey="compare" />
@@ -190,6 +272,11 @@ const Navbar = () => {
               sx={{ ...styles.activeNavbarLink, ml: 0.1 }}
             >
               <Trans i18nKey="profiles" />
+=======
+              sx={{ ...styles.activeNavbarLink, ml: 0.1 }}
+            >
+              <Trans i18nKey="compare" />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             </Button>
           </Box>
           <Box ml="auto">
@@ -197,7 +284,11 @@ const Navbar = () => {
               sx={{ ml: 2, mr: "-8px", px: 1.5 }}
               size="small"
               component={NavLink}
+<<<<<<< HEAD
               to="account"
+=======
+              to="profile"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               endIcon={<Avatar sx={{ width: 26, height: 26, ml: 1 }} />}
             >
               {userInfo.username}
@@ -368,6 +459,7 @@ const Logo = () => {
   );
 };
 
+<<<<<<< HEAD
 const SpacesButton = ({ currentSpace }: any) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -463,4 +555,6 @@ const SpacesButton = ({ currentSpace }: any) => {
   );
 };
 
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 export default Navbar;

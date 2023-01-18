@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import QuizRoundedIcon from "@mui/icons-material/QuizRounded";
 import { QuestionnaireList } from "./QuestionnaireList";
 import { Trans } from "react-i18next";
@@ -12,7 +16,11 @@ import {
   IQuestionnairesModel,
   IQuestionnairesPageDataModel,
   ITotalProgressModel,
+<<<<<<< HEAD
   TQueryProps,
+=======
+  TQueryData,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 } from "../../types";
 import Title from "../shared/Title";
 import Alert from "@mui/material/Alert";
@@ -32,6 +40,7 @@ import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
 import SupTitleBreadcrumb, {
   useSupTitleBreadcrumb,
 } from "../shared/SupTitleBreadcrumb";
+<<<<<<< HEAD
 >>>>>>> 3d40d98 (OTAT-218 Add breadcrumb service)
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
@@ -43,6 +52,15 @@ import PermissionControl from "../shared/PermissionControl";
 =======
 import AlertBox from "../shared/AlertBox";
 >>>>>>> 7f37b32 (OTAT-212 Add compare page)
+=======
+>>>>>>> 909c4cb (OTAT-218 Add breadcrumb service)
+import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
+import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
+>>>>>>> 3f7a6c0 (OTAT-218 Add breadcrumb)
+=======
+import PermissionControl from "../shared/PermissionControl";
+>>>>>>> 12af81b (OTAT-221 Add permission control component)
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 const QuestionnaireContainer = () => {
   const {
@@ -86,7 +104,11 @@ const QuestionnaireContainer = () => {
               },
             ]}
           />
+<<<<<<< HEAD
 >>>>>>> ce7326d (OTAT-218 Add breadcrumb)
+=======
+>>>>>>> 3f7a6c0 (OTAT-218 Add breadcrumb)
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         }
       >
         <QuizRoundedIcon sx={{ mr: 1 }} />
@@ -95,7 +117,11 @@ const QuestionnaireContainer = () => {
 
 =======
       <QuestionnaireTitle />
+<<<<<<< HEAD
 >>>>>>> 3d40d98 (OTAT-218 Add breadcrumb service)
+=======
+>>>>>>> 909c4cb (OTAT-218 Add breadcrumb service)
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       <NotCompletedAlert
         isCompleted={
           totalProgressQueryData.data?.total_progress?.progress == 100
@@ -143,7 +169,11 @@ const QuestionnaireContainer = () => {
           loading={
             totalProgressQueryData.loading || assessmentQueryData.loading
           }
+<<<<<<< HEAD
 >>>>>>> 3b81eb7 (OTAT-221 Add permission control component)
+=======
+>>>>>>> 12af81b (OTAT-221 Add permission control component)
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
         />
         <Box
           flexWrap={"wrap"}
@@ -219,7 +249,11 @@ const NotCompletedAlert = (props: {
       {loading ? (
         <LoadingSkeleton height="76px" />
       ) : (
+<<<<<<< HEAD
         <AlertBox
+=======
+        <Alert
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           severity={isCompleted ? "success" : "info"}
           action={
             <Button
@@ -248,7 +282,11 @@ const NotCompletedAlert = (props: {
           ) : (
             <Trans i18nKey="pickupQuestionnaire" />
           )}
+<<<<<<< HEAD
         </AlertBox>
+=======
+        </Alert>
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       )}
     </Box>
   );
@@ -269,11 +307,19 @@ const QuestionnaireTitle = () => {
           routes={[
             {
               title: breadcrumbInfo.space,
+<<<<<<< HEAD
               to: `/${spaceId}/assessments`,
+=======
+              to: "/spaces/",
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
             },
             {
               title: breadcrumbInfo.assessment,
+<<<<<<< HEAD
+=======
+              to: `/${spaceId}/assessments`,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               icon: (
                 <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
               ),

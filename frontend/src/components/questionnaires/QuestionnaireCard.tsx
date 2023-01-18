@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import { Trans } from "react-i18next";
@@ -30,7 +34,10 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
     progress = 0,
     subject: subjects,
     title,
+<<<<<<< HEAD
     current_metric_index,
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   } = data || {};
 
   const isSmallScreen = useScreenResize("sm");
@@ -53,8 +60,12 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
                 `${(<Trans i18nKey={"lastUpdated"} />)} ${last_updated}`
               }
               size="small"
+<<<<<<< HEAD
               fontFamily="Roboto"
               fontWeight={"bold"}
+=======
+              fontFamily={"RobotoBold"}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             >
               <Box flex="1" display="flex" alignItems={"flex-start"}>
                 {title}
@@ -107,7 +118,10 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
             id={id}
             progress={progress}
             number_of_answers={number_of_answers}
+<<<<<<< HEAD
             current_metric_index={current_metric_index}
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           />
         </Box>
       </Box>
@@ -119,9 +133,14 @@ const ActionButtons = (props: {
   id: TId;
   progress: number;
   number_of_answers: number;
+<<<<<<< HEAD
   current_metric_index: number;
 }) => {
   const { id, progress, number_of_answers, current_metric_index } = props;
+=======
+}) => {
+  const { id, progress, number_of_answers } = props;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
   return (
     <Box display="flex">
@@ -142,7 +161,11 @@ const ActionButtons = (props: {
       )}
       {progress < 100 && progress > 0 && (
         <ActionButton
+<<<<<<< HEAD
           to={`${id}/${current_metric_index || number_of_answers + 1}`}
+=======
+          to={`${id}/${number_of_answers + 1}`}
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
           text="continue"
           icon={<PlayArrowRoundedIcon fontSize="small" />}
         />

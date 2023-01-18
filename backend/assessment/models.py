@@ -11,6 +11,7 @@ class Color(models.Model):
     title = models.CharField(max_length=40)
     color_code = models.CharField(max_length=20)
 
+<<<<<<< HEAD
 class AssessmentProjectManager(models.Manager):
     def load(self, assessment_id):
         try:
@@ -18,6 +19,8 @@ class AssessmentProjectManager(models.Manager):
         except AssessmentProject.DoesNotExist:
             return None
 
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 class AssessmentProject(models.Model):
 
     STATUS_CHOICES = [
@@ -38,7 +41,10 @@ class AssessmentProject(models.Model):
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, null=True)
     color = models.ForeignKey(Color, on_delete=models.PROTECT, null=True)
     space = models.ForeignKey(Space, on_delete=models.PROTECT, null=True)
+<<<<<<< HEAD
     objects = AssessmentProjectManager()
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
     def __str__(self) -> str:
         return self.title

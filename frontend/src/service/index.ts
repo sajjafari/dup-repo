@@ -17,7 +17,11 @@ export const createService = (
 ) => {
   axios.defaults.baseURL = BASE_URL;
   axios.defaults.withCredentials = true;
+<<<<<<< HEAD
   axios.defaults.timeoutErrorMessage = t("checkNetworkConnection") as string;
+=======
+  axios.defaults.timeoutErrorMessage = t("checkNetworkConnection");
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
   const rejectResponseInterceptor = async (err: any = {}) => {
     if (err._isCustomError) {
@@ -46,6 +50,10 @@ export const createService = (
           const newAccessToken = await fetchNewAccessToken(refreshToken);
           if (newAccessToken) {
             setAccessToken(newAccessToken);
+<<<<<<< HEAD
+=======
+            //@ts-expect-error
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             axios.defaults.headers["Authorization"] = `JWT ${newAccessToken}`;
             prevRequest.headers["Authorization"] = `JWT ${newAccessToken}`;
             const result = await axios.request(prevRequest);
@@ -68,6 +76,10 @@ export const createService = (
     const { config = {} } = res;
 
     if (config.url === "auth/jwt/create/" && res.data?.access) {
+<<<<<<< HEAD
+=======
+      //@ts-expect-error
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       axios.defaults.headers["Authorization"] = `JWT ${res.data?.access}`;
     }
 
@@ -333,6 +345,7 @@ export const createService = (
         withCredentials: true,
       });
     },
+<<<<<<< HEAD
     fetchCompareResult(
       args: { assessmentIds: string[] },
       config: AxiosRequestConfig<any> | undefined
@@ -346,6 +359,16 @@ export const createService = (
           withCredentials: true,
         }
       );
+=======
+    compare(
+      args: { assessment_list: string[] },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      return axios.get(`/assessment/loadcompare/`, {
+        ...config,
+        withCredentials: true,
+      });
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     },
     saveCompareItem(
       { assessmentId }: { assessmentId: TId },
@@ -356,11 +379,14 @@ export const createService = (
         withCredentials: true,
       });
     },
+<<<<<<< HEAD
     fetchProfiles(args: any, config: AxiosRequestConfig<any> | undefined = {}) {
       const { query } = args || {};
       const params = query ? { query } : {};
       return axios.get(`/baseinfo/profiles/`, { params, ...config });
     },
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     fetchCompareItemAssessments(
       args: any | undefined,
       config: AxiosRequestConfig<any> | undefined
@@ -382,6 +408,7 @@ export const createService = (
         config
       );
     },
+<<<<<<< HEAD
     fetchAssessmentsInfo(
       args: { assessmentIds: TId[] },
       config: AxiosRequestConfig<any> | undefined
@@ -487,6 +514,8 @@ export const createService = (
       return axios.get(`/baseinfo/inspectprofile/${profileId}/`, config);
 >>>>>>> c7ab3a1 (OTAT-253 Add create profile dialog)
     },
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   };
 
   return service;

@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import { styles } from "../../config/styles";
 import { ECustomErrorType } from "../../types";
@@ -6,6 +7,15 @@ import { ICustomError } from "../../utils/CustomError";
 import ErrorEmptyData from "./errors/ErrorEmptyData";
 import ErrorDataLoading from "./errors/ErrorDataLoading";
 import { ErrorNotFoundOrAccessDenied } from "./errors/ErrorNotFoundOrAccessDenied";
+=======
+import Box from "@mui/material/Box";
+import { styles } from "../../config/styles";
+import { ECustomErrorType } from "../../types";
+import { ICustomError } from "../../utils/CustomError";
+import EmptyError from "./errors/EmptyError";
+import DataLoadingError from "./errors/DataLoadingError";
+import { NotFoundOrAccessDenied } from "./errors/NotFoundOrAccessDenied";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import GettingThingsReadyLoading from "./loadings/GettingThingsReadyLoading";
 
 interface IQueryDataProps<T> {
@@ -37,7 +47,11 @@ const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
     error,
     errorObject,
     isDataEmpty = defaultIsDataEmpty,
+<<<<<<< HEAD
     errorComponent = <ErrorDataLoading />,
+=======
+    errorComponent = <DataLoadingError />,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     renderLoading = () => loadingComponent,
     loadingComponent = (
       <Box sx={{ ...styles.centerVH }} pt={3}>
@@ -45,7 +59,11 @@ const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
       </Box>
     ),
     renderError = defaultRenderError,
+<<<<<<< HEAD
     emptyDataComponent = <ErrorEmptyData />,
+=======
+    emptyDataComponent = <EmptyError />,
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   } = props;
 
   if (loading) {
@@ -83,7 +101,11 @@ const defaultIsDataEmpty = (data: any) => {
 
 export const defaultRenderError = (
   err: ICustomError | undefined,
+<<<<<<< HEAD
   errorComponent: JSX.Element = <ErrorDataLoading />
+=======
+  errorComponent: JSX.Element = <DataLoadingError />
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 ): any => {
   if (!err) {
     return errorComponent;
@@ -92,7 +114,11 @@ export const defaultRenderError = (
     err.type === ECustomErrorType.NOT_FOUND ||
     err.type === ECustomErrorType.ACCESS_DENIED
   ) {
+<<<<<<< HEAD
     return <ErrorNotFoundOrAccessDenied />;
+=======
+    return <NotFoundOrAccessDenied />;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   }
   return errorComponent;
 };

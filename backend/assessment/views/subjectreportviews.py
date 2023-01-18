@@ -12,7 +12,11 @@ from account.permission.spaceperm import IsSpaceMember
 
 from ..services.categoryreport import CategoryReportInfo
 from ..fixture.common import ANSWERED_QUESTION_NUMBER_BOUNDARY, calculate_staus
+<<<<<<< HEAD
 from ..services.metricstatistic import extract_total_progress
+=======
+from ..fixture.metricstatistic import extract_total_progress
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 class SubjectReportViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [IsAuthenticated, IsSpaceMember]
@@ -48,7 +52,11 @@ class SubjectReportViewSet(viewsets.ReadOnlyModelViewSet):
         
         if category_report_info.total_answered_metric <= ANSWERED_QUESTION_NUMBER_BOUNDARY:
             response.data['status'] = 'Not Calculated'
+<<<<<<< HEAD
             response.data['no_insight_yet_message'] = 'To view insights, you need to answer more questions'
+=======
+            response.data['no_insight_yet_message'] = 'For insight views, you must answer more metrics'
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             response.data['results'] = None
         else:
             self.extract_report_details(response, quality_attribute_values)

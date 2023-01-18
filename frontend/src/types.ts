@@ -1,6 +1,10 @@
 import { DialogProps } from "@mui/material/Dialog";
 import { AxiosPromise, AxiosRequestConfig } from "axios";
 import { ToastOptions } from "react-toastify";
+<<<<<<< HEAD
+=======
+import { string } from "yup";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import { ICustomError } from "./utils/CustomError";
 
 export enum ECustomErrorType {
@@ -125,6 +129,7 @@ export interface IAssessmentProfileModel {
   >;
 }
 
+<<<<<<< HEAD
 export interface IProfile {
   code: string;
   description: string;
@@ -132,6 +137,8 @@ export interface IProfile {
   title: string;
 }
 
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 export interface IAssessmentResult {
   assessment_project: string;
   id: TId;
@@ -291,7 +298,10 @@ export interface IQuestionnairesInfo {
   metric_number: number;
   progress: number;
   last_updated?: string;
+<<<<<<< HEAD
   current_metric_index: number;
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   title: string;
   subject: { id: TId; title: string }[];
 }
@@ -325,7 +335,11 @@ export type TQueryFunction<T extends any = any, A extends any = any> = (
   config?: AxiosRequestConfig<any> | undefined
 ) => Promise<T>;
 
+<<<<<<< HEAD
 export type TQueryProps<T extends any = any, A extends any = any> = {
+=======
+export type TQueryData<T extends any = any, A extends any = any> = {
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   data: T;
   loading: boolean;
   loaded: boolean;
@@ -345,7 +359,11 @@ export interface IQuestionnairesPageDataModel {
 
 export interface IDialogProps extends DialogProps {
   onClose: () => void;
+<<<<<<< HEAD
   onSubmitForm?: (args: any) => void;
+=======
+  onSubmitForm?: () => void;
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
   openDialog?: any;
   context?: IDialogContext;
 }
@@ -360,6 +378,7 @@ export type TDialogContextType = "update" | "create";
 export interface ICompareModel {
   assessment_project_compare_list: any[];
 }
+<<<<<<< HEAD
 
 export interface ICompareResultBaseInfo {
   id: TId;
@@ -391,3 +410,5 @@ export interface ICompareResultModel {
   overall_insights: ICompareResultCompareItems[];
   subjects: ICompareResultSubject[];
 }
+=======
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)

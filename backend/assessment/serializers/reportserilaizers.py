@@ -1,6 +1,12 @@
 from statistics import mean
 from rest_framework import serializers
+<<<<<<< HEAD
 from baseinfo.serializers.profileserializers import AssessmentProfileSimpleSerilizer
+=======
+import more_itertools
+
+from baseinfo.serializers import AssessmentProfileSimpleSerilizer
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 from assessment.serializers.commonserializers import ColorSerilizer
 from account.serializers import SpaceSerializer
 
@@ -8,8 +14,12 @@ from account.serializers import SpaceSerializer
 from ..models import AssessmentProject, AssessmentResult
 from ..fixture.common import calculate_staus, ANSWERED_QUESTION_NUMBER_BOUNDARY
 from ..fixture.dictionary import Dictionary
+<<<<<<< HEAD
 from ..services.metricstatistic import calculate_total_metric_number_by_subject, calculate_answered_metric_by_subject, extract_total_progress
 from ..services.attributesstatistics import extract_most_significant_strength_atts, extract_most_significant_weaknessness_atts
+=======
+from ..fixture.metricstatistic import calculate_total_metric_number_by_subject, calculate_answered_metric_by_subject, extract_total_progress
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 
 class AssessmentProjectReportSerilizer(serializers.ModelSerializer):
     color = ColorSerilizer()
@@ -77,10 +87,31 @@ class AssessmentReportSerilizer(serializers.ModelSerializer):
 
 
     def get_most_significant_strength_atts(self, result: AssessmentResult):
+<<<<<<< HEAD
         return extract_most_significant_strength_atts(result)
         
     def get_most_significant_weaknessness_atts(self, result: AssessmentResult):
         return extract_most_significant_weaknessness_atts(result)
+=======
+        quality_attributes = []
+        if result.assessment_project.status is not None:
+            for att_value in result.quality_attribute_values.order_by('-maturity_level_value').all():
+                if att_value.maturity_level_value > 2:
+                    quality_attributes.append(att_value.quality_attribute.title)
+            return more_itertools.take(3, quality_attributes)
+        else:
+            return []
+        
+    def get_most_significant_weaknessness_atts(self, result: AssessmentResult):
+        quality_attributes = []
+        if result.assessment_project.status is not None and result.assessment_project.status:
+            for att_value in result.quality_attribute_values.order_by('-maturity_level_value').all():
+                if att_value.maturity_level_value < 3:
+                    quality_attributes.append(att_value.quality_attribute.title)
+            return more_itertools.take(3, reversed(quality_attributes))
+        else:
+            return []
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
     
     def calculate_total_status(self, result: AssessmentResult):
         if result.quality_attribute_values.all():

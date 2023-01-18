@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
+=======
+import Box, { BoxProps } from "@mui/material/Box";
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
@@ -10,7 +14,11 @@ const GettingThingsReadyLoading = (props: IGettingThingsReadyLoadingProps) => {
   const { ...rest } = props;
   return (
     <Box
+<<<<<<< HEAD
       color="gray"
+=======
+      color="white"
+>>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
       {...rest}
       sx={{
         width: "100%",
