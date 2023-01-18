@@ -82,6 +82,7 @@ urlpatterns = router.urls + metric_category_router.urls + metric_category_by_sub
 urlpatterns += [
     path("inspectprofile/<str:profile_id>/", profileviews.ProfileDetailDisplayApi.as_view()),
     path("importprofile/", profileviews.ImportProfileApi.as_view()),
+<<<<<<< HEAD
 ]
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
@@ -90,3 +91,6 @@ urlpatterns += [
     path("inspectprofile/<str:profile_id>/", profileviews.ProfileDetailDisplayApi.as_view()),
 ]
 >>>>>>> 3015a1a (display profile by rest service)
+=======
+]
+>>>>>>> 471e98a (OTAT-248: import profile service is ready)

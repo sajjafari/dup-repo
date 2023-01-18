@@ -8,6 +8,9 @@ def load_profile(profile_id) -> AssessmentProfile:
         return None
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 471e98a (OTAT-248: import profile service is ready)
 def extract_detail_of_profile(profile):
     response = extract_profile_basic_infos(profile)
     response['profileInfos'] = extract_profile_report_infos(profile)
@@ -23,8 +26,11 @@ def extract_profile_basic_infos(profile):
     response['creation_date'] = profile.creation_time
     return response
 
+<<<<<<< HEAD
 =======
 >>>>>>> 3015a1a (display profile by rest service)
+=======
+>>>>>>> 471e98a (OTAT-248: import profile service is ready)
 def extract_questionnaires_infos(profile):
     questionnairesInfos = []
     categories = profile.metric_categories.all()

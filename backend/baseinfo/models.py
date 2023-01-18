@@ -106,10 +106,14 @@ class AnswerTemplate(models.Model):
 class Metric(models.Model):
     title = models.TextField()
 <<<<<<< HEAD
+<<<<<<< HEAD
     description = models.TextField(null=True)
 =======
     description = models.TextField()
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    description = models.TextField(null=True)
+>>>>>>> 471e98a (OTAT-248: import profile service is ready)
     creation_time = models.DateTimeField(auto_now_add=True)
     last_modification_date = models.DateTimeField(auto_now=True)
     metric_category = models.ForeignKey(MetricCategory, on_delete=models.CASCADE)
