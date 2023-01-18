@@ -130,9 +130,13 @@ INSTALLED_APPS = [
     'baseinfo',
     'assessment',
 <<<<<<< HEAD
+<<<<<<< HEAD
     'assessmentplatform'
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    'assessmentplatform'
+>>>>>>> 00a92b2 (OTAT-216: fix some issues in installation)
     # 'djversion',
 ]
 

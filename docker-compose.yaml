@@ -102,6 +102,9 @@ services:
       context: .
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 00a92b2 (OTAT-216: fix some issues in installation)
     command: celery -A assessmentplatform worker -l info
     volumes:
       - ./backend:/backend
@@ -146,6 +149,7 @@ services:
   flower:
     build: .
     command: celery -A assessmentplatform flower
+<<<<<<< HEAD
     volumes:
       - ./backend:/backend
     depends_on:
@@ -170,6 +174,8 @@ services:
   flower:
     build: .
     command: celery -A backend flower
+=======
+>>>>>>> 00a92b2 (OTAT-216: fix some issues in installation)
     volumes:
       - ./backend:/backend
     depends_on:
@@ -177,7 +183,7 @@ services:
       - redis
       - celery
     environment:
-      - DEBUG=1
+      - DEBUG=${DEBUG}
       - CELERY_BROKER=redis://redis:6379/1
       - CELERY_BACKEND=redis://redis:6379/1
       - SECRET_KEY=${SECRET_KEY}
