@@ -202,6 +202,7 @@ OPTIONAL_APPS = (
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -212,6 +213,8 @@ OPTIONAL_APPS = (
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
 >>>>>>> 12b3703 (add dsl parser app to docker compose)
+=======
+>>>>>>> 9633745 (add dsl parser app to docker compose)
 f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
     import imp

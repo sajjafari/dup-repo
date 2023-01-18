@@ -62,8 +62,11 @@ services:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 12b3703 (add dsl parser app to docker compose)
+=======
+>>>>>>> 9633745 (add dsl parser app to docker compose)
   dsl:
       build: ./dsl-parser
       restart: on-failure
