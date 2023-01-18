@@ -151,6 +151,9 @@ const Navbar = () => {
           </ListItemButton>
         </ListItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0f858af (OTAT-154 Add profile to mobile nav)
         <ListItem disablePadding>
           <ListItemButton
             sx={{ textAlign: "left", borderRadius: 1.5 }}
@@ -160,8 +163,11 @@ const Navbar = () => {
             <ListItemText primary={<Trans i18nKey="profiles" />} />
           </ListItemButton>
         </ListItem>
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 0f858af (OTAT-154 Add profile to mobile nav)
       </List>
     </Box>
   );
