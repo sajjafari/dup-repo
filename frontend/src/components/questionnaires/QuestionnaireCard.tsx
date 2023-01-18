@@ -34,10 +34,14 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
     progress = 0,
     subject: subjects,
     title,
+<<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
     current_metric_index,
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    current_metric_index,
+>>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/components/questionnaires/QuestionnaireCard.tsx
   } = data || {};
 
   const isSmallScreen = useScreenResize("sm");
@@ -118,10 +122,14 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
             id={id}
             progress={progress}
             number_of_answers={number_of_answers}
+<<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
             current_metric_index={current_metric_index}
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            current_metric_index={current_metric_index}
+>>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/components/questionnaires/QuestionnaireCard.tsx
           />
         </Box>
       </Box>
@@ -133,6 +141,7 @@ const ActionButtons = (props: {
   id: TId;
   progress: number;
   number_of_answers: number;
+<<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
   current_metric_index: number;
 }) => {
@@ -141,6 +150,11 @@ const ActionButtons = (props: {
 }) => {
   const { id, progress, number_of_answers } = props;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  current_metric_index: number;
+}) => {
+  const { id, progress, number_of_answers, current_metric_index } = props;
+>>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/components/questionnaires/QuestionnaireCard.tsx
 
   return (
     <Box display="flex">
@@ -161,11 +175,15 @@ const ActionButtons = (props: {
       )}
       {progress < 100 && progress > 0 && (
         <ActionButton
+<<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
           to={`${id}/${current_metric_index || number_of_answers + 1}`}
 =======
           to={`${id}/${number_of_answers + 1}`}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          to={`${id}/${current_metric_index || number_of_answers + 1}`}
+>>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/components/questionnaires/QuestionnaireCard.tsx
           text="continue"
           icon={<PlayArrowRoundedIcon fontSize="small" />}
         />

@@ -298,10 +298,14 @@ export interface IQuestionnairesInfo {
   metric_number: number;
   progress: number;
   last_updated?: string;
+<<<<<<< HEAD:frontend/src/types.ts
 <<<<<<< HEAD
   current_metric_index: number;
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  current_metric_index: number;
+>>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/types.ts
   title: string;
   subject: { id: TId; title: string }[];
 }
