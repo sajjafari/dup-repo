@@ -39,6 +39,7 @@ class AssessmentProfileSerilizer(serializers.ModelSerializer):
     metric_categories = MetricCategorySerilizer(many=True)
     assessment_subjects = AssessmentSubjectSerilizer(many=True)
 <<<<<<< HEAD
+<<<<<<< HEAD
     class Meta:
         model = AssessmentProfile
         fields = ['id', 'code', 'title', 'metric_categories', 'assessment_subjects', 'description', 'images']
@@ -48,6 +49,11 @@ class AssessmentProfileSerilizer(serializers.ModelSerializer):
         model = AssessmentProfile
         fields = ['id', 'code', 'title', 'metric_categories', 'assessment_subjects', 'description', 'images', 'dsl']
 >>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
+=======
+    class Meta:
+        model = AssessmentProfile
+        fields = ['id', 'code', 'title', 'metric_categories', 'assessment_subjects', 'description', 'images']
+>>>>>>> 1c9b809 (remove extra dsl field from profile)
 
 class AssessmentProfileCreateSerilizer(serializers.ModelSerializer):
     class Meta:
