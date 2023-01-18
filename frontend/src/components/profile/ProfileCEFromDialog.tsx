@@ -69,12 +69,21 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
   const onSubmit = async (data: any) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 443adbc (OTAT-253 Add delete profile)
 =======
   const onSubmit = async (data: any, event: any, shouldView?: boolean) => {
 >>>>>>> 2a2dbf5 (OTAT-288 Add create and view btn)
     const formattedData = { dsl_id: data.dsl_id.id };
+=======
+    const { dsl_id, tags, ...restOfData } = data;
+    const formattedData = {
+      dsl_id: dsl_id.id,
+      tag_ids: tags.map((t: any) => t.id),
+      ...restOfData,
+    };
+>>>>>>> 1bdba36 (OTAT-284 Add tags field to profile create from)
     setLoading(true);
     try {
       const { data: res } =
@@ -173,6 +182,19 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
 >>>>>>> 443adbc (OTAT-253 Add delete profile)
               required={true}
               label={<Trans i18nKey="dsl" />}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <AutocompleteAsyncField
+              {...useConnectAutocompleteField({
+                service: (args, config) =>
+                  service.fetchProfileTags(args, config),
+              })}
+              name="tags"
+              required={true}
+              multiple={true}
+              searchOnType={false}
+              label={<Trans i18nKey="tags" />}
             />
           </Grid>
         </Grid>

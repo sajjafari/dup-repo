@@ -27,8 +27,9 @@ const InfoItem = (props: IInfoItems) => {
 };
 
 const DefaultInfoItemComponent = (
-  props: PropsWithChildren<{ title: string; bg?: "white" }>
+  props: PropsWithChildren<{ title: string; bg?: "white"; itemBg?: string }>
 ) => {
+<<<<<<< HEAD
   const { title, children, bg } = props;
 =======
 =======
@@ -51,6 +52,9 @@ const DefaultInfoItemComponent = (
 =======
   const { title, children, bg } = props;
 >>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
+=======
+  const { title, children, bg, itemBg } = props;
+>>>>>>> 1bdba36 (OTAT-284 Add tags field to profile create from)
   return (
     <Typography
       mb={1}
@@ -77,7 +81,8 @@ const DefaultInfoItemComponent = (
         sx={{
           py: 0.2,
           px: 0.6,
-          background: "white",
+          background: itemBg || "white",
+
           borderRadius: 1,
         }}
       >
@@ -116,6 +121,7 @@ const defaultRenderMap: Record<string, (...args: any) => JSX.Element> = {
 <<<<<<< HEAD
 <<<<<<< HEAD
   tags: (title: string, items: string[], props: any) => (
+<<<<<<< HEAD
     <DefaultInfoItemComponent title={title} {...props}>
 =======
   tags: (title: string, items: string[]) => (
@@ -125,6 +131,9 @@ const defaultRenderMap: Record<string, (...args: any) => JSX.Element> = {
   tags: (title: string, items: string[], props: any) => (
     <DefaultInfoItemComponent title={title} {...props}>
 >>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
+=======
+    <DefaultInfoItemComponent title={title} {...props} itemBg={"#f5f2f2"}>
+>>>>>>> 1bdba36 (OTAT-284 Add tags field to profile create from)
       {items.map((item) => (
         <Chip size="small" label={item} sx={{ mr: 0.3 }} />
       ))}

@@ -516,6 +516,9 @@ export const createService = (
       const { id } = args || {};
       return axios.get(`/baseinfo/importprofile/${id}`, config);
     },
+    fetchProfileTags(args: any, config: AxiosRequestConfig<any> | undefined) {
+      return axios.get(`/baseinfo/tags/`, config);
+    },
     deleteProfile(
       args: { id: TId },
       config: AxiosRequestConfig<any> | undefined
