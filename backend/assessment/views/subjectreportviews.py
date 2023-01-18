@@ -58,6 +58,7 @@ class SubjectReportViewSet(viewsets.ReadOnlyModelViewSet):
             response.data['status'] = 'Not Calculated'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             response.data['no_insight_yet_message'] = 'To view insights, you need to answer more questions'
 =======
             response.data['no_insight_yet_message'] = 'For insight views, you must answer more metrics'
@@ -65,6 +66,9 @@ class SubjectReportViewSet(viewsets.ReadOnlyModelViewSet):
 =======
             response.data['no_insight_yet_message'] = 'To view SOFTWARE insights, you need to answer more questions'
 >>>>>>> d221c33 (change report message)
+=======
+            response.data['no_insight_yet_message'] = 'To view insights, you need to answer more questions'
+>>>>>>> d050f7a (fix some messages)
             response.data['results'] = None
         else:
             self.extract_report_details(response, quality_attribute_values)
