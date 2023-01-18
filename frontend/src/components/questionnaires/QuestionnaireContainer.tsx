@@ -38,7 +38,11 @@ import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 >>>>>>> ce7326d (OTAT-218 Add breadcrumb)
 =======
 import PermissionControl from "../shared/PermissionControl";
+<<<<<<< HEAD
 >>>>>>> 3b81eb7 (OTAT-221 Add permission control component)
+=======
+import AlertBox from "../shared/AlertBox";
+>>>>>>> 7f37b32 (OTAT-212 Add compare page)
 
 const QuestionnaireContainer = () => {
   const {
@@ -215,7 +219,7 @@ const NotCompletedAlert = (props: {
       {loading ? (
         <LoadingSkeleton height="76px" />
       ) : (
-        <Alert
+        <AlertBox
           severity={isCompleted ? "success" : "info"}
           action={
             <Button
@@ -244,7 +248,7 @@ const NotCompletedAlert = (props: {
           ) : (
             <Trans i18nKey="pickupQuestionnaire" />
           )}
-        </Alert>
+        </AlertBox>
       )}
     </Box>
   );

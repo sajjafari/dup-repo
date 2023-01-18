@@ -152,6 +152,15 @@
   "selectAssessment": "Select assessment",
   "changeAssessment": "Change assessment",
   "addToCompareList": "Add to compare list",
+<<<<<<< HEAD
   "statusIsEvaluatedAs": "Status is evaluated as"
 >>>>>>> 297dde2 (OTAT-212 Add compare)
+=======
+  "statusIsEvaluatedAs": "Status is evaluated as",
+  "changeSelectedAssessment": "Change selected assessment",
+  "assessmentsAreFilteredBy": "Assessments are filtered by",
+  "inOrderToSelectAssessmentsFromOtherProfiles": "In order to select assessments from other profiles make a new comparison.",
+  "newComparison": "New comparison",
+  "addToCompare": "Add to compare"
+>>>>>>> 7f37b32 (OTAT-212 Add compare page)
 }
