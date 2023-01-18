@@ -119,7 +119,14 @@ const Routes = () => {
             path="/account/:username/expert-groups/:expertGroupId"
             element={<ExpertGroupScreen />}
           />
+<<<<<<< HEAD
 >>>>>>> bff18dc (OTAT-293 Add view profile page foundation)
+=======
+          <Route
+            path="/account/:username/expert-groups/:expertGroupId/profiles/:profileId"
+            element={<ProfileScreen />}
+          />
+>>>>>>> aa86b5d (OTAT-301 Moved create profile to expert group)
           <Route path="/spaces" element={<SpacesScreen />} />
           <Route path="/profiles" element={<ProfilesScreen />} />
           <Route path="/profiles/:profileId" element={<ProfileScreen />} />

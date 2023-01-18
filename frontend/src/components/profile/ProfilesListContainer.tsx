@@ -80,9 +80,6 @@ const ProfilesListContainer = () => {
 =======
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
     <Box>
-      <Box display="flex" mb={1} position="relative">
-        <CreateProfileButton onSubmitForm={profilesQueryData.query} />
-      </Box>
       <QueryData
         {...profilesQueryData}
         renderLoading={() => (
@@ -114,6 +111,7 @@ const ProfilesListContainer = () => {
   );
 };
 
+<<<<<<< HEAD
 const CreateProfileButton = (props: { onSubmitForm: TQueryFunction }) => {
   const { onSubmitForm } = props;
   const dialogProps = useDialog();
@@ -417,4 +415,6 @@ const Actions = (props: any) => {
 
 =======
 >>>>>>> e7c00fc (OTAT-293 Add View expert group page)
+=======
+>>>>>>> aa86b5d (OTAT-301 Moved create profile to expert group)
 export default ProfilesListContainer;

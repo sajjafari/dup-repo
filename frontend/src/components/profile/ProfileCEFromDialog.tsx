@@ -40,7 +40,12 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
   const { type, data = {} } = context;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { id } = data;
+=======
+  const { expertGroupId: fallbackExpertGroupId } = useParams();
+  const { id, expertGroupId = fallbackExpertGroupId } = data;
+>>>>>>> aa86b5d (OTAT-301 Moved create profile to expert group)
   const defaultValues = type === "update" ? data : {};
 =======
   const { id: rowId } = data;
@@ -89,6 +94,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
     const formattedData = {
       dsl_id: dsl_id.id,
       tag_ids: tags.map((t: any) => t.id),
+      expert_group_id: expertGroupId,
       ...restOfData,
     };
 >>>>>>> 1bdba36 (OTAT-284 Add tags field to profile create from)
