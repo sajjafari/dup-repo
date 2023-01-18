@@ -305,6 +305,7 @@ export interface IQuestionnairesInfo {
   progress: number;
   last_updated?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:frontend/src/types.ts
 <<<<<<< HEAD
   current_metric_index: number;
@@ -315,6 +316,9 @@ export interface IQuestionnairesInfo {
 >>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/types.ts
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+  current_metric_index: number;
+>>>>>>> b9b7db6 (OTAT-212 Fix continue button)
   title: string;
   subject: { id: TId; title: string }[];
 }

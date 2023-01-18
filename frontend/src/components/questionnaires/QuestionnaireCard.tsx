@@ -35,6 +35,7 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
     subject: subjects,
     title,
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
     current_metric_index,
@@ -45,6 +46,9 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
 >>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/components/questionnaires/QuestionnaireCard.tsx
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+    current_metric_index,
+>>>>>>> b9b7db6 (OTAT-212 Fix continue button)
   } = data || {};
 
   const isSmallScreen = useScreenResize("sm");
@@ -126,6 +130,7 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
             progress={progress}
             number_of_answers={number_of_answers}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
             current_metric_index={current_metric_index}
@@ -136,6 +141,9 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
 >>>>>>> 54e9997 (OTAT-160 Fix continue button functionality):front/src/components/questionnaires/QuestionnaireCard.tsx
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+            current_metric_index={current_metric_index}
+>>>>>>> b9b7db6 (OTAT-212 Fix continue button)
           />
         </Box>
       </Box>
@@ -148,6 +156,7 @@ const ActionButtons = (props: {
   progress: number;
   number_of_answers: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
   current_metric_index: number;
@@ -166,6 +175,11 @@ const ActionButtons = (props: {
 }) => {
   const { id, progress, number_of_answers } = props;
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+  current_metric_index: number;
+}) => {
+  const { id, progress, number_of_answers, current_metric_index } = props;
+>>>>>>> b9b7db6 (OTAT-212 Fix continue button)
 
   return (
     <Box display="flex">
@@ -187,6 +201,7 @@ const ActionButtons = (props: {
       {progress < 100 && progress > 0 && (
         <ActionButton
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:frontend/src/components/questionnaires/QuestionnaireCard.tsx
 <<<<<<< HEAD
           to={`${id}/${current_metric_index || number_of_answers + 1}`}
@@ -199,6 +214,9 @@ const ActionButtons = (props: {
 =======
           to={`${id}/${number_of_answers + 1}`}
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+          to={`${id}/${current_metric_index || number_of_answers + 1}`}
+>>>>>>> b9b7db6 (OTAT-212 Fix continue button)
           text="continue"
           icon={<PlayArrowRoundedIcon fontSize="small" />}
         />
