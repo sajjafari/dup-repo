@@ -109,9 +109,13 @@ urlpatterns += [
 =======
     path("addexpertgroup/<str:expert_group_id>/", expertgroupviews.AddUserToExpertGroupApi.as_view()),
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 >>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)
 =======
+=======
+    path("expertgroup/confirm/<str:token>/", expertgroupviews.ConfirmUserForExpertGroupApi.as_view()),
+>>>>>>> 030e13b (OTAT-302: Add token validation)
     path("profiles/archive/<str:profile_id>/", profileviews.ProfileArchiveApi.as_view()),
     path("profiles/publish/<str:profile_id>/", profileviews.ProfilePublishApi.as_view()),
 ]
