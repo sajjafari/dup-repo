@@ -5,6 +5,7 @@ from ..serializers.commonserializers import MetricCategorySerilizer, AssessmentS
 
 class ProfileDslSerializer(serializers.ModelSerializer):
 <<<<<<< HEAD
+<<<<<<< HEAD
     class Meta:
         model = ProfileDsl
         fields = ['id', 'dsl_file']
@@ -27,6 +28,11 @@ class ProfileDslSerializer(serializers.ModelSerializer):
         model = ProfileDsl
         fields = ['id', 'dsl']
 >>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
+=======
+    class Meta:
+        model = ProfileDsl
+        fields = ['id', 'dsl_file']
+>>>>>>> d2cf4b2 (change upload file for dsl)
 
 class AssessmentProfileSerilizer(serializers.ModelSerializer):
     images = ProfileImageSerializer(many=True)

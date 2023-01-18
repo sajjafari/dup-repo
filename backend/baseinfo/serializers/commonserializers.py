@@ -1,12 +1,15 @@
 from rest_framework import serializers
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 =======
 from rest_framework.serializers import Serializer, FileField
 >>>>>>> 471e98a (OTAT-248: import profile service is ready)
+=======
+>>>>>>> d2cf4b2 (change upload file for dsl)
 from ..models import AnswerTemplate, AssessmentSubject, Metric, MetricImpact, QualityAttribute, MetricCategory
 from ..imagecomponent.serializers import QualityAttributeImageSerializer, SubjectImageSerializer
 
@@ -64,6 +67,7 @@ class MetricSerilizer(serializers.ModelSerializer):
     class Meta:
         model = Metric
 <<<<<<< HEAD
+<<<<<<< HEAD
         fields = ['id', 'title', 'index', 'answer_templates']
 <<<<<<< HEAD
 =======
@@ -76,3 +80,6 @@ class FileUploadSerializer(Serializer):
     class Meta:
         fields = ('file',)
 >>>>>>> 471e98a (OTAT-248: import profile service is ready)
+=======
+        fields = ['id', 'title', 'index', 'answer_templates']
+>>>>>>> d2cf4b2 (change upload file for dsl)

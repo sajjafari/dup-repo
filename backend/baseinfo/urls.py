@@ -14,6 +14,7 @@ router.register('metriccategories', commonviews.MetricCategoryViewSet, basename=
 router.register('subjects', commonviews.AssessmentSubjectViewSet, basename='subjects')
 router.register('attributes', commonviews.QualityAttributeViewSet, basename='attributes')
 router.register('dsl', profileviews.UploadProfileApi, basename='dsl')
+<<<<<<< HEAD
 
 
 metric_category_router = routers.NestedDefaultRouter(router, 'metriccategories', lookup='metric_category')
@@ -35,6 +36,8 @@ router.register('profiles', commonviews.AssessmentProfileViewSet, basename='prof
 router.register('metriccategories', commonviews.MetricCategoryViewSet, basename='metriccategories')
 router.register('subjects', commonviews.AssessmentSubjectViewSet, basename='subjects')
 router.register('attributes', commonviews.QualityAttributeViewSet, basename='attributes')
+=======
+>>>>>>> d2cf4b2 (change upload file for dsl)
 
 
 metric_category_router = routers.NestedDefaultRouter(router, 'metriccategories', lookup='metric_category')
@@ -57,7 +60,6 @@ subject_router.register('images', SubjectImageViewSet, basename='subject-images'
 
 profile_router = routers.NestedDefaultRouter(router, 'profiles', lookup='profile')
 profile_router.register('images', ProfileImageViewSet, basename='profile-images')
-profile_router.register('dsl', profileviews.UploadProfileApi, basename='profile-dsl')
 
 <<<<<<< HEAD
 <<<<<<< HEAD
