@@ -1,5 +1,8 @@
 import createPalette from "@mui/material/styles/createPalette";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
 import { createTheme } from "@mui/material";
 import "@fontsource/oswald/300.css";
 import "@fontsource/oswald/400.css";

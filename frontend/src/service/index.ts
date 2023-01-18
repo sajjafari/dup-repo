@@ -460,6 +460,7 @@ export const createService = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetchProfile(
       args: { profileId: TId },
       config: AxiosRequestConfig<any> | undefined
@@ -525,6 +526,11 @@ export const createService = (
     uploadProfilePhoto(file: any, config: AxiosRequestConfig<any> | undefined) {
       return axios.post(
         `/baseinfo/profiles/1/images/`,
+=======
+    uploadProfile(file: any, config: AxiosRequestConfig<any> | undefined) {
+      return axios.post(
+        `/baseinfo/profiles/1/dsl/`,
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
         { image: file },
         {
           ...config,
@@ -534,6 +540,7 @@ export const createService = (
         }
       );
     },
+<<<<<<< HEAD
     deleteProfilePhoto(
       args: { id: TId },
       config: AxiosRequestConfig<any> | undefined
@@ -575,6 +582,8 @@ export const createService = (
     },
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
 =======
+=======
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
     uploadProfilePhoto(file: any, config: AxiosRequestConfig<any> | undefined) {
       return axios.post(
         `/baseinfo/profiles/1/images/`,

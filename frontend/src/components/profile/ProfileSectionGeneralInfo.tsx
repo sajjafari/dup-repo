@@ -33,37 +33,52 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Box my={4} sx={{ mx: { xs: 0, sm: 1, md: 2 } }}>
 =======
     <Box my={4} mx={2}>
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+    <Box my={4} sx={{ mx: { xs: 0, sm: 1, md: 2 } }}>
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
       <Typography variant="h6" sx={{ opacity: 0.8, fontSize: "1.1rem" }}>
         <Trans i18nKey="aboutProfile" />
       </Typography>
       <Box
         sx={{
 <<<<<<< HEAD
+<<<<<<< HEAD
           p: 1,
 =======
           border: (t) => `1px dashed ${t.palette.primary.dark}`,
           p: 2,
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+          p: 1,
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
           borderRadius: 2,
         }}
       >
         <Grid container spacing={1}>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Grid item xs={12} sm={7} md={5} lg={4}>
 =======
           <Grid item xs={4}>
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+          <Grid item xs={12} sm={7} md={5} lg={4}>
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
             {data.profileInfos.map((info: any) => {
               return (
                 <InfoItem
                   info={{
                     ...info,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
                     type: info.title === "Subjects" ? "array" : info.type,
                   }}
                 />
@@ -117,9 +132,14 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
           </Grid>
           <Grid item xs={12}>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Typography
               variant="body2"
 <<<<<<< HEAD
+=======
+            <Typography
+              variant="body2"
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
               fontFamily="Roboto"
               sx={{
                 my: 0.5,
@@ -128,6 +148,7 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
                 px: 1,
                 borderRadius: 1,
               }}
+<<<<<<< HEAD
 =======
               fontFamily="RobotoRegular"
               sx={{ my: 1 }}
@@ -138,6 +159,10 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
 >>>>>>> 11a534e (OTAT-266 add Vite)
               {data.description ||
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorem deleniti libero ratione repudiandae modi deserunt rem doloremque perferendis, mollitia doloribus saepe incidunt numquam sequi porro quos exercitationem dolor placeat?"}
+=======
+            >
+              {data.description}
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
             </Typography>
           </Grid>
         </Grid>

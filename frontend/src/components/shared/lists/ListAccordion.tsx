@@ -23,6 +23,9 @@ const ListAccordion = (props: IListAccordion) => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
     <Box
       component="ul"
       sx={{
@@ -30,9 +33,12 @@ const ListAccordion = (props: IListAccordion) => {
         listStyle: { xs: "none", md: "disc" },
       }}
     >
+<<<<<<< HEAD
 =======
     <ul>
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
       {items.map((item: any, index: number) => {
         return (
           <LiComponent
@@ -42,10 +48,14 @@ const ListAccordion = (props: IListAccordion) => {
         );
       })}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </Box>
 =======
     </ul>
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+    </Box>
+>>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
   );
 };
 
