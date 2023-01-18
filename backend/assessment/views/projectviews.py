@@ -59,6 +59,7 @@ class AssessmentProjectByCurrentUserViewSet(ModelViewSet):
         current_user_space_list = current_user.spaces.all()
         query_set = AssessmentProject.objects.none()
 <<<<<<< HEAD
+<<<<<<< HEAD
         profile_id = self.request.query_params.get('profile_id')
         for space in current_user_space_list:
             if profile_id is not None:
@@ -69,6 +70,14 @@ class AssessmentProjectByCurrentUserViewSet(ModelViewSet):
         for space in current_user_space_list:
             query_set |= AssessmentProject.objects.filter(space_id=space.id)
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        profile_id = self.request.query_params.get('profile_id')
+        for space in current_user_space_list:
+            if profile_id is not None:
+                query_set |= AssessmentProject.objects.filter(space_id=space.id, assessment_profile_id=profile_id)
+            else:
+                query_set |= AssessmentProject.objects.filter(space_id=space.id)
+>>>>>>> aa4d5c8 (OTAT-229: filter current user projects by profile)
         return query_set
 
 
