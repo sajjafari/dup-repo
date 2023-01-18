@@ -224,6 +224,14 @@
 >>>>>>> c7ab3a1 (OTAT-253 Add create profile dialog)
 =======
   "dsl": "DSL",
+<<<<<<< HEAD
   "currentSpace": "Current space"
 >>>>>>> f70eca7 (OTAT-258 Add drop down menu)
+=======
+  "currentSpace": "Current space",
+  "allSpaces": "All spaces",
+  "questionOptions": "Question options",
+  "impact": "Impact",
+  "relatedAttributes": "Related attributes"
+>>>>>>> b2c86b5 (OTAT-258 Fix mobile navbar items)
 }
