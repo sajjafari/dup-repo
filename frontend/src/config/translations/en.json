@@ -363,6 +363,12 @@
 >>>>>>> 81ae816 (OTAT-291 Add expert groups list)
 =======
   "createExpertGroup": "Create expert group",
+<<<<<<< HEAD
   "expertGroupT": "Expert Group"
 >>>>>>> bff18dc (OTAT-293 Add view profile page foundation)
+=======
+  "expertGroupT": "Expert Group",
+  "addLink": "Add link",
+  "about": "About"
+>>>>>>> e7c00fc (OTAT-293 Add View expert group page)
 }
