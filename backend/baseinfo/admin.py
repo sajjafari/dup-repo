@@ -29,10 +29,14 @@ class AssessmentSubjectAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     autocomplete_fields = ['metric_categories']
     search_fields = ['code', 'title', 'assessment_profile']
 <<<<<<< HEAD
+<<<<<<< HEAD
     fields = ['code', 'title', 'description', 'assessment_profile', 'metric_categories', 'index']
 =======
     fields = ['code', 'title', 'description', 'assessment_profile', 'index']
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    fields = ['code', 'title', 'description', 'assessment_profile', 'metric_categories', 'index']
+>>>>>>> d63c9ae (back metric category to subject in panel admin)
     list_display = ['code', 'title', 'subject_categories', 'assessment_profile']
     list_editable = ['title']
     list_per_page = 10
