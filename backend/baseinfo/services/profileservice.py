@@ -1,6 +1,7 @@
+from rest_framework import status
+from ..serializers.profileserializers import AssessmentProfileSerilizer
 from ..models.profilemodels import AssessmentProfile, ProfileTag
 from assessment.models import AssessmentProject
-from rest_framework import status
 
 
 def load_profile(profile_id) -> AssessmentProfile:
@@ -42,28 +43,43 @@ def delete_validation(profile_id, user_id):
             delete_validation_res['status'] = status.HTTP_403_FORBIDDEN        
     return delete_validation_res
 
+<<<<<<< HEAD
 >>>>>>> b5a5a11 (OTAT-289: archive and publish profile service is ready)
 def extract_detail_of_profile(profile):
+=======
+def extract_detail_of_profile(profile, request):
+>>>>>>> 928d4ae (organize profile diffrent services)
     response = extract_profile_basic_infos(profile)
     response['profileInfos'] = extract_profile_report_infos(profile)
     response['subjectsInfos'] = extract_subjects_infos(profile)
     response['questionnaires'] = extract_questionnaires_infos(profile)
+    extra_profile_info = AssessmentProfileSerilizer(profile, context={'request': request}).data
+    response['is_active'] = extra_profile_info['is_active']
+    response['expert_group'] = extra_profile_info['expert_group']
+    response['number_of_assessment'] = extra_profile_info['number_of_assessment']
+    response['current_user_delete_permission'] = extra_profile_info['current_user_delete_permission']
+    response['current_user_is_coordinator'] = extra_profile_info['current_user_is_coordinator']
     return response
 
-def extract_profile_basic_infos(profile):
+def extract_profile_basic_infos(profile: AssessmentProfile):
     response = {}
     response['title'] = profile.title
-    response['description'] = profile.description
+    response['summary'] = profile.summary
+    response['about'] = profile.about
     response['last_update'] = profile.last_modification_date
     response['creation_date'] = profile.creation_time
     return response
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 3015a1a (display profile by rest service)
 =======
 >>>>>>> 471e98a (OTAT-248: import profile service is ready)
 def extract_questionnaires_infos(profile):
+=======
+def extract_questionnaires_infos(profile: AssessmentProfile):
+>>>>>>> 928d4ae (organize profile diffrent services)
     questionnairesInfos = []
     categories = profile.metric_categories.all()
     for category in categories:
@@ -304,4 +320,24 @@ def __extract_profile_attribute_count(subjects):
     for subject in subjects:
         attributes.extend(subject.qualityattribute_set.all())
     return {'title' : 'Attributes count', 'item': len(attributes)}
+
+
+def get_current_user_delete_permission(profile: AssessmentProfile, current_user_id):
+    number_of_assessment = AssessmentProject.objects.filter(assessment_profile_id = profile.id).count()
+    if number_of_assessment > 0:
+        return False
+    if profile.expert_group is not None:
+        user = profile.expert_group.users.filter(id = current_user_id)
+        return user.count() > 0
+    return True
+
+def get_current_user_is_coordinator(profile: AssessmentProfile, current_user_id):
+    if profile.expert_group is not None:
+        if profile.expert_group.owner is not None:
+            if profile.expert_group.owner.id == current_user_id:
+                return True
+    return False
+
+
+
     

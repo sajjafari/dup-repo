@@ -92,6 +92,7 @@ urlpatterns = router.urls + metric_category_router.urls + metric_category_by_sub
 <<<<<<< HEAD
 urlpatterns += [
     path("inspectprofile/<str:profile_id>/", profileviews.ProfileDetailDisplayApi.as_view()),
+    path("expertgroup/profiles/<str:expert_group_id>/", profileviews.ProfileListApi.as_view()),
     path("importprofile/", profileviews.ImportProfileApi.as_view()),
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -2,7 +2,6 @@
 <<<<<<< HEAD
 import requests
 import traceback
-from zipfile import ZipFile
 from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import status
@@ -10,6 +9,7 @@ from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 
+<<<<<<< HEAD
 from ..services import profileservice
 from ..services import importprofileservice
 <<<<<<< HEAD
@@ -57,9 +57,13 @@ from ..services import expertgroupservice
 =======
 >>>>>>> 365b8eb (OTAT-269: enrich expert_group service)
 from ..serializers.profileserializers import ProfileDslSerializer, AssessmentProfileSerilizer, ProfileTagSerializer
+=======
+from ..services import profileservice, importprofileservice, expertgroupservice
+from ..serializers.profileserializers import ProfileDslSerializer, AssessmentProfileSerilizer, ProfileTagSerializer, ImportProfileSerializer
+>>>>>>> 928d4ae (organize profile diffrent services)
 from ..models.profilemodels import ProfileDsl, ProfileTag, AssessmentProfile
 
-DSL_PARSER_URL_SERVICE = "http://dsl:8080/extract/"
+DSL_PARSER_URL_SERVICE = "http://localhost:8080/extract/"
 
 class AssessmentProfileViewSet(ModelViewSet):
     serializer_class = AssessmentProfileSerilizer
@@ -67,7 +71,7 @@ class AssessmentProfileViewSet(ModelViewSet):
     search_fields = ['title']
 
     def get_queryset(self):
-        return AssessmentProfile.objects.filter(is_active=True)
+        return AssessmentProfile.objects.filter()
 
     def destroy(self, request, *args, **kwargs):
         resp = profileservice.delete_validation(kwargs['pk'], request.user.id)
@@ -114,7 +118,17 @@ class ProfileDetailDisplayApi(APIView):
             return Response({"message": error_message}, status = status.HTTP_400_BAD_REQUEST)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         response = profileservice.extract_detail_of_profile(profile)
+=======
+        response = profileservice.extract_detail_of_profile(profile, request)
+        return Response(response, status = status.HTTP_200_OK)
+
+class ProfileListApi(APIView):
+    def get(self, request, expert_group_id):
+        expert_group = expertgroupservice.load_expert_group(expert_group_id)
+        response = AssessmentProfileSerilizer(expert_group.profiles, many = True, context={'request': request}).data
+>>>>>>> 928d4ae (organize profile diffrent services)
         return Response(response, status = status.HTTP_200_OK)
     
 class UploadProfileApi(ModelViewSet):
@@ -125,7 +139,9 @@ class UploadProfileApi(ModelViewSet):
         return ProfileDsl.objects.all()
 
 class ImportProfileApi(APIView):
+    serializer_class = ImportProfileSerializer
     def post(self, request):
+<<<<<<< HEAD
         dsl_id = request.data.get('dsl_id')
         dsl = ProfileDsl.objects.get(id = dsl_id)
         input_zip = ZipFile(dsl.dsl_file)
@@ -138,15 +154,17 @@ class ImportProfileApi(APIView):
 >>>>>>> 9633745 (add dsl parser app to docker compose)
         if resp['hasError']:
 =======
+=======
+        serializer = ImportProfileSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        dsl_contents = importprofileservice.extract_dsl_contents(serializer.validated_data['dsl_id'])
+>>>>>>> 928d4ae (organize profile diffrent services)
         base_infos_resp = requests.post(DSL_PARSER_URL_SERVICE, json={"dslContent": dsl_contents}).json()
         if base_infos_resp['hasError']:
 >>>>>>> 2946cf0 (make profile tag many to many)
             return Response({"message": "The uploaded dsl is invalid."}, status = status.HTTP_400_BAD_REQUEST)
         try:
-            extra_info = {}
-            extra_info['tag_ids'] = request.data.get('tag_ids')
-            extra_info['expert_group_id'] = request.data.get('expert_group_id')
-            assessment_profile = importprofileservice.import_profile(base_infos_resp, extra_info)
+            assessment_profile = importprofileservice.import_profile(base_infos_resp, **serializer.validated_data)
             return Response({"message": "The profile imported successfully", "id": assessment_profile.id}, status = status.HTTP_200_OK)
         except Exception as e:
             message = traceback.format_exc()
