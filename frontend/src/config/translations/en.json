@@ -189,6 +189,11 @@
   "and": "and",
   "attributes": "Attributes",
   "subjectAttributes": "{{subject}} attributes",
+<<<<<<< HEAD
   "editComparisonItems": "Edit comparison items"
 >>>>>>> 7ab5c0b (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+  "editComparisonItems": "Edit comparison items",
+  "comparisonResult": "Comparison result"
+>>>>>>> 3c4a20d (OTAT-259 Change compare result page title)
 }
