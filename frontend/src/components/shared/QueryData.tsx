@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 import React, { PropsWithChildren } from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 11a534e (OTAT-266 add Vite)
+=======
+import React, { PropsWithChildren, useContext } from "react";
+>>>>>>> 44b8524 (OTAT-294 Add edit to expert group)
 import { Box } from "@mui/material";
 import { styles } from "../../config/styles";
-import { ECustomErrorType } from "../../types";
+import { ECustomErrorType, TQueryFunction, TQueryProps } from "../../types";
 import { ICustomError } from "../../utils/CustomError";
 import ErrorEmptyData from "./errors/ErrorEmptyData";
 import ErrorDataLoading from "./errors/ErrorDataLoading";
@@ -36,6 +40,7 @@ interface IQueryDataProps<T> {
   error: boolean;
   loaded: boolean;
   errorObject: ICustomError | undefined;
+  abortController?: AbortController;
   render: (data: T) => JSX.Element;
   renderLoading?: () => JSX.Element;
   renderError?: (
@@ -45,7 +50,18 @@ interface IQueryDataProps<T> {
       | undefined
   ) => JSX.Element;
   isDataEmpty?: (data: T) => boolean;
+  query: TQueryFunction<T>;
 }
+
+const QueryDataContext = React.createContext<TQueryProps>({
+  data: undefined,
+  error: false,
+  loading: true,
+  loaded: false,
+  query: async () => null,
+  errorObject: undefined,
+  abortController: undefined as any,
+});
 
 const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
   const {
@@ -75,12 +91,17 @@ const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
     emptyDataComponent = <ErrorEmptyData />,
+<<<<<<< HEAD
 =======
     emptyDataComponent = <EmptyError />,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
     emptyDataComponent = <ErrorEmptyData />,
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+    abortController,
+    query,
+>>>>>>> 44b8524 (OTAT-294 Add edit to expert group)
   } = props;
 
   if (loading) {
@@ -93,7 +114,31 @@ const QueryData = <T extends any = any>(props: IQueryDataProps<T>) => {
   if (isEmpty) {
     return emptyDataComponent;
   }
-  return <>{loaded && data ? render(data) : null}</>;
+  return (
+    <QueryDataContext.Provider
+      value={{
+        data,
+        error,
+        errorObject,
+        loaded,
+        loading,
+        query,
+        abortController,
+      }}
+    >
+      {loaded && data ? render(data) : null}
+    </QueryDataContext.Provider>
+  );
+};
+
+export const useQueryDataContext = () => {
+  const context = useContext(QueryDataContext);
+  if (context === undefined) {
+    throw new Error(
+      "useQueryDataContext must be used within a QueryData render method"
+    );
+  }
+  return context;
 };
 
 const defaultIsDataEmpty = (data: any) => {

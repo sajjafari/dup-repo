@@ -22,9 +22,12 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import FilePresentRoundedIcon from "@mui/icons-material/FilePresentRounded";
 import { styles } from "../../../config/styles";
 import FileUploadRoundedIcon from "@mui/icons-material/FileUploadRounded";
+<<<<<<< HEAD
 import { useServiceContext } from "../../../providers/ServiceProvider";
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> 44b8524 (OTAT-294 Add edit to expert group)
 import { TQueryServiceFunction, useQuery } from "../../../utils/useQuery";
 =======
 import { useQuery } from "../../../utils/useQuery";
@@ -46,12 +49,13 @@ import formatBytes from "../../../utils/formatBytes";
 import getFieldError from "../../../utils/getFieldError";
 import DownloadRoundedIcon from "@mui/icons-material/DownloadRounded";
 import { Trans } from "react-i18next";
+import getFileNameFromSrc from "../../../utils/getFileNameFromSrc";
 
 interface IUploadFieldProps {
   name: string;
   label: string | JSX.Element;
   required?: boolean;
-  defaultValue?: any[];
+  defaultValue?: any;
   accept?: Accept;
   maxSize?: number;
 <<<<<<< HEAD
@@ -68,7 +72,13 @@ interface IUploadFieldProps {
 =======
   uploadService?: TQueryServiceFunction<any, any>;
   deleteService?: TQueryServiceFunction<any, any>;
+<<<<<<< HEAD
 >>>>>>> 4a3d6ae (OTAT-292 Add create expert group form)
+=======
+  hideDropText?: boolean;
+  shouldFetchFileInfo?: boolean;
+  defaultValueType?: string;
+>>>>>>> 44b8524 (OTAT-294 Add edit to expert group)
 }
 
 const UploadField = (props: IUploadFieldProps) => {
@@ -107,6 +117,7 @@ interface IUploadProps {
   accept?: Accept;
   maxSize?: number;
   required?: boolean;
+<<<<<<< HEAD
   defaultValue?: any[];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -117,6 +128,14 @@ interface IUploadProps {
   uploadService?: TQueryServiceFunction<any, any>;
   deleteService?: TQueryServiceFunction<any, any>;
 >>>>>>> 4a3d6ae (OTAT-292 Add create expert group form)
+=======
+  defaultValue?: any;
+  uploadService?: TQueryServiceFunction<any, any>;
+  deleteService?: TQueryServiceFunction<any, any>;
+  hideDropText?: boolean;
+  shouldFetchFileInfo?: boolean;
+  defaultValueType?: string;
+>>>>>>> 44b8524 (OTAT-294 Add edit to expert group)
 }
 
 const Uploader = (props: IUploadProps) => {
@@ -129,9 +148,27 @@ const Uploader = (props: IUploadProps) => {
     required,
     uploadService,
     deleteService,
+    hideDropText,
+    shouldFetchFileInfo = false,
+    defaultValue = [],
+    defaultValueType,
   } = props;
 
-  const [myFiles, setMyFiles] = useState<File[]>([]);
+  const [myFiles, setMyFiles] = useState<
+    (File | { src: string; name: string; type: string })[]
+  >(
+    shouldFetchFileInfo || !defaultValue
+      ? []
+      : typeof defaultValue === "string"
+      ? ([
+          {
+            src: defaultValue,
+            name: getFileNameFromSrc(defaultValue),
+            type: defaultValueType || "",
+          },
+        ] as { src: string; name: string; type: string }[])
+      : []
+  );
 
   const uploadQueryProps = useQuery({
     service: uploadService || ((() => null) as any),
@@ -246,7 +283,10 @@ const Uploader = (props: IUploadProps) => {
       uploadQueryProps.data?.[fieldProps.name]) ||
     (file as any)?.[fieldProps.name];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 44b8524 (OTAT-294 Add edit to expert group)
   const { errorMessage, hasError } = getFieldError(errors, fieldProps.name);
 =======
 
@@ -361,16 +401,48 @@ const Uploader = (props: IUploadProps) => {
               >
                 <ListItemIcon
                   sx={{
-                    minWidth: "42px",
+                    minWidth: "20px",
+                    maxWidth: "40px",
+                    maxHeight: "40px",
+                    overflow: "hidden",
+                    mr: 1.5,
                     display: { xs: "none", sm: "inline-flex" },
                   }}
                 >
-                  <FilePresentRoundedIcon />
+                  {file?.type?.includes("image") ? (
+                    <Box
+                      sx={{
+                        maxWidth: "100%",
+                        maxHeight: "100%",
+                        objectFit: "contain",
+                      }}
+                      component="img"
+                      src={
+                        (file as any).src || URL.createObjectURL(file as any)
+                      }
+                      alt={file.name}
+                      title={file.name}
+                    />
+                  ) : (
+                    <FilePresentRoundedIcon />
+                  )}
                 </ListItemIcon>
                 <ListItemText
+                  title={`${(acceptedFiles[0] || file)?.name} - ${
+                    (acceptedFiles[0] || file)?.size
+                      ? formatBytes((acceptedFiles[0] || file)?.size)
+                      : ""
+                  }`}
+                  primaryTypographyProps={{
+                    sx: { ...styles.ellipsis, width: "95%" },
+                  }}
                   primary={<>{(acceptedFiles[0] || file)?.name}</>}
                   secondary={
-                    <>{formatBytes((acceptedFiles[0] || file)?.size)}</>
+                    <>
+                      {(acceptedFiles[0] || file)?.size
+                        ? formatBytes((acceptedFiles[0] || file)?.size)
+                        : null}
+                    </>
                   }
                 />
               </ListItem>
@@ -397,8 +469,13 @@ const Uploader = (props: IUploadProps) => {
                   color: (t) => t.palette.info.dark,
                 }}
               >
-                <FileUploadRoundedIcon sx={{ mr: 1 }} />{" "}
-                <Trans i18nKey="dropYourFileHere" />
+                <FileUploadRoundedIcon sx={{ mr: hideDropText ? 0 : 1 }} />
+                {!hideDropText && (
+                  <>
+                    {" "}
+                    <Trans i18nKey="dropYourFileHere" />
+                  </>
+                )}
               </Box>
             </>
           )}

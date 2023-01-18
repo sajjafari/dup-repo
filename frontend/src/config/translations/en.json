@@ -369,6 +369,15 @@
 =======
   "expertGroupT": "Expert Group",
   "addLink": "Add link",
+<<<<<<< HEAD
   "about": "About"
 >>>>>>> e7c00fc (OTAT-293 Add View expert group page)
+=======
+  "about": "About",
+  "groupPicture": "Group picture",
+  "name": "Name",
+  "website": "Website",
+  "tags": "Tags",
+  "updateExpertGroup": "Update expert group"
+>>>>>>> 44b8524 (OTAT-294 Add edit to expert group)
 }
