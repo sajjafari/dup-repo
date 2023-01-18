@@ -36,6 +36,7 @@ const QuestionnairesNotCompleteAlert = (
 ) => {
   const { subjectName, to, progress, q, a } = props;
   const location = useLocation();
+  console.log(to);
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,10 +73,14 @@ const QuestionnairesNotCompleteAlert = (
               to={to}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
               {subjectName} <Trans i18nKey="questionnaires" />{" "}
 =======
               {subjectName} questionnaires{" "}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              {subjectName} <Trans i18nKey="questionnaires" />{" "}
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
               {q && a && (
                 <QANumberIndicator
                   q={q}

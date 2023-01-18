@@ -114,12 +114,12 @@ import {
   useCompareContext,
   useCompareDispatch,
 } from "../../providers/CompareProvider";
-import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 import Chip from "@mui/material/Chip";
 import { styles } from "../../config/styles";
 import AlertBox from "../shared/AlertBox";
 import PermissionControl from "../shared/PermissionControl";
+import forLoopComponent from "../../utils/forLoopComponent";
 
 const CompareParts = () => {
   const { assessmentIds, assessmentsInfoQueryData } = useCompareParts();
@@ -187,7 +187,7 @@ const CompareParts = () => {
 =======
       <PermissionControl error={assessmentsInfoQueryData.errorObject}>
         <Box my={3}>
-          <ProfileField />
+          <CompareSelectedProfileInfo />
         </Box>
         <Box position={"relative"}>
           <QueryData
@@ -198,17 +198,15 @@ const CompareParts = () => {
                 <>
                   <CompareButton disabled={true} />
                   <Grid container spacing={3}>
-                    {[0, 1, 2, 3].map((index) => {
-                      return (
-                        <Grid item xs={12} md={6} key={index}>
-                          <LoadingSkeleton
-                            height={
-                              assessmentIds?.length === 0 ? "264px" : "290px"
-                            }
-                          />
-                        </Grid>
-                      );
-                    })}
+                    {forLoopComponent(4, (index) => (
+                      <Grid item xs={12} md={6} key={index}>
+                        <LoadingSkeleton
+                          height={
+                            assessmentIds?.length === 0 ? "264px" : "290px"
+                          }
+                        />
+                      </Grid>
+                    ))}
                   </Grid>
                 </>
               );
@@ -221,7 +219,7 @@ const CompareParts = () => {
                     disabled={assessmentIds?.length <= 1}
                   />
                   <Grid container spacing={3}>
-                    {[0, 1, 2, 3].map((index) => {
+                    {forLoopComponent(4, (index) => {
                       const data = res[index];
                       return (
                         <Grid item xs={12} md={6} key={index}>
@@ -428,10 +426,14 @@ const CompareButton = (props: {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CompareSelectedProfileInfo = () => {
 =======
 const ProfileField = () => {
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+const CompareSelectedProfileInfo = () => {
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
   const { profile } = useCompareContext();
   const dispatch = useCompareDispatch();
   const makeNewComparison = () => {
@@ -457,10 +459,14 @@ const ProfileField = () => {
         <Chip label={profile.title} />
       </AlertTitle>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Trans i18nKey="toCompareAssessmentsOfOtherProfiles" />
 =======
       <Trans i18nKey="inOrderToSelectAssessmentsFromOtherProfiles" />
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+      <Trans i18nKey="toCompareAssessmentsOfOtherProfiles" />
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
     </AlertBox>
   ) : (
     <></>

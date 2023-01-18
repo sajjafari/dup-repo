@@ -93,6 +93,7 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
           p: 3,
           height: "100%",
           px: 3.8,
+<<<<<<< HEAD
           borderRadius: 2,
 
           border: `1.5px dashed ${
@@ -125,13 +126,15 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
           p: 3,
           height: "100%",
           px: 3.5,
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
           borderRadius: 2,
 <<<<<<< HEAD
           minHeight: "264px",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
 
-          border: `2px dashed ${
+          border: `1.5px dashed ${
             disabled ? "#101c324f" : data?.color?.color_code || "#101c32"
           }`,
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
@@ -171,13 +174,19 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
             <AddBoxRoundedIcon sx={{ mb: 0.5 }} fontSize="large" />
             <Typography textTransform={"none"} textAlign="center">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
               <Trans
                 i18nKey="selectAssessmentForComparison"
                 values={{ value: numberMap[index] }}
               />
+<<<<<<< HEAD
 =======
               <Trans i18nKey="selectAssessmentForComparison" />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
             </Typography>
           </>
         )}
@@ -192,10 +201,15 @@ const ComparePartItem = (props: IComparePartsItemProps) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const numberMap = ["first", "second", "third", "fourth"];
 
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+const numberMap = ["first", "second", "third", "fourth"];
+
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 const DeleteAssessmentIconBtn = (props: {
   id: TId;
   index: number;

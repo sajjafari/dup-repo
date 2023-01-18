@@ -19,10 +19,14 @@ const AlertBox = (props: IAlertBox) => {
       action={!isSmall ? action : undefined}
       sx={
 <<<<<<< HEAD
+<<<<<<< HEAD
         isSmall && action
 =======
         isSmall
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+        isSmall && action
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
           ? { ...(rest.sx || {}), "& .MuiAlert-message": { width: "100%" } }
           : rest.sx
       }
@@ -30,10 +34,14 @@ const AlertBox = (props: IAlertBox) => {
       <Box sx={isSmall ? { flexDirection: "column", width: "100%" } : {}}>
         {children}
 <<<<<<< HEAD
+<<<<<<< HEAD
         {isSmall && action ? (
 =======
         {isSmall ? (
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+        {isSmall && action ? (
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
           <Box
             sx={{
               pt: { xs: 1.5, md: 0.5 },

@@ -1,6 +1,7 @@
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import Chip from "@mui/material/Chip";
@@ -19,32 +20,22 @@ import CircularProgress from "@mui/material/CircularProgress";
 import MuiLink from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 >>>>>>> d4b1d73 (OTAT-212 Fix bugs)
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import { Trans } from "react-i18next";
-import { getColorOfStatus, styles } from "../../config/styles";
-import { Gauge } from "../shared/charts/Gauge";
-import Title from "../shared/Title";
-import {
-  Bar,
-  XAxis,
-  YAxis,
-  Legend,
-  Tooltip,
-  BarChart,
-  CartesianGrid,
-  ResponsiveContainer,
-} from "recharts";
-import {
-  ICompareResultBaseInfo,
-  ICompareResultCompareItems,
-  ICompareResultModel,
-  ICompareResultSubject,
-  ITotalProgress,
-  TStatus,
-} from "../../types";
+import Chip from "@mui/material/Chip";
+import MuiLink from "@mui/material/Link";
+import CompareTable from "./CompareTable";
 import AlertBox from "../shared/AlertBox";
+<<<<<<< HEAD
 >>>>>>> c865200 (OTAT-212 Add compare result page)
+=======
+import { ICompareResultModel } from "../../types";
+import { getMinWithBaseOnNumberOfAssessments } from "./utils";
+import CompareResultAssessmentsSection from "./CompareResultAssessmentsSection";
+import CompareResultSubjectAttributesBarChart from "./CompareResultAttributesBarChart";
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 
 interface ICompareResultProps {
   data: ICompareResultModel;
@@ -56,6 +47,9 @@ const CompareResult = (props: ICompareResultProps) => {
   return (
     <Box mt={4}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
       <Box sx={{ overflowX: "auto" }}>
         <Box
           px={1}
@@ -92,6 +86,7 @@ const CompareResult = (props: ICompareResultProps) => {
             );
           })}
         </Box>
+<<<<<<< HEAD
 =======
       <CompareItems data={data} />
     </Box>
@@ -123,16 +118,22 @@ const CompareItems = (props: { data: ICompareResultModel }) => {
           base_infos={data.base_infos}
         />
 >>>>>>> c865200 (OTAT-212 Add compare result page)
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
       </Box>
     </Box>
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CompareResultCommonBaseInfo = (props: { data: ICompareResultModel }) => {
 =======
 const GeneralInfo = (props: { data: ICompareResultModel }) => {
 >>>>>>> c865200 (OTAT-212 Add compare result page)
+=======
+const CompareResultCommonBaseInfo = (props: { data: ICompareResultModel }) => {
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
   const { data } = props;
   const { base_infos, subjects } = data;
   const profile = base_infos[0].profile;
@@ -162,6 +163,7 @@ const GeneralInfo = (props: { data: ICompareResultModel }) => {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const CompareResultAssessments = (props: {
@@ -510,4 +512,6 @@ const renderCompareItem = (key: string, value: any) => {
 };
 
 >>>>>>> c865200 (OTAT-212 Add compare result page)
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 export default CompareResult;

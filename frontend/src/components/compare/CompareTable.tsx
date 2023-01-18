@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
@@ -33,7 +37,11 @@ const CompareTable = (props: {
                 <Typography
                   sx={{
                     fontSize: "1rem",
+<<<<<<< HEAD
                     fontFamily: "Roboto",
+=======
+                    fontFamily: "RobotoRegular",
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
                     opacity: 0.7,
                   }}
                 >
@@ -70,7 +78,11 @@ const CompareTable = (props: {
                               <li>
                                 <Typography
                                   sx={{ my: 0.3 }}
+<<<<<<< HEAD
                                   fontFamily={"Roboto"}
+=======
+                                  fontFamily={"RobotoMedium"}
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
                                   fontSize="1.1rem"
                                 >
                                   {text}
@@ -95,7 +107,11 @@ const CompareTable = (props: {
 };
 
 const textStyle = {
+<<<<<<< HEAD
   fontFamily: "Roboto",
+=======
+  fontFamily: "RobotoBold",
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
   fontSize: "1.1rem",
   fontWeight: "bolder",
 };

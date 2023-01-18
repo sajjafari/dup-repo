@@ -35,6 +35,7 @@ import {
 } from "../../providers/CompareProvider";
 import hasStatus from "../../utils/hasStatus";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import AlertBox from "../shared/AlertBox";
 =======
 import { useParams } from "react-router-dom";
@@ -60,6 +61,9 @@ import {
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
 =======
 >>>>>>> d4b1d73 (OTAT-212 Fix bugs)
+=======
+import AlertBox from "../shared/AlertBox";
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 
 interface ICompareItemCEFormDialog
   extends Omit<ICompareItemCEForm, "closeDialog"> {}
@@ -112,6 +116,7 @@ const CompareItemCEFormDialog = (props: ICompareItemCEFormDialog) => {
     >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <AlertBox severity="info">
         <Trans i18nKey="onlyAssessmentsWithEvaluatedStatus" />
       </AlertBox>
@@ -122,6 +127,11 @@ const CompareItemCEFormDialog = (props: ICompareItemCEFormDialog) => {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+      <AlertBox severity="info">
+        <Trans i18nKey="onlyAssessmentsWithEvaluatedStatus" />
+      </AlertBox>
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
       <CompareItemCEForm {...props} closeDialog={closeDialog} />
     </CEDialog>
   );

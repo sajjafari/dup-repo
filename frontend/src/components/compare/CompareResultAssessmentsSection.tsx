@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 import Grid from "@mui/material/Grid";
 import { styles } from "../../config/styles";
 import { ICompareResultBaseInfo } from "../../types";

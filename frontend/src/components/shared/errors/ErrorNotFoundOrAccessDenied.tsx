@@ -6,8 +6,12 @@ import ErrorNotFoundOrAccessDeniedImage from "../../../assets/svg/notFoundOrAcce
 =======
 import Box from "@mui/material/Box";
 import { styles } from "../../../config/styles";
+<<<<<<< HEAD
 import ErrorNotFoundOrAccessDeniedImage from "../../../assets/svg/404-withmsg.svg";
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+import ErrorNotFoundOrAccessDeniedImage from "../../../assets/svg/notFoundOrAccessDenied.svg";
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 
 export const ErrorNotFoundOrAccessDenied = () => {
   return (

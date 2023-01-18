@@ -297,10 +297,14 @@ const NoInsightYetMessage = (props: { data: ISubjectReportModel }) => {
           variant="contained"
           component={Link}
 <<<<<<< HEAD
+<<<<<<< HEAD
           to={`./../../questionnaires?subject_pk=${subjectId}`}
 =======
           to={`./../questionnaires?subject_pk=${subjectId}`}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          to={`./../../questionnaires?subject_pk=${subjectId}`}
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
         >
           {title} <Trans i18nKey="questionnaires" />
         </Button>

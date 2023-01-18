@@ -45,6 +45,9 @@ const commonStyles = {
     },
   }),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
   circularProgressBackgroundStroke: style({
     display: "flex",
     justifyContent: "center",
@@ -55,6 +58,7 @@ const commonStyles = {
     boxShadow: "0 0 4px #bbb7b7 inset",
     borderRadius: "100%",
   }),
+<<<<<<< HEAD
   ellipsis: style({
     whiteSpace: "nowrap",
     overflow: "hidden",
@@ -62,6 +66,8 @@ const commonStyles = {
   }),
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 };
 
 const cards = {
@@ -119,6 +125,9 @@ const buttons = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 const compare = {
   compareResultBorder: style({
     "&:not(:last-of-type) > div": {
@@ -127,12 +136,16 @@ const compare = {
   }),
 };
 
+<<<<<<< HEAD
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 export const styles = {
   ...commonStyles,
   ...auth,
   ...buttons,
+<<<<<<< HEAD
 <<<<<<< HEAD
   ...compare,
 =======
@@ -142,6 +155,9 @@ export const styles = {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+  ...compare,
+>>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
   cards,
 };
 
