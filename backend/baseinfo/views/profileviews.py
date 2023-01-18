@@ -14,6 +14,7 @@ from ..services import profileservice
 from ..services import importprofileservice
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from ..serializers.profileserializers import ProfileDslSerializer
 <<<<<<< HEAD
 from ..models import ProfileDsl
@@ -53,12 +54,13 @@ from ..models import ProfileDsl
 =======
 from ..services import expertgroupservice
 >>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)
+=======
+>>>>>>> 365b8eb (OTAT-269: enrich expert_group service)
 from ..serializers.profileserializers import ProfileDslSerializer, AssessmentProfileSerilizer, ProfileTagSerializer
 from ..models.profilemodels import ProfileDsl, ProfileTag, AssessmentProfile
 from ..models.basemodels import MetricCategory
 
 DSL_PARSER_URL_SERVICE = "http://localhost:8080/extract/"
-
 
 class AssessmentProfileViewSet(ModelViewSet):
     serializer_class = AssessmentProfileSerilizer
@@ -121,14 +123,15 @@ class ImportProfileApi(APIView):
 >>>>>>> 2946cf0 (make profile tag many to many)
             return Response({"message": "The uploaded dsl is invalid."}, status = status.HTTP_400_BAD_REQUEST)
         try:
-            tag_ids = request.data.get('tag_ids')
-            expert_group_id = request.data.get('expert_group_id')
-
-            importprofileservice.import_profile(base_infos_resp, tag_ids)
-            return Response({"message": "The profile imported successfully", "resp": base_infos_resp}, status = status.HTTP_200_OK)
+            extra_info = {}
+            extra_info['tag_ids'] = request.data.get('tag_ids')
+            extra_info['expert_group_id'] = request.data.get('expert_group_id')
+            assessment_profile = importprofileservice.import_profile(base_infos_resp, extra_info)
+            return Response({"message": "The profile imported successfully", "profile_id": assessment_profile.id}, status = status.HTTP_200_OK)
         except Exception as e:
             message = traceback.format_exc()
             print(message)
+<<<<<<< HEAD
             return Response({"message": "Error in importing profile"}, status = status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
@@ -194,3 +197,6 @@ class ImportProfileApi(APIView):
 
     
 
+=======
+            return Response({"message": "Error in importing profile"}, status = status.HTTP_500_INTERNAL_SERVER_ERROR)
+>>>>>>> 365b8eb (OTAT-269: enrich expert_group service)
