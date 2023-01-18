@@ -61,10 +61,14 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
               size="large"
               component={Link}
 <<<<<<< HEAD
+<<<<<<< HEAD
               to={"./../../../insights"}
 =======
               to={"./../../.."}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              to={"./../../../insights"}
+>>>>>>> c865200 (OTAT-212 Add compare result page)
             >
               <Trans i18nKey="viewInsights" />
             </Button>{" "}

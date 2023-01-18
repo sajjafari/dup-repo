@@ -21,10 +21,14 @@ interface ITitle extends Omit<TypographyProps, "borderBottom"> {
   size?: "small" | "medium" | "large";
   wrapperProps?: BoxProps;
 <<<<<<< HEAD
+<<<<<<< HEAD
   inPageLink?: string;
 =======
   inPageLink?: `#${string}`;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  inPageLink?: string;
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 }
 
 const Title = (props: ITitle) => {
@@ -122,6 +126,7 @@ const Title = (props: ITitle) => {
           <></>
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Box sx={{ ...styles.centerV, display: { xs: "block", sm: "flex" } }}>
           {children}
           {inPageLink && (
@@ -135,6 +140,14 @@ const Title = (props: ITitle) => {
             <Link
               href={inPageLink}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        <Box sx={{ ...styles.centerV, display: { xs: "block", sm: "flex" } }}>
+          {children}
+          {inPageLink && (
+            <Link
+              href={`#${inPageLink}`}
+              id={inPageLink}
+>>>>>>> c865200 (OTAT-212 Add compare result page)
               className="title-hash-link"
               sx={{
                 display: "flex",

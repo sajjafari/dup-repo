@@ -1,5 +1,6 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
@@ -16,11 +17,23 @@ import { useSearchParams } from "react-router-dom";
 import { useServiceContext } from "../../providers/ServiceProvider";
 import { useQuery } from "../../utils/useQuery";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import Box from "@mui/material/Box";
+import { Trans } from "react-i18next";
+import { useParams, useSearchParams } from "react-router-dom";
+import { useServiceContext } from "../../providers/ServiceProvider";
+import { useQuery } from "../../utils/useQuery";
+import QueryData from "../shared/QueryData";
+import Title from "../shared/Title";
+import CompareResult from "./CompareResult";
+import { ICompareResultModel } from "../../types";
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 
 const CompareResultContainer = () => {
   const [searchParams] = useSearchParams();
   const assessmentIds = searchParams.getAll("assessmentIds");
   const { service } = useServiceContext();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const compareResultQueryData = useQuery<ICompareResultModel>({
     service: (args = { assessmentIds }, config) =>
@@ -66,6 +79,36 @@ const CompareResultContainer = () => {
 
   return <div>CompareResultContainer</div>;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const compareResultQueryData = useQuery<ICompareResultModel>({
+    service: (args = { assessmentIds }, config) =>
+      service.fetchCompareResult(args, config),
+  });
+
+  return (
+    <QueryData
+      {...compareResultQueryData}
+      render={(data) => {
+        return (
+          <Box>
+            <Title borderBottom={true}>
+              <Trans i18nKey="theResultOfComparing" />{" "}
+              <Box sx={{ ml: { xs: 0, sm: 1 } }} display="inline">
+                {data.base_infos.map((item: any, index: number) => (
+                  <>
+                    {item.title}
+                    {index < data.base_infos.length - 1 ? " and" : ""}{" "}
+                  </>
+                ))}
+              </Box>
+            </Title>
+            <CompareResult data={data} />{" "}
+          </Box>
+        );
+      }}
+    />
+  );
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 };
 
 export default CompareResultContainer;

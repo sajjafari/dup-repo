@@ -27,12 +27,18 @@ declare module "@mui/material/styles/createPalette" {
     secondaryDark: string;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   interface PaletteOptions {
     ml: { primary: React.CSSProperties["color"] };
     cl: { primary: React.CSSProperties["color"] };
   }
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 }
 
 declare module "@mui/material/styles" {
@@ -49,13 +55,19 @@ declare module "@mui/material/styles" {
     subLarge?: React.CSSProperties;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 
   interface Palette {
     ml: { primary: React.CSSProperties["color"] };
     cl: { primary: React.CSSProperties["color"] };
   }
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 }
 
 // Update the Typography's variant prop options
@@ -70,10 +82,15 @@ declare module "@mui/material/Typography" {
 const palette = createPalette({
   background: { secondary: "#273248", secondaryDark: "#121d33" },
 <<<<<<< HEAD
+<<<<<<< HEAD
   ml: { primary: "#6035A1" },
   cl: { primary: "#3596A1" },
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  ml: { primary: "#6035A1" },
+  cl: { primary: "#3596A1" },
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 });
 
 export const theme = createTheme({

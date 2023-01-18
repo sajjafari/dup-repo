@@ -17,10 +17,14 @@ import {
   IQuestionnairesPageDataModel,
   ITotalProgressModel,
 <<<<<<< HEAD
+<<<<<<< HEAD
   TQueryProps,
 =======
   TQueryData,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  TQueryProps,
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 } from "../../types";
 import Title from "../shared/Title";
 import Alert from "@mui/material/Alert";

@@ -8,6 +8,7 @@ import {
   IQuestionnairesPageDataModel,
   TId,
 <<<<<<< HEAD
+<<<<<<< HEAD
   TQueryProps,
   TQueryFunction,
 } from "../../types";
@@ -15,6 +16,9 @@ import LoadingSkeletonOfQuestionnaires from "../shared/loadings/LoadingSkeletonO
 import { Box } from "@mui/material";
 =======
   TQueryData,
+=======
+  TQueryProps,
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   TQueryFunction,
 } from "../../types";
 import LoadingSkeletonOfQuestionnaires from "../shared/loadings/LoadingSkeletonOfQuestionnaires";
@@ -29,12 +33,17 @@ import { LoadingSkeleton } from "../shared/loadings/LoadingSkeleton";
 
 interface IQuestionnaireListProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
   questionnaireQueryData: TQueryProps<IQuestionnairesModel>;
   pageQueryData: TQueryProps<IQuestionnairesPageDataModel>;
 =======
   questionnaireQueryData: TQueryData<IQuestionnairesModel>;
   pageQueryData: TQueryData<IQuestionnairesPageDataModel>;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  questionnaireQueryData: TQueryProps<IQuestionnairesModel>;
+  pageQueryData: TQueryProps<IQuestionnairesPageDataModel>;
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 }
 
 export const QuestionnaireList = (props: IQuestionnaireListProps) => {

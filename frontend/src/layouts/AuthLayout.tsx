@@ -39,10 +39,14 @@ const AuthLayout = (props: PropsWithChildren<{}>) => {
           fallback={
             <Box mt={6}>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <GettingThingsReadyLoading color="white" />
 =======
               <GettingThingsReadyLoading />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              <GettingThingsReadyLoading color="white" />
+>>>>>>> c865200 (OTAT-212 Add compare result page)
             </Box>
           }
         >

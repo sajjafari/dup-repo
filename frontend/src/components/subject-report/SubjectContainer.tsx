@@ -173,10 +173,14 @@ const SubjectTitle = (props: {
       backLink={-1}
       id="insight"
 <<<<<<< HEAD
+<<<<<<< HEAD
       inPageLink="insight"
 =======
       inPageLink="#insight"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      inPageLink="insight"
+>>>>>>> c865200 (OTAT-212 Add compare result page)
       sup={
         <SupTitleBreadcrumb
           routes={[

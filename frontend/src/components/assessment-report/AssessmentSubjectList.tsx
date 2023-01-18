@@ -33,10 +33,14 @@ export const AssessmentSubjectList = (props: IAssessmentSubjectListProps) => {
           borderBottom={true}
           sx={{ borderBottomColor: colorCode }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           inPageLink="subjects"
 =======
           inPageLink="#subjects"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          inPageLink="subjects"
+>>>>>>> c865200 (OTAT-212 Add compare result page)
         >
           <Trans i18nKey="subjects" />
         </Title>

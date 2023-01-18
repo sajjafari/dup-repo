@@ -349,10 +349,14 @@ export type TQueryFunction<T extends any = any, A extends any = any> = (
 ) => Promise<T>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type TQueryProps<T extends any = any, A extends any = any> = {
 =======
 export type TQueryData<T extends any = any, A extends any = any> = {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+export type TQueryProps<T extends any = any, A extends any = any> = {
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   data: T;
   loading: boolean;
   loaded: boolean;
@@ -396,6 +400,9 @@ export interface ICompareModel {
   assessment_project_compare_list: any[];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 
 export interface ICompareResultBaseInfo {
   id: TId;
@@ -427,5 +434,8 @@ export interface ICompareResultModel {
   overall_insights: ICompareResultCompareItems[];
   subjects: ICompareResultSubject[];
 }
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)

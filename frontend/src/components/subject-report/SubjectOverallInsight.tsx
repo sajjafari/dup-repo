@@ -17,11 +17,14 @@ const SubjectOverallInsight = (props: any) => {
   return (
     <Box>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* <Title sx={{ opacity: 0.9 }} inPageLink="#insight">
         <Trans i18nKey="overallStatusOf" values={{ title }} />
       </Title> */}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
       <Box display="flex" sx={{ flexDirection: { xs: "column", sm: "row" } }}>
         <OverallInsightText {...props} />
         <Box sx={{ pl: { xs: 0, sm: 3, md: 6 }, mt: { xs: 4, sm: 0 } }}>
@@ -134,6 +137,7 @@ const OverallInsightText = (props: any) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const MostSigItems = ({
   loading,
   att,
@@ -143,16 +147,27 @@ const MostSigItems = ({
   loading,
   att,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+export const MostSigItems = ({
+  loading,
+  att,
+  items,
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   color,
   text,
 }: {
   loading: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   att?: any[];
   items?: string[];
 =======
   att: any[];
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  att?: any[];
+  items?: string[];
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   color: string;
   text: string;
 }) => {
@@ -167,6 +182,7 @@ const MostSigItems = ({
         <Trans i18nKey={text} />
       </Title>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <ul style={{ marginBlockStart: "8px", paddingInlineStart: "26px" }}>
         {loading ? (
           <MostSigItemLoadingSkeleton />
@@ -178,15 +194,22 @@ const MostSigItems = ({
       </ul>
 =======
       <Box p={1}>
+=======
+      <ul style={{ marginBlockStart: "8px", paddingInlineStart: "26px" }}>
+>>>>>>> c865200 (OTAT-212 Add compare result page)
         {loading ? (
           <MostSigItemLoadingSkeleton />
         ) : (
-          att?.map((attribute: any, index: any) => {
-            return <Typography key={index}>{attribute?.title}</Typography>;
+          (att || items)?.map((item: any, index: any) => {
+            return <li key={index}>{att ? item?.title : item}</li>;
           })
         )}
+<<<<<<< HEAD
       </Box>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      </ul>
+>>>>>>> c865200 (OTAT-212 Add compare result page)
     </>
   );
 };

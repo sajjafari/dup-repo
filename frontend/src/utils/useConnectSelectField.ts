@@ -21,9 +21,14 @@ const useConnectSelectField = (url: any) => {
 =======
 const useConnectSelectField = (props: {
   url: string;
+  searchParams?: Record<string, any>;
   filterOptions?: (options: any[]) => any[];
 }) => {
-  const { url, filterOptions = (options) => options } = props;
+  const {
+    url,
+    filterOptions = (options) => options,
+    searchParams = {},
+  } = props;
   const [options, setOptions] = useState<any[]>([]);
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
   const [loading, setLoading] = useState(false);
@@ -46,6 +51,9 @@ const useConnectSelectField = (props: {
       const {
         data: { results },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
       } = await service.fetchOptions({ url }, { signal, params: searchParams });
 
       if (results && Array.isArray(results)) {

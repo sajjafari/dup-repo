@@ -15,10 +15,14 @@ export const SubjectAttributeList = (props: any) => {
   return (
     <Box mt={15} id="attributes">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Title sx={{ opacity: 0.8, fontSize: "1.7rem" }} inPageLink="attributes">
 =======
       <Title sx={{ opacity: 0.8, fontSize: "1.7rem" }} inPageLink="#attributes">
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      <Title sx={{ opacity: 0.8, fontSize: "1.7rem" }} inPageLink="attributes">
+>>>>>>> c865200 (OTAT-212 Add compare result page)
         {data?.title} <Trans i18nKey="attributes" />
       </Title>
       <Box mt={3}>

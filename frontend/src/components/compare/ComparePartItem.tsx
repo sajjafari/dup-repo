@@ -225,6 +225,7 @@ const DeleteAssessmentIconBtn = (props: {
         opacity: 0.9,
         position: "absolute",
 <<<<<<< HEAD
+<<<<<<< HEAD
         zIndex: 2,
         bottom: "10px",
         left: index % 2 !== 0 ? undefined : "10px",
@@ -233,6 +234,11 @@ const DeleteAssessmentIconBtn = (props: {
         bottom: "10px",
         left: "10px",
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+        zIndex: 2,
+        bottom: "10px",
+        left: index % 2 !== 0 ? undefined : "10px",
+>>>>>>> c865200 (OTAT-212 Add compare result page)
         right: index % 2 !== 0 ? { xs: "none", md: "10px" } : undefined,
       }}
     >

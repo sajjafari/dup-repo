@@ -40,10 +40,14 @@ function App() {
     <ErrorBoundary>
       {loading ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Box width="100%" sx={{ mt: 10, ...styles.centerVH }}>
 =======
         <Box width="100%" sx={{ minHeight: "100vh", ...styles.centerVH }}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        <Box width="100%" sx={{ mt: 10, ...styles.centerVH }}>
+>>>>>>> c865200 (OTAT-212 Add compare result page)
           <GettingThingsReadyLoading color="gray" />
         </Box>
       ) : (

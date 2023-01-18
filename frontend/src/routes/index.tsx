@@ -125,6 +125,7 @@ const Routes = () => {
           </Route>
           <Route path="/compare" element={<CompareScreen />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Route path="/compare/result" element={<CompareResultScreen />} />
         </Route>
         <Route path="*" element={<ErrorNotFoundPage />} />
@@ -133,6 +134,9 @@ const Routes = () => {
             path="/compare/compare-result"
             element={<CompareResultScreen />}
           />
+=======
+          <Route path="/compare/result" element={<CompareResultScreen />} />
+>>>>>>> c865200 (OTAT-212 Add compare result page)
         </Route>
 <<<<<<< HEAD
         <Route path="*" element={<PageNotFoundError />} />

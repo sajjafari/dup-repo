@@ -15,10 +15,14 @@ const GettingThingsReadyLoading = (props: IGettingThingsReadyLoadingProps) => {
   return (
     <Box
 <<<<<<< HEAD
+<<<<<<< HEAD
       color="gray"
 =======
       color="white"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      color="gray"
+>>>>>>> c865200 (OTAT-212 Add compare result page)
       {...rest}
       sx={{
         width: "100%",

@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import Box, { BoxProps } from "@mui/material/Box";
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
 import { getColorOfStatus, styles } from "../../../config/styles";
@@ -11,10 +15,14 @@ import Skeleton from "@mui/material/Skeleton";
 import { TStatus } from "../../../types";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface IVerticalLevelChartProps extends BoxProps {
 =======
 interface IVerticalLevelChartProps {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+interface IVerticalLevelChartProps extends BoxProps {
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   loading?: boolean;
   title: string;
   status: TStatus;
@@ -23,6 +31,7 @@ interface IVerticalLevelChartProps {
 }
 
 const VerticalLevelChart = (props: IVerticalLevelChartProps) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { loading, title, status, cl, ml, ...rest } = props;
   const statusColor = getColorOfStatus(status);
@@ -39,6 +48,16 @@ const VerticalLevelChart = (props: IVerticalLevelChartProps) => {
   return (
     <Box sx={{ ...styles.centerCH }}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const { loading, title, status, cl, ml, ...rest } = props;
+  const statusColor = getColorOfStatus(status);
+
+  return (
+    <Box
+      {...rest}
+      sx={{ ...(styles.centerCH as any), ...((rest.sx || {}) as any) }}
+    >
+>>>>>>> c865200 (OTAT-212 Add compare result page)
       <Box textAlign={"center"}>
         <Typography textAlign={"center"}>
           {loading ? (

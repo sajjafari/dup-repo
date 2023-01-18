@@ -137,6 +137,7 @@ const CompareItemCEForm = (props: ICompareItemCEForm) => {
   const defaultValues = type === "update" ? data || {} : {};
   const formMethods = useForm({ shouldUnregister: true });
   const { assessmentIds, profile } = useCompareContext();
+<<<<<<< HEAD
   const dispatch = useCompareDispatch();
 
   const onSubmit = (data: any) => {
@@ -162,6 +163,8 @@ const CompareItemCEForm = (props: ICompareItemCEForm) => {
   const defaultValues = type === "update" ? data || {} : {};
   const formMethods = useForm({ shouldUnregister: true });
   const { assessmentIds } = useCompareContext();
+=======
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   const dispatch = useCompareDispatch();
 
   const onSubmit = (data: any) => {
@@ -185,7 +188,7 @@ const CompareItemCEForm = (props: ICompareItemCEForm) => {
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
     }
   };
-  console.log("dd", defaultValues?.id);
+
   return (
     <FormProviderWithForm
       formMethods={formMethods}

@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TQueryProps } from "../types";
 =======
 import { TQueryData } from "../types";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { TQueryProps } from "../types";
+>>>>>>> c865200 (OTAT-212 Add compare result page)
 import { ICustomError } from "./CustomError";
 
 type TCombinedQueryData = {
@@ -15,10 +19,14 @@ type TCombinedQueryData = {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const combineQueryData = (...args: TQueryProps[]) => {
 =======
 const combineQueryData = (...args: TQueryData[]) => {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+const combineQueryData = (...args: TQueryProps[]) => {
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   const errorObject: undefined | ICustomError[] = [];
   const data: undefined | any[] = [];
   const query: ((...arg: any) => Promise<any>)[] = [];

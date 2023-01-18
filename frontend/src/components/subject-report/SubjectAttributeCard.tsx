@@ -129,12 +129,17 @@ const AttributeStatusBarContainer = (props: any) => {
       <Box display={"flex"} flex={1}>
         <Box width="100%">
 <<<<<<< HEAD
+<<<<<<< HEAD
           {ml && <AttributeStatusBar ml={ml} isMl={true} />}
           {cl && <AttributeStatusBar cl={cl} />}
 =======
           <AttributeStatusBar ml={ml} isMl={true} />
           <AttributeStatusBar cl={cl} />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          {ml && <AttributeStatusBar ml={ml} isMl={true} />}
+          {cl && <AttributeStatusBar cl={cl} />}
+>>>>>>> c865200 (OTAT-212 Add compare result page)
         </Box>
       </Box>
       <Box
@@ -164,12 +169,17 @@ const AttributeStatusBarContainer = (props: any) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const AttributeStatusBar = (props: any) => {
   const { ml, cl, isMl, isBasic } = props;
 =======
 const AttributeStatusBar = (props: any) => {
   const { ml, cl, isMl } = props;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+export const AttributeStatusBar = (props: any) => {
+  const { ml, cl, isMl, isBasic } = props;
+>>>>>>> c865200 (OTAT-212 Add compare result page)
   const width = isMl
     ? ml
       ? `${(ml / 5) * 100}%`
@@ -184,8 +194,8 @@ const AttributeStatusBar = (props: any) => {
       sx={{
         my: 0.5,
         background: "gray",
-        borderTopRightRadius: "8px",
-        borderBottomRightRadius: "8px",
+        borderTopRightRadius: 1,
+        borderBottomRightRadius: 1,
         position: "relative",
         color: "white",
         display: "flex",
@@ -197,8 +207,8 @@ const AttributeStatusBar = (props: any) => {
         width={width}
         sx={{
           background: isMl ? "#6035A1" : "#3596A1",
-          borderTopRightRadius: "8px",
-          borderBottomRightRadius: "8px",
+          borderTopRightRadius: 1,
+          borderBottomRightRadius: 1,
         }}
       ></Box>
       <Typography
