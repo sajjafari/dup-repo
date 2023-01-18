@@ -20,7 +20,9 @@ import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import { authActions, useAuthContext } from "../../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import EngineeringIcon from "@mui/icons-material/Engineering";
 import { styles } from "../../config/styles";
+import ExpertGroupsContainer from "../expert-groups/ExpertGroupsContainer";
 
 const AccountContainer = () => {
   return (
@@ -33,7 +35,7 @@ const AccountContainer = () => {
 };
 
 function AccountSettings() {
-  const [value, setValue] = React.useState("1");
+  const [value, setValue] = React.useState("about");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
@@ -51,11 +53,20 @@ function AccountSettings() {
                   <Trans i18nKey="accountSetting" />
                 </Box>
               }
-              value="1"
+              value="about"
+            />
+            <Tab
+              label={
+                <Box sx={{ ...styles.centerV }}>
+                  <EngineeringIcon fontSize="small" sx={{ mr: "8px" }} />
+                  <Trans i18nKey="expertGroups" />
+                </Box>
+              }
+              value="expert-groups"
             />
           </TabList>
         </Box>
-        <TabPanel value="1" sx={{ p: { xs: 1, sm: 2, md: 3 } }}>
+        <TabPanel value="about" sx={{ p: { xs: 1, sm: 2, md: 3 } }}>
           <Box mt={3}>
             <About />
           </Box>
@@ -82,6 +93,9 @@ function AccountSettings() {
               </Grid>
             </Grid>
           </Box>
+        </TabPanel>
+        <TabPanel value="expert-groups" sx={{ p: { xs: 1, sm: 2, md: 3 } }}>
+          <ExpertGroupsContainer />
         </TabPanel>
       </TabContext>
     </Box>
