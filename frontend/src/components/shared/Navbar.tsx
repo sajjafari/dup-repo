@@ -171,9 +171,13 @@ const Navbar = () => {
           background: "white",
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
         data-cy="nav-bar"
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        data-cy="nav-bar"
+>>>>>>> 3374ddc (OTAT-211 Add testing packages)
       >
         <Toolbar variant="dense" sx={{ backgroundColor: "white" }}>
           <IconButton

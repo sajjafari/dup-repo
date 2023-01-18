@@ -102,9 +102,13 @@ const SignIn = () => {
                 size="large"
                 loading={loading}
 <<<<<<< HEAD
+<<<<<<< HEAD
                 data-cy="btn-sign-in"
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                data-cy="btn-sign-in"
+>>>>>>> 3374ddc (OTAT-211 Add testing packages)
               >
                 <Trans i18nKey="signIn" />
               </LoadingButton>
@@ -117,9 +121,13 @@ const SignIn = () => {
             <Trans i18nKey="dontHaveAccount" />{" "}
             <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
               data-cy="btn-sign-up"
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              data-cy="btn-sign-up"
+>>>>>>> 3374ddc (OTAT-211 Add testing packages)
               onClick={() => {
                 navigate("/sign-up");
               }}

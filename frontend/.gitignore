@@ -26,6 +26,7 @@ dist-ssr
 *.sw?
 
 
+<<<<<<< HEAD
 coverage
 =======
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
@@ -78,3 +79,6 @@ dist-ssr
 *.sln
 *.sw?
 >>>>>>> 11a534e (OTAT-266 add Vite)
+=======
+coverage
+>>>>>>> 3374ddc (OTAT-211 Add testing packages)

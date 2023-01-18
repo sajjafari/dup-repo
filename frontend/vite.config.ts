@@ -22,13 +22,19 @@ export default defineConfig({
     },
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3374ddc (OTAT-211 Add testing packages)
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./src/test/setup-test.ts",
   },
+<<<<<<< HEAD
 =======
 >>>>>>> 11a534e (OTAT-266 add Vite)
+=======
+>>>>>>> 3374ddc (OTAT-211 Add testing packages)
   build: {
     rollupOptions: {
       plugins: [
