@@ -12,6 +12,7 @@ import {
   IQuestionnairesModel,
   IQuestionnairesPageDataModel,
   ITotalProgressModel,
+  TQueryData,
 } from "../../types";
 import Title from "../shared/Title";
 import Alert from "@mui/material/Alert";
@@ -20,11 +21,17 @@ import { Link, useParams, useSearchParams } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 import { LoadingSkeleton } from "../shared/loadings/LoadingSkeleton";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import hasStatus from "../../utils/hasStatus";
 import Button from "@mui/material/Button";
 import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
 =======
 import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
+=======
+import SupTitleBreadcrumb, {
+  useSupTitleBreadcrumb,
+} from "../shared/SupTitleBreadcrumb";
+>>>>>>> 909c4cb (OTAT-218 Add breadcrumb service)
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 >>>>>>> 3f7a6c0 (OTAT-218 Add breadcrumb)
@@ -37,10 +44,10 @@ const QuestionnaireContainer = () => {
     assessmentQueryData,
   } = useQuestionnaire();
   const progress = questionnaireQueryData.data?.progress || 0;
-  const { spaceId } = useParams();
 
   return (
     <Box>
+<<<<<<< HEAD
       <Title
         backLink={-1}
         sup={
@@ -77,6 +84,9 @@ const QuestionnaireContainer = () => {
         <Trans i18nKey="Questionnaires" />
       </Title>
 
+=======
+      <QuestionnaireTitle />
+>>>>>>> 909c4cb (OTAT-218 Add breadcrumb service)
       <NotCompletedAlert
         isCompleted={
           totalProgressQueryData.data?.total_progress?.progress == 100
@@ -189,6 +199,41 @@ const NotCompletedAlert = (props: {
         </Alert>
       )}
     </Box>
+  );
+};
+
+const QuestionnaireTitle = () => {
+  const { spaceId, assessmentId } = useParams();
+  const breadcrumbInfo = useSupTitleBreadcrumb({
+    spaceId,
+    assessmentId,
+  });
+
+  return (
+    <Title
+      backLink={-1}
+      sup={
+        <SupTitleBreadcrumb
+          routes={[
+            {
+              title: breadcrumbInfo.space,
+              to: "/spaces/",
+              icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
+            },
+            {
+              title: breadcrumbInfo.assessment,
+              to: `/${spaceId}/assessments`,
+              icon: (
+                <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
+              ),
+            },
+          ]}
+        />
+      }
+    >
+      <QuizRoundedIcon sx={{ mr: 1 }} />
+      <Trans i18nKey="Questionnaires" />
+    </Title>
   );
 };
 
