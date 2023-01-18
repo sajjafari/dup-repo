@@ -85,10 +85,15 @@ const VerticalLevelChart = (props: IVerticalLevelChartProps) => {
           }}
           variant="h3"
 <<<<<<< HEAD
+<<<<<<< HEAD
           fontFamily={"Oswald"}
           fontWeight="bold"
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          fontFamily={"Oswald"}
+          fontWeight="bold"
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
           letterSpacing={".1em"}
         >
           {loading ? <Skeleton width={"164px"} /> : status}

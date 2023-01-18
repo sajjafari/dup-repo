@@ -1,6 +1,9 @@
 import React from "react";
 import { Trans } from "react-i18next";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
 import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { styles } from "../../config/styles";
 import { useAuthContext } from "../../providers/AuthProvider";
@@ -80,6 +83,7 @@ const Navbar = () => {
             to="spaces"
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
             <ListItemText primary={<Trans i18nKey="spaces" />} />
 =======
             <ListItemText
@@ -104,6 +108,9 @@ const Navbar = () => {
               }
             />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            <ListItemText primary={<Trans i18nKey="spaces" />} />
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
           </ListItemButton>
         </ListItem>
         {current_space?.id && (
@@ -114,6 +121,9 @@ const Navbar = () => {
               to={`/${current_space?.id}/assessments`}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
               <ListItemText
                 primary={
                   <>
@@ -135,9 +145,12 @@ const Navbar = () => {
                   </>
                 }
               />
+<<<<<<< HEAD
 =======
               <ListItemText primary={<Trans i18nKey="assessments" />} />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
             </ListItemButton>
           </ListItem>
         )}
@@ -226,6 +239,7 @@ const Navbar = () => {
 <<<<<<< HEAD
             <SpacesButton currentSpace={current_space} />
             {/* {current_space?.id && (
+<<<<<<< HEAD
 =======
             <Button
               component={NavLink}
@@ -260,6 +274,8 @@ const Navbar = () => {
 >>>>>>> 8344fdf (OTAT-258 Add drop down menu)
             {current_space?.id && (
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
               <Button
                 component={NavLink}
                 to={`/${current_space?.id}/assessments`}
@@ -273,10 +289,14 @@ const Navbar = () => {
                 <Trans i18nKey="assessments" />
               </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
             )} */}
 =======
             )}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            )} */}
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
             <Button
               component={NavLink}
               to={`/compare`}
@@ -285,6 +305,7 @@ const Navbar = () => {
                   sx={{ opacity: 0.8, fontSize: "18px !important" }}
                 />
               }
+<<<<<<< HEAD
 <<<<<<< HEAD
               sx={{ ...styles.activeNavbarLink, ml: 0.1, mr: 0.8 }}
             >
@@ -298,6 +319,9 @@ const Navbar = () => {
               <Trans i18nKey="profiles" />
 =======
               sx={{ ...styles.activeNavbarLink, ml: 0.1 }}
+=======
+              sx={{ ...styles.activeNavbarLink, ml: 0.1, mr: 0.8 }}
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
             >
               <Trans i18nKey="compare" />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
@@ -508,22 +532,32 @@ const SpacesButton = ({ currentSpace }: any) => {
     setAnchorEl(null);
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   const navigate = useNavigate();
 =======
 >>>>>>> 8344fdf (OTAT-258 Add drop down menu)
+=======
+  const navigate = useNavigate();
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
 
   return (
     <>
       <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
         onClick={() =>
           currentSpace?.id && navigate(`/${currentSpace?.id}/assessments`)
         }
         sx={{ ...styles.activeNavbarLink, ml: 0.1, mr: 0.8 }}
+<<<<<<< HEAD
 =======
         onClick={handleClick}
         sx={{ ...styles.activeNavbarLink, ml: 0.1 }}
 >>>>>>> 8344fdf (OTAT-258 Add drop down menu)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
         startIcon={
           <FolderRoundedIcon
             sx={{ opacity: 0.8, fontSize: "18px !important" }}
@@ -531,6 +565,9 @@ const SpacesButton = ({ currentSpace }: any) => {
         }
         endIcon={
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
           <Button
             sx={{ minWidth: "8px", ml: 0.6, px: 0.2, py: 0.2 }}
             onClick={(e) => {
@@ -540,6 +577,7 @@ const SpacesButton = ({ currentSpace }: any) => {
           >
             {open ? <ArrowDropUpRoundedIcon /> : <ArrowDropDownRoundedIcon />}
           </Button>
+<<<<<<< HEAD
         }
       >
         <Trans i18nKey={"spaces"} />
@@ -563,6 +601,25 @@ const SpacesButton = ({ currentSpace }: any) => {
       >
         <Trans i18nKey={"spaces"} />
 >>>>>>> 8344fdf (OTAT-258 Add drop down menu)
+=======
+        }
+      >
+        <Trans i18nKey={"spaces"} />
+        {currentSpace?.title && (
+          <Typography
+            variant="caption"
+            textTransform={"none"}
+            sx={{
+              pl: 0.5,
+              ml: 0.5,
+              lineHeight: "1",
+              borderLeft: (t) => `1px solid ${t.palette.grey[300]}`,
+            }}
+          >
+            {currentSpace?.title}
+          </Typography>
+        )}
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
       </Button>
 
       <Menu
@@ -573,6 +630,9 @@ const SpacesButton = ({ currentSpace }: any) => {
         PaperProps={{ sx: { minWidth: "260px" } }}
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
         {currentSpace?.id && (
           <>
             <Typography
@@ -596,6 +656,7 @@ const SpacesButton = ({ currentSpace }: any) => {
             <Divider />
           </>
         )}
+<<<<<<< HEAD
         <MenuItem
           dense
           onClick={handleClose}
@@ -606,17 +667,22 @@ const SpacesButton = ({ currentSpace }: any) => {
         <Typography variant="subMedium" sx={{ px: 1, py: 0.3, opacity: 0.8 }}>
           <Trans i18nKey={"currentSpace"} />
         </Typography>
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
         <MenuItem
           dense
-          component={NavLink}
           onClick={handleClose}
+          component={NavLink}
           to={`/spaces`}
         >
+<<<<<<< HEAD
           {currentSpace?.title}
         </MenuItem>
         <Divider />
         <MenuItem dense onClick={handleClose}>
 >>>>>>> 8344fdf (OTAT-258 Add drop down menu)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
           <Trans i18nKey={"allSpaces"} />
         </MenuItem>
       </Menu>

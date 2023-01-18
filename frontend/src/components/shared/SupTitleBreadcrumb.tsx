@@ -36,6 +36,7 @@ const SupTitleBreadcrumb = (
       {routes.map((route, index) => {
         const { to, title, sup, icon } = route;
 <<<<<<< HEAD
+<<<<<<< HEAD
         const disabled = routes.length - 1 === index || !to;
         return (
           <Box display="flex" flexDirection={"column"} key={index}>
@@ -69,26 +70,31 @@ const SupTitleBreadcrumb = (
                 color: disabled ? "GrayText" : "primary.dark",
 =======
         return to ? (
+=======
+        const disabled = routes.length - 1 === index || !to;
+        return (
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
           <Box display="flex" flexDirection={"column"} key={index}>
             {/* {sup && (
-              <Typography
-                sx={{
-                  fontSize: "0.6rem",
-                  fontFamily: "Roboto",
-                  opacity: 0.6,
-                  letterSpacing: "0.07em",
-                  color: "text.primary",
-                }}
-              >
-                {sup}
-              </Typography>
-            )} */}
+          <Typography
+            sx={{
+              fontSize: "0.6rem",
+              fontFamily: "Roboto",
+              opacity: 0.6,
+              letterSpacing: "0.07em",
+              color: "text.primary",
+            }}
+          >
+            {sup}
+          </Typography>
+        )} */}
 
             <MuiLink
-              component={Link}
-              underline="hover"
+              component={disabled ? "p" : Link}
+              underline={disabled ? "none" : "hover"}
               color="inherit"
               to={to}
+              onClick={(e) => disabled && e.preventDefault()}
               sx={{
                 ...styles.centerV,
                 fontSize: "0.8rem",
@@ -96,8 +102,12 @@ const SupTitleBreadcrumb = (
                 fontWeight: "bold",
                 opacity: 0.8,
                 letterSpacing: "0.085em",
+<<<<<<< HEAD
                 color: "primary.dark",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                color: disabled ? "GrayText" : "primary.dark",
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
               }}
             >
               {icon}
@@ -107,10 +117,13 @@ const SupTitleBreadcrumb = (
             </MuiLink>
           </Box>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         ) : (
           <Typography color="text.primary">{title}</Typography>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
         );
       })}
       {/* <Typography color="text.primary">Breadcrumbs</Typography> */}

@@ -29,10 +29,14 @@ const ProfilesContainer = (props: PropsWithChildren<{}>) => {
     <Box>
       <Title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Trans i18nKey="profiles" />
 =======
         <Trans i18nKey="profile" />
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+        <Trans i18nKey="profiles" />
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
       </Title>
 
       <Box mt={2}>

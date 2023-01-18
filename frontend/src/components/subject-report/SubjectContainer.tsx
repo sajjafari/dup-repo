@@ -34,9 +34,13 @@ import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { t } from "i18next";
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { t } from "i18next";
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
 
 const SubjectContainer = () => {
   const { noStatus, loading, loaded, hasError, subjectQueryData, subjectId } =
@@ -191,6 +195,7 @@ const SubjectTitle = (props: {
             {
               title: assessment_project_space_title,
 <<<<<<< HEAD
+<<<<<<< HEAD
               to: `/${spaceId}/assessments`,
               icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
             },
@@ -205,6 +210,14 @@ const SubjectTitle = (props: {
               title: assessment_project_title,
               to: `/${spaceId}/assessments`,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              to: `/${spaceId}/assessments`,
+              icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
+            },
+            {
+              title: `${assessment_project_title} ${t("insights")}`,
+              to: `/${spaceId}/assessments/${assessmentId}/insights`,
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
               icon: (
                 <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
               ),
@@ -219,9 +232,12 @@ const SubjectTitle = (props: {
                 </>
               ),
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               to: `/${spaceId}/assessments/${assessmentId}/insights`,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
               icon: (
                 <AnalyticsRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
               ),

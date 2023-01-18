@@ -42,9 +42,13 @@ const AssessmentContainer = () => {
   const { data, error, errorObject, requested_space } = rest;
   const isEmpty = data.length == 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { spaceId } = useParams();
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const { spaceId } = useParams();
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
 
   return error &&
     (errorObject?.type === ECustomErrorType.ACCESS_DENIED ||
@@ -67,9 +71,12 @@ const AssessmentContainer = () => {
             routes={[
               {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 to: "/spaces",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
                 title: requested_space,
                 sup: "spaces",
                 icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,

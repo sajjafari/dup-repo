@@ -27,9 +27,13 @@ import SupTitleBreadcrumb, {
 import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { t } from "i18next";
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { t } from "i18next";
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
 
 const MetricsTitle = (props: {
   data: IQuestionnaireModel;
@@ -93,6 +97,7 @@ const MetricsTitle = (props: {
               {
                 title: breadcrumbInfo?.space,
 <<<<<<< HEAD
+<<<<<<< HEAD
                 to: `/${spaceId}/assessments`,
                 icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
               },
@@ -107,6 +112,14 @@ const MetricsTitle = (props: {
                 title: breadcrumbInfo?.assessment,
                 to: `/${spaceId}/assessments`,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                to: `/${spaceId}/assessments`,
+                icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
+              },
+              {
+                title: `${breadcrumbInfo?.assessment} ${t("questionnaires")}`,
+                to: `/${spaceId}/assessments/${assessmentId}/questionnaires`,
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
                 icon: (
                   <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
                 ),

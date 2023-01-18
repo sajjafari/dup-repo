@@ -328,18 +328,25 @@ const QuestionnaireTitle = () => {
             {
               title: breadcrumbInfo.space,
 <<<<<<< HEAD
+<<<<<<< HEAD
               to: `/${spaceId}/assessments`,
 =======
               to: "/spaces/",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              to: `/${spaceId}/assessments`,
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
               icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
             },
             {
               title: breadcrumbInfo.assessment,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               to: `/${spaceId}/assessments`,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
               icon: (
                 <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
               ),
