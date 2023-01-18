@@ -1,5 +1,6 @@
 import React, { useReducer, FC, useContext, useMemo } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { createService } from "../../service";
 import { TService } from "../../service";
 =======
@@ -8,6 +9,10 @@ import { createService } from "../../service";
 import { TService } from "../../service";
 import { appActions, useAppDispatch } from "../AppProvider";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { createService } from "../../service";
+import { TService } from "../../service";
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 import { authActions, useAuthContext } from "../AuthProvider";
 import serviceReducer from "./reducer";
 
@@ -18,17 +23,23 @@ interface IServiceProviderProps {
 export interface IServiceContext {
   service: TService;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   dispatch: React.Dispatch<any>;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 }
 
 export const ServiceContext = React.createContext<IServiceContext>({
   service: {} as any,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   dispatch: () => {},
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 });
 
 export const ServiceProvider: FC<IServiceProviderProps> = ({ children }) => {
@@ -42,6 +53,7 @@ export const ServiceProvider: FC<IServiceProviderProps> = ({ children }) => {
     []
   );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [state] = useReducer(serviceReducer, { service });
 
@@ -58,6 +70,12 @@ export const ServiceProvider: FC<IServiceProviderProps> = ({ children }) => {
       {children}
     </ServiceContext.Provider>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const [state] = useReducer(serviceReducer, { service });
+
+  return (
+    <ServiceContext.Provider value={state}>{children}</ServiceContext.Provider>
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
   );
 };
 

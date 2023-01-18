@@ -1,5 +1,9 @@
 import React, { PropsWithChildren } from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 import { Trans } from "react-i18next";
 import Title from "../shared/Title";
 import TabContext from "@mui/lab/TabContext";
@@ -20,7 +24,11 @@ const ProfilesContainer = (props: PropsWithChildren<{}>) => {
   return (
     <Box>
       <Title>
+<<<<<<< HEAD
         <Trans i18nKey="profiles" />
+=======
+        <Trans i18nKey="profile" />
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
       </Title>
 
       <Box mt={2}>
@@ -35,22 +43,36 @@ const ProfilesContainer = (props: PropsWithChildren<{}>) => {
                 }
                 value="list"
               />
+<<<<<<< HEAD
               {/* <Tab
+=======
+              <Tab
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
                 label={
                   <Box sx={{ ...styles.centerV }}>
                     <Trans i18nKey="market" />
                   </Box>
                 }
                 value="market"
+<<<<<<< HEAD
               /> */}
+=======
+              />
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
             </TabList>
           </Box>
           <TabPanel value="list" sx={{ p: { xs: 1, sm: 3 } }}>
             <ProfilesListContainer />
           </TabPanel>
+<<<<<<< HEAD
           {/* <TabPanel value="market" sx={{ p: { xs: 1, sm: 3 } }}>
             <ProfilesMarketContainer />
           </TabPanel> */}
+=======
+          <TabPanel value="market" sx={{ p: { xs: 1, sm: 3 } }}>
+            <ProfilesMarketContainer />
+          </TabPanel>
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
         </TabContext>
       </Box>
     </Box>

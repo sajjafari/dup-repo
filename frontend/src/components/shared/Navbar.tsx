@@ -278,6 +278,13 @@ const Navbar = () => {
               <Trans i18nKey="compare" />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
             </Button>
+            <Button
+              component={NavLink}
+              to={`/profiles`}
+              sx={{ ...styles.activeNavbarLink, ml: 0.1 }}
+            >
+              <Trans i18nKey="profiles" />
+            </Button>
           </Box>
           <Box ml="auto">
             <Button
@@ -285,10 +292,14 @@ const Navbar = () => {
               size="small"
               component={NavLink}
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="account"
 =======
               to="profile"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              to="account"
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
               endIcon={<Avatar sx={{ width: 26, height: 26, ml: 1 }} />}
             >
               {userInfo.username}

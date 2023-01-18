@@ -59,15 +59,21 @@ const commonStyles = {
     borderRadius: "100%",
   }),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
   ellipsis: style({
     whiteSpace: "nowrap",
     overflow: "hidden",
     textOverflow: "ellipsis",
   }),
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 };
 
 const cards = {

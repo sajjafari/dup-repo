@@ -2,6 +2,9 @@ import React from "react";
 import { Route, Routes as RrdRoutes } from "react-router-dom";
 import PrivateRoutes from "./PrivateRoutes";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 import Redirect from "./Redirect";
 import GettingThingsReadyLoading from "../components/shared/loadings/GettingThingsReadyLoading";
 import ErrorNotFoundPage from "../components/shared/errors/ErrorNotFoundPage";
@@ -22,10 +25,14 @@ import AppLayout from "../layouts/AppLayout";
 const SignInScreen = React.lazy(() => import("../screens/SignInScreen"));
 const SignUpScreen = React.lazy(() => import("../screens/SignUpScreen"));
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AccountScreen = React.lazy(() => import("../screens/AccountScreen"));
 =======
 const ProfileScreen = React.lazy(() => import("../screens/ProfileScreen"));
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+const AccountScreen = React.lazy(() => import("../screens/AccountScreen"));
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 const ActivationSuccessfulScreen = React.lazy(
   () => import("../screens/ActivationSuccessfulScreen")
 );
@@ -57,11 +64,17 @@ const CompareResultScreen = React.lazy(
 );
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ProfilesScreen = React.lazy(() => import("../screens/ProfilesScreen"));
 const ProfileScreen = React.lazy(() => import("../screens/ProfileScreen"));
 
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+const ProfilesScreen = React.lazy(() => import("../screens/ProfilesScreen"));
+const ProfileScreen = React.lazy(() => import("../screens/ProfileScreen"));
+
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 const Routes = () => {
   return (
     <React.Suspense fallback={<GettingThingsReadyLoading />}>
@@ -90,6 +103,7 @@ const Routes = () => {
           }
         >
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Route path="/account" element={<AccountScreen />} />
           <Route path="/spaces" element={<SpacesScreen />} />
           <Route path="/profiles" element={<ProfilesScreen />} />
@@ -98,6 +112,12 @@ const Routes = () => {
           <Route path="/profile" element={<ProfileScreen />} />
           <Route path="/spaces" element={<SpacesScreen />} />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <Route path="/account" element={<AccountScreen />} />
+          <Route path="/spaces" element={<SpacesScreen />} />
+          <Route path="/profiles" element={<ProfilesScreen />} />
+          <Route path="/profiles/:profileId" element={<ProfileScreen />} />
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
           <Route path="/:spaceId/setting" element={<SpaceSettingScreen />} />
           <Route path="/:spaceId/assessments" element={<AssessmentsScreen />} />
           <Route

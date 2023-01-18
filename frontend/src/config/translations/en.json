@@ -143,10 +143,15 @@
   "overallStatusOf": "Overall status of {{title}}",
   "notEvaluated": "NOT EVALUATED",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "viewProfileMarket": "View profile market",
   "noOptions": "No options",
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  "viewProfileMarket": "View profile market",
+  "noOptions": "No options",
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
   "thisReportIsNotAccurate": "The report is not accurate enough.",
   "pleaseCompleteAllSubjectQuestionnaires": "Please complete all {{subjectName}} questionnaires to make it more accurate.",
   "pleaseCompleteAllQuestionnaires": "Please complete more questionnaires to get a better accuracy.",
@@ -288,6 +293,16 @@
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
 =======
   "editComparisonItems": "Edit comparison items",
+<<<<<<< HEAD
   "comparisonResult": "Comparison result"
 >>>>>>> 25e7ef0 (OTAT-259 Change compare result page title)
+=======
+  "comparisonResult": "Comparison result",
+  "aboutAuthor": "About author",
+  "viewOtherProfilesFromThisAuthor": "View other profiles from this author",
+  "questionImpact": "Question impact",
+  "aboutProfile": "About profile",
+  "created": "Created",
+  "description": "Description"
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 }

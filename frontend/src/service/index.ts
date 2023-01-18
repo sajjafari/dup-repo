@@ -396,13 +396,19 @@ export const createService = (
       });
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
     fetchProfiles(args: any, config: AxiosRequestConfig<any> | undefined = {}) {
       const { query } = args || {};
       const params = query ? { query } : {};
       return axios.get(`/baseinfo/profiles/`, { params, ...config });
     },
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
     fetchCompareItemAssessments(
       args: any | undefined,
       config: AxiosRequestConfig<any> | undefined
@@ -436,6 +442,7 @@ export const createService = (
       return axios.post(
         `/assessment/compareselect/`,
         { assessment_list_ids: assessmentIds || [] },
+<<<<<<< HEAD
 <<<<<<< HEAD
         config
       );
@@ -544,6 +551,18 @@ export const createService = (
       );
     },
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+        config
+      );
+    },
+    fetchProfile(
+      args: { profileId: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { profileId } = args || {};
+      return axios.get(`/baseinfo/profiles/${profileId}/`, config);
+    },
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
   };
 
   return service;

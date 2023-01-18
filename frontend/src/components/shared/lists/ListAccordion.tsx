@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 import Collapse from "@mui/material/Collapse";
 import React, { FC } from "react";
 import { styles } from "../../../config/styles";
@@ -14,6 +18,7 @@ const ListAccordion = (props: IListAccordion) => {
   const { items, renderItem, LiComponent = UnOrderedListAccordionItem } = props;
 
   return (
+<<<<<<< HEAD
     <Box
       component="ul"
       sx={{
@@ -21,6 +26,9 @@ const ListAccordion = (props: IListAccordion) => {
         listStyle: { xs: "none", md: "disc" },
       }}
     >
+=======
+    <ul>
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
       {items.map((item: any, index: number) => {
         return (
           <LiComponent
@@ -29,7 +37,11 @@ const ListAccordion = (props: IListAccordion) => {
           />
         );
       })}
+<<<<<<< HEAD
     </Box>
+=======
+    </ul>
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
   );
 };
 

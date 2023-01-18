@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import { Box } from "@mui/material";
+=======
+import Box from "@mui/material/Box";
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 import { Trans } from "react-i18next";
 import Button from "@mui/material/Button";
 import { styles } from "../../config/styles";
@@ -29,7 +33,11 @@ const ProfileSectionAuthorInfo = (props: IProfileSectionAuthorInfo) => {
             <AccountBoxRoundedIcon fontSize="inherit" />
           </Box>
           <Box py={1} ml={1}>
+<<<<<<< HEAD
             <Typography fontFamily="Roboto" fontWeight={"bold"}>
+=======
+            <Typography fontFamily="RobotoBold">
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
               {data.profileInfos.authorInfos.name}
             </Typography>
             <Box sx={{ ...styles.centerV }}>

@@ -12,6 +12,7 @@ import useConnectSelectField from "../../utils/useConnectSelectField";
 import NoteAddRoundedIcon from "@mui/icons-material/NoteAddRounded";
 import { ICustomError } from "../../utils/CustomError";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link, useParams } from "react-router-dom";
 import toastError from "../../utils/toastError";
 import { CEDialog, CEDialogActions } from "../../components/shared/dialogs/CEDialog";
@@ -22,13 +23,25 @@ import Button from "@mui/material/Button";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
 =======
 import { useParams } from "react-router-dom";
+=======
+import { Link, useParams } from "react-router-dom";
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 import toastError from "../../utils/toastError";
 import {
   CEDialog,
   CEDialogActions,
 } from "../../components/shared/dialogs/CEDialog";
 import FormProviderWithForm from "../../components/shared/FormProviderWithForm";
+<<<<<<< HEAD
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import AutocompleteAsyncField, {
+  useConnectAutocompleteField,
+} from "../shared/fields/AutocompleteAsyncField";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 
 interface IAssessmentCEFromDialogProps extends DialogProps {
   onClose: () => void;
@@ -151,11 +164,17 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
             />
           </Grid>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Grid item xs={12}>
             <ProfileField defaultValue={defaultValues?.assessment_profile} />
           </Grid>
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <Grid item xs={12}>
+            <ProfileField defaultValue={defaultValues?.assessment_profile} />
+          </Grid>
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
         </Grid>
         <CEDialogActions closeDialog={close} loading={loading} type={type} />
       </FormProviderWithForm>
@@ -164,7 +183,15 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ProfileField = ({ defaultValue }: { defaultValue: any }) => {
+=======
+const ProfileField = ({
+  defaultValue = { title: "Common profile", id: 6 },
+}: {
+  defaultValue: any;
+}) => {
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
   const { service } = useServiceContext();
   const queryData = useConnectAutocompleteField({
     service: (args, config) => service.fetchProfiles(args, config),
@@ -181,6 +208,9 @@ const ProfileField = ({ defaultValue }: { defaultValue: any }) => {
   );
 };
 
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 export default AssessmentCEFromDialog;

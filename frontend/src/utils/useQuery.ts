@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef, useState } from "react";
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ICustomError } from "./CustomError";
@@ -16,12 +17,19 @@ interface IUseQueryProps<T, A> {
   initialLoading?: boolean;
 =======
 import { AxiosRequestConfig, AxiosResponse } from "axios";
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 import React, { useEffect, useRef, useState } from "react";
-import { toast } from "react-toastify";
+import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ICustomError } from "./CustomError";
 import dataExist from "./dataExist";
 import defToastError, { IToastErrorOptions } from "./toastError";
+import get from "lodash/get";
 
+export type TQueryServiceFunction<T extends any = any, A extends any = any> = (
+  args?: A,
+  config?: AxiosRequestConfig<any> | undefined
+) => Promise<AxiosResponse<T, any>>;
 interface IUseQueryProps<T, A> {
   initialData?: any;
   runOnMount?: boolean;
@@ -35,6 +43,7 @@ interface IUseQueryProps<T, A> {
     | ((err: ICustomError, options?: IToastErrorOptions) => void);
   toastErrorOptions?: IToastErrorOptions;
 <<<<<<< HEAD
+<<<<<<< HEAD
   service: TQueryServiceFunction<T, A>;
   accessor?: string;
 =======
@@ -43,6 +52,10 @@ interface IUseQueryProps<T, A> {
     config?: AxiosRequestConfig<any> | undefined
   ) => Promise<AxiosResponse<T, any>>;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  service: TQueryServiceFunction<T, A>;
+  accessor?: string;
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
 }
 
 export const useQuery = <T extends any = any, A extends any = any>(
@@ -58,6 +71,7 @@ export const useQuery = <T extends any = any, A extends any = any>(
     toastError = false,
     toastErrorOptions,
     accessor,
+<<<<<<< HEAD
   } = props;
   const [data, setData] = useState<T>(initialData);
   const [loading, setLoading] = useState(initialLoading);
@@ -67,6 +81,8 @@ export const useQuery = <T extends any = any, A extends any = any>(
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
     toastError = false,
     toastErrorOptions,
+=======
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
   } = props;
   const [data, setData] = useState<T>(initialData);
 <<<<<<< HEAD
@@ -99,6 +115,7 @@ export const useQuery = <T extends any = any, A extends any = any>(
 
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const { data: res } = await service(args, {
         signal: controller.current.signal,
         ...config,
@@ -110,6 +127,13 @@ export const useQuery = <T extends any = any, A extends any = any>(
         ...config,
       });
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      const { data: res } = await service(args, {
+        signal: controller.current.signal,
+        ...config,
+      });
+      const data = accessor ? get(res, accessor, initialData) : res;
+>>>>>>> 6640d72 (OTAT-154 Add profile page)
       if (data) {
         setData(data);
         setError(false);
