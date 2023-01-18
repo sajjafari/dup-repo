@@ -165,19 +165,27 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3333",
     "http://127.0.0.1:3333",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "https://checkuptest.asta.ir",
 =======
     "https://checkup.asta.ir",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    "https://checkuptest.asta.ir",
+>>>>>>> 8934a58 (fix some issues in new installation)
 ]
 
 CORS_ALLOW_CREDENTIALS = True
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 CSRF_TRUSTED_ORIGINS = ['https://checkuptest.asta.ir']
 =======
 CSRF_TRUSTED_ORIGINS = ['https://checkup.asta.ir']
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+CSRF_TRUSTED_ORIGINS = ['https://checkuptest.asta.ir']
+>>>>>>> 8934a58 (fix some issues in new installation)
 
 
 
@@ -268,12 +276,17 @@ ACCOUNTS_VERIFICATION_REQUIRED = True
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 STATIC_URL = '/admin/vol/web/static/'
 MEDIA_URL = '/admin/vol/web/media/'
 =======
 STATIC_URL = '/admin/static/'
 MEDIA_URL = '/admin/media/'
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+STATIC_URL = '/admin/vol/web/static/'
+MEDIA_URL = '/admin/vol/web/media/'
+>>>>>>> 8934a58 (fix some issues in new installation)
 
 MEDIA_ROOT = '/admin/vol/web/media'
 STATIC_ROOT = '/admin/vol/web/static'
