@@ -353,6 +353,11 @@
 >>>>>>> 2a2dbf5 (OTAT-288 Add create and view btn)
 =======
   "spaceSettingT": "Space Setting",
+<<<<<<< HEAD
   "expertGroups": "Expert groups"
 >>>>>>> e1df88f (OTAT-290 Add expert groups to account)
+=======
+  "expertGroups": "Expert groups",
+  "createExpertGroup": "Create expert group"
+>>>>>>> 81ae816 (OTAT-291 Add expert groups list)
 }

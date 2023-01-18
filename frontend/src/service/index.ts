@@ -664,7 +664,16 @@ export const createService = (
       const { profileId } = args || {};
       return axios.get(`/baseinfo/inspectprofile/${profileId}/`, config);
     },
+<<<<<<< HEAD
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+    fetchUserExpertGroups(
+      args: any,
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      return axios.get(`/baseinfo/tags/`, config);
+    },
+>>>>>>> 81ae816 (OTAT-291 Add expert groups list)
   };
 
   return service;
