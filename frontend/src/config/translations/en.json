@@ -316,6 +316,11 @@
   "description": "Description",
   "createProfile": "Create profile",
   "updateProfile": "Update profile",
+<<<<<<< HEAD
   "dsl": "DSL"
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+  "dsl": "DSL",
+  "currentSpace": "Current space"
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
 }

@@ -33,12 +33,18 @@ import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
 import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 import CompareRoundedIcon from "@mui/icons-material/CompareRounded";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownRoundedIcon from "@mui/icons-material/ArrowDropDownRounded";
 import ArrowDropUpRoundedIcon from "@mui/icons-material/ArrowDropUpRounded";
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
 
 const drawerWidth = 240;
 
@@ -211,6 +217,7 @@ const Navbar = () => {
           </Typography>
           <Box sx={{ display: { xs: "none", md: "block" }, ml: 3 }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <SpacesButton currentSpace={current_space} />
             {/* {current_space?.id && (
 =======
@@ -242,6 +249,9 @@ const Navbar = () => {
                 )}
               </Box>
             </Button>
+=======
+            <SpacesButton currentSpace={current_space} />
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
             {current_space?.id && (
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
               <Button
@@ -479,6 +489,9 @@ const Logo = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
 const SpacesButton = ({ currentSpace }: any) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -488,21 +501,30 @@ const SpacesButton = ({ currentSpace }: any) => {
   const handleClose = () => {
     setAnchorEl(null);
   };
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
 
   return (
     <>
       <Button
+<<<<<<< HEAD
         onClick={() =>
           currentSpace?.id && navigate(`/${currentSpace?.id}/assessments`)
         }
         sx={{ ...styles.activeNavbarLink, ml: 0.1, mr: 0.8 }}
+=======
+        onClick={handleClick}
+        sx={{ ...styles.activeNavbarLink, ml: 0.1 }}
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
         startIcon={
           <FolderRoundedIcon
             sx={{ opacity: 0.8, fontSize: "18px !important" }}
           />
         }
         endIcon={
+<<<<<<< HEAD
           <Button
             sx={{ minWidth: "8px", ml: 0.6, px: 0.2, py: 0.2 }}
             onClick={(e) => {
@@ -529,6 +551,12 @@ const SpacesButton = ({ currentSpace }: any) => {
             {currentSpace?.title}
           </Typography>
         )}
+=======
+          open ? <ArrowDropUpRoundedIcon /> : <ArrowDropDownRoundedIcon />
+        }
+      >
+        <Trans i18nKey={"spaces"} />
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
       </Button>
 
       <Menu
@@ -538,6 +566,7 @@ const SpacesButton = ({ currentSpace }: any) => {
         onClose={handleClose}
         PaperProps={{ sx: { minWidth: "260px" } }}
       >
+<<<<<<< HEAD
         {currentSpace?.id && (
           <>
             <Typography
@@ -567,6 +596,21 @@ const SpacesButton = ({ currentSpace }: any) => {
           component={NavLink}
           to={`/spaces`}
         >
+=======
+        <Typography variant="subMedium" sx={{ px: 1, py: 0.3, opacity: 0.8 }}>
+          <Trans i18nKey={"currentSpace"} />
+        </Typography>
+        <MenuItem
+          dense
+          component={NavLink}
+          onClick={handleClose}
+          to={`/spaces`}
+        >
+          {currentSpace?.title}
+        </MenuItem>
+        <Divider />
+        <MenuItem dense onClick={handleClose}>
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
           <Trans i18nKey={"allSpaces"} />
         </MenuItem>
       </Menu>
@@ -574,6 +618,9 @@ const SpacesButton = ({ currentSpace }: any) => {
   );
 };
 
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 8344fdf (OTAT-258 Add drop down menu)
 export default Navbar;
