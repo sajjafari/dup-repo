@@ -4,6 +4,7 @@ from .views import commonviews
 from .imagecomponent.views import QualityAttributeImageViewSet, SubjectImageViewSet, ProfileImageViewSet
 from rest_framework_nested import routers
 from .views import profileviews
+from .views import expertgroupviews
 from django.urls import path
 
 
@@ -18,7 +19,11 @@ router.register('dsl', profileviews.UploadProfileApi, basename='dsl')
 <<<<<<< HEAD
 =======
 router.register('tags', profileviews.ProfileTagViewSet, basename='tags')
+<<<<<<< HEAD
 >>>>>>> 2946cf0 (make profile tag many to many)
+=======
+router.register('expertgroups', expertgroupviews.ExpertGroupViewSet, basename='expertgroups')
+>>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)
 
 
 metric_category_router = routers.NestedDefaultRouter(router, 'metriccategories', lookup='metric_category')
@@ -89,6 +94,7 @@ urlpatterns += [
     path("inspectprofile/<str:profile_id>/", profileviews.ProfileDetailDisplayApi.as_view()),
     path("importprofile/", profileviews.ImportProfileApi.as_view()),
 <<<<<<< HEAD
+<<<<<<< HEAD
 ]
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
@@ -100,3 +106,7 @@ urlpatterns += [
 =======
 ]
 >>>>>>> 471e98a (OTAT-248: import profile service is ready)
+=======
+    path("addexpertgroup/<str:expert_group_id>/", expertgroupviews.AddUserToExpertGroupApi.as_view()),
+]
+>>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)

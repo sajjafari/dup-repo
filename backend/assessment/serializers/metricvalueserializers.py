@@ -1,8 +1,12 @@
 from rest_framework import serializers
 
+<<<<<<< HEAD
 from baseinfo.models import Metric
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+from baseinfo.models.metricmodels import Metric
+>>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)
 from baseinfo.serializers.commonserializers import AnswerTemplateSerializer, SimpleMetricSerializers
 =======
 from baseinfo.serializers import AnswerTemplateSerializer

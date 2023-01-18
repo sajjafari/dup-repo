@@ -2,6 +2,7 @@ from rest_framework import serializers
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
@@ -11,6 +12,10 @@ from rest_framework.serializers import Serializer, FileField
 =======
 >>>>>>> d2cf4b2 (change upload file for dsl)
 from ..models import AnswerTemplate, AssessmentSubject, Metric, MetricImpact, QualityAttribute, MetricCategory
+=======
+from ..models.basemodels import AssessmentSubject, QualityAttribute, MetricCategory
+from ..models.metricmodels import AnswerTemplate, Metric, MetricImpact
+>>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)
 from ..imagecomponent.serializers import QualityAttributeImageSerializer, SubjectImageSerializer
 
 class MetricCategorySerilizer(serializers.ModelSerializer):

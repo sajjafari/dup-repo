@@ -1,5 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
 <<<<<<< HEAD
+<<<<<<< HEAD
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
@@ -17,6 +18,10 @@ from ..serializers.profileserializers import AssessmentProfileSerilizer
 >>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 =======
 from ..models import AssessmentSubject, Metric, MetricCategory, QualityAttribute
+=======
+from ..models.basemodels import AssessmentSubject, MetricCategory, QualityAttribute
+from ..models.metricmodels import Metric
+>>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)
 from ..serializers.commonserializers import AssessmentSubjectSerilizer, MetricCategorySerilizer, MetricSerilizer, QualityAttributeSerilizer, MetricCategoryBySubjectSerilizer
 >>>>>>> 2946cf0 (make profile tag many to many)
 
