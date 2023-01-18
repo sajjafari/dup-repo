@@ -27,6 +27,7 @@ dist-ssr
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 coverage
 =======
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
@@ -82,3 +83,8 @@ dist-ssr
 =======
 coverage
 >>>>>>> 3374ddc (OTAT-211 Add testing packages)
+=======
+coverage
+
+cypress.env.json
+>>>>>>> 45a32a5 (OTAT-272 Add login by api automation for e2e tests)
