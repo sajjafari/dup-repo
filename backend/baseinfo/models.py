@@ -45,6 +45,18 @@ class ProfileDsl(models.Model):
     dsl_file = models.FileField(upload_to='profile/dsl')
 >>>>>>> d2cf4b2 (change upload file for dsl)
 
+class ProfileTag(models.Model):
+    code = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
+    profile = models.ForeignKey(AssessmentProfile, on_delete=models.CASCADE, related_name='tags')
+
+    class Meta:
+        verbose_name = 'Profile Tag'
+        verbose_name_plural = "Profile Tags"
+
+    def __str__(self) -> str:
+        return self.title
+
 class MetricCategory(models.Model):
     code = models.CharField(max_length=50)
     title = models.CharField(max_length=100)

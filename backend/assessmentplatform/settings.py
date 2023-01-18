@@ -131,12 +131,17 @@ INSTALLED_APPS = [
     'assessment',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     'assessmentplatform'
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
     'assessmentplatform'
 >>>>>>> 00a92b2 (OTAT-216: fix some issues in installation)
+=======
+    'assessmentplatform',
+    # 'drf_yasg',
+>>>>>>> 055f1b9 (Add tag to profile display)
     # 'djversion',
 ]
 
@@ -239,7 +244,7 @@ AUTH_USER_MODEL = 'account.User'
 ADMIN_MENU_ORDER = (
     ("Users", ('account.User', "auth.Group",)),
     ("BaseInfo", ("baseinfo.AssessmentProfile", "baseinfo.MetricCategory",
-    "baseinfo.AssessmentSubject" , "baseinfo.QualityAttribute", "baseinfo.Metric")),
+    "baseinfo.AssessmentSubject" , "baseinfo.QualityAttribute", "baseinfo.Metric", "baseinfo.ProfileTag")),
     ("Content", ("pages.Page", "blog.BlogPost",
        "generic.ThreadedComment", (_("Media Library"), "media-library"),)),
     ("Site", ("sites.Site", "redirects.Redirect", "conf.Setting")),
