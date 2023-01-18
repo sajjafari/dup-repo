@@ -74,10 +74,14 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
 >>>>>>> 443adbc (OTAT-253 Add delete profile)
 =======
   const onSubmit = async (data: any, event: any, shouldView?: boolean) => {
+<<<<<<< HEAD
 >>>>>>> 2a2dbf5 (OTAT-288 Add create and view btn)
     const formattedData = { dsl_id: data.dsl_id.id };
 =======
     const { dsl_id, tags, ...restOfData } = data;
+=======
+    const { dsl_id, tags = [], ...restOfData } = data;
+>>>>>>> ea630b6 (OTAT-288 Fix shouldNavigate arg passing)
     const formattedData = {
       dsl_id: dsl_id.id,
       tag_ids: tags.map((t: any) => t.id),
@@ -191,7 +195,6 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
                   service.fetchProfileTags(args, config),
               })}
               name="tags"
-              required={true}
               multiple={true}
               searchOnType={false}
               label={<Trans i18nKey="tags" />}
@@ -203,7 +206,9 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
           loading={loading}
           type={type}
           hasViewBtn={true}
-          onSubmit={formMethods.handleSubmit(onSubmit)}
+          onSubmit={(...args) =>
+            formMethods.handleSubmit((data) => onSubmit(data, ...args))()
+          }
         />
       </FormProviderWithForm>
     </CEDialog>
