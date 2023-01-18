@@ -104,5 +104,9 @@ class AssessmentProfileSimpleSerilizer(serializers.ModelSerializer):
 class ExpertGroupSimpleSerilizers(serializers.ModelSerializer):
     class Meta:
         model = ExpertGroup
+<<<<<<< HEAD
         fields = ['id', 'name', 'description']
 >>>>>>> be4d999 (OTAT-170: refactor account app views and serializers for invite members)
+=======
+        fields = ['id', 'name', 'bio', 'about']
+>>>>>>> 7d31828 (Add bio and about to expert group)
