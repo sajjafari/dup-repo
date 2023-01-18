@@ -60,6 +60,7 @@ import PermissionControl from "../shared/PermissionControl";
 >>>>>>> 3b81eb7 (OTAT-221 Add permission control component)
 =======
 import AlertBox from "../shared/AlertBox";
+<<<<<<< HEAD
 >>>>>>> 7f37b32 (OTAT-212 Add compare page)
 =======
 >>>>>>> 909c4cb (OTAT-218 Add breadcrumb service)
@@ -73,6 +74,10 @@ import PermissionControl from "../shared/PermissionControl";
 =======
 import AlertBox from "../shared/AlertBox";
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+import setDocumentTitle from "../../utils/setDocumentTitle";
+import { t } from "i18next";
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 
 const QuestionnaireContainer = () => {
   const {
@@ -318,6 +323,10 @@ const QuestionnaireTitle = () => {
     spaceId,
     assessmentId,
   });
+
+  useEffect(() => {
+    setDocumentTitle(`${breadcrumbInfo.assessment} ${t("questionnaires")}`);
+  }, [breadcrumbInfo?.assessment]);
 
   return (
     <Title

@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 =======
 import React from "react";
 >>>>>>> 11a534e (OTAT-266 add Vite)
+=======
+import React, { useEffect } from "react";
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 import { Box } from "@mui/material";
 import { useServiceContext } from "../../providers/ServiceProvider";
 import { useParams } from "react-router-dom";
@@ -29,6 +33,8 @@ import ProfileSectionGeneralInfo from "./ProfileSectionGeneralInfo";
 import ListAccordion from "../shared/lists/ListAccordion";
 import InfoItem from "../shared/InfoItem";
 import formatDate from "../../utils/formatDate";
+import setDocumentTitle from "../../utils/setDocumentTitle";
+import { t } from "i18next";
 
 const ProfileContainer = () => {
   const { profileQueryProps } = useProfile();
@@ -2043,6 +2049,7 @@ const useProfile = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <Box maxWidth="340px" mt={2}>
       <Button
@@ -2062,6 +2069,11 @@ const useProfile = () => {
 =======
 =======
   console.log(profileQueryProps.data);
+=======
+  useEffect(() => {
+    setDocumentTitle(`${t("profile")}: ${profileQueryProps.data?.title}`);
+  }, [profileQueryProps.data?.title]);
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
   return { profileQueryProps };

@@ -10,3 +10,5 @@ export const BASE_URL =
     ? "https://checkuptest.asta.ir"
 >>>>>>> 8934a58 (fix some issues in new installation)
     : process.env.BASE_URL;
+
+export const APP_LABEL = "Checkup-Platform";

@@ -5,7 +5,12 @@ import Autocomplete, { AutocompleteProps } from "@mui/material/Autocomplete";
 import throttle from "lodash/throttle";
 import TextField from "@mui/material/TextField";
 import { TQueryServiceFunction, useQuery } from "../../../utils/useQuery";
-import { Controller, ControllerRenderProps, RegisterOptions, useFormContext } from "react-hook-form";
+import {
+  Controller,
+  ControllerRenderProps,
+  RegisterOptions,
+  useFormContext,
+} from "react-hook-form";
 import getFieldError from "../../../utils/getFieldError";
 import { Box } from "@mui/material";
 =======
@@ -33,13 +38,26 @@ import { TQueryProps } from "../../../types";
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 type TUnionAutocompleteAndAutocompleteAsyncFieldBase = Omit<IAutocompleteAsyncFieldBase, "serviceQueryData" | "field">;
+=======
+type TUnionAutocompleteAndAutocompleteAsyncFieldBase = Omit<
+  IAutocompleteAsyncFieldBase,
+  "serviceQueryData" | "field"
+>;
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 
-interface IAutocompleteAsyncFieldProps<T> extends TUnionAutocompleteAndAutocompleteAsyncFieldBase {
-  rules?: Omit<RegisterOptions<any, any>, "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled">;
+interface IAutocompleteAsyncFieldProps<T>
+  extends TUnionAutocompleteAndAutocompleteAsyncFieldBase {
+  rules?: Omit<
+    RegisterOptions<any, any>,
+    "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled"
+  >;
 }
 
-const AutocompleteAsyncField = <T extends any = any>(props: IAutocompleteAsyncFieldProps<T> & Omit<TQueryProps, "data">) => {
+const AutocompleteAsyncField = <T extends any = any>(
+  props: IAutocompleteAsyncFieldProps<T> & Omit<TQueryProps, "data">
+) => {
   const { name, rules = {}, defaultValue, required = false, ...rest } = props;
   const { control, setValue } = useFormContext();
   const { options } = rest;
@@ -86,8 +104,11 @@ const AutocompleteAsyncField = <T extends any = any>(props: IAutocompleteAsyncFi
       render={({ field, fieldState, formState }) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return <AutocompleteBaseField {...rest} name={name} required={required} field={field} defaultValue={defaultValue} />;
 =======
+=======
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
         return (
           <AutocompleteBaseField
             {...rest}
@@ -97,15 +118,19 @@ const AutocompleteAsyncField = <T extends any = any>(props: IAutocompleteAsyncFi
             defaultValue={defaultValue}
           />
         );
+<<<<<<< HEAD
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
 =======
         return <AutocompleteBaseField {...rest} name={name} required={required} field={field} defaultValue={defaultValue} />;
 >>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
+=======
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
       }}
     />
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 interface IAutocompleteAsyncFieldBase extends Omit<AutocompleteProps<any, any, any, any>, "renderInput"> {
@@ -116,6 +141,10 @@ interface IAutocompleteAsyncFieldBase
 =======
 interface IAutocompleteAsyncFieldBase extends Omit<AutocompleteProps<any, any, any, any>, "renderInput"> {
 >>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
+=======
+interface IAutocompleteAsyncFieldBase
+  extends Omit<AutocompleteProps<any, any, any, any>, "renderInput"> {
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
   field: ControllerRenderProps<any, any>;
   formatRequest?: (request: any) => any;
   name: string;
@@ -127,6 +156,7 @@ interface IAutocompleteAsyncFieldBase extends Omit<AutocompleteProps<any, any, a
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryProps, "data">) => {
 =======
 const AutocompleteBaseField = (
@@ -136,11 +166,17 @@ const AutocompleteBaseField = (
 =======
 const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryProps, "data">) => {
 >>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
+=======
+const AutocompleteBaseField = (
+  props: IAutocompleteAsyncFieldBase & Omit<TQueryProps, "data">
+) => {
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
   const {
     field,
     formatRequest = (request) => request,
     helperText,
     label,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     getOptionLabel = (option) => (typeof option === "string" ? option : option?.title || null),
@@ -159,6 +195,14 @@ const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryP
     filterSelectedOption = (options: readonly any[], value: any): any[] =>
       value ? options.filter((option) => option?.id != value?.id) : (options as any[]),
 >>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
+=======
+    getOptionLabel = (option) =>
+      typeof option === "string" ? option : option?.title || null,
+    filterSelectedOption = (options: readonly any[], value: any): any[] =>
+      value
+        ? options.filter((option) => option?.id != value?.id)
+        : (options as any[]),
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
     renderOption,
     noOptionsText,
     required,
@@ -180,6 +224,7 @@ const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryP
     setValue,
   } = useFormContext();
   const { hasError, errorMessage } = getFieldError(errors, name);
+<<<<<<< HEAD
   const [inputValue, setInputValue] = React.useState(() => getOptionLabel(defaultValue) || "");
 =======
   } = useFormContext();
@@ -194,6 +239,11 @@ const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryP
   const { hasError, errorMessage } = getFieldError(errors, name);
   const [inputValue, setInputValue] = React.useState(() => getOptionLabel(defaultValue) || "");
 >>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
+=======
+  const [inputValue, setInputValue] = React.useState(
+    () => getOptionLabel(defaultValue) || ""
+  );
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
   const [options, setOptions] = React.useState<any[]>([]);
 
   const fetch = React.useMemo(
@@ -232,13 +282,18 @@ const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryP
   }, [loaded]);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   // console.log(defaultValue, restFields, value, optionsData);
+=======
+
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
   return (
     <Autocomplete
       {...restFields}
       defaultValue={defaultValue}
       value={value}
       loading={loading}
+<<<<<<< HEAD
       loadingText={options.length > 5 ? <LoadingComponent options={options} /> : undefined}
 =======
 
@@ -259,6 +314,11 @@ const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryP
 =======
       loadingText={options.length > 5 ? <LoadingComponent options={options} /> : undefined}
 >>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
+=======
+      loadingText={
+        options.length > 5 ? <LoadingComponent options={options} /> : undefined
+      }
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
       size="small"
       autoHighlight
       getOptionLabel={getOptionLabel}
@@ -314,18 +374,24 @@ const LoadingComponent = ({ options }: { options: readonly any[] }) => {
       {forLoopComponent(options.length, (index) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <LoadingSkeleton width="100%" height="36px" sx={{ my: 0.3, borderRadius: 1 }} key={index} />
 =======
+=======
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
         <LoadingSkeleton
           width="100%"
           height="36px"
           sx={{ my: 0.3, borderRadius: 1 }}
           key={index}
         />
+<<<<<<< HEAD
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
 =======
         <LoadingSkeleton width="100%" height="36px" sx={{ my: 0.3, borderRadius: 1 }} key={index} />
 >>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
+=======
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
       ))}
     </Box>
   );

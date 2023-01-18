@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,6 +6,9 @@ import React from "react";
 <<<<<<< HEAD
 =======
 >>>>>>> 11a534e (OTAT-266 add Vite)
+=======
+import React, { useEffect } from "react";
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import Chip from "@mui/material/Chip";
@@ -15,6 +19,7 @@ import { ICompareResultModel } from "../../types";
 import { getMinWithBaseOnNumberOfAssessments } from "./utils";
 import CompareResultAssessmentsSection from "./CompareResultAssessmentsSection";
 import CompareResultSubjectAttributesBarChart from "./CompareResultAttributesBarChart";
+<<<<<<< HEAD
 =======
 import { Alert, Chip, CircularProgress, Link, Typography } from "@mui/material";
 =======
@@ -39,6 +44,10 @@ import { getMinWithBaseOnNumberOfAssessments } from "./utils";
 import CompareResultAssessmentsSection from "./CompareResultAssessmentsSection";
 import CompareResultSubjectAttributesBarChart from "./CompareResultAttributesBarChart";
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+import setDocumentTitle from "../../utils/setDocumentTitle";
+import { t } from "i18next";
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 
 interface ICompareResultProps {
   data: ICompareResultModel;
@@ -46,6 +55,14 @@ interface ICompareResultProps {
 
 const CompareResult = (props: ICompareResultProps) => {
   const { data } = props;
+
+  useEffect(() => {
+    setDocumentTitle(
+      `${t("comparisonResultT")} ${data.base_infos
+        .map((bi) => bi.title)
+        .join(` & `)}`
+    );
+  }, [data.base_infos]);
 
   return (
     <Box mt={4}>

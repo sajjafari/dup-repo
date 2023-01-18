@@ -36,11 +36,15 @@ import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { t } from "i18next";
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
 import { t } from "i18next";
 >>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
+=======
+import setDocumentTitle from "../../utils/setDocumentTitle";
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 
 const SubjectContainer = () => {
   const { noStatus, loading, loaded, hasError, subjectQueryData, subjectId } =
@@ -173,6 +177,10 @@ const SubjectTitle = (props: {
     title,
   } = data || {};
   const { spaceId, assessmentId } = useParams();
+
+  useEffect(() => {
+    setDocumentTitle(`${title} ${t("insight")}`);
+  }, [title]);
 
   return (
     <Title

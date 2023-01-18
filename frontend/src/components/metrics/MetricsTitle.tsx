@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import React, { useEffect } from "react";
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
@@ -29,11 +33,15 @@ import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { t } from "i18next";
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
 import { t } from "i18next";
 >>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
+=======
+import setDocumentTitle from "../../utils/setDocumentTitle";
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 
 const MetricsTitle = (props: {
   data: IQuestionnaireModel;
@@ -54,6 +62,12 @@ const MetricsTitle = (props: {
     assessmentId,
     questionnaireId,
   });
+
+  useEffect(() => {
+    if (isComplete) {
+      setDocumentTitle(`${title} ${t("questionnaireFinished")}`);
+    }
+  }, [title, isComplete]);
 
   return (
     <Box sx={{ pt: 1, pb: 0 }}>

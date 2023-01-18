@@ -1,8 +1,8 @@
 {
-  "signInScreenTitle": "sign in",
-  "signUpScreenTitle": "sign up",
-  "signUp": "sign up",
-  "signIn": "sign in",
+  "signInScreenTitle": "Sign in",
+  "signUpScreenTitle": "Sign up",
+  "signUp": "Sign up",
+  "signIn": "Sign in",
   "yourAccountCreatedSuccessfully": "Your account has been created successfully.",
   "username": "Username",
   "password": "Password",
@@ -33,7 +33,7 @@
   "nextQuestion": "NEXT QUESTION",
   "howMyAnswerLook": "How my answer looks?",
   "goBackToQuestionnaires": "go back to questionnaires",
-  "question": "QUESTION",
+  "question": "Question",
   "createSpace": "Create space",
   "create": "Create",
   "update": "Update",
@@ -78,7 +78,7 @@
   "setAsDefault": "Set as default",
   "showsOverallStatusOfSystem": "Shows overall status of your system",
   "overAllStatus": "Overall status",
-  "overallInsights": "OVERALL INSIGHTS",
+  "overallInsights": "Overall insights",
   "technicalDueDiligence": "Technical Due Diligence Report Of ",
   "mostSignificantStrengths": "Most significant strengths",
   "mostSignificantWeaknesses": "Most significant weaknesses",
@@ -243,6 +243,7 @@
   "allSpaces": "All spaces",
   "questionOptions": "Question options",
   "impact": "Impact",
+<<<<<<< HEAD
   "relatedAttributes": "Related attributes"
 >>>>>>> b2c86b5 (OTAT-258 Fix mobile navbar items)
 =======
@@ -331,4 +332,17 @@
   "impact": "Impact",
   "relatedAttributes": "Related attributes"
 >>>>>>> 255e0ee (OTAT-258 Fix mobile navbar items)
+=======
+  "relatedAttributes": "Related attributes",
+  "userProfileT": "User Profile",
+  "compare": "Compare",
+  "reviewQuestions": "Review questions",
+  "profiles": "Profiles",
+  "spaceSetting": "Space setting",
+  "insight": "Insight",
+  "overallInsightsT": "Overall Insights",
+  "items": "Items",
+  "comparisonResultT": "Comparison Result Of",
+  "spaceSettingT": "Space Setting"
+>>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
 }
