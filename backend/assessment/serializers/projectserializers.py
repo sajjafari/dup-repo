@@ -6,6 +6,7 @@ from rest_framework import serializers
 from ..services.metricstatistic import extract_total_progress
 from ..models import AssessmentProject
 from .commonserializers import ColorSerilizer
+<<<<<<< HEAD
 from baseinfo.serializers.profileserializers import AssessmentProfileSerilizer, AssessmentProfileSimpleSerilizer
 <<<<<<< HEAD
 =======
@@ -20,6 +21,11 @@ from baseinfo.serializers import AssessmentProfileSerilizer, AssessmentProfileSi
 =======
 >>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 from account.serializers import SpaceSimpleSerializer
+=======
+from baseinfo.serializers.profileserializers import AssessmentProfileSerilizer
+from baseinfo.serializers.commonserializers import AssessmentProfileSimpleSerilizer
+from account.serializers.spaceserializers import SpaceSimpleSerializer
+>>>>>>> be4d999 (OTAT-170: refactor account app views and serializers for invite members)
 
 
 class AssessmentProjectListSerilizer(serializers.ModelSerializer):

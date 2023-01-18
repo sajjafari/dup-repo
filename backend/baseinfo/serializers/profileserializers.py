@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from ..models.profilemodels import AssessmentProfile, ProfileDsl, ProfileTag
-from ..models.profilemodels import ExpertGroup
 from ..imagecomponent.serializers import ProfileImageSerializer
+from .commonserializers import ExpertGroupSimpleSerilizers
 from assessment.models import AssessmentProject
 class ProfileDslSerializer(serializers.ModelSerializer):
 <<<<<<< HEAD
@@ -38,11 +38,6 @@ class ProfileTagSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProfileTag
         fields = ['id', 'code', 'title']
-
-class ExpertGroupSimpleSerilizers(serializers.ModelSerializer):
-    class Meta:
-        model = ExpertGroup
-        fields = ['id', 'name']
 
 class AssessmentProfileSerilizer(serializers.ModelSerializer):
     images = ProfileImageSerializer(many=True)
@@ -105,10 +100,7 @@ class AssessmentProfileCreateSerilizer(serializers.ModelSerializer):
         model = AssessmentProfile
         fields = ['id']
 
-class AssessmentProfileSimpleSerilizer(serializers.ModelSerializer):
-    class Meta:
-        model = AssessmentProfile
-        fields = ['id', 'code', 'title', 'description']
+
 
 
 

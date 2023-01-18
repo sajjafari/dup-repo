@@ -15,7 +15,11 @@ from ..models import AnswerTemplate, AssessmentSubject, Metric, MetricImpact, Qu
 =======
 from ..models.basemodels import AssessmentSubject, QualityAttribute, MetricCategory
 from ..models.metricmodels import AnswerTemplate, Metric, MetricImpact
+<<<<<<< HEAD
 >>>>>>> adc5997 (OTAT-269: expert group base info and services is ready)
+=======
+from ..models.profilemodels import AssessmentProfile, ExpertGroup
+>>>>>>> be4d999 (OTAT-170: refactor account app views and serializers for invite members)
 from ..imagecomponent.serializers import QualityAttributeImageSerializer, SubjectImageSerializer
 
 class MetricCategorySerilizer(serializers.ModelSerializer):
@@ -73,6 +77,7 @@ class MetricSerilizer(serializers.ModelSerializer):
         model = Metric
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         fields = ['id', 'title', 'index', 'answer_templates']
 <<<<<<< HEAD
 =======
@@ -88,3 +93,16 @@ class FileUploadSerializer(Serializer):
 =======
         fields = ['id', 'title', 'index', 'answer_templates']
 >>>>>>> d2cf4b2 (change upload file for dsl)
+=======
+        fields = ['id', 'title', 'index', 'answer_templates']
+
+class AssessmentProfileSimpleSerilizer(serializers.ModelSerializer):
+    class Meta:
+        model = AssessmentProfile
+        fields = ['id', 'code', 'title', 'description']
+
+class ExpertGroupSimpleSerilizers(serializers.ModelSerializer):
+    class Meta:
+        model = ExpertGroup
+        fields = ['id', 'name', 'description']
+>>>>>>> be4d999 (OTAT-170: refactor account app views and serializers for invite members)

@@ -2,6 +2,7 @@ from statistics import mean
 from rest_framework import serializers
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 from baseinfo.serializers.profileserializers import AssessmentProfileSimpleSerilizer
 =======
 import more_itertools
@@ -11,8 +12,11 @@ from baseinfo.serializers import AssessmentProfileSimpleSerilizer
 =======
 from baseinfo.serializers.profileserializers import AssessmentProfileSimpleSerilizer
 >>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
+=======
+from baseinfo.serializers.commonserializers import AssessmentProfileSimpleSerilizer
+>>>>>>> be4d999 (OTAT-170: refactor account app views and serializers for invite members)
 from assessment.serializers.commonserializers import ColorSerilizer
-from account.serializers import SpaceSerializer
+from account.serializers.commonserializers import SpaceSerializer
 
 
 from ..models import AssessmentProject, AssessmentResult
