@@ -207,6 +207,7 @@
   "questionImpact": "Question impact",
   "aboutProfile": "About profile",
   "created": "Created",
+<<<<<<< HEAD
   "description": "Description"
 >>>>>>> 2a32e17 (OTAT-154 Add profile page)
 =======
@@ -214,4 +215,10 @@
   "oneFileOnly": "You can only upload one file at a time.",
   "dropYourFileHere": "Drop your file here"
 >>>>>>> a0e0d8d (OTAT-252 Add uploader field)
+=======
+  "description": "Description",
+  "createProfile": "Create profile",
+  "updateProfile": "Update profile",
+  "dsl": "DSL"
+>>>>>>> c7ab3a1 (OTAT-253 Add create profile dialog)
 }

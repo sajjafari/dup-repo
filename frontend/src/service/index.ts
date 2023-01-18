@@ -420,7 +420,17 @@ export const createService = (
       config: AxiosRequestConfig<any> | undefined
     ) {
       return axios.delete(`/baseinfo/profiles/1/images/${args?.id}/`, config);
+<<<<<<< HEAD
 >>>>>>> a0e0d8d (OTAT-252 Add uploader field)
+=======
+    },
+    fetchProfile(
+      args: { profileId: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { profileId } = args || {};
+      return axios.get(`/baseinfo/inspectprofile/${profileId}/`, config);
+>>>>>>> c7ab3a1 (OTAT-253 Add create profile dialog)
     },
   };
 
