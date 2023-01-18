@@ -1,7 +1,11 @@
 version: '3.9'
 
 services:
+<<<<<<< HEAD
   backend:
+=======
+  checkupassessmenttoolkit:
+>>>>>>> cb52529 (Add existing project files to github)
     build:
       context: .
     command: >
@@ -11,6 +15,7 @@ services:
     ports:
       - 8000:8000
     volumes:
+<<<<<<< HEAD
       - ./backend:/backend
       - static-data:/admin/vol/web
     environment:
@@ -20,6 +25,17 @@ services:
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
+=======
+      - ./checkupassessmenttoolkit:/checkupassessmenttoolkit
+      - ./data/web:/vol/web
+    environment:
+      - SECRET_KEY=devsecretkey
+      - DEBUG=1
+      - DB_HOST=db
+      - DB_NAME=checkupassessment
+      - DB_USER=postgres
+      - DB_PASS=123456
+>>>>>>> cb52529 (Add existing project files to github)
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - EMAIL_HOST=${EMAIL_HOST}
       - DEFAULT_FROM_EMAIL=${DEFAULT_FROM_EMAIL}
@@ -30,6 +46,7 @@ services:
     depends_on:
       - db
 
+<<<<<<< HEAD
   dsl:
       build: ./dsl-parser
       restart: on-failure
@@ -43,6 +60,14 @@ services:
       - POSTGRES_DB=${DB_NAME}
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASS}
+=======
+  db:
+    image: postgres:11
+    environment:
+      - POSTGRES_DB=checkupassessment
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+>>>>>>> cb52529 (Add existing project files to github)
     volumes:
       - postgres-data:/var/lib/postgresql/data
     ports:
@@ -54,6 +79,7 @@ services:
     restart: always
     build:
       context: .
+<<<<<<< HEAD
     command: celery -A assessmentplatform worker -l info
     volumes:
       - ./backend:/backend
@@ -64,12 +90,25 @@ services:
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
+=======
+    command: celery -A checkupassessmenttoolkit worker -l info
+    volumes:
+      - ./checkupassessmenttoolkit:/checkupassessmenttoolkit
+    environment:
+      - SECRET_KEY=devsecretkey
+      - DEBUG=1
+      - DB_HOST=db
+      - DB_NAME=checkupassessment
+      - DB_USER=postgres
+      - DB_PASS=123456
+>>>>>>> cb52529 (Add existing project files to github)
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - CELERY_BROKER_URL=redis://redis:6379/1
       - DOMAIN=${DOMAIN}
     depends_on:
       - db
       - redis
+<<<<<<< HEAD
       - backend
 
   flower:
@@ -90,6 +129,28 @@ services:
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
+=======
+      - checkupassessmenttoolkit
+
+  flower:
+    build: .
+    command: celery -A checkupassessmenttoolkit flower
+    volumes:
+      - ./checkupassessmenttoolkit:/checkupassessmenttoolkit
+    depends_on:
+      - checkupassessmenttoolkit
+      - redis
+      - celery
+    environment:
+      - DEBUG=1
+      - CELERY_BROKER=redis://redis:6379/1
+      - CELERY_BACKEND=redis://redis:6379/1
+      - SECRET_KEY=devsecretkey
+      - DB_HOST=db
+      - DB_NAME=checkupassessment
+      - DB_USER=postgres
+      - DB_PASS=123456
+>>>>>>> cb52529 (Add existing project files to github)
       - ALLOWED_HOSTS=${ALLOWED_HOSTS}
       - DOMAIN=${DOMAIN}
     ports:
@@ -98,13 +159,20 @@ services:
   frontend:
     restart: always
     command : npm start
+<<<<<<< HEAD
     container_name: frontend
     build:
       context: ./frontend
+=======
+    container_name: front
+    build:
+      context: ./front
+>>>>>>> cb52529 (Add existing project files to github)
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
     environment:
+<<<<<<< HEAD
       - BASE_URL=http://backend:8000
     stdin_open: true
     depends_on:
@@ -113,3 +181,12 @@ services:
 volumes:
   postgres-data:
   static-data:
+=======
+      - BASE_URL=http://checkupassessmenttoolkit:8000
+    stdin_open: true
+    depends_on:
+      - checkupassessmenttoolkit  
+
+volumes:
+  postgres-data:
+>>>>>>> cb52529 (Add existing project files to github)
