@@ -341,6 +341,7 @@ const Navbar = () => {
               component={NavLink}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               to="account"
 =======
               to="profile"
@@ -348,6 +349,9 @@ const Navbar = () => {
 =======
               to="account"
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+              to={`account/${userInfo.username}/about`}
+>>>>>>> bff18dc (OTAT-293 Add view profile page foundation)
               endIcon={<Avatar sx={{ width: 26, height: 26, ml: 1 }} />}
             >
               {userInfo.username}

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import React, { useEffect, useLayoutEffect } from "react";
+>>>>>>> bff18dc (OTAT-293 Add view profile page foundation)
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
@@ -19,7 +23,7 @@ import Grid from "@mui/material/Grid";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
 import { authActions, useAuthContext } from "../../providers/AuthProvider";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import EngineeringIcon from "@mui/icons-material/Engineering";
 import { styles } from "../../config/styles";
 import ExpertGroupsContainer from "../expert-groups/ExpertGroupsContainer";
@@ -35,10 +39,20 @@ const AccountContainer = () => {
 };
 
 function AccountSettings() {
-  const [value, setValue] = React.useState("about");
+  const { accountTab } = useParams();
+  const navigate = useNavigate();
+  const [value, setValue] = React.useState(accountTab as string);
+
+  useEffect(() => {
+    if (!["about", "expert-groups"].includes(accountTab as string)) {
+      navigate("./../about", { replace: true });
+      setValue("about");
+    }
+  }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
+    navigate(`./../${newValue}`);
   };
 
   return (

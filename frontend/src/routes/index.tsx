@@ -37,6 +37,10 @@ const ActivationSuccessfulScreen = React.lazy(
   () => import("../screens/ActivationSuccessfulScreen")
 );
 
+const ExpertGroupScreen = React.lazy(
+  () => import("../screens/ExpertGroupScreen")
+);
+
 const AssessmentReportScreen = React.lazy(
   () => import("../screens/AssessmentReportScreen")
 );
@@ -104,7 +108,18 @@ const Routes = () => {
         >
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Route path="/account" element={<AccountScreen />} />
+=======
+          <Route
+            path="/account/:username/:accountTab"
+            element={<AccountScreen />}
+          />
+          <Route
+            path="/account/:username/expert-groups/:expertGroupId"
+            element={<ExpertGroupScreen />}
+          />
+>>>>>>> bff18dc (OTAT-293 Add view profile page foundation)
           <Route path="/spaces" element={<SpacesScreen />} />
           <Route path="/profiles" element={<ProfilesScreen />} />
           <Route path="/profiles/:profileId" element={<ProfileScreen />} />

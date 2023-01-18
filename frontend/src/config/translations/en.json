@@ -358,6 +358,11 @@
 >>>>>>> e1df88f (OTAT-290 Add expert groups to account)
 =======
   "expertGroups": "Expert groups",
+<<<<<<< HEAD
   "createExpertGroup": "Create expert group"
 >>>>>>> 81ae816 (OTAT-291 Add expert groups list)
+=======
+  "createExpertGroup": "Create expert group",
+  "expertGroupT": "Expert Group"
+>>>>>>> bff18dc (OTAT-293 Add view profile page foundation)
 }
