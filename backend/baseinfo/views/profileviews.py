@@ -58,7 +58,7 @@ from ..services import expertgroupservice
 >>>>>>> 365b8eb (OTAT-269: enrich expert_group service)
 from ..serializers.profileserializers import ProfileDslSerializer, AssessmentProfileSerilizer, ProfileTagSerializer
 from ..models.profilemodels import ProfileDsl, ProfileTag, AssessmentProfile
-from ..models.basemodels import MetricCategory
+from assessment.models import AssessmentProject
 
 DSL_PARSER_URL_SERVICE = "http://localhost:8080/extract/"
 
@@ -76,8 +76,18 @@ class AssessmentProfileViewSet(ModelViewSet):
         return queryset
 
     def destroy(self, request, *args, **kwargs):
-        if MetricCategory.objects.filter(assessment_profile_id=kwargs['pk']).count() > 0:
-            return Response({'error' : 'AssessmentProfile cannot be deleted'})
+        profile = profileservice.load_profile(kwargs['pk'])
+        if profile is None:
+            error_message = 'The Assessment Profile with given Id {profile_id} does not exists'.format(profile_id = profile.id)
+            return Response({'message': error_message}, status=status.HTTP_400_BAD_REQUEST)
+        qs = AssessmentProject.objects.filter(assessment_profile_id = profile.id)
+        if qs.count() > 0:
+            return Response({'message': 'Some assessment with this profile exist'}, status=status.HTTP_400_BAD_REQUEST)
+        
+        if profile.expert_group is not None:
+            user = profile.expert_group.users.filter(id = request.user.id)
+            if user.count() == 0:
+                return Response({'message': 'The current user does not have permission for deleting profile'}, status=status.HTTP_403_FORBIDDEN)
         return super().destroy(request, *args, ** kwargs)
 
 class ProfileTagViewSet(ModelViewSet):
