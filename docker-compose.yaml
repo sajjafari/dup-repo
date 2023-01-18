@@ -27,7 +27,7 @@ services:
       - DB_PASS=${DB_PASS}
 =======
       - ./checkupassessmenttoolkit:/checkupassessmenttoolkit
-      - ./data/web:/vol/web
+      - static-data:/admin/vol/web
     environment:
       - SECRET_KEY=devsecretkey
       - DEBUG=1
@@ -189,4 +189,8 @@ volumes:
 
 volumes:
   postgres-data:
+<<<<<<< HEAD
 >>>>>>> cb52529 (Add existing project files to github)
+=======
+  static-data:
+>>>>>>> 8254ce5 (remove djversion due to installation problem)
