@@ -11,7 +11,7 @@ import setServerFieldErrors from "../../utils/setServerFieldError";
 import useConnectSelectField from "../../utils/useConnectSelectField";
 import NoteAddRoundedIcon from "@mui/icons-material/NoteAddRounded";
 import { ICustomError } from "../../utils/CustomError";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import toastError from "../../utils/toastError";
 import { CEDialog, CEDialogActions } from "../shared/dialogs/CEDialog";
 import FormProviderWithForm from "../shared/FormProviderWithForm";
@@ -53,6 +53,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
 >>>>>>> 443adbc (OTAT-253 Add delete profile)
   const formMethods = useForm({ shouldUnregister: true });
   const abortController = useMemo(() => new AbortController(), [rest.open]);
+  const navigate = useNavigate();
   const close = () => {
     abortController.abort();
     closeDialog();
@@ -64,11 +65,15 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
     };
   }, []);
 
+<<<<<<< HEAD
   const onSubmit = async (data: any) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 443adbc (OTAT-253 Add delete profile)
+=======
+  const onSubmit = async (data: any, event: any, shouldView?: boolean) => {
+>>>>>>> 2a2dbf5 (OTAT-288 Add create and view btn)
     const formattedData = { dsl_id: data.dsl_id.id };
     setLoading(true);
     try {
@@ -85,6 +90,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
       setLoading(false);
       onSubmitForm();
       close();
+      shouldView && res?.id && navigate(`${res.id}`);
     } catch (e) {
       const err = e as ICustomError;
       setLoading(false);
@@ -135,10 +141,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
         </>
       }
     >
-      <FormProviderWithForm
-        formMethods={formMethods}
-        onSubmit={formMethods.handleSubmit(onSubmit)}
-      >
+      <FormProviderWithForm formMethods={formMethods}>
         <Grid container spacing={2} sx={styles.formGrid}>
           <Grid item xs={12}>
             <UploadField
@@ -173,7 +176,13 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
             />
           </Grid>
         </Grid>
-        <CEDialogActions closeDialog={close} loading={loading} type={type} />
+        <CEDialogActions
+          closeDialog={close}
+          loading={loading}
+          type={type}
+          hasViewBtn={true}
+          onSubmit={formMethods.handleSubmit(onSubmit)}
+        />
       </FormProviderWithForm>
     </CEDialog>
   );

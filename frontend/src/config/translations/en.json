@@ -343,6 +343,11 @@
   "overallInsightsT": "Overall Insights",
   "items": "Items",
   "comparisonResultT": "Comparison Result Of",
+<<<<<<< HEAD
   "spaceSettingT": "Space Setting"
 >>>>>>> 40b97fc (OTAT-182 Add document title related to pages)
+=======
+  "spaceSettingT": "Space Setting",
+  "andView": "and view"
+>>>>>>> 2a2dbf5 (OTAT-288 Add create and view btn)
 }
