@@ -25,10 +25,14 @@ class QuestionaryView(APIView):
         assessment_project = AssessmentProject.objects.get(id = assessment_project_id)
         result_id = assessment_project.get_assessment_result().id
 <<<<<<< HEAD
+<<<<<<< HEAD
         if not self.is_qulaity_attribute_value_exists(result_id):
 =======
         if self.is_qulaity_attribute_value_exists(result_id) == False:
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        if not self.is_qulaity_attribute_value_exists(result_id):
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
             self.init_quality_attribute_value(result_id)
 
         

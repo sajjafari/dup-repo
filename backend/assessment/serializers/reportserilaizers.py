@@ -15,11 +15,16 @@ from ..models import AssessmentProject, AssessmentResult
 from ..fixture.common import calculate_staus, ANSWERED_QUESTION_NUMBER_BOUNDARY
 from ..fixture.dictionary import Dictionary
 <<<<<<< HEAD
+<<<<<<< HEAD
 from ..services.metricstatistic import calculate_total_metric_number_by_subject, calculate_answered_metric_by_subject, extract_total_progress
 from ..services.attributesstatistics import extract_most_significant_strength_atts, extract_most_significant_weaknessness_atts
 =======
 from ..fixture.metricstatistic import calculate_total_metric_number_by_subject, calculate_answered_metric_by_subject, extract_total_progress
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+from ..services.metricstatistic import calculate_total_metric_number_by_subject, calculate_answered_metric_by_subject, extract_total_progress
+from ..services.attributesstatistics import extract_most_significant_strength_atts, extract_most_significant_weaknessness_atts
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 
 class AssessmentProjectReportSerilizer(serializers.ModelSerializer):
     color = ColorSerilizer()
@@ -88,6 +93,7 @@ class AssessmentReportSerilizer(serializers.ModelSerializer):
 
     def get_most_significant_strength_atts(self, result: AssessmentResult):
 <<<<<<< HEAD
+<<<<<<< HEAD
         return extract_most_significant_strength_atts(result)
         
     def get_most_significant_weaknessness_atts(self, result: AssessmentResult):
@@ -112,6 +118,12 @@ class AssessmentReportSerilizer(serializers.ModelSerializer):
         else:
             return []
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        extract_most_significant_strength_atts(result)
+        
+    def get_most_significant_weaknessness_atts(self, result: AssessmentResult):
+        extract_most_significant_weaknessness_atts(result)
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
     
     def calculate_total_status(self, result: AssessmentResult):
         if result.quality_attribute_values.all():

@@ -13,10 +13,15 @@ from ..serializers.projectserializers import AssessmentProjecCreateSerilizer, As
      AssessmentProjectSimpleSerilizer, AssessmentProjectCompareSerilizer
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 from account.permission.spaceperm import ASSESSMENT_LIST_IDS_PARAM_NAME
 
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+from account.permission.spaceperm import ASSESSMENT_LIST_IDS_PARAM_NAME
+
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 class AssessmentProjectViewSet(ModelViewSet):
     def get_serializer_class(self):
         if self.action in ('create', 'update'):
@@ -45,10 +50,14 @@ class AssessmentProjectBySpaceViewSet(ModelViewSet):
         return AssessmentProject.objects.filter(space_id=self.kwargs['space_pk'])
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 # TODO filter by profile
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 class AssessmentProjectByCurrentUserViewSet(ModelViewSet):
     permission_classes=[IsAuthenticated]
     def get_serializer_class(self):
@@ -84,6 +93,7 @@ class AssessmentProjectByCurrentUserViewSet(ModelViewSet):
 
 class AssessmentProjectSelectForCompareView(APIView):
 <<<<<<< HEAD
+<<<<<<< HEAD
     permission_classes=[IsAuthenticated, IsSpaceMember]
     def post(self, request):
         assessment_list_ids = request.data.get(ASSESSMENT_LIST_IDS_PARAM_NAME)
@@ -92,6 +102,11 @@ class AssessmentProjectSelectForCompareView(APIView):
     def post(self, request):
         assessment_list_ids = request.data.get('assessment_list_ids')
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    permission_classes=[IsAuthenticated, IsSpaceMember]
+    def post(self, request):
+        assessment_list_ids = request.data.get(ASSESSMENT_LIST_IDS_PARAM_NAME)
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
         assessment_list = []
         for assessment_id in assessment_list_ids:
             try:
@@ -99,8 +114,12 @@ class AssessmentProjectSelectForCompareView(APIView):
                 assessment_list.append(AssessmentProjectCompareSerilizer(assessment).data)
             except AssessmentProject.DoesNotExist:
 <<<<<<< HEAD
+<<<<<<< HEAD
                 return Response({'error: The assessment_id {id} is invalid'.format(id=assessment_id)},status=status.HTTP_404_NOT_FOUND)
 =======
                 return Response({'error: The assessment_id {} is invalid'.format(assessment_id)},status=status.HTTP_404_NOT_FOUND)
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                return Response({'error: The assessment_id {id} is invalid'.format(id=assessment_id)},status=status.HTTP_404_NOT_FOUND)
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
         return Response(assessment_list)

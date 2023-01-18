@@ -13,10 +13,14 @@ from account.permission.spaceperm import IsSpaceMember
 from ..services.categoryreport import CategoryReportInfo
 from ..fixture.common import ANSWERED_QUESTION_NUMBER_BOUNDARY, calculate_staus
 <<<<<<< HEAD
+<<<<<<< HEAD
 from ..services.metricstatistic import extract_total_progress
 =======
 from ..fixture.metricstatistic import extract_total_progress
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+from ..services.metricstatistic import extract_total_progress
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 
 class SubjectReportViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [IsAuthenticated, IsSpaceMember]

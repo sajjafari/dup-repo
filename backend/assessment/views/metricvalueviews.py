@@ -11,10 +11,14 @@ from baseinfo.models import MetricCategory
 from ..serializers.metricvalueserializers import AddMetricValueSerializer, UpdateMetricValueSerializer, MetricValueSerializer
 from ..fixture.dictionary import Dictionary
 <<<<<<< HEAD
+<<<<<<< HEAD
 from ..services.metricstatistic import extract_total_progress
 =======
 from ..fixture.metricstatistic import extract_total_progress
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+from ..services.metricstatistic import extract_total_progress
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 
 
 class MetricValueViewSet(ModelViewSet):

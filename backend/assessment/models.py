@@ -12,6 +12,9 @@ class Color(models.Model):
     color_code = models.CharField(max_length=20)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 class AssessmentProjectManager(models.Manager):
     def load(self, assessment_id):
         try:
@@ -19,8 +22,11 @@ class AssessmentProjectManager(models.Manager):
         except AssessmentProject.DoesNotExist:
             return None
 
+<<<<<<< HEAD
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 class AssessmentProject(models.Model):
 
     STATUS_CHOICES = [
@@ -42,9 +48,13 @@ class AssessmentProject(models.Model):
     color = models.ForeignKey(Color, on_delete=models.PROTECT, null=True)
     space = models.ForeignKey(Space, on_delete=models.PROTECT, null=True)
 <<<<<<< HEAD
+<<<<<<< HEAD
     objects = AssessmentProjectManager()
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    objects = AssessmentProjectManager()
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 
     def __str__(self) -> str:
         return self.title

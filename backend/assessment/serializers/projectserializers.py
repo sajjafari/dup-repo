@@ -2,12 +2,16 @@ from rest_framework import serializers
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 from ..services.metricstatistic import extract_total_progress
 from ..models import AssessmentProject
 from .commonserializers import ColorSerilizer
 from baseinfo.serializers.profileserializers import AssessmentProfileSerilizer, AssessmentProfileSimpleSerilizer
 =======
 from ..fixture.metricstatistic import extract_total_progress
+=======
+from ..services.metricstatistic import extract_total_progress
+>>>>>>> c87d367 (OTAT-232: compare service is ready now)
 from ..models import AssessmentProject
 from .commonserializers import ColorSerilizer
 from baseinfo.serializers import AssessmentProfileSerilizer, AssessmentProfileSimpleSerilizer
