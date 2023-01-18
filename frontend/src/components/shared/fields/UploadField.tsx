@@ -56,6 +56,7 @@ interface IUploadFieldProps {
   maxSize?: number;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   uploadService: TQueryServiceFunction<any, any>;
   deleteService: TQueryServiceFunction<any, any>;
 =======
@@ -64,6 +65,10 @@ interface IUploadFieldProps {
   uploadService: TQueryServiceFunction<any, any>;
   deleteService: TQueryServiceFunction<any, any>;
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+  uploadService?: TQueryServiceFunction<any, any>;
+  deleteService?: TQueryServiceFunction<any, any>;
+>>>>>>> 4a3d6ae (OTAT-292 Add create expert group form)
 }
 
 const UploadField = (props: IUploadFieldProps) => {
@@ -105,8 +110,13 @@ interface IUploadProps {
   defaultValue?: any[];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   uploadService: TQueryServiceFunction<any, any>;
   deleteService: TQueryServiceFunction<any, any>;
+=======
+  uploadService?: TQueryServiceFunction<any, any>;
+  deleteService?: TQueryServiceFunction<any, any>;
+>>>>>>> 4a3d6ae (OTAT-292 Add create expert group form)
 }
 
 const Uploader = (props: IUploadProps) => {
@@ -124,11 +134,12 @@ const Uploader = (props: IUploadProps) => {
   const [myFiles, setMyFiles] = useState<File[]>([]);
 
   const uploadQueryProps = useQuery({
-    service: uploadService,
+    service: uploadService || ((() => null) as any),
     runOnMount: false,
   });
 
   const deleteQueryProps = useQuery({
+<<<<<<< HEAD
     service: deleteService,
 =======
 =======
@@ -163,6 +174,9 @@ const Uploader = (props: IUploadProps) => {
 =======
     service: deleteService,
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+    service: deleteService || ((() => null) as any),
+>>>>>>> 4a3d6ae (OTAT-292 Add create expert group form)
     runOnMount: false,
   });
 
@@ -172,6 +186,11 @@ const Uploader = (props: IUploadProps) => {
         const reader = new FileReader();
         reader.onload = async () => {
           const binaryStr = reader.result;
+          if (!uploadService) {
+            setMyFiles(acceptedFiles);
+            fieldProps.onChange(acceptedFiles?.[0]);
+            return;
+          }
           try {
             const res = await uploadQueryProps.query(binaryStr);
             setMyFiles(acceptedFiles);
@@ -307,6 +326,11 @@ const Uploader = (props: IUploadProps) => {
                         aria-label="delete"
                         onClick={async (e) => {
                           e.stopPropagation();
+                          if (!deleteService) {
+                            setMyFiles([]);
+                            fieldProps.onChange("");
+                            return;
+                          }
                           if (uploadQueryProps.error) {
                             setMyFiles([]);
                             return;
@@ -316,7 +340,6 @@ const Uploader = (props: IUploadProps) => {
                             fieldProps.value?.[0]?.id;
                           if (!id) {
                             toastError(true);
-
                             return;
                           }
                           try {

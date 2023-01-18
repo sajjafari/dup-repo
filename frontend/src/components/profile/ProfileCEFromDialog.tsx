@@ -75,11 +75,15 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
 =======
   const onSubmit = async (data: any, event: any, shouldView?: boolean) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2a2dbf5 (OTAT-288 Add create and view btn)
     const formattedData = { dsl_id: data.dsl_id.id };
 =======
     const { dsl_id, tags, ...restOfData } = data;
 =======
+=======
+    event.preventDefault();
+>>>>>>> 4a3d6ae (OTAT-292 Add create expert group form)
     const { dsl_id, tags = [], ...restOfData } = data;
 >>>>>>> ea630b6 (OTAT-288 Fix shouldNavigate arg passing)
     const formattedData = {
@@ -207,7 +211,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
           type={type}
           hasViewBtn={true}
           onSubmit={(...args) =>
-            formMethods.handleSubmit((data) => onSubmit(data, ...args))()
+            formMethods.handleSubmit((data) => onSubmit(data, ...args))
           }
         />
       </FormProviderWithForm>

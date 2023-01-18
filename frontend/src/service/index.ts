@@ -687,7 +687,33 @@ export const createService = (
       const { id, email } = args || {};
       return axios.post(`/baseinfo/addexpertgroup/${id}/`, { email }, config);
     },
+<<<<<<< HEAD
 >>>>>>> 81ae816 (OTAT-291 Add expert groups list)
+=======
+    createExpertGroup(
+      args: { data: any },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { data = {} } = args || {};
+
+      return axios.post(`/baseinfo/expertgroups/`, data, {
+        ...(config || {}),
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+    },
+    updateExpertGroup(
+      args: { id: TId; data: any },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { data = {}, id } = args || {};
+
+      return axios.put(`/baseinfo/expertgroups/${id}/`, data, {
+        ...(config || {}),
+      });
+    },
+>>>>>>> 4a3d6ae (OTAT-292 Add create expert group form)
   };
 
   return service;
