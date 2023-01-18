@@ -1,12 +1,16 @@
 from statistics import mean
 from rest_framework import serializers
 <<<<<<< HEAD
+<<<<<<< HEAD
 from baseinfo.serializers.profileserializers import AssessmentProfileSimpleSerilizer
 =======
 import more_itertools
 
 from baseinfo.serializers import AssessmentProfileSimpleSerilizer
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+from baseinfo.serializers.profileserializers import AssessmentProfileSimpleSerilizer
+>>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 from assessment.serializers.commonserializers import ColorSerilizer
 from account.serializers import SpaceSerializer
 

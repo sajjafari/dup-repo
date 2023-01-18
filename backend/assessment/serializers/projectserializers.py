@@ -7,6 +7,7 @@ from ..services.metricstatistic import extract_total_progress
 from ..models import AssessmentProject
 from .commonserializers import ColorSerilizer
 from baseinfo.serializers.profileserializers import AssessmentProfileSerilizer, AssessmentProfileSimpleSerilizer
+<<<<<<< HEAD
 =======
 from ..fixture.metricstatistic import extract_total_progress
 =======
@@ -16,6 +17,8 @@ from ..models import AssessmentProject
 from .commonserializers import ColorSerilizer
 from baseinfo.serializers import AssessmentProfileSerilizer, AssessmentProfileSimpleSerilizer
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 from account.serializers import SpaceSimpleSerializer
 
 

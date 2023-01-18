@@ -2,11 +2,15 @@ from rest_framework import serializers
 
 from baseinfo.models import Metric
 <<<<<<< HEAD
+<<<<<<< HEAD
 from baseinfo.serializers.commonserializers import AnswerTemplateSerializer, SimpleMetricSerializers
 =======
 from baseinfo.serializers import AnswerTemplateSerializer
 from baseinfo.serializers import SimpleMetricSerializers
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+from baseinfo.serializers.commonserializers import AnswerTemplateSerializer, SimpleMetricSerializers
+>>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 from assessment.models import MetricValue, QualityAttributeValue
 
 from ..fixture.common import update_assessment_status

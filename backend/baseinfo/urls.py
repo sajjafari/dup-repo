@@ -57,6 +57,7 @@ subject_router.register('images', SubjectImageViewSet, basename='subject-images'
 
 profile_router = routers.NestedDefaultRouter(router, 'profiles', lookup='profile')
 profile_router.register('images', ProfileImageViewSet, basename='profile-images')
+profile_router.register('dsl', profileviews.UploadProfileApi, basename='profile-dsl')
 
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -26,6 +26,7 @@ class AssessmentProfile(models.Model):
         verbose_name_plural = "Assessment Profiles"
         ordering = ['title']
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 class ProfileDsl(models.Model):
     dsl_file = models.FileField(upload_to='profile/dsl')
@@ -33,6 +34,12 @@ class ProfileDsl(models.Model):
         
 
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+
+class ProfileDsl(models.Model):
+    dsl = models.FileField(upload_to='profile/dsl')
+    profile = models.OneToOneField(AssessmentProfile, on_delete=models.CASCADE, related_name='dsl')
+>>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 
 class MetricCategory(models.Model):
     code = models.CharField(max_length=50)

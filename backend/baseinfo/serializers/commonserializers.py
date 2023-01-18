@@ -1,4 +1,8 @@
 from rest_framework import serializers
+<<<<<<< HEAD
+=======
+
+>>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 from ..models import AnswerTemplate, AssessmentSubject, Metric, MetricImpact, QualityAttribute, MetricCategory
 from ..imagecomponent.serializers import QualityAttributeImageSerializer, SubjectImageSerializer
 
@@ -55,4 +59,8 @@ class MetricSerilizer(serializers.ModelSerializer):
     answer_templates = AnswerTemplateSerializer(many=True)
     class Meta:
         model = Metric
+<<<<<<< HEAD
         fields = ['id', 'title', 'index', 'answer_templates']
+=======
+        fields = ['id', 'title', 'index', 'answer_templates']
+>>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)

@@ -15,15 +15,13 @@ from ..models import ProfileDsl
 DSL_PARSER_URL_SERVICE = "http://dsl:8080/extract/"
 =======
 from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
+
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
-from ..models import AssessmentProfile
 from ..services import profileservice
-from ..serializers import AssessmentSubjectSerilizer
-from rest_framework import serializers
-
-
+from ..serializers.profileserializers import ProfileDslSerializer
+from ..models import ProfileDsl
 
 >>>>>>> 3015a1a (display profile by rest service)
 
@@ -64,13 +62,29 @@ class ImportProfileApi(APIView):
 =======
         response = {}
         response['title'] = profile.title
+        response['description'] = profile.description
         response['last_update'] = profile.last_modification_date
         response['creation_date'] = profile.creation_time
         response['profileInfos'] = profileservice.extract_profile_infos(profile)
         response['subjectsInfos'] = profileservice.extract_subjects_infos(profile)
         response['questionnaires'] = profileservice.extract_questionnaires_infos(profile)
         return Response(response, status = status.HTTP_200_OK)
+<<<<<<< HEAD
 >>>>>>> 3015a1a (display profile by rest service)
+=======
+    
+class UploadProfileApi(ModelViewSet):
+    serializer_class = ProfileDslSerializer
+    def get_serializer_context(self):
+        return {'profile_id': self.kwargs['profile_pk']}
+
+    def get_queryset(self):
+        return ProfileDsl.objects.filter(profile_id=self.kwargs['profile_pk'])
+
+    
+
+    
+>>>>>>> 05e3e29 (Add upload service for profile and fix some issues in profile display)
 
     
 
