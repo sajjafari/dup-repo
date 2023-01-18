@@ -94,6 +94,7 @@ class AssessmentReportSerilizer(serializers.ModelSerializer):
     def get_most_significant_strength_atts(self, result: AssessmentResult):
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         return extract_most_significant_strength_atts(result)
         
     def get_most_significant_weaknessness_atts(self, result: AssessmentResult):
@@ -124,6 +125,12 @@ class AssessmentReportSerilizer(serializers.ModelSerializer):
     def get_most_significant_weaknessness_atts(self, result: AssessmentResult):
         extract_most_significant_weaknessness_atts(result)
 >>>>>>> c87d367 (OTAT-232: compare service is ready now)
+=======
+        return extract_most_significant_strength_atts(result)
+        
+    def get_most_significant_weaknessness_atts(self, result: AssessmentResult):
+        return extract_most_significant_weaknessness_atts(result)
+>>>>>>> 57f0d83 (OTAT-232: fix some labels and issues)
     
     def calculate_total_status(self, result: AssessmentResult):
         if result.quality_attribute_values.all():
