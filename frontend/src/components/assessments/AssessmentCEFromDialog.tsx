@@ -16,6 +16,7 @@ import { ICustomError } from "../../utils/CustomError";
 import { Link, useParams } from "react-router-dom";
 import toastError from "../../utils/toastError";
 import { CEDialog, CEDialogActions } from "../../components/shared/dialogs/CEDialog";
+<<<<<<< HEAD
 import FormProviderWithForm from "../../components/shared/FormProviderWithForm";
 import AutocompleteAsyncField, { useConnectAutocompleteField } from "../shared/fields/AutocompleteAsyncField";
 import { Box } from "@mui/material";
@@ -38,6 +39,10 @@ import FormProviderWithForm from "../../components/shared/FormProviderWithForm";
 import AutocompleteAsyncField, {
   useConnectAutocompleteField,
 } from "../shared/fields/AutocompleteAsyncField";
+=======
+import FormProviderWithForm from "../../components/shared/FormProviderWithForm";
+import AutocompleteAsyncField, { useConnectAutocompleteField } from "../shared/fields/AutocompleteAsyncField";
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
 import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
@@ -54,6 +59,7 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
   const [loading, setLoading] = React.useState(false);
   const { service } = useServiceContext();
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { onClose: closeDialog, onSubmitForm, context = {}, openDialog, ...rest } = props;
 =======
   const {
@@ -64,6 +70,9 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
     ...rest
   } = props;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const { onClose: closeDialog, onSubmitForm, context = {}, openDialog, ...rest } = props;
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
   const { type, data = {} } = context;
   const { id: rowId } = data;
   const defaultValues = type === "update" ? data : {};
@@ -87,6 +96,7 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
       const { data: res } =
         type === "update"
 <<<<<<< HEAD
+<<<<<<< HEAD
           ? await service.updateAssessment({ rowId, data: { space: spaceId, ...data } }, { signal: abortController.signal })
           : await service.createAssessment({ data: { space: spaceId, ...data } }, { signal: abortController.signal });
 =======
@@ -99,6 +109,10 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
               { signal: abortController.signal }
             );
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          ? await service.updateAssessment({ rowId, data: { space: spaceId, ...data } }, { signal: abortController.signal })
+          : await service.createAssessment({ data: { space: spaceId, ...data } }, { signal: abortController.signal });
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
       setLoading(false);
       onSubmitForm();
       close();
@@ -117,6 +131,7 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
       title={
         <>
           <NoteAddRoundedIcon sx={{ mr: 1 }} />
+<<<<<<< HEAD
 <<<<<<< HEAD
           {type === "update" ? <Trans i18nKey="updateAssessment" /> : <Trans i18nKey="createAssessment" />}
         </>
@@ -137,6 +152,13 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
         onSubmit={formMethods.handleSubmit(onSubmit)}
       >
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          {type === "update" ? <Trans i18nKey="updateAssessment" /> : <Trans i18nKey="createAssessment" />}
+        </>
+      }
+    >
+      <FormProviderWithForm formMethods={formMethods} onSubmit={formMethods.handleSubmit(onSubmit)}>
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
         <Grid container spacing={2} sx={styles.formGrid}>
           <Grid item xs={12} md={8}>
             <InputFieldUC
@@ -184,6 +206,7 @@ const AssessmentCEFromDialog = (props: IAssessmentCEFromDialogProps) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ProfileField = ({ defaultValue }: { defaultValue: any }) => {
 =======
 const ProfileField = ({
@@ -192,6 +215,9 @@ const ProfileField = ({
   defaultValue: any;
 }) => {
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+const ProfileField = ({ defaultValue }: { defaultValue: any }) => {
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
   const { service } = useServiceContext();
   const queryData = useConnectAutocompleteField({
     service: (args, config) => service.fetchProfiles(args, config),

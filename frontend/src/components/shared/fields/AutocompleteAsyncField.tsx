@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { ReactNode, useEffect, useState } from "react";
 import Autocomplete, { AutocompleteProps } from "@mui/material/Autocomplete";
 import throttle from "lodash/throttle";
@@ -9,26 +10,28 @@ import getFieldError from "../../../utils/getFieldError";
 import { Box } from "@mui/material";
 =======
 import React, { ReactNode, useEffect } from "react";
+=======
+import React, { ReactNode, useEffect, useState } from "react";
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
 import Autocomplete, { AutocompleteProps } from "@mui/material/Autocomplete";
 import throttle from "lodash/throttle";
 import TextField from "@mui/material/TextField";
 import { TQueryServiceFunction, useQuery } from "../../../utils/useQuery";
-import {
-  Controller,
-  ControllerRenderProps,
-  RegisterOptions,
-  useFormContext,
-} from "react-hook-form";
+import { Controller, ControllerRenderProps, RegisterOptions, useFormContext } from "react-hook-form";
 import getFieldError from "../../../utils/getFieldError";
 import { Box } from "@mui/material";
+<<<<<<< HEAD
 import Skeleton from "@mui/material/Skeleton";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
 import { LoadingSkeleton } from "../loadings/LoadingSkeleton";
 import forLoopComponent from "../../../utils/forLoop";
 import ErrorDataLoading from "../errors/ErrorDataLoading";
 import { styles } from "../../../config/styles";
 import { TQueryProps } from "../../../types";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 type TUnionAutocompleteAndAutocompleteAsyncFieldBase = Omit<IAutocompleteAsyncFieldBase, "serviceQueryData" | "field">;
 
@@ -45,15 +48,15 @@ type TUnionAutocompleteAndAutocompleteAsyncFieldBase = Omit<
   IAutocompleteAsyncFieldBase,
   "serviceQueryData" | "field"
 >;
+=======
+type TUnionAutocompleteAndAutocompleteAsyncFieldBase = Omit<IAutocompleteAsyncFieldBase, "serviceQueryData" | "field">;
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
 
-interface IAutocompleteAsyncFieldProps<T>
-  extends TUnionAutocompleteAndAutocompleteAsyncFieldBase {
-  rules?: Omit<
-    RegisterOptions<any, any>,
-    "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled"
-  >;
+interface IAutocompleteAsyncFieldProps<T> extends TUnionAutocompleteAndAutocompleteAsyncFieldBase {
+  rules?: Omit<RegisterOptions<any, any>, "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled">;
 }
 
+<<<<<<< HEAD
 const AutocompleteAsyncField = <T extends any = any>(
   props: IAutocompleteAsyncFieldProps<T> & Omit<TQueryProps, "data">
 ) => {
@@ -66,6 +69,12 @@ const AutocompleteAsyncField = <T extends any = any>(
   } = props;
   const { control } = useFormContext();
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+const AutocompleteAsyncField = <T extends any = any>(props: IAutocompleteAsyncFieldProps<T> & Omit<TQueryProps, "data">) => {
+  const { name, rules = {}, defaultValue, required = false, ...rest } = props;
+  const { control, setValue } = useFormContext();
+  const { options } = rest;
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
 
   return (
     <Controller
@@ -75,6 +84,7 @@ const AutocompleteAsyncField = <T extends any = any>(
       shouldUnregister={true}
       defaultValue={defaultValue}
       render={({ field, fieldState, formState }) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
         return <AutocompleteBaseField {...rest} name={name} required={required} field={field} defaultValue={defaultValue} />;
 =======
@@ -88,17 +98,24 @@ const AutocompleteAsyncField = <T extends any = any>(
           />
         );
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+        return <AutocompleteBaseField {...rest} name={name} required={required} field={field} defaultValue={defaultValue} />;
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
       }}
     />
   );
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface IAutocompleteAsyncFieldBase extends Omit<AutocompleteProps<any, any, any, any>, "renderInput"> {
 =======
 interface IAutocompleteAsyncFieldBase
   extends Omit<AutocompleteProps<any, any, any, any>, "renderInput"> {
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+interface IAutocompleteAsyncFieldBase extends Omit<AutocompleteProps<any, any, any, any>, "renderInput"> {
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
   field: ControllerRenderProps<any, any>;
   formatRequest?: (request: any) => any;
   name: string;
@@ -109,17 +126,22 @@ interface IAutocompleteAsyncFieldBase
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryProps, "data">) => {
 =======
 const AutocompleteBaseField = (
   props: IAutocompleteAsyncFieldBase & Omit<TQueryProps, "data">
 ) => {
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+const AutocompleteBaseField = (props: IAutocompleteAsyncFieldBase & Omit<TQueryProps, "data">) => {
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
   const {
     field,
     formatRequest = (request) => request,
     helperText,
     label,
+<<<<<<< HEAD
 <<<<<<< HEAD
     getOptionLabel = (option) => (typeof option === "string" ? option : option?.title || null),
     filterSelectedOption = (options: readonly any[], value: any): any[] =>
@@ -132,6 +154,11 @@ const AutocompleteBaseField = (
         ? options.filter((option) => option?.id != value?.id)
         : (options as any[]),
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+    getOptionLabel = (option) => (typeof option === "string" ? option : option?.title || null),
+    filterSelectedOption = (options: readonly any[], value: any): any[] =>
+      value ? options.filter((option) => option?.id != value?.id) : (options as any[]),
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
     renderOption,
     noOptionsText,
     required,
@@ -149,6 +176,7 @@ const AutocompleteBaseField = (
   const {
     formState: { errors },
 <<<<<<< HEAD
+<<<<<<< HEAD
     setValue,
   } = useFormContext();
   const { hasError, errorMessage } = getFieldError(errors, name);
@@ -160,6 +188,12 @@ const AutocompleteBaseField = (
     () => getOptionLabel(defaultValue) || ""
   );
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+    setValue,
+  } = useFormContext();
+  const { hasError, errorMessage } = getFieldError(errors, name);
+  const [inputValue, setInputValue] = React.useState(() => getOptionLabel(defaultValue) || "");
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
   const [options, setOptions] = React.useState<any[]>([]);
 
   const fetch = React.useMemo(
@@ -184,14 +218,19 @@ const AutocompleteBaseField = (
       const opt = filterSelectedOption(optionsData, value);
       setOptions(opt);
 <<<<<<< HEAD
+<<<<<<< HEAD
       defaultValue && onChange(defaultValue);
 =======
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+      defaultValue && onChange(defaultValue);
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
     }
     return () => {
       active = false;
     };
   }, [loaded]);
+<<<<<<< HEAD
 <<<<<<< HEAD
   // console.log(defaultValue, restFields, value, optionsData);
   return (
@@ -203,15 +242,23 @@ const AutocompleteBaseField = (
       loadingText={options.length > 5 ? <LoadingComponent options={options} /> : undefined}
 =======
 
+=======
+  // console.log(defaultValue, restFields, value, optionsData);
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
   return (
     <Autocomplete
       {...restFields}
+      defaultValue={defaultValue}
       value={value}
       loading={loading}
+<<<<<<< HEAD
       loadingText={
         options.length > 5 ? <LoadingComponent options={options} /> : undefined
       }
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+      loadingText={options.length > 5 ? <LoadingComponent options={options} /> : undefined}
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
       size="small"
       autoHighlight
       getOptionLabel={getOptionLabel}
@@ -266,6 +313,7 @@ const LoadingComponent = ({ options }: { options: readonly any[] }) => {
     <Box display="flex" flexDirection="column" m={-1}>
       {forLoopComponent(options.length, (index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <LoadingSkeleton width="100%" height="36px" sx={{ my: 0.3, borderRadius: 1 }} key={index} />
 =======
         <LoadingSkeleton
@@ -275,6 +323,9 @@ const LoadingComponent = ({ options }: { options: readonly any[] }) => {
           key={index}
         />
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+        <LoadingSkeleton width="100%" height="36px" sx={{ my: 0.3, borderRadius: 1 }} key={index} />
+>>>>>>> f325683 (OTAT-286 Fix profile filed default value setter)
       ))}
     </Box>
   );
