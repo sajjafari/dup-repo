@@ -2,9 +2,12 @@ import { DialogProps } from "@mui/material/Dialog";
 import { AxiosPromise, AxiosRequestConfig } from "axios";
 import { ToastOptions } from "react-toastify";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { string } from "yup";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { ICustomError } from "./utils/CustomError";
 
 export enum ECustomErrorType {

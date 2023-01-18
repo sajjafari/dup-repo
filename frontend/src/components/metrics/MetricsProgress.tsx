@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Button from "@mui/material/Button";
 import Hidden from "@mui/material/Hidden";
 import LinearProgress from "@mui/material/LinearProgress";
@@ -152,10 +156,14 @@ export const MetricProgressItem = (props: any) => {
             textAlign: "center",
             lineHeight: "13px",
 <<<<<<< HEAD
+<<<<<<< HEAD
             fontFamily: "Roboto",
 =======
             fontFamily: "RobotoMedium",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            fontFamily: "Roboto",
+>>>>>>> 11a534e (OTAT-266 add Vite)
             opacity: metric.index == metricIndex ? 1 : 0.6,
             color: metric.answer ? `white` : "gray",
             transition: "opacity .1s ease",

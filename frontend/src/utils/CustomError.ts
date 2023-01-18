@@ -30,11 +30,16 @@ function CustomError(props: {
   } = props;
   const defaultAction =
 <<<<<<< HEAD
+<<<<<<< HEAD
     //@ts-expect-error
     action && typeof action === "function" && action.bind(this as any, data);
 =======
     action && typeof action === "function" && action.bind(this, data);
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+    //@ts-expect-error
+    action && typeof action === "function" && action.bind(this as any, data);
+>>>>>>> 11a534e (OTAT-266 add Vite)
   const formattedMessage = getFormattedMessage(message, status);
   const customError: ICustomError = {
     name: "CustomError",

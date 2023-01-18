@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
@@ -38,10 +42,14 @@ const CompareTable = (props: {
                   sx={{
                     fontSize: "1rem",
 <<<<<<< HEAD
+<<<<<<< HEAD
                     fontFamily: "Roboto",
 =======
                     fontFamily: "RobotoRegular",
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+                    fontFamily: "Roboto",
+>>>>>>> 11a534e (OTAT-266 add Vite)
                     opacity: 0.7,
                   }}
                 >
@@ -79,10 +87,14 @@ const CompareTable = (props: {
                                 <Typography
                                   sx={{ my: 0.3 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   fontFamily={"Roboto"}
 =======
                                   fontFamily={"RobotoMedium"}
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+                                  fontFamily={"Roboto"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
                                   fontSize="1.1rem"
                                 >
                                   {text}
@@ -108,10 +120,14 @@ const CompareTable = (props: {
 
 const textStyle = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   fontFamily: "Roboto",
 =======
   fontFamily: "RobotoBold",
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+  fontFamily: "Roboto",
+>>>>>>> 11a534e (OTAT-266 add Vite)
   fontSize: "1.1rem",
   fontWeight: "bolder",
 };

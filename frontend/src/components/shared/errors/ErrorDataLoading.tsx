@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
 =======
 import Box, { BoxProps } from "@mui/material/Box";
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+import { Box, BoxProps } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import React from "react";
 import ReportGmailerrorredRoundedIcon from "@mui/icons-material/ReportGmailerrorredRounded";
 import { Typography } from "@mui/material";

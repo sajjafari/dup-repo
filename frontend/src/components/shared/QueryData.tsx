@@ -1,5 +1,8 @@
 import React, { PropsWithChildren } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Box } from "@mui/material";
 import { styles } from "../../config/styles";
 import { ECustomErrorType } from "../../types";

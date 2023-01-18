@@ -1,10 +1,14 @@
 import React from "react";
 import Alert, { AlertProps } from "@mui/material/Alert";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import useScreenResize from "../../utils/useScreenResize";
 
 interface IAlertBox extends AlertProps {}

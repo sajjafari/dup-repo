@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import { Trans } from "react-i18next";
@@ -72,11 +76,16 @@ const QuestionnaireCard = (props: IQuestionnaireCardProps) => {
               }
               size="small"
 <<<<<<< HEAD
+<<<<<<< HEAD
               fontFamily="Roboto"
               fontWeight={"bold"}
 =======
               fontFamily={"RobotoBold"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              fontFamily="Roboto"
+              fontWeight={"bold"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
             >
               <Box flex="1" display="flex" alignItems={"flex-start"}>
                 {title}

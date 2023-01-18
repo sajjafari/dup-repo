@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import PageNotFoundImage from "../../../assets/svg/404.svg";
 import { styles } from "../../../config/styles";
 

@@ -7,10 +7,14 @@ import { InputFieldUC } from "../shared/fields/InputField";
 import Title from "../shared/Title";
 import { Trans } from "react-i18next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import {
   FieldValues,
   FormProvider,
@@ -255,10 +259,14 @@ const SuccessfullyCreatedAccountMessage = () => {
         <Typography
           variant="h6"
 <<<<<<< HEAD
+<<<<<<< HEAD
           fontFamily="Roboto"
 =======
           fontFamily="RobotoMedium"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          fontFamily="Roboto"
+>>>>>>> 11a534e (OTAT-266 add Vite)
           sx={{ my: 3, textAlign: "center", letterSpacing: ".03em" }}
         >
           <Trans i18nKey="pleaseCheckYouEmail" />

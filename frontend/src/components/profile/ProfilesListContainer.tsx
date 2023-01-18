@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 =======
 import Box from "@mui/material/Box";
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import React from "react";
@@ -299,12 +303,12 @@ const Actions = (props: any) => {
                       >
                         <Typography
                           variant="h6"
-                          fontFamily={"RobotoBold"}
                           sx={{
                             fontSize: {
                               xs: "1.05rem",
                               sm: "1.1rem",
                               md: "1.2rem",
+                              fontFamily: "Roboto",
                             },
                             fontWeight: "bold",
                             textDecoration: "none",

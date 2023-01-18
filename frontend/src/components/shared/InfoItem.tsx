@@ -44,6 +44,7 @@ const DefaultInfoItemComponent = (
       mb={1}
       variant="body2"
 <<<<<<< HEAD
+<<<<<<< HEAD
       sx={{
         ...styles.centerV,
         fontFamily: "Roboto",
@@ -68,6 +69,9 @@ const DefaultInfoItemComponent = (
       </Box>
 =======
       sx={{ ...styles.centerV, fontFamily: "RobotoRegular" }}
+=======
+      sx={{ ...styles.centerV, fontFamily: "Roboto" }}
+>>>>>>> 11a534e (OTAT-266 add Vite)
       justifyContent="space-between"
     >
       {title}: <strong>{children}</strong>

@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Typography from "@mui/material/Typography";
 import LinearProgress from "@mui/material/LinearProgress";
 import { Trans } from "react-i18next";
@@ -34,11 +38,16 @@ const SubjectProgress = (props: ISubjectProgressProps) => {
           mt: 1,
           opacity: 0.7,
 <<<<<<< HEAD
+<<<<<<< HEAD
           fontFamily: "Oswald",
           fontWeight: 400,
 =======
           fontFamily: "OswaldRegular",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          fontFamily: "Oswald",
+          fontWeight: 400,
+>>>>>>> 11a534e (OTAT-266 add Vite)
           color: colorCode
             ? (t) => t.palette.getContrastText(colorCode)
             : "white",

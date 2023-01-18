@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Trans } from "react-i18next";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
@@ -62,10 +66,14 @@ function AccountSettings() {
                   sx={{ opacity: 0.85 }}
                   fontSize={"1rem"}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   fontFamily="Roboto"
 =======
                   fontFamily="RobotoMedium"
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+                  fontFamily="Roboto"
+>>>>>>> 11a534e (OTAT-266 add Vite)
                   letterSpacing=".05rem"
                 >
                   <Trans i18nKey="signOutOfYourAccount" />

@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Chip, CircularProgress, Typography } from "@mui/material";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Trans } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import { useServiceContext } from "../../providers/ServiceProvider";
@@ -141,10 +145,14 @@ const SpaceCard = (props: ISpaceCardProps) => {
             component={Link}
             variant="h6"
 <<<<<<< HEAD
+<<<<<<< HEAD
             fontFamily={"Roboto"}
 =======
             fontFamily={"RobotoBold"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            fontFamily={"Roboto"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
             to={`/${id}/assessments`}
             onClick={changeCurrentSpaceAndNavigateToAssessments}
             sx={{
@@ -176,12 +184,18 @@ const SpaceCard = (props: ISpaceCardProps) => {
         <Box sx={{ ...styles.centerV, opacity: 0.8 }}>
           <PeopleOutlineRoundedIcon sx={{ mr: 0.5 }} fontSize="small" />
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Typography fontFamily="Roboto" fontWeight={"bold"}>
             {members_number}
           </Typography>
 =======
           <Typography fontFamily={"RobotoBold"}>{members_number}</Typography>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <Typography fontFamily="Roboto" fontWeight={"bold"}>
+            {members_number}
+          </Typography>
+>>>>>>> 11a534e (OTAT-266 add Vite)
         </Box>
       </Box>
       <Box

@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
 =======
 import Box, { BoxProps } from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box, BoxProps } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import IconButton from "@mui/material/IconButton";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import CircularProgress from "@mui/material/CircularProgress";

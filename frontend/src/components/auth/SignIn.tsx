@@ -6,10 +6,14 @@ import { styles } from "../../config/styles";
 import { InputFieldUC } from "../shared/fields/InputField";
 import { Trans } from "react-i18next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { FormProvider, useForm } from "react-hook-form";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";

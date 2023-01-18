@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Checkbox from "@mui/material/Checkbox";
 import Paper from "@mui/material/Paper";
 import ToggleButton from "@mui/material/ToggleButton";
@@ -93,10 +97,14 @@ export const MetricCard = (props: IMetricCardProps) => {
           <Typography
             variant="subLarge"
 <<<<<<< HEAD
+<<<<<<< HEAD
             fontFamily={"Roboto"}
 =======
             fontFamily={"RobotoRegular"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            fontFamily={"Roboto"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
             sx={{ color: "white", opacity: 0.65 }}
           >
             <Trans i18nKey="question" />
@@ -109,10 +117,14 @@ export const MetricCard = (props: IMetricCardProps) => {
               pb: 5,
               fontSize: { xs: "1.4rem", sm: "2rem" },
 <<<<<<< HEAD
+<<<<<<< HEAD
               fontFamily: { xs: "Roboto", lg: "Roboto" },
 =======
               fontFamily: { xs: "RobotoRegular", lg: "RobotoMedium" },
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              fontFamily: { xs: "Roboto", lg: "Roboto" },
+>>>>>>> 11a534e (OTAT-266 add Vite)
             }}
           >
             {title}
@@ -247,10 +259,14 @@ const AnswerTemplate = (props: {
                     textAlign: "left",
                     fontSize: { xs: "1.15rem", sm: "1.3rem" },
 <<<<<<< HEAD
+<<<<<<< HEAD
                     fontFamily: { xs: "Roboto", sm: "Roboto" },
 =======
                     fontFamily: { xs: "RobotoRegular", sm: "RobotoMedium" },
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                    fontFamily: { xs: "Roboto", sm: "Roboto" },
+>>>>>>> 11a534e (OTAT-266 add Vite)
                     justifyContent: "flex-start",
                     boxShadow: "0 0 2px white",
                     borderWidth: "2px",
@@ -353,10 +369,14 @@ const MyAnswer = ({ answer_templates, value }: any) => {
           <Typography
             variant="subLarge"
 <<<<<<< HEAD
+<<<<<<< HEAD
             fontFamily={"Roboto"}
 =======
             fontFamily={"RobotoRegular"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            fontFamily={"Roboto"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
             component={Link}
             to="#"
             sx={{ color: "white", opacity: 0.5, textDecoration: "none" }}
@@ -429,10 +449,14 @@ const MyAnswer = ({ answer_templates, value }: any) => {
           <Typography
             variant="subLarge"
 <<<<<<< HEAD
+<<<<<<< HEAD
             fontFamily={"Roboto"}
 =======
             fontFamily={"RobotoRegular"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            fontFamily={"Roboto"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
             component={Link}
             to="#"
             sx={{ color: "white", opacity: 0.5, textDecoration: "none" }}

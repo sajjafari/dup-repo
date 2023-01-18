@@ -1,5 +1,8 @@
 import React, { PropsWithChildren } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Box } from "@mui/material";
 import GettingThingsReadyLoading from "../components/shared/loadings/GettingThingsReadyLoading";
 import Navbar from "../components/shared/Navbar";

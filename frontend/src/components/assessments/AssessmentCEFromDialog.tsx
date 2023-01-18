@@ -38,7 +38,7 @@ import FormProviderWithForm from "../../components/shared/FormProviderWithForm";
 import AutocompleteAsyncField, {
   useConnectAutocompleteField,
 } from "../shared/fields/AutocompleteAsyncField";
-import Box from "@mui/material/Box";
+import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)

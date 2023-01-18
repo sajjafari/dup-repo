@@ -1,5 +1,8 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Box } from "@mui/material";
 import { styles } from "../../../config/styles";
 import ErrorNotFoundOrAccessDeniedImage from "../../../assets/svg/notFoundOrAccessDenied.svg";

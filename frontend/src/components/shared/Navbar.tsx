@@ -11,8 +11,12 @@ import { NavLink } from "react-router-dom";
 import { styles } from "../../config/styles";
 import { useAuthContext } from "../../providers/AuthProvider";
 import AppBar from "@mui/material/AppBar";
+<<<<<<< HEAD
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";

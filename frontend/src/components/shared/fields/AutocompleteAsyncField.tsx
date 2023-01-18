@@ -10,7 +10,6 @@ import { Box } from "@mui/material";
 =======
 import React, { ReactNode, useEffect } from "react";
 import Autocomplete, { AutocompleteProps } from "@mui/material/Autocomplete";
-import get from "lodash/get";
 import throttle from "lodash/throttle";
 import TextField from "@mui/material/TextField";
 import { TQueryServiceFunction, useQuery } from "../../../utils/useQuery";
@@ -21,7 +20,7 @@ import {
   useFormContext,
 } from "react-hook-form";
 import getFieldError from "../../../utils/getFieldError";
-import Box from "@mui/material/Box";
+import { Box } from "@mui/material";
 import Skeleton from "@mui/material/Skeleton";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
 import { LoadingSkeleton } from "../loadings/LoadingSkeleton";

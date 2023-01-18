@@ -2,6 +2,9 @@ import React from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Box } from "@mui/material";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 =======

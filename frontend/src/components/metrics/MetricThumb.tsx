@@ -1,10 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Trans } from "react-i18next";
@@ -28,10 +32,14 @@ export const MetricThumb = (props: any) => {
           <Trans i18nKey={"question"} /> {metricIndex}/{total_number_of_metrics}
         </Typography>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Typography variant="h6" fontFamily={"Roboto"}>
 =======
         <Typography variant="h6" fontFamily={"RobotoMedium"}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        <Typography variant="h6" fontFamily={"Roboto"}>
+>>>>>>> 11a534e (OTAT-266 add Vite)
           {metric?.title}
         </Typography>
       </Box>

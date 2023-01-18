@@ -18,10 +18,14 @@ export const createService = (
   axios.defaults.baseURL = BASE_URL;
   axios.defaults.withCredentials = true;
 <<<<<<< HEAD
+<<<<<<< HEAD
   axios.defaults.timeoutErrorMessage = t("checkNetworkConnection") as string;
 =======
   axios.defaults.timeoutErrorMessage = t("checkNetworkConnection");
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  axios.defaults.timeoutErrorMessage = t("checkNetworkConnection") as string;
+>>>>>>> 11a534e (OTAT-266 add Vite)
 
   const rejectResponseInterceptor = async (err: any = {}) => {
     if (err._isCustomError) {
@@ -51,9 +55,12 @@ export const createService = (
           if (newAccessToken) {
             setAccessToken(newAccessToken);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             //@ts-expect-error
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
             axios.defaults.headers["Authorization"] = `JWT ${newAccessToken}`;
             prevRequest.headers["Authorization"] = `JWT ${newAccessToken}`;
             const result = await axios.request(prevRequest);
@@ -77,9 +84,12 @@ export const createService = (
 
     if (config.url === "auth/jwt/create/" && res.data?.access) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       //@ts-expect-error
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
       axios.defaults.headers["Authorization"] = `JWT ${res.data?.access}`;
     }
 

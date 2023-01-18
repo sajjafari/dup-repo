@@ -2,10 +2,14 @@ import React from "react";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import BgLines1 from "../../assets/svg/bgLines1.svg";
 import SubjectProgress from "../shared/progress/SubjectProgress";
 import { Trans } from "react-i18next";
@@ -77,7 +81,8 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
           variant="h4"
           textTransform={"uppercase"}
           letterSpacing={".13em"}
-          fontFamily="OswaldMedium"
+          fontFamily="Oswald"
+          fontWeight={500}
         >
           {title}
         </Typography>
@@ -169,9 +174,13 @@ const SubjectStatus = (
             letterSpacing=".17em"
             sx={{
 <<<<<<< HEAD
+<<<<<<< HEAD
               fontWeight: "500",
               borderBottom: hasStats ? `3px solid ${getColorOfStatus(status)}` : undefined,
 =======
+=======
+              fontWeight: "500",
+>>>>>>> 11a534e (OTAT-266 add Vite)
               borderBottom: hasStats
                 ? `3px solid ${getColorOfStatus(status)}`
                 : undefined,
@@ -221,10 +230,14 @@ const ReadMoreAboutSubject = (
           cursor: "pointer",
         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
         fontFamily="Roboto"
 =======
         fontFamily="RobotoRegular"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        fontFamily="Roboto"
+>>>>>>> 11a534e (OTAT-266 add Vite)
       >
         <Trans i18nKey="readAbout" /> {title}
       </Typography>

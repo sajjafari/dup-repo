@@ -5,10 +5,14 @@ import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 import { styles } from "../../config/styles";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { LoadingSkeleton } from "./loadings/LoadingSkeleton";
 import { TId } from "../../types";
 import { useServiceContext } from "../../providers/ServiceProvider";
@@ -70,7 +74,7 @@ const SupTitleBreadcrumb = (
               <Typography
                 sx={{
                   fontSize: "0.6rem",
-                  fontFamily: "RobotoMedium",
+                  fontFamily: "Roboto",
                   opacity: 0.6,
                   letterSpacing: "0.07em",
                   color: "text.primary",
@@ -88,7 +92,8 @@ const SupTitleBreadcrumb = (
               sx={{
                 ...styles.centerV,
                 fontSize: "0.8rem",
-                fontFamily: "RobotoBold",
+                fontFamily: "Roboto",
+                fontWeight: "bold",
                 opacity: 0.8,
                 letterSpacing: "0.085em",
                 color: "primary.dark",

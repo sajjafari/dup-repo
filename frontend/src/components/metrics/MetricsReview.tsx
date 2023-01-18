@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -39,10 +43,14 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
               opacity: 0.8,
               mb: 4,
 <<<<<<< HEAD
+<<<<<<< HEAD
               fontFamily: "Roboto",
 =======
               fontFamily: "RobotoBold",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              fontFamily: "Roboto",
+>>>>>>> 11a534e (OTAT-266 add Vite)
               fontWeight: "bolder",
             }}
             textTransform={"uppercase"}
@@ -50,10 +58,14 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
             <Trans i18nKey="youFinishedQuestionnaire" />
           </Typography>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Typography variant="h5" fontFamily="Roboto" fontWeight="bold">
 =======
           <Typography variant="h5" fontFamily="RobotoBold">
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <Typography variant="h5" fontFamily="Roboto" fontWeight="bold">
+>>>>>>> 11a534e (OTAT-266 add Vite)
             <Trans i18nKey="youCan" />{" "}
             <Button
               startIcon={<QueryStatsRoundedIcon />}
@@ -120,14 +132,20 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
                       <Trans i18nKey={"question"} />
                     </Typography>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
                     <Typography
                       variant="h6"
                       fontFamily="Roboto"
                       fontWeight="bold"
                     >
+<<<<<<< HEAD
 =======
                     <Typography variant="h6" fontFamily={"RobotoBold"}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
                       {metric.title}
                     </Typography>
                   </Box>
@@ -141,14 +159,20 @@ export const Review = ({ metrics = [], isReviewPage }: any) => {
                         <Trans i18nKey={"yourAnswer"} />
                       </Typography>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
                       <Typography
                         variant="h6"
                         fontFamily="Roboto"
                         fontWeight="bold"
                       >
+<<<<<<< HEAD
 =======
                       <Typography variant="h6" fontFamily={"RobotoBold"}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
                         {metric.answer.caption}
                       </Typography>
                     </Box>

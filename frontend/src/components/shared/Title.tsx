@@ -1,10 +1,14 @@
 import React from "react";
 import Typography, { TypographyProps } from "@mui/material/Typography";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
 =======
 import Box, { BoxProps } from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box, BoxProps } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Link as RLink, To } from "react-router-dom";
 import Link from "@mui/material/Link";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";

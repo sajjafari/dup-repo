@@ -21,11 +21,14 @@ export default defineConfig({
       },
     },
   },
+<<<<<<< HEAD
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./src/test/setup-test.ts",
   },
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
   build: {
     rollupOptions: {
       plugins: [

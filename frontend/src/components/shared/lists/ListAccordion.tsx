@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Collapse from "@mui/material/Collapse";
 import React, { FC } from "react";
 import { styles } from "../../../config/styles";

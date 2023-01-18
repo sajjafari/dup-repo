@@ -3,10 +3,14 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Title from "../../components/shared/Title";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
 import Hidden from "@mui/material/Hidden";
@@ -33,10 +37,14 @@ const SUbjectAttributeCard = (props: any) => {
               fontWeight="bolder"
               sx={{ opacity: 0.95, letterSpacing: ".05em" }}
 <<<<<<< HEAD
+<<<<<<< HEAD
               fontFamily="Roboto"
 =======
               fontFamily="RobotoBold"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              fontFamily="Roboto"
+>>>>>>> 11a534e (OTAT-266 add Vite)
             >
               {title}
             </Title>
@@ -44,11 +52,15 @@ const SUbjectAttributeCard = (props: any) => {
           <AttributeStatusBarContainer status={status} ml={ml} cl={1} />
           <Box mt={3}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
             <Typography
               fontSize="1.15rem"
               fontFamily="Roboto"
               fontWeight={"bold"}
             >
+<<<<<<< HEAD
               <Trans i18nKey={"withConfidence"} />
               <Typography
                 component="span"
@@ -61,6 +73,13 @@ const SUbjectAttributeCard = (props: any) => {
                 component="span"
                 fontFamily={"RobotoBold"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              <Trans i18nKey={"withConfidence"} />
+              <Typography
+                component="span"
+                fontFamily="Roboto"
+                fontWeight={"bold"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
                 color="#3596A1"
                 fontSize="1.12rem"
               >
@@ -71,11 +90,16 @@ const SUbjectAttributeCard = (props: any) => {
               <Typography
                 component="span"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 fontFamily="Roboto"
                 fontWeight={"bold"}
 =======
                 fontFamily={"RobotoBold"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                fontFamily="Roboto"
+                fontWeight={"bold"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
                 color="#6035A1"
                 fontSize="1.2rem"
               >
@@ -87,10 +111,14 @@ const SUbjectAttributeCard = (props: any) => {
           </Box>
           <Box mt={0.6}>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Typography fontSize="1.05rem" fontFamily="Roboto">
 =======
             <Typography fontSize="1.05rem" fontFamily="RobotoMedium">
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            <Typography fontSize="1.05rem" fontFamily="Roboto">
+>>>>>>> 11a534e (OTAT-266 add Vite)
               {description}
             </Typography>
           </Box>
@@ -149,9 +177,13 @@ const AttributeStatusBarContainer = (props: any) => {
         <Typography
           variant="h4"
 <<<<<<< HEAD
+<<<<<<< HEAD
           fontWeight={"bold"}
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          fontWeight={"bold"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
           letterSpacing=".15em"
           sx={{
             borderLeft: `2px solid ${statusColor}`,

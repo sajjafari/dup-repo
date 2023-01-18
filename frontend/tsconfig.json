@@ -1,10 +1,14 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
+<<<<<<< HEAD
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
@@ -28,23 +32,27 @@
       "esnext"
     ],
     "allowJs": true,
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
     "skipLibCheck": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "noImplicitThis": false
-
+    "jsx": "react-jsx"
   },
+<<<<<<< HEAD
   "include": [
     "src/**/*"
   ]
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+>>>>>>> 11a534e (OTAT-266 add Vite)
 }

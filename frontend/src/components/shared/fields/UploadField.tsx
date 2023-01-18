@@ -6,10 +6,14 @@ import React, { useCallback, useState } from "react";
 import { Accept, DropEvent, FileRejection, useDropzone } from "react-dropzone";
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import CircularProgress from "@mui/material/CircularProgress";
 import FormControl from "@mui/material/FormControl";
 import FormHelperText from "@mui/material/FormHelperText";

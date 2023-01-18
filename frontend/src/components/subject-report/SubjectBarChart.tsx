@@ -54,6 +54,9 @@ const SubjectBar = (props: any) => {
         <Bar
           dataKey="ml"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
           name={t("maturityLevel") as string}
           fill="#6035A1"
           maxBarSize={40}

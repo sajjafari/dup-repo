@@ -10,6 +10,7 @@ import { useFormContext, UseFormRegister } from "react-hook-form";
 import getFieldError from "../../../utils/getFieldError";
 import ColorLensRoundedIcon from "@mui/icons-material/ColorLensRounded";
 import { Box } from "@mui/material";
+<<<<<<< HEAD
 =======
 import { useFormContext } from "react-hook-form";
 =======
@@ -19,6 +20,8 @@ import getFieldError from "../../../utils/getFieldError";
 import ColorLensRoundedIcon from "@mui/icons-material/ColorLensRounded";
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { styles } from "../../../config/styles";
 import { LoadingSkeleton } from "../loadings/LoadingSkeleton";
 

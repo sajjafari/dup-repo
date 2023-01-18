@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Trans } from "react-i18next";
 import Grid from "@mui/material/Grid";
 import Skeleton from "@mui/material/Skeleton";
@@ -51,11 +55,16 @@ const OverallInsightText = (props: any) => {
     <Box display="flex" flexDirection={"column"} flex={1}>
       <Typography
 <<<<<<< HEAD
+<<<<<<< HEAD
         fontFamily={"Roboto"}
         fontWeight="500"
 =======
         fontFamily={"RobotoMedium"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        fontFamily={"Roboto"}
+        fontWeight="500"
+>>>>>>> 11a534e (OTAT-266 add Vite)
         fontSize="1.3rem"
         sx={{ opacity: 0.96 }}
       >
@@ -67,10 +76,14 @@ const OverallInsightText = (props: any) => {
             <Typography
               component="span"
 <<<<<<< HEAD
+<<<<<<< HEAD
               fontFamily={"Roboto"}
 =======
               fontFamily={"RobotoBold"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              fontFamily={"Roboto"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
               fontWeight="bold"
               sx={{ color: "#3596A1" }}
               fontSize="1.15rem"
@@ -82,10 +95,14 @@ const OverallInsightText = (props: any) => {
               component="span"
               fontWeight="bold"
 <<<<<<< HEAD
+<<<<<<< HEAD
               fontFamily={"Roboto"}
 =======
               fontFamily={"RobotoBold"}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              fontFamily={"Roboto"}
+>>>>>>> 11a534e (OTAT-266 add Vite)
               sx={{ color: "#6035A1" }}
               fontSize="1.15rem"
             >
@@ -93,14 +110,20 @@ const OverallInsightText = (props: any) => {
             </Typography>{" "}
             <Trans i18nKey="meaning" values={{ title }} />{" "}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
             <Typography
               component="span"
               fontFamily="Roboto"
               fontWeight={"bold"}
             >
+<<<<<<< HEAD
 =======
             <Typography component="span" fontFamily={"RobotoBold"}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
               {status}.
             </Typography>
             <Box>

@@ -1,6 +1,7 @@
 import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box, BoxProps } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
@@ -8,6 +9,9 @@ import Box from "@mui/material/Box";
 =======
 import Box, { BoxProps } from "@mui/material/Box";
 >>>>>>> c865200 (OTAT-212 Add compare result page)
+=======
+import { Box, BoxProps } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
 import { getColorOfStatus, styles } from "../../../config/styles";

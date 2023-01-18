@@ -30,10 +30,14 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { IAssessment, TId, TQueryFunction } from "../../types";
 import { TDialogProps } from "../../utils/useDialog";
 import Button from "@mui/material/Button";
@@ -101,9 +105,13 @@ const AssessmentCard = (props: IAssessmentCardProps) => {
                 sx={{
                   padding: "8px 28px",
 <<<<<<< HEAD
+<<<<<<< HEAD
                   fontWeight: "bold",
 =======
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                  fontWeight: "bold",
+>>>>>>> 11a534e (OTAT-266 add Vite)
                   pb: 0,
                   textAlign: "center",
                   color: item.color?.color_code || "#101c32",

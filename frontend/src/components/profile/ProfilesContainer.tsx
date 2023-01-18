@@ -1,9 +1,13 @@
 import React, { PropsWithChildren } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Trans } from "react-i18next";
 import Title from "../shared/Title";
 import TabContext from "@mui/lab/TabContext";

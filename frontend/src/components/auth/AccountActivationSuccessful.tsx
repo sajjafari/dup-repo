@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -42,10 +46,14 @@ const AccountActivationSuccessful = () => {
                 <Typography
                   variant="h6"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   fontFamily="Roboto"
 =======
                   fontFamily="RobotoMedium"
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+                  fontFamily="Roboto"
+>>>>>>> 11a534e (OTAT-266 add Vite)
                   sx={{ my: 3, textAlign: "center", letterSpacing: ".03em" }}
                 >
                   <Trans i18nKey="youHaveVerifiedYourAccount" />

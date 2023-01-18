@@ -11,6 +11,7 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 =======
 import { createTheme } from "@mui/material/styles";
+<<<<<<< HEAD
 import RobotoBold from "../assets/fonts/roboto/Roboto-Bold.woff";
 import RobotoLight from "../assets/fonts/roboto/Roboto-Light.woff";
 import RobotoMedium from "../assets/fonts/roboto/Roboto-Medium.woff";
@@ -20,6 +21,16 @@ import OswaldLight from "../assets/fonts/oswald/Oswald-Light.woff";
 import OswaldMedium from "../assets/fonts/oswald/Oswald-Medium.woff";
 import OswaldRegular from "../assets/fonts/oswald/Oswald-Regular.woff";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import "@fontsource/oswald/300.css";
+import "@fontsource/oswald/400.css";
+import "@fontsource/oswald/500.css";
+import "@fontsource/oswald/700.css";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 
 declare module "@mui/material/styles/createPalette" {
   interface TypeBackground {
@@ -123,6 +134,7 @@ export const theme = createTheme({
     },
     button: {
 <<<<<<< HEAD
+<<<<<<< HEAD
       fontFamily: "'Oswald','Roboto'",
       letterSpacing: ".1em",
     },
@@ -141,22 +153,29 @@ export const theme = createTheme({
       fontFamily: "'Oswald','Roboto'",
 =======
       fontFamily: "'OswaldMedium','RobotoMedium'",
+=======
+      fontFamily: "'Oswald','Roboto'",
+>>>>>>> 11a534e (OTAT-266 add Vite)
       letterSpacing: ".1em",
     },
     h3: {
-      fontFamily: "'OswaldBold','RobotoBold'",
+      fontFamily: "'Oswald','Roboto'",
     },
     h4: {
-      fontFamily: "'OswaldBold','RobotoBold'",
+      fontFamily: "'Oswald','Roboto'",
       opacity: 0.9,
     },
     h5: {
-      fontFamily: "'OswaldBold','RobotoBold'",
+      fontFamily: "'Oswald','Roboto'",
       opacity: 0.85,
     },
     h6: {
+<<<<<<< HEAD
       fontFamily: "'OswaldBold','RobotoBold'",
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+      fontFamily: "'Oswald','Roboto'",
+>>>>>>> 11a534e (OTAT-266 add Vite)
       letterSpacing: "0.05em",
       lineHeight: 1.6,
       opacity: 0.85,
@@ -168,6 +187,7 @@ export const theme = createTheme({
         html {
           scroll-behavior: smooth;
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         @font-face {
@@ -219,6 +239,8 @@ export const theme = createTheme({
           src: local('Oswald-Light'), url(${OswaldLight}) format('woff');
         }
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
       `,
     },
     MuiTypography: {

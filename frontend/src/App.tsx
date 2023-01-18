@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Routes from "./routes";
 import "./config/i18n";
 import useGetSignedInUserInfo from "./utils/useGetSignedInUserInfo";
@@ -7,15 +8,20 @@ import { Box } from "@mui/material";
 import ErrorDataLoading from "./components/shared/errors/ErrorDataLoading";
 =======
 import React from "react";
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Routes from "./routes";
 import "./config/i18n";
 import useGetSignedInUserInfo from "./utils/useGetSignedInUserInfo";
-import Box from "@mui/material/Box";
 import { styles } from "./config/styles";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import DataLoadingError from "./components/shared/errors/DataLoadingError";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
 =======
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import ErrorDataLoading from "./components/shared/errors/ErrorDataLoading";
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
 import GettingThingsReadyLoading from "./components/shared/loadings/GettingThingsReadyLoading";

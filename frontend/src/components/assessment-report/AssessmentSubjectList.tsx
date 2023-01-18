@@ -1,5 +1,8 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import ErrorEmptyData from "../shared/errors/ErrorEmptyData";

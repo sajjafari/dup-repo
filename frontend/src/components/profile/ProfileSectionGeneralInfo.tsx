@@ -1,9 +1,13 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Trans } from "react-i18next";
 import { styles } from "../../config/styles";
 import Typography from "@mui/material/Typography";
@@ -112,6 +116,7 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
           </Grid>
           <Grid item xs={12}>
+<<<<<<< HEAD
             <Typography
               variant="body2"
 <<<<<<< HEAD
@@ -128,6 +133,9 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
               sx={{ my: 1 }}
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
             >
+=======
+            <Typography variant="body2" fontFamily="Roboto" sx={{ my: 1 }}>
+>>>>>>> 11a534e (OTAT-266 add Vite)
               {data.description ||
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorem deleniti libero ratione repudiandae modi deserunt rem doloremque perferendis, mollitia doloribus saepe incidunt numquam sequi porro quos exercitationem dolor placeat?"}
             </Typography>

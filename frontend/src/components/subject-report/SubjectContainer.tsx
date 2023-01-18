@@ -4,10 +4,14 @@ import Paper from "@mui/material/Paper";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Trans } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import GettingThingsReadyLoading from "../../components/shared/loadings/GettingThingsReadyLoading";
@@ -264,14 +268,19 @@ const NoInsightYetMessage = (props: { data: ISubjectReportModel }) => {
       >
         {no_insight_yet_message ? (
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Typography variant="h4" fontFamily={"Roboto"}>
 =======
           <Typography variant="h4" fontFamily={"RobotoRegular"}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <Typography variant="h4" fontFamily={"Roboto"}>
+>>>>>>> 11a534e (OTAT-266 add Vite)
             {no_insight_yet_message}
           </Typography>
         ) : (
           <>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Typography variant="h4" fontFamily={"Roboto"}>
               <Trans i18nKey="moreQuestionsNeedToBeAnswered" />
@@ -288,6 +297,17 @@ const NoInsightYetMessage = (props: { data: ISubjectReportModel }) => {
             </Typography>
             <Typography variant="h5" fontFamily={"RobotoLight"} sx={{ mt: 2 }}>
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            <Typography variant="h4" fontFamily={"Roboto"}>
+              <Trans i18nKey="moreQuestionsNeedToBeAnswered" />
+            </Typography>
+            <Typography
+              variant="h5"
+              fontFamily={"Roboto"}
+              fontWeight="300"
+              sx={{ mt: 2 }}
+            >
+>>>>>>> 11a534e (OTAT-266 add Vite)
               <Trans i18nKey="completeSomeOfQuestionnaires" />
             </Typography>
           </>

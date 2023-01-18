@@ -14,6 +14,7 @@ import {
 } from "../../types";
 import LoadingSkeletonOfQuestionnaires from "../shared/loadings/LoadingSkeletonOfQuestionnaires";
 import { Box } from "@mui/material";
+<<<<<<< HEAD
 =======
   TQueryData,
 =======
@@ -24,6 +25,8 @@ import { Box } from "@mui/material";
 import LoadingSkeletonOfQuestionnaires from "../shared/loadings/LoadingSkeletonOfQuestionnaires";
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import QANumberIndicator from "../shared/QANumberIndicator";
 import Divider from "@mui/material/Divider";
 import Button from "@mui/material/Button";

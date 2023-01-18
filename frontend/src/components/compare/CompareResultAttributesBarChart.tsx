@@ -14,10 +14,14 @@ import {
   TCompareResultAttributeInfo,
 } from "../../types";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import Typography from "@mui/material/Typography";
 import { Trans } from "react-i18next";
 
@@ -33,10 +37,14 @@ const CompareResultSubjectAttributesBarChart = (props: {
         sx={{
           fontSize: "1.05rem",
 <<<<<<< HEAD
+<<<<<<< HEAD
           fontFamily: "Roboto",
 =======
           fontFamily: "RobotoRegular",
 >>>>>>> 0cf45a9 (OTAT-212 Fix bugs and add edit button to compare result page)
+=======
+          fontFamily: "Roboto",
+>>>>>>> 11a534e (OTAT-266 add Vite)
           opacity: 0.7,
           mb: 0.5,
           mt: 2,

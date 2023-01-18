@@ -1,9 +1,13 @@
 import React, { PropsWithChildren } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 =======
 import Box from "@mui/material/Box";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+import { Box } from "@mui/material";
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Outlet } from "react-router-dom";
 import pl1 from "../assets/svg/pl1.svg";
 import Logo from "../assets/svg/logo.svg";

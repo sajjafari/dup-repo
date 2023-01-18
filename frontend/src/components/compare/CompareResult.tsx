@@ -2,6 +2,9 @@ import React from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 11a534e (OTAT-266 add Vite)
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import Chip from "@mui/material/Chip";
