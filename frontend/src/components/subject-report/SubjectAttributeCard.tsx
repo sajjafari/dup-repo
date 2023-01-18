@@ -194,8 +194,8 @@ export const AttributeStatusBar = (props: any) => {
       sx={{
         my: 0.5,
         background: "gray",
-        borderTopRightRadius: 1,
-        borderBottomRightRadius: 1,
+        borderTopRightRadius: "8px",
+        borderBottomRightRadius: "8px",
         position: "relative",
         color: "white",
         display: "flex",
@@ -207,8 +207,8 @@ export const AttributeStatusBar = (props: any) => {
         width={width}
         sx={{
           background: isMl ? "#6035A1" : "#3596A1",
-          borderTopRightRadius: 1,
-          borderBottomRightRadius: 1,
+          borderTopRightRadius: "8px",
+          borderBottomRightRadius: "8px",
         }}
       ></Box>
       <Typography

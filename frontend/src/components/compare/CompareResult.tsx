@@ -1,5 +1,6 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Box } from "@mui/material";
 import { Trans } from "react-i18next";
 import Chip from "@mui/material/Chip";
@@ -12,12 +13,17 @@ import CompareResultAssessmentsSection from "./CompareResultAssessmentsSection";
 import CompareResultSubjectAttributesBarChart from "./CompareResultAttributesBarChart";
 =======
 import { Alert, Chip, CircularProgress, Link, Typography } from "@mui/material";
+=======
+import Chip from "@mui/material/Chip";
+import CircularProgress from "@mui/material/CircularProgress";
+import MuiLink from "@mui/material/Link";
+import Typography from "@mui/material/Typography";
+>>>>>>> d4b1d73 (OTAT-212 Fix bugs)
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { Trans } from "react-i18next";
 import { getColorOfStatus, styles } from "../../config/styles";
 import { Gauge } from "../shared/charts/Gauge";
-import ProgressChip from "../shared/ProgressChip";
 import Title from "../shared/Title";
 import {
   Bar,
@@ -29,14 +35,12 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
-import { t } from "i18next";
 import {
   ICompareResultBaseInfo,
   ICompareResultCompareItems,
   ICompareResultModel,
   ICompareResultSubject,
   ITotalProgress,
-  ITotalProgressModel,
   TStatus,
 } from "../../types";
 import AlertBox from "../shared/AlertBox";
@@ -139,6 +143,7 @@ const GeneralInfo = (props: { data: ICompareResultModel }) => {
       <Trans i18nKey={"whichHasNamed"} values={{ value: subjects.length }} />
       {subjects.map((subject) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <MuiLink href={`#${subject.title}`} sx={{ mx: 0.6 }}>
           {subject.title}
         </MuiLink>
@@ -147,6 +152,11 @@ const GeneralInfo = (props: { data: ICompareResultModel }) => {
           {subject.title}
         </Link>
 >>>>>>> c865200 (OTAT-212 Add compare result page)
+=======
+        <MuiLink href={`#${subject.title}`} sx={{ mx: 0.6 }}>
+          {subject.title}
+        </MuiLink>
+>>>>>>> d4b1d73 (OTAT-212 Fix bugs)
       ))}
     </AlertBox>
   );

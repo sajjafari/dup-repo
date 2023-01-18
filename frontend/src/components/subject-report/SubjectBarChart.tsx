@@ -60,8 +60,12 @@ const SubjectBar = (props: any) => {
 =======
           name={t("maturityLevel")}
           fill="#6035A1"
+<<<<<<< HEAD
           maxBarSize={80}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          maxBarSize={40}
+>>>>>>> d4b1d73 (OTAT-212 Fix bugs)
         />
       </BarChart>
     </ResponsiveContainer>

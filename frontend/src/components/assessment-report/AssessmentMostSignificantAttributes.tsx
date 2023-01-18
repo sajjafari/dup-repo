@@ -30,11 +30,16 @@ export const AssessmentMostSignificantAttributes = (
 ) => {
   const { most_significant_items = [], isWeakness } = props;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isEmpty =
     most_significant_items?.length === 0 || !most_significant_items;
 =======
   const isEmpty = most_significant_items.length === 0;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const isEmpty =
+    most_significant_items?.length === 0 || !most_significant_items;
+>>>>>>> d4b1d73 (OTAT-212 Fix bugs)
 
   return (
     <Paper sx={{ height: "100%", borderRadius: 3 }} elevation={3}>

@@ -34,6 +34,7 @@ import {
   useCompareDispatch,
 } from "../../providers/CompareProvider";
 import hasStatus from "../../utils/hasStatus";
+<<<<<<< HEAD
 import AlertBox from "../shared/AlertBox";
 =======
 import { useParams } from "react-router-dom";
@@ -57,6 +58,8 @@ import {
   useCompareDispatch,
 } from "../../providers/CompareProvider";
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+>>>>>>> d4b1d73 (OTAT-212 Fix bugs)
 
 interface ICompareItemCEFormDialog
   extends Omit<ICompareItemCEForm, "closeDialog"> {}

@@ -236,6 +236,9 @@ const Actions = (props: {
       loading={editLoading}
       boxProps={{ position: "absolute", top: "10px", right: "10px", zIndex: 2 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> d4b1d73 (OTAT-212 Fix bugs)
       items={
         hasStatus(item.status)
           ? [
@@ -268,6 +271,7 @@ const Actions = (props: {
               },
             ]
       }
+<<<<<<< HEAD
 =======
       items={[
         {
@@ -287,6 +291,8 @@ const Actions = (props: {
         },
       ]}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> d4b1d73 (OTAT-212 Fix bugs)
     />
   );
 };
