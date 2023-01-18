@@ -461,6 +461,7 @@ export const createService = (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetchProfile(
       args: { profileId: TId },
       config: AxiosRequestConfig<any> | undefined
@@ -532,6 +533,12 @@ export const createService = (
         `/baseinfo/profiles/1/dsl/`,
 >>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
         { image: file },
+=======
+    uploadProfileDSL(file: any, config: AxiosRequestConfig<any> | undefined) {
+      return axios.post(
+        `/baseinfo/dsl/`,
+        { dsl_file: file },
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
         {
           ...config,
           headers: {
@@ -540,6 +547,7 @@ export const createService = (
         }
       );
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     deleteProfilePhoto(
       args: { id: TId },
@@ -584,6 +592,43 @@ export const createService = (
 =======
 =======
 >>>>>>> 8b5713c (OTAT-154 Add responsive layout to profile and connected services)
+=======
+    deleteProfileDSL(
+      args: { id: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id } = args || {};
+      return axios.delete(`/baseinfo/dsl/${id}`, config);
+    },
+    createProfile(
+      args: { data: any },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { data } = args || {};
+      return axios.post(`/baseinfo/importprofile/`, data, config);
+    },
+    updateProfile(
+      args: { id: TId; data: any },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id, data } = args || {};
+      return axios.put(`/baseinfo/importprofile/${id}`, data, config);
+    },
+    fetchProfile(
+      args: { id: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id } = args || {};
+      return axios.get(`/baseinfo/importprofile/${id}`, config);
+    },
+    deleteProfile(
+      args: { id: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id } = args || {};
+      return axios.delete(`/baseinfo/importprofile/${id}`, config);
+    },
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
     uploadProfilePhoto(file: any, config: AxiosRequestConfig<any> | undefined) {
       return axios.post(
         `/baseinfo/profiles/1/images/`,
@@ -603,9 +648,13 @@ export const createService = (
       return axios.delete(`/baseinfo/profiles/1/images/${args?.id}/`, config);
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
 =======
     fetchProfile(
+=======
+    inspectProfile(
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
       args: { profileId: TId },
       config: AxiosRequestConfig<any> | undefined
     ) {

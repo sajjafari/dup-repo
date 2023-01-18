@@ -39,6 +39,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
   } = props;
   const { type, data = {} } = context;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { id } = data;
   const defaultValues = type === "update" ? data : {};
 =======
@@ -46,6 +47,10 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
   const defaultValues = type === "update" ? data : {};
   const { spaceId } = useParams();
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+  const { id } = data;
+  const defaultValues = type === "update" ? data : {};
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
   const formMethods = useForm({ shouldUnregister: true });
   const abortController = useMemo(() => new AbortController(), [rest.open]);
   const close = () => {
@@ -61,6 +66,9 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
 
   const onSubmit = async (data: any) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
     const formattedData = { dsl_id: data.dsl_id.id };
     setLoading(true);
     try {
@@ -83,6 +91,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
       setServerFieldErrors(err, formMethods);
       toastError(err);
     }
+<<<<<<< HEAD
 =======
     console.log(data);
     // setLoading(true);
@@ -107,6 +116,8 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
     //   toastError(err);
     // }
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
   };
 
   return (
@@ -132,6 +143,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
           <Grid item xs={12}>
             <UploadField
 <<<<<<< HEAD
+<<<<<<< HEAD
               accept={{ "application/zip": [".zip"] }}
               uploadService={(args, config) =>
                 service.uploadProfileDSL(args, config)
@@ -141,14 +153,21 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
               }
               name="dsl_id"
 =======
+=======
+              accept={{ "application/zip": [".zip"] }}
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
               uploadService={(args, config) =>
-                service.uploadProfilePhoto(args, config)
+                service.uploadProfileDSL(args, config)
               }
               deleteService={(args, config) =>
-                service.deleteProfilePhoto(args, config)
+                service.deleteProfileDSL(args, config)
               }
+<<<<<<< HEAD
               name="image"
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+              name="dsl_id"
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
               required={true}
               label={<Trans i18nKey="dsl" />}
             />

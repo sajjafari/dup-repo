@@ -48,10 +48,14 @@ const ProfilesContainer = (props: PropsWithChildren<{}>) => {
                 value="list"
               />
 <<<<<<< HEAD
+<<<<<<< HEAD
               {/* <Tab
 =======
               <Tab
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+              {/* <Tab
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
                 label={
                   <Box sx={{ ...styles.centerV }}>
                     <Trans i18nKey="market" />
@@ -59,15 +63,20 @@ const ProfilesContainer = (props: PropsWithChildren<{}>) => {
                 }
                 value="market"
 <<<<<<< HEAD
+<<<<<<< HEAD
               /> */}
 =======
               />
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+              /> */}
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
             </TabList>
           </Box>
           <TabPanel value="list" sx={{ p: { xs: 1, sm: 3 } }}>
             <ProfilesListContainer />
           </TabPanel>
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* <TabPanel value="market" sx={{ p: { xs: 1, sm: 3 } }}>
             <ProfilesMarketContainer />
@@ -77,6 +86,11 @@ const ProfilesContainer = (props: PropsWithChildren<{}>) => {
             <ProfilesMarketContainer />
           </TabPanel>
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+          {/* <TabPanel value="market" sx={{ p: { xs: 1, sm: 3 } }}>
+            <ProfilesMarketContainer />
+          </TabPanel> */}
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
         </TabContext>
       </Box>
     </Box>

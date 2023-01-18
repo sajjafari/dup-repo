@@ -4,6 +4,7 @@ import { Box } from "@mui/material";
 import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
+<<<<<<< HEAD
 =======
 import Box from "@mui/material/Box";
 =======
@@ -13,15 +14,21 @@ import Skeleton from "@mui/material/Skeleton";
 import Typography from "@mui/material/Typography";
 import React from "react";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
 import { styles } from "../../config/styles";
 import { useServiceContext } from "../../providers/ServiceProvider";
 import { useQuery } from "../../utils/useQuery";
 import QueryData from "../shared/QueryData";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
 =======
 import CategoryRoundedIcon from "@mui/icons-material/CategoryRounded";
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+import DeleteRoundedIcon from "@mui/icons-material/DeleteRounded";
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
 import QuizRoundedIcon from "@mui/icons-material/QuizRounded";
 import { Link } from "react-router-dom";
 import forLoopComponent from "../../utils/forLoopComponent";
@@ -36,14 +43,20 @@ import ProfileCEFromDialog from "./ProfileCEFromDialog";
 import useDialog from "../../utils/useDialog";
 import { TQueryFunction } from "../../types";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
 import toastError from "../../utils/toastError";
 import { ICustomError } from "../../utils/CustomError";
 import MoreActions from "../shared/MoreActions";
 import useMenu from "../../utils/useMenu";
+<<<<<<< HEAD
 =======
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
 =======
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+=======
+>>>>>>> 443adbc (OTAT-253 Add delete profile)
 
 const ProfilesListContainer = () => {
   const { service } = useServiceContext();
@@ -321,12 +334,17 @@ const Actions = (props: any) => {
                           {title}
                         </Typography>
                       </Box>
-                      {/* <Box
+
+                      <Box
                         ml="auto"
                         sx={{ ...styles.centerV, color: "#525252" }}
                         alignSelf="stretch"
                       >
-                        <Box sx={{ ...styles.centerV }} mr={1.5}>
+                        <Actions
+                          profile={profile}
+                          fetchSpaces={profilesQueryData.query}
+                        />
+                        {/* <Box sx={{ ...styles.centerV }} mr={1.5}>
                           {numberOfQuestionnaires}{" "}
                           <QuizRoundedIcon fontSize="small" sx={{ ml: 0.3 }} />
                         </Box>
@@ -336,8 +354,8 @@ const Actions = (props: any) => {
                             fontSize="small"
                             sx={{ ml: 0.3 }}
                           />
-                        </Box>
-                      </Box> */}
+                        </Box> */}
+                      </Box>
                     </Box>
                   </Box>
 <<<<<<< HEAD
@@ -382,6 +400,74 @@ const CreateProfileButton = (props: { onSubmitForm: TQueryFunction }) => {
       <ProfileCEFromDialog {...dialogProps} onSubmitForm={onSubmitForm} />
     </>
 >>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
+  );
+};
+
+const Actions = (props: any) => {
+  const { profile, fetchSpaces, dialogProps, setUserInfo } = props;
+  const { id } = profile;
+  const { service } = useServiceContext();
+  const [editLoading, setEditLoading] = useState(false);
+  const {
+    query: deleteProfile,
+    loading,
+    abortController,
+  } = useQuery({
+    service: (args, config) => service.deleteProfile({ id }, config),
+    runOnMount: false,
+  });
+
+  // const openEditDialog = (e: any) => {
+  //   setEditLoading(true);
+  //   service
+  //     .fetchSpace({ spaceId }, { signal: abortController.signal })
+  //     .then(({ data }) => {
+  //       setEditLoading(false);
+  //       dialogProps.openDialog({ data, type: "update" });
+  //     })
+  //     .catch((e) => {
+  //       const err = e as ICustomError;
+  //       toastError(err);
+  //       setEditLoading(false);
+  //     });
+  // };
+
+  const deleteItem = async (e: any) => {
+    try {
+      await deleteProfile();
+      await fetchSpaces();
+      await setUserInfo();
+    } catch (e) {
+      const err = e as ICustomError;
+      toastError(err);
+    }
+  };
+
+  return (
+    <MoreActions
+      {...useMenu()}
+      boxProps={{ ml: 0.2 }}
+      loading={loading || editLoading}
+      items={[
+        // {
+        //   icon: <EditRoundedIcon fontSize="small" />,
+        //   text: <Trans i18nKey="edit" />,
+        //   onClick: openEditDialog,
+        // },
+        // !isActiveSpace
+        //   ? {
+        //       icon: <DeleteRoundedIcon fontSize="small" />,
+        //       text: <Trans i18nKey="delete" />,
+        //       onClick: deleteItem,
+        //     }
+        //   : undefined,
+        {
+          icon: <DeleteRoundedIcon fontSize="small" />,
+          text: <Trans i18nKey="delete" />,
+          onClick: deleteItem,
+        },
+      ]}
+    />
   );
 };
 
