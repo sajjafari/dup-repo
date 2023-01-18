@@ -395,6 +395,7 @@ export const createService = (
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetchProfile(
       args: { profileId: TId },
       config: AxiosRequestConfig<any> | undefined
@@ -404,9 +405,12 @@ export const createService = (
 =======
 =======
     uploadProfile(file: any, config: AxiosRequestConfig<any> | undefined) {
+=======
+    uploadProfileDSL(file: any, config: AxiosRequestConfig<any> | undefined) {
+>>>>>>> 2dc54c4 (OTAT-253 Add delete profile)
       return axios.post(
-        `/baseinfo/profiles/1/dsl/`,
-        { image: file },
+        `/baseinfo/dsl/`,
+        { dsl_file: file },
         {
           ...config,
           headers: {
@@ -415,7 +419,45 @@ export const createService = (
         }
       );
     },
+<<<<<<< HEAD
 >>>>>>> 9de2fe5 (OTAT-154 Add responsive layout to profile and connected services)
+=======
+    deleteProfileDSL(
+      args: { id: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id } = args || {};
+      return axios.delete(`/baseinfo/dsl/${id}`, config);
+    },
+    createProfile(
+      args: { data: any },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { data } = args || {};
+      return axios.post(`/baseinfo/importprofile/`, data, config);
+    },
+    updateProfile(
+      args: { id: TId; data: any },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id, data } = args || {};
+      return axios.put(`/baseinfo/importprofile/${id}`, data, config);
+    },
+    fetchProfile(
+      args: { id: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id } = args || {};
+      return axios.get(`/baseinfo/importprofile/${id}`, config);
+    },
+    deleteProfile(
+      args: { id: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { id } = args || {};
+      return axios.delete(`/baseinfo/importprofile/${id}`, config);
+    },
+>>>>>>> 2dc54c4 (OTAT-253 Add delete profile)
     uploadProfilePhoto(file: any, config: AxiosRequestConfig<any> | undefined) {
       return axios.post(
         `/baseinfo/profiles/1/images/`,
@@ -437,7 +479,7 @@ export const createService = (
 >>>>>>> a0e0d8d (OTAT-252 Add uploader field)
 =======
     },
-    fetchProfile(
+    inspectProfile(
       args: { profileId: TId },
       config: AxiosRequestConfig<any> | undefined
     ) {
