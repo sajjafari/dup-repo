@@ -394,6 +394,7 @@ export const createService = (
       );
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     fetchProfile(
       args: { profileId: TId },
       config: AxiosRequestConfig<any> | undefined
@@ -401,6 +402,20 @@ export const createService = (
       const { profileId } = args || {};
       return axios.get(`/baseinfo/profiles/${profileId}/`, config);
 =======
+=======
+    uploadProfile(file: any, config: AxiosRequestConfig<any> | undefined) {
+      return axios.post(
+        `/baseinfo/profiles/1/dsl/`,
+        { image: file },
+        {
+          ...config,
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+    },
+>>>>>>> 9de2fe5 (OTAT-154 Add responsive layout to profile and connected services)
     uploadProfilePhoto(file: any, config: AxiosRequestConfig<any> | undefined) {
       return axios.post(
         `/baseinfo/profiles/1/images/`,
