@@ -19,9 +19,15 @@ import AlertTitle from "@mui/material/AlertTitle";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 import { LoadingSkeleton } from "../shared/loadings/LoadingSkeleton";
+<<<<<<< HEAD
 import hasStatus from "../../utils/hasStatus";
 import Button from "@mui/material/Button";
 import AnalyticsRoundedIcon from "@mui/icons-material/AnalyticsRounded";
+=======
+import SupTitleBreadcrumb from "../shared/SupTitleBreadcrumb";
+import FolderRoundedIcon from "@mui/icons-material/FolderRounded";
+import DescriptionRoundedIcon from "@mui/icons-material/DescriptionRounded";
+>>>>>>> 3f7a6c0 (OTAT-218 Add breadcrumb)
 
 const QuestionnaireContainer = () => {
   const {
@@ -31,19 +37,14 @@ const QuestionnaireContainer = () => {
     assessmentQueryData,
   } = useQuestionnaire();
   const progress = questionnaireQueryData.data?.progress || 0;
-  const loaded = useRef(false);
-
-  useEffect(() => {
-    if (questionnaireQueryData.loaded) {
-      loaded.current = true;
-    }
-  }, [questionnaireQueryData.loading]);
+  const { spaceId } = useParams();
 
   return (
     <Box>
       <Title
         backLink={-1}
         sup={
+<<<<<<< HEAD
           <Box display="flex" alignItems={"center"}>
             {pageQueryData.loading ? (
               <Skeleton width="80px" height="22px" sx={{ mr: 1 }} />
@@ -52,6 +53,24 @@ const QuestionnaireContainer = () => {
             )}{" "}
             <Trans i18nKey="assessment" />
           </Box>
+=======
+          <SupTitleBreadcrumb
+            routes={[
+              {
+                title: "spaces",
+                to: "/spaces/",
+                icon: <FolderRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />,
+              },
+              {
+                title: pageQueryData.data?.assessment_title,
+                to: `/${spaceId}/assessments`,
+                icon: (
+                  <DescriptionRoundedIcon fontSize="inherit" sx={{ mr: 0.5 }} />
+                ),
+              },
+            ]}
+          />
+>>>>>>> 3f7a6c0 (OTAT-218 Add breadcrumb)
         }
       >
         <QuizRoundedIcon sx={{ mr: 1 }} />
