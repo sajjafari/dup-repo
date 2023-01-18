@@ -3,8 +3,12 @@ from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 from ..models import AssessmentProfile, AssessmentSubject, Metric, MetricCategory, QualityAttribute
+<<<<<<< HEAD
 from ..serializers.commonserializers import AssessmentSubjectSerilizer, MetricCategorySerilizer, MetricSerilizer, QualityAttributeSerilizer, MetricCategoryBySubjectSerilizer
 from ..serializers.profileserializers import AssessmentProfileSerilizer
+=======
+from ..serializers import AssessmentProfileSerilizer, AssessmentSubjectSerilizer, MetricCategorySerilizer, MetricSerilizer, QualityAttributeSerilizer, MetricCategoryBySubjectSerilizer
+>>>>>>> 3015a1a (display profile by rest service)
 
 
 class MetricCategoryViewSet(ModelViewSet):

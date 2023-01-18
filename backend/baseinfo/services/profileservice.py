@@ -7,6 +7,7 @@ def load_profile(profile_id) -> AssessmentProfile:
     except AssessmentProfile.DoesNotExist:
         return None
 
+<<<<<<< HEAD
 def extract_detail_of_profile(profile):
     response = extract_profile_basic_infos(profile)
     response['profileInfos'] = extract_profile_report_infos(profile)
@@ -22,6 +23,8 @@ def extract_profile_basic_infos(profile):
     response['creation_date'] = profile.creation_time
     return response
 
+=======
+>>>>>>> 3015a1a (display profile by rest service)
 def extract_questionnaires_infos(profile):
     questionnairesInfos = []
     categories = profile.metric_categories.all()
@@ -29,8 +32,28 @@ def extract_questionnaires_infos(profile):
         category_infos = {}
         category_infos['title'] = category.title
         category_infos['description'] = category.description
+<<<<<<< HEAD
         category_infos['report_infos'] = __extract_category_report_info(category)
         category_infos['questions'] = __extract_category_metric_info(category) 
+=======
+        report_infos = []
+        report_infos.append({'title' : 'Related subjects', 'item': [subject.title for subject in category.assessment_subjects.all()]})
+        report_infos.append({'title' : 'Number of questions', 'item': category.metric_set.count()})
+        report_infos.append({'title' : 'Questionnaire index', 'item': category.index})
+        category_infos['report_infos'] = report_infos
+        questions = []
+        for metric in category.metric_set.all():
+            info = {}
+            info['title'] = metric.title
+            info['inedx'] = metric.index
+            info['listOfOptions'] = [answer.caption for answer in metric.answer_templates.all()]
+            relatedAttributes = []
+            for impact in metric.metric_impacts.all():
+                relatedAttributes.append({'title' : impact.quality_attribute.title, 'item': impact.level})
+            info['relatedAttributes'] = relatedAttributes
+            questions.append(info) 
+        category_infos['questions'] = questions
+>>>>>>> 3015a1a (display profile by rest service)
         questionnairesInfos.append(category_infos)
     return questionnairesInfos
 
@@ -42,6 +65,7 @@ def extract_subjects_infos(profile):
         subject_infos = {}
         subject_infos['title'] = subject.title
         subject_infos['description'] = subject.description
+<<<<<<< HEAD
         subject_infos['report_infos'] =  __extratc_subject_report_info(subject)
         subject_infos['attributes_infos'] = __extract_subject_attributes_info(attributes_qs)
         subjectsInfos.append(subject_infos)
@@ -110,6 +134,38 @@ def __extract_category_report_info(category):
     report_infos.append({'title' : 'Related subjects', 'item': [subject.title for subject in category.assessment_subjects.all()]})
     return report_infos
 
+=======
+        report_infos = []
+        report_infos.append({'title' : 'Number of attributes', 'item': attributes_qs.count()})
+        report_infos.append({'title' : 'Index of the Team', 'item': subject.index})
+        subject_infos['report_infos'] = report_infos
+        attributes_infos = []
+        for att in attributes_qs.all():
+            att_info = {}
+            att_info['title'] = att.title
+            att_info['description'] = att.description
+            impacts = att.metric_impacts.all()
+            questions = []
+            for impact in impacts:
+                metric = {}
+                metric['title'] = impact.metric.title
+                metric['impact'] = impact.level
+                questions.append(metric)
+            att_info['questions'] = questions
+            attributes_infos.append(att_info)
+        subject_infos['attributes_infos'] = attributes_infos
+        subjectsInfos.append(subject_infos)
+    return subjectsInfos
+
+def extract_profile_infos(profile):
+    profileInfos = []
+    subjects = profile.assessment_subjects.all()
+    profileInfos.append(__extract_profile_subjects(subjects))
+    profileInfos.append(__extract_profile_category_count(profile.metric_categories))
+    profileInfos.append(__extract_profile_attribute_count(subjects))
+    return profileInfos
+
+>>>>>>> 3015a1a (display profile by rest service)
 def __extract_profile_subjects(subjects):
     subject_titles = [subject.title for subject in subjects]
     return {'title' : 'Subjects', 'item': subject_titles}
@@ -117,12 +173,15 @@ def __extract_profile_subjects(subjects):
 def __extract_profile_category_count(metric_categories):
     return {'title' : 'Questionnaires count', 'item': metric_categories.count()}
 
+<<<<<<< HEAD
 def __extract_profile_metric_count(metric_categories):
     total_metric_count = 0
     for category in metric_categories.all():
         total_metric_count += category.metric_set.count()
     return {'title' : 'Total questions count', 'item': total_metric_count}
 
+=======
+>>>>>>> 3015a1a (display profile by rest service)
 def __extract_profile_attribute_count(subjects):
     attributes = []
     for subject in subjects:
