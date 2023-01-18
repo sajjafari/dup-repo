@@ -201,6 +201,7 @@ OPTIONAL_APPS = (
 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -209,6 +210,8 @@ OPTIONAL_APPS = (
 #############
 
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> 12b3703 (add dsl parser app to docker compose)
 f = os.path.join(PROJECT_APP_PATH, "local_settings.py")
 if os.path.exists(f):
     import imp
@@ -244,9 +247,9 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    # 'DEFAULT_PERMISSION_CLASSES': [
-    #     'rest_framework.permissions.IsAuthenticated'
-    # ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated'
+    ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'PAGE_SIZE':200

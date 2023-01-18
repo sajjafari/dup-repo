@@ -15,6 +15,7 @@ from ..serializers.profileserializers import ProfileDslSerializer
 from ..models import ProfileDsl
 
 DSL_PARSER_URL_SERVICE = "http://dsl:8080/extract/"
+<<<<<<< HEAD
 =======
 =======
 import requests
@@ -39,6 +40,8 @@ import traceback
 =======
 from ..models import ProfileDsl
 >>>>>>> d2cf4b2 (change upload file for dsl)
+=======
+>>>>>>> 12b3703 (add dsl parser app to docker compose)
 
 class ProfileDetailDisplayApi(APIView):
     def get(self, request, profile_id):
@@ -65,6 +68,7 @@ class ImportProfileApi(APIView):
         input_zip = ZipFile(dsl.dsl_file)
         dsl_contents = importprofileservice.extract_dsl_contents(input_zip)
         resp = requests.post(DSL_PARSER_URL_SERVICE, json={"dslContent": dsl_contents}).json()
+<<<<<<< HEAD
         if resp['hasError']:
             return Response({"message": "The uploaded dsl is invalid."}, status = status.HTTP_400_BAD_REQUEST)
         try:
@@ -121,6 +125,8 @@ class ImportProfileApi(APIView):
         input_zip = ZipFile(dsl.dsl_file)
         dsl_contents = importprofileservice.extract_dsl_contents(input_zip)
         resp = requests.post("http://localhost:8080/extract/", json={"dslContent": dsl_contents}).json()
+=======
+>>>>>>> 12b3703 (add dsl parser app to docker compose)
         if resp['hasError']:
             return Response({"message": "The uploaded dsl is invalid."}, status = status.HTTP_400_BAD_REQUEST)
         try:
