@@ -36,7 +36,6 @@ const QuestionnairesNotCompleteAlert = (
 ) => {
   const { subjectName, to, progress, q, a } = props;
   const location = useLocation();
-  console.log(to);
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -10,10 +10,15 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import InfoItem from "../shared/InfoItem";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import formatDate from "../../utils/formatDate";
 import { t } from "i18next";
 =======
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+import formatDate from "../../utils/formatDate";
+import { t } from "i18next";
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
 
 interface IProfileSectionAuthorInfo {
   data: any;
@@ -44,12 +49,17 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
       >
         <Grid container spacing={1}>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <Grid item xs={12} sm={7} md={5} lg={4}>
+=======
+          <Grid item xs={4}>
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
             {data.profileInfos.map((info: any) => {
               return (
                 <InfoItem
                   info={{
                     ...info,
+<<<<<<< HEAD
                     type: info.title === "Subjects" ? "array" : info.type,
                   }}
                 />
@@ -75,14 +85,31 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
           <Grid item xs={3}>
             {data.profileInfos.primaryInfos.map((info: any) => {
               return <InfoItem info={info} />;
+=======
+                    type: info.title === "Subjects" ? "tags" : info.type,
+                  }}
+                />
+              );
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
             })}
           </Grid>
           <Grid item xs={2}></Grid>
           <Grid item xs={2}>
+<<<<<<< HEAD
             {data.profileInfos.secondaryInfos.map((info: any) => {
               return <InfoItem info={info} />;
             })}
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
+=======
+            {data?.last_update && (
+              <InfoItem
+                info={{
+                  item: formatDate(data?.last_update),
+                  title: t("lastUpdated"),
+                }}
+              />
+            )}
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
           </Grid>
           <Grid item xs={12}>
             <Typography
@@ -101,7 +128,8 @@ const ProfileSectionGeneralInfo = (props: IProfileSectionAuthorInfo) => {
               sx={{ my: 1 }}
 >>>>>>> 6640d72 (OTAT-154 Add profile page)
             >
-              {data.description}
+              {data.description ||
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dolorem deleniti libero ratione repudiandae modi deserunt rem doloremque perferendis, mollitia doloribus saepe incidunt numquam sequi porro quos exercitationem dolor placeat?"}
             </Typography>
           </Grid>
         </Grid>

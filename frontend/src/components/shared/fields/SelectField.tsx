@@ -140,7 +140,6 @@ export const SelectField = (props: ISelectField) => {
 =======
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
 
-  console.log(defaultValue);
   return (
 <<<<<<< HEAD
     <FormControl fullWidth error={hasError} size={size} variant="outlined">

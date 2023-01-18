@@ -583,7 +583,17 @@ export const createService = (
     ) {
       return axios.delete(`/baseinfo/profiles/1/images/${args?.id}/`, config);
     },
+<<<<<<< HEAD
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+    fetchProfile(
+      args: { profileId: TId },
+      config: AxiosRequestConfig<any> | undefined
+    ) {
+      const { profileId } = args || {};
+      return axios.get(`/baseinfo/inspectprofile/${profileId}/`, config);
+    },
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
   };
 
   return service;

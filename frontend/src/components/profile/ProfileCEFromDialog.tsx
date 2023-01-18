@@ -38,8 +38,14 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
     ...rest
   } = props;
   const { type, data = {} } = context;
+<<<<<<< HEAD
   const { id } = data;
   const defaultValues = type === "update" ? data : {};
+=======
+  const { id: rowId } = data;
+  const defaultValues = type === "update" ? data : {};
+  const { spaceId } = useParams();
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
   const formMethods = useForm({ shouldUnregister: true });
   const abortController = useMemo(() => new AbortController(), [rest.open]);
   const close = () => {
@@ -54,6 +60,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
   }, []);
 
   const onSubmit = async (data: any) => {
+<<<<<<< HEAD
     const formattedData = { dsl_id: data.dsl_id.id };
     setLoading(true);
     try {
@@ -76,6 +83,30 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
       setServerFieldErrors(err, formMethods);
       toastError(err);
     }
+=======
+    console.log(data);
+    // setLoading(true);
+    // try {
+    //   const { data: res } =
+    //     type === "update"
+    //       ? await service.updateProfile(
+    //           { rowId, data: { space: spaceId, ...data } },
+    //           { signal: abortController.signal }
+    //         )
+    //       : await service.createProfile(
+    //           { data: { space: spaceId, ...data } },
+    //           { signal: abortController.signal }
+    //         );
+    //   setLoading(false);
+    //   onSubmitForm();
+    //   close();
+    // } catch (e) {
+    //   const err = e as ICustomError;
+    //   setLoading(false);
+    //   setServerFieldErrors(err, formMethods);
+    //   toastError(err);
+    // }
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
   };
 
   return (
@@ -100,6 +131,7 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
         <Grid container spacing={2} sx={styles.formGrid}>
           <Grid item xs={12}>
             <UploadField
+<<<<<<< HEAD
               accept={{ "application/zip": [".zip"] }}
               uploadService={(args, config) =>
                 service.uploadProfileDSL(args, config)
@@ -108,6 +140,15 @@ const ProfileCEFromDialog = (props: IProfileCEFromDialogProps) => {
                 service.deleteProfileDSL(args, config)
               }
               name="dsl_id"
+=======
+              uploadService={(args, config) =>
+                service.uploadProfilePhoto(args, config)
+              }
+              deleteService={(args, config) =>
+                service.deleteProfilePhoto(args, config)
+              }
+              name="image"
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
               required={true}
               label={<Trans i18nKey="dsl" />}
             />

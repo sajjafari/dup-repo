@@ -230,6 +230,7 @@ const CompareItemCEForm = (props: ICompareItemCEForm) => {
             label={<Trans i18nKey="assessment" />}
             size="medium"
             renderOption={(option = {}) => {
+<<<<<<< HEAD
 =======
             {...useConnectSelectField(`/assessment/currentuserprojects/`)}
 =======
@@ -256,6 +257,8 @@ const CompareItemCEForm = (props: ICompareItemCEForm) => {
             renderOption={(option = {}) => {
               console.log("opt", option.id);
 >>>>>>> 671bfb7 (OTAT-212 Add compare page)
+=======
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
               return (
                 <MenuItem
                   value={option.id}

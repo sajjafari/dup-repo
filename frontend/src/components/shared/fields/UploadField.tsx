@@ -20,10 +20,14 @@ import { styles } from "../../../config/styles";
 import FileUploadRoundedIcon from "@mui/icons-material/FileUploadRounded";
 import { useServiceContext } from "../../../providers/ServiceProvider";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { TQueryServiceFunction, useQuery } from "../../../utils/useQuery";
 =======
 import { useQuery } from "../../../utils/useQuery";
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+import { TQueryServiceFunction, useQuery } from "../../../utils/useQuery";
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
 import toastError from "../../../utils/toastError";
 import { t } from "i18next";
 import { ICustomError } from "../../../utils/CustomError";
@@ -47,10 +51,15 @@ interface IUploadFieldProps {
   accept?: Accept;
   maxSize?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   uploadService: TQueryServiceFunction<any, any>;
   deleteService: TQueryServiceFunction<any, any>;
 =======
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+  uploadService: TQueryServiceFunction<any, any>;
+  deleteService: TQueryServiceFunction<any, any>;
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
 }
 
 const UploadField = (props: IUploadFieldProps) => {
@@ -91,6 +100,7 @@ interface IUploadProps {
   required?: boolean;
   defaultValue?: any[];
 <<<<<<< HEAD
+<<<<<<< HEAD
   uploadService: TQueryServiceFunction<any, any>;
   deleteService: TQueryServiceFunction<any, any>;
 }
@@ -117,20 +127,38 @@ const Uploader = (props: IUploadProps) => {
   const deleteQueryProps = useQuery({
     service: deleteService,
 =======
+=======
+  uploadService: TQueryServiceFunction<any, any>;
+  deleteService: TQueryServiceFunction<any, any>;
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
 }
 
 const Uploader = (props: IUploadProps) => {
-  const { fieldProps, errors, label, accept, maxSize, required } = props;
-  console.log(fieldProps.value);
+  const {
+    fieldProps,
+    errors,
+    label,
+    accept,
+    maxSize,
+    required,
+    uploadService,
+    deleteService,
+  } = props;
+
   const [myFiles, setMyFiles] = useState<File[]>([]);
-  const { service } = useServiceContext();
+
   const uploadQueryProps = useQuery({
-    service: (args, config) => service.uploadProfilePhoto(args, config),
+    service: uploadService,
     runOnMount: false,
   });
+
   const deleteQueryProps = useQuery({
+<<<<<<< HEAD
     service: (args, config) => service.deleteProfilePhoto(args, config),
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+    service: deleteService,
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
     runOnMount: false,
   });
 
@@ -167,9 +195,12 @@ const Uploader = (props: IUploadProps) => {
     multiple: false,
     onDropRejected(rejectedFiles, event) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       console.dir(rejectedFiles, event);
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
       if (rejectedFiles.length > 1) {
         toastError(t("oneFileOnly") as string);
       }
@@ -183,11 +214,15 @@ const Uploader = (props: IUploadProps) => {
 
   const loading = uploadQueryProps.loading || deleteQueryProps.loading;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
   const isDownloadable =
     (!uploadQueryProps.loading &&
       !uploadQueryProps.error &&
       uploadQueryProps.data?.[fieldProps.name]) ||
     (file as any)?.[fieldProps.name];
+<<<<<<< HEAD
 
   const { errorMessage, hasError } = getFieldError(errors, fieldProps.name);
 =======
@@ -195,6 +230,10 @@ const Uploader = (props: IUploadProps) => {
   const { errorMessage, hasError } = getFieldError(errors, fieldProps.name);
   console.log(file);
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+
+  const { errorMessage, hasError } = getFieldError(errors, fieldProps.name);
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
   return (
     <FormControl sx={{ width: "100%" }} error={hasError}>
       <Box
@@ -229,6 +268,7 @@ const Uploader = (props: IUploadProps) => {
                     sx={{ backgroundColor: "#ffffffc9", borderRadius: 1 }}
                   >
 <<<<<<< HEAD
+<<<<<<< HEAD
                     {isDownloadable && (
 =======
                     {((!uploadQueryProps.loading &&
@@ -236,6 +276,9 @@ const Uploader = (props: IUploadProps) => {
                       uploadQueryProps.data?.[fieldProps.name]) ||
                       (file as any)?.[fieldProps.name]) && (
 >>>>>>> 834bd68 (OTAT-252 Add uploader field)
+=======
+                    {isDownloadable && (
+>>>>>>> b8df8ab (OTAT-253 Add create profile dialog)
                       <IconButton
                         onClick={(e: any) => e.stopPropagation()}
                         sx={{ mr: 0.2 }}
