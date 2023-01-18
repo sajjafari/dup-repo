@@ -29,6 +29,7 @@ interface IAssessmentSubjectCardProps extends ISubjectInfo {
 
 export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { title, progress = 0, status, id, image, colorCode, description = "" } = props;
 =======
   const {
@@ -41,6 +42,9 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
     description = "",
   } = props;
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+  const { title, progress = 0, status, id, image, colorCode, description = "" } = props;
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
   return (
     <Paper
       sx={{
@@ -72,6 +76,7 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
         }}
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Typography variant="h4" textTransform={"uppercase"} letterSpacing={".13em"} fontFamily="Oswald" fontWeight={500}>
           {title}
         </Typography>
@@ -92,20 +97,31 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
           description={description}
         />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+        <Typography variant="h4" textTransform={"uppercase"} letterSpacing={".13em"} fontFamily="Oswald" fontWeight={500}>
+          {title}
+        </Typography>
+        <ReadMoreAboutSubject colorCode={colorCode} title={title} description={description} />
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
         <Box
           mt={2}
           sx={{
             filter: (t) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
               const shouldInvert = t.palette.getContrastText(colorCode) === "rgba(0, 0, 0, 0.87)";
 =======
               const shouldInvert =
                 t.palette.getContrastText(colorCode) === "rgba(0, 0, 0, 0.87)";
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+              const shouldInvert = t.palette.getContrastText(colorCode) === "rgba(0, 0, 0, 0.87)";
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
               return shouldInvert ? "invert(.93)" : undefined;
             },
           }}
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
           <img src={`${BASE_URL}${image}`} alt={title} width={"90px"} style={{ filter: "drop-shadow(1px 4px 4px #00000050)" }} />
 =======
@@ -116,6 +132,9 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
             style={{ filter: "drop-shadow(1px 4px 4px #00000050)" }}
           />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+          <img src={`${BASE_URL}${image}`} alt={title} width={"90px"} style={{ filter: "drop-shadow(1px 4px 4px #00000050)" }} />
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
         </Box>
         <SubjectProgress progress={progress} colorCode={colorCode} />
 
@@ -129,6 +148,7 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
             to={progress === 100 ? `./${id}#insight` : `./${id}`}
             state={{ status }}
 <<<<<<< HEAD
+<<<<<<< HEAD
             startIcon={progress === 0 ? <StartRoundedIcon /> : <QueryStatsRoundedIcon />}
           >
             <Trans i18nKey={"viewInsights"} />
@@ -141,6 +161,11 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
               i18nKey={progress === 0 ? "startAssessment" : "viewInsights"}
             />
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            startIcon={progress === 0 ? <StartRoundedIcon /> : <QueryStatsRoundedIcon />}
+          >
+            <Trans i18nKey={"viewInsights"} />
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
           </Button>
         </Box>
       </Box>
@@ -149,12 +174,16 @@ export const AssessmentSubjectCard = (props: IAssessmentSubjectCardProps) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SubjectStatus = (props: Pick<IAssessmentSubjectCardProps, "title" | "status">) => {
 =======
 const SubjectStatus = (
   props: Pick<IAssessmentSubjectCardProps, "title" | "status">
 ) => {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+const SubjectStatus = (props: Pick<IAssessmentSubjectCardProps, "title" | "status">) => {
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
   const { title, status } = props;
   const hasStats = hasStatus(status);
   return (
@@ -163,11 +192,15 @@ const SubjectStatus = (
         <>
           <Typography textAlign={"center"}>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Trans i18nKey="subjectStatusIs" values={{ title }} /> {hasStats && <Trans i18nKey="evaluatedAs" />}
 =======
             <Trans i18nKey="subjectStatusIs" values={{ title }} />{" "}
             {hasStats && <Trans i18nKey="evaluatedAs" />}
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+            <Trans i18nKey="subjectStatusIs" values={{ title }} /> {hasStats && <Trans i18nKey="evaluatedAs" />}
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
           </Typography>
           <Typography
             variant={hasStats ? "h3" : "h4"}
@@ -177,6 +210,7 @@ const SubjectStatus = (
 <<<<<<< HEAD
               fontWeight: "500",
               borderBottom: hasStats ? `3px solid ${getColorOfStatus(status)}` : undefined,
+<<<<<<< HEAD
 =======
 =======
               fontWeight: "500",
@@ -185,6 +219,8 @@ const SubjectStatus = (
                 ? `3px solid ${getColorOfStatus(status)}`
                 : undefined,
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
               pl: 1,
               pr: 1,
             }}
@@ -198,6 +234,7 @@ const SubjectStatus = (
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ReadMoreAboutSubject = (props: Pick<IAssessmentSubjectCardProps, "title" | "colorCode" | "description">) => {
 =======
 const ReadMoreAboutSubject = (
@@ -207,6 +244,9 @@ const ReadMoreAboutSubject = (
   >
 ) => {
 >>>>>>> fdf2328 (OTAT-216: rename and restructre projects)
+=======
+const ReadMoreAboutSubject = (props: Pick<IAssessmentSubjectCardProps, "title" | "colorCode" | "description">) => {
+>>>>>>> fb59c98 (OTAT-281 Change start assessments to view insight in subject cards)
   const { title, colorCode, description } = props;
   return (
     <Box
