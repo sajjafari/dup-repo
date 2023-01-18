@@ -9,12 +9,16 @@ from django.urls import path
 
 
 router = routers.DefaultRouter()
-router.register('profiles', commonviews.AssessmentProfileViewSet, basename='profiles')
+router.register('profiles', profileviews.AssessmentProfileViewSet, basename='profiles')
 router.register('metriccategories', commonviews.MetricCategoryViewSet, basename='metriccategories')
 router.register('subjects', commonviews.AssessmentSubjectViewSet, basename='subjects')
 router.register('attributes', commonviews.QualityAttributeViewSet, basename='attributes')
 router.register('dsl', profileviews.UploadProfileApi, basename='dsl')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+router.register('tags', profileviews.ProfileTagViewSet, basename='tags')
+>>>>>>> 2946cf0 (make profile tag many to many)
 
 
 metric_category_router = routers.NestedDefaultRouter(router, 'metriccategories', lookup='metric_category')
